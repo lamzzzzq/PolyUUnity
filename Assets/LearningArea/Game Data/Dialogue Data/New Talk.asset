@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e0520893f5d3840bb7dd3e62b1a2ec, type: 3}
+  m_Name: New Talk
+  m_EditorClassIdentifier: 
+  dialoguePiceces:
+  - ID: Piece01
+    image: {fileID: 21300000, guid: 4279f96403606ed4a9559c60c3cc53ba, type: 3}
+    text: "\u4F60\u597D\u554A"
+    quest: {fileID: 0}
+    options:
+    - text: "\u4F60\u597D"
+      targetID: 
+      takeQuest: 0
+    - text: "\u6709\u4E8B\uFF1F"
+      targetID: Piece02
+      takeQuest: 0
+  - ID: Piece02
+    image: {fileID: 0}
+    text: "\u7897\u597D\u4E45\u6C92\u6D17\u4E86\uFF0C\u5E6B\u6211\u6D17\u6D17\uFF0Cok\uFF1F"
+    quest: {fileID: 11400000, guid: e285fcc5aa155174a80a87875e4dd506, type: 2}
+    options:
+    - text: "ok\uFF0C\u6C92\u554F\u984C"
+      targetID: 
+      takeQuest: 1
+    - text: "\u66AB\u6642\u6709\u4E8B\u8981\u505A\uFF0C\u7B49\u7B49\u3002"
+      targetID: 
+      takeQuest: 0

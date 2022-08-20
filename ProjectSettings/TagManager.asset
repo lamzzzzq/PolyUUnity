@@ -8,6 +8,8 @@ TagManager:
   - Cloth
   - Sponge
   - Disappear
+  - CinemachineTarget
+  - Interactive
   layers:
   - Default
   - TransparentFX
