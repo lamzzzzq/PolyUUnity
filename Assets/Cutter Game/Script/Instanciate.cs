@@ -33,33 +33,35 @@ public class Instanciate : MonoBehaviour
 
             if (gameObject.name == "BreadTop" && (Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
             {
-                Instantiate(cloneObj, new Vector3(10.937f, 0.23f, 26.1f), Quaternion.identity);
+                Instantiate(cloneObj, new Vector3(10.974f, 0.3f, GameFlow.plateZpos), Quaternion.identity);
                 Debug.Log("Instantiate Burger Top");
-                GameFlow.plateValue += foodValue;
+                GameFlow.plateValue[GameFlow.plateNum] += foodValue;
             }
             if (gameObject.name == "Cheese" && (Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
             {
-                Instantiate(cloneObj, new Vector3(10.937f, 0.20f, 26.1f), Quaternion.identity);
+                Instantiate(cloneObj, new Vector3(10.974f, 0.20f, GameFlow.plateZpos), Quaternion.identity);
                 //newCheese.transform.parent = testObj.transform;
                 Debug.Log("Instantiate CheeseSlice");
-                GameFlow.plateValue += foodValue;
+                GameFlow.plateValue[GameFlow.plateNum] += foodValue;
             }
             if (gameObject.name == "Tomato" && (Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
             {
-                Instantiate(cloneObj, new Vector3(10.937f, 0.12f, 26.1f), Quaternion.identity);
+                Instantiate(cloneObj, new Vector3(10.974f, 0.12f, GameFlow.plateZpos), Quaternion.identity);
                 //newTomato.transform.parent = testObj.transform;
                 Debug.Log("Instantiate TomatoSlice");
-                GameFlow.plateValue += foodValue;
+                GameFlow.plateValue[GameFlow.plateNum] += foodValue;
             }
             if (gameObject.name == "BreadBottom" && (Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
             {
-                Instantiate(cloneObj, new Vector3(10.937f, 0.1f, 26.1f), Quaternion.identity);
+                Instantiate(cloneObj, new Vector3(10.974f, 0.1f, GameFlow.plateZpos), Quaternion.identity);
                 //newBreadBottom.transform.parent = testObj.transform;
                 Debug.Log("Instantiate Burger Bottom");
-                GameFlow.plateValue += foodValue;
+                GameFlow.plateValue[GameFlow.plateNum] += foodValue;
             }
 
-            //Debug.Log(GameFlow.plateValue + " " + GameFlow.orderValue); 
+
+            if (Input.GetKeyDown(KeyCode.P))
+            { Debug.Log(GameFlow.plateValue[GameFlow.plateNum] + " " + GameFlow.orderValue[GameFlow.plateNum]); }
         }
 
 
