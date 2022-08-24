@@ -12,6 +12,7 @@ namespace PixelCrushers.DialogueSystem
 
         private LuaConditionWizard luaConditionWizard = new LuaConditionWizard(EditorTools.selectedDatabase);
         private string lastValue = null;
+        private float luaFieldWidth = 0;
 
         private bool ShowReferenceDatabase()
         {
@@ -24,6 +25,15 @@ namespace PixelCrushers.DialogueSystem
             EditorTools.SetInitialDatabaseIfNull();
             var height = (EditorTools.selectedDatabase == null) ? EditorGUIUtility.singleLineHeight : luaConditionWizard.GetHeight();
             if (ShowReferenceDatabase()) height += EditorGUIUtility.singleLineHeight;
+
+            if (property != null)
+            {
+                height -= EditorGUIUtility.singleLineHeight;
+                if (luaFieldWidth == 0) luaFieldWidth = Screen.width - 34f;
+                var textAreaHeight = EditorTools.textAreaGuiStyle.CalcHeight(new GUIContent(property.stringValue), luaFieldWidth) + 2f;
+                height += textAreaHeight;
+            }
+
             return height;
         }
 
@@ -35,6 +45,8 @@ namespace PixelCrushers.DialogueSystem
                 EditorTools.SetInitialDatabaseIfNull();
                 try
                 {
+                    luaFieldWidth = position.width - 16f;
+
                     if (ShowReferenceDatabase())
                     {
                         EditorTools.DrawReferenceDatabase(new Rect(position.x, position.y, position.width, EditorGUIUtility.singleLineHeight));
@@ -55,7 +67,7 @@ namespace PixelCrushers.DialogueSystem
                         {
                             luaConditionWizard.OpenWizard(property.stringValue);
                         }
-                        property.stringValue = luaConditionWizard.Draw(position, new GUIContent("Lua Condition Wizard", "Use to add Lua conditions below"), property.stringValue);
+                        property.stringValue = luaConditionWizard.Draw(position, new GUIContent("Lua Condition Wizard", "Use to add Lua conditions below"), property.stringValue, true);
                         lastValue = property.stringValue;
                     }
                 }

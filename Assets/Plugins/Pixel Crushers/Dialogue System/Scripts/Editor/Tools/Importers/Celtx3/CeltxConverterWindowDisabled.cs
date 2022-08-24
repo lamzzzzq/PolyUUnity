@@ -15,7 +15,7 @@ namespace PixelCrushers.DialogueSystem
         {
             if (EditorUtility.DisplayDialog("Enable Celtx Gem 3 Support", "Celtx Gem 3 import support isn't enabled yet. Would you like to enable it? After clicking Enable, re-open the Celtx import window.\n\nNOTE: Celtx import requires Netwonsoft Json.NET. Please follow the Json.NET setup steps in the Celtx Importer Guide before enabling Celtx import.", "Enable", "Cancel"))
             {
-                EditorTools.TryAddScriptingDefineSymbols("USE_CELTX");
+                EditorTools.TryAddScriptingDefineSymbols("USE_CELTX3");
             }
         }
     }

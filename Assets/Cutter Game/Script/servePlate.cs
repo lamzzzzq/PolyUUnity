@@ -10,11 +10,11 @@ public class servePlate : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player" && (Input.GetKeyDown(KeyCode.J)||InputBridge.Instance.BButtonDown))
+        if(other.tag == "Player" && (Input.GetKeyDown(KeyCode.I)||InputBridge.Instance.BButtonDown))
         {
-            Debug.Log("plateValue = " + GameFlow.plateValue);
-            Debug.Log("orderValue = " + GameFlow.orderValue);
-            if(GameFlow.plateValue == GameFlow.orderValue)
+            Debug.Log("plateValue = " + GameFlow.plateValue[GameFlow.plateNum]);
+            Debug.Log("orderValue = " + GameFlow.orderValue[GameFlow.plateNum]);
+            if(GameFlow.plateValue[GameFlow.plateNum] == GameFlow.orderValue[GameFlow.plateNum])
             {
                 rightMeal = true;
                 PixelCrushers.MessageSystem.SendMessage(this,"Got","Sandwich");

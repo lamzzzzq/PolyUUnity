@@ -132,7 +132,7 @@ namespace PixelCrushers.DialogueSystem
                             var height = EditorTools.textAreaGuiStyle.CalcHeight(new GUIContent(element.stringValue), luaFieldWidth) + 2f;
                             rect = new Rect(x + 96f, y, width - 96f, height);
                             y += height;
-                            element.stringValue = EditorGUI.TextArea(rect, element.stringValue);
+                            element.stringValue = EditorGUI.TextArea(rect, element.stringValue, EditorTools.textAreaGuiStyle);
                         }
                     }
 

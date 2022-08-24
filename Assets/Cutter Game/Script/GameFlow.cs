@@ -12,6 +12,10 @@ public class GameFlow : MonoBehaviour
 
     public Transform plateSelector;
 
+    //public MeshRenderer[] currentPic;
+
+    //public Texture[] orderPic;
+
     // Start is called before the first frame update
     void Start()
     {

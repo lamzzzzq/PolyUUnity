@@ -198,10 +198,10 @@ namespace PixelCrushers.DialogueSystem
             DialogueActor dialogueActor;
             StandardUISubtitlePanel panel = null;
 
-            if (DialogueManager.isConversationActive)
+            if (DialogueManager.isConversationActive && DialogueManager.currentConversationState != null)
             {
                 var subtitle = DialogueManager.currentConversationState.subtitle;
-                if (subject == subtitle.speakerInfo.transform)
+                if (subtitle.speakerInfo != null && subtitle.speakerInfo.transform == subject)
                 {
                     panel = subtitleControls.GetPanel(subtitle, out dialogueActor);
                 }

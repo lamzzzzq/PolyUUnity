@@ -37,13 +37,25 @@ public class MoveCookedMeat : MonoBehaviour
     {
         if(other.tag == "Player" && (Input.GetKeyDown(KeyCode.J)||InputBridge.Instance.BButtonDown))
         {
-            Instantiate(cookedMeat, new Vector3(10.937f,0.23f,26.1f), Quaternion.identity);
-            //GameFlow.plateValue += foodValue;
+            Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
+            GameFlow.plateValue[GameFlow.plateNum] += foodValue;
             cooking = false;
             //meatMat.material.color = defaultColor;
             //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
             Destroy(gameObject);
         }
+    }
+
+    public void instantiate()
+    {
+
+            Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
+            GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+            cooking = false;
+            //meatMat.material.color = defaultColor;
+            //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
+            Destroy(gameObject);
+
     }
 
     IEnumerator cookTimer()

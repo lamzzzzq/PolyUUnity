@@ -284,6 +284,13 @@ namespace PixelCrushers.DialogueSystem
 
         private bool ShouldShowContinueButton(bool isPCLine, bool isPCResponseMenuNext, bool isPCAutoResponseNext)
         {
+            // If we require continue button on last line, we have to grab the current conversation state to check it:
+            if (settings.subtitleSettings.requireContinueOnLastLine && !DialogueManager.instance.currentConversationState.hasAnyResponses)
+            {
+                // Note: side effect - set waitForContinue true
+                waitForContinue = true;
+                return true;
+            }
             // Should we show the continue button? (Even if optional and not waiting for it)
             switch (settings.GetContinueButtonMode())
             {

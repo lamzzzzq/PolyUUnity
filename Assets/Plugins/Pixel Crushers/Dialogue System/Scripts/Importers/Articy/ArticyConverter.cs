@@ -79,8 +79,6 @@ namespace PixelCrushers.DialogueSystem.Articy
         private int itemID;
         private int locationID;
         private static List<string> fullVariableNames = new List<string>(); // Make static to expose ConvertExpression().
-        //private Conversation documentConversation;
-        //private DialogueEntry lastDocumentEntry;
 
         private HashSet<string> otherScriptFieldTitles = new HashSet<string>();
         private List<Conversation> documentConversations = new List<Conversation>();
@@ -123,24 +121,12 @@ namespace PixelCrushers.DialogueSystem.Articy
         {
             if (conversation == null) return;
             conversationStack.Add(conversation);
-
-            //--- No longer used. Caused double links.
-            //var conversationArticyId = conversation.LookupValue(ArticyIdFieldTitle);
-            //var articyDialogue = articyData.dialogues.ContainsKey(conversationArticyId) ? articyData.dialogues[conversationArticyId] : null; // May be null if a flow fragment.
-            //if (articyDialogue != null && articyDialogue.isDocument)
-            //{
-            //    documentConversation = conversation;
-            //    lastDocumentEntry = conversation.GetFirstDialogueEntry();
-            //}
         }
 
         private void PopConversation()
         {
             if (conversationStack.Count < 1) return;
             conversationStack.RemoveAt(conversationStack.Count - 1);
-
-            //documentConversation = null;
-            //lastDocumentEntry = null;
         }
 
         private Conversation GetConversationStackTop()
@@ -558,6 +544,7 @@ namespace PixelCrushers.DialogueSystem.Articy
             Conversation conversation = template.CreateConversation(conversationID, conversationTitle);
             Field.SetValue(conversation.fields, ArticyIdFieldTitle, articyDialogue.id, FieldType.Text);
             Field.SetValue(conversation.fields, "Description", articyDialogue.text.DefaultText, FieldType.Text);
+            SetConversationOverrideProperties(conversation, articyDialogue.features);
             SetFeatureFields(conversation.fields, articyDialogue.features);
             conversation.ActorID = FindActorIdFromArticyDialogue(articyDialogue, 0, 1);
             conversation.ConversantID = FindActorIdFromArticyDialogue(articyDialogue, 1, 2);
@@ -630,6 +617,113 @@ namespace PixelCrushers.DialogueSystem.Articy
             return conversation;
         }
 
+        // Extract special conversation override features and set conversation override settings:
+        private void SetConversationOverrideProperties(Conversation conversation, ArticyData.Features features)
+        {
+            foreach (ArticyData.Feature feature in features.features)
+            {
+                foreach (ArticyData.Property property in feature.properties)
+                {
+                    for (int i = property.fields.Count - 1; i >= 0; i--)
+                    {
+                        var field = property.fields[i];
+                        var deleteField = true;
+                        switch (field.title)
+                        {
+                            case "ShowNPCSubtitlesDuringLine":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.showNPCSubtitlesDuringLine = Tools.StringToBool(field.value);
+                                break;
+                            case "ShowNPCSubtitlesWithResponses":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.showNPCSubtitlesWithResponses = Tools.StringToBool(field.value);
+                                break;
+                            case "ShowPCSubtitlesDuringLine":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.showPCSubtitlesDuringLine = Tools.StringToBool(field.value);
+                                break;
+                            case "SkipPCSubtitleAfterResponseMenu":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.skipPCSubtitleAfterResponseMenu = Tools.StringToBool(field.value);
+                                break;
+                            case "SubtitleCharsPerSecond":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.subtitleCharsPerSecond = Tools.StringToFloat(field.value);
+                                break;
+                            case "MinSubtitleSeconds":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.minSubtitleSeconds = Tools.StringToFloat(field.value);
+                                break;
+                            case "ContinueButton":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSubtitleSettings = true;
+                                conversation.overrideSettings.continueButton = StringToContinueButtonMode(field.value);
+                                break;
+                            //---
+                            case "DefaultSequence":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSequenceSettings = true;
+                                conversation.overrideSettings.defaultSequence = field.value;
+                                break;
+                            case "DefaultPlayerSequence":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSequenceSettings = true;
+                                conversation.overrideSettings.defaultPlayerSequence = field.value;
+                                break;
+                            case "DefaultResponseMenuSequence":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideSequenceSettings = true;
+                                conversation.overrideSettings.defaultResponseMenuSequence = field.value;
+                                break;
+                            //---
+                            case "AlwaysForceResponseMenu":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideInputSettings = true;
+                                conversation.overrideSettings.alwaysForceResponseMenu = Tools.StringToBool(field.value);
+                                break;
+                            case "IncludeInvalidEntries":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideInputSettings = true;
+                                conversation.overrideSettings.includeInvalidEntries = Tools.StringToBool(field.value);
+                                break;
+                            case "ResponseTimeout":
+                                conversation.overrideSettings.useOverrides = true;
+                                conversation.overrideSettings.overrideInputSettings = true;
+                                conversation.overrideSettings.responseTimeout = Tools.StringToFloat(field.value);
+                                break;
+                            default:
+                                deleteField = false;
+                                break;
+                        }
+                        if (deleteField)
+                        {
+                            property.fields.RemoveAt(i);
+                        }
+                    }
+                }
+            }
+        }
+
+        private DisplaySettings.SubtitleSettings.ContinueButtonMode StringToContinueButtonMode(string value)
+        {
+            var enumValues = System.Enum.GetValues(typeof(DisplaySettings.SubtitleSettings.ContinueButtonMode));
+            for (int i = 0; i < enumValues.Length; i++)
+            {
+                var enumMode = (DisplaySettings.SubtitleSettings.ContinueButtonMode)i;
+                if (string.Equals(value, enumMode.ToString(), System.StringComparison.OrdinalIgnoreCase))
+                {
+                    return enumMode;
+                }
+            }
+            return DisplaySettings.SubtitleSettings.ContinueButtonMode.Never;
+        }
+
         private void SetDialogueEntryParticipants(DialogueEntry startEntry, int actorID, int conversantID)
         {
             startEntry.ActorID = actorID;
@@ -674,7 +768,16 @@ namespace PixelCrushers.DialogueSystem.Articy
             IndexDialogueEntryByArticyId(startEntry, articyFlowFragment.id);
             ConvertPinExpressionsToConditionsAndScripts(startEntry, articyFlowFragment.pins);
             startEntry.outgoingLinks = new List<Link>();
-            //Field.SetValue(startEntry.fields, "Sequence", "Continue()", FieldType.Text);
+            var conversationSequenceField = Field.Lookup(conversation.fields, "Sequence");
+            if (conversationSequenceField != null && !string.IsNullOrEmpty(conversationSequenceField.value))
+            {
+                conversation.fields.Remove(conversationSequenceField);
+                Field.SetValue(startEntry.fields, "Sequence", conversationSequenceField.value, FieldType.Text);
+            }
+            else
+            {
+                Field.SetValue(startEntry.fields, "Sequence", "Continue()", FieldType.Text);
+            }
             conversation.dialogueEntries.Add(startEntry);
 
             // Convert dialogue's in and out pins to passthrough group entries:

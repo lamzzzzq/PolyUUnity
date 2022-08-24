@@ -2598,26 +2598,28 @@ namespace PixelCrushers.DialogueSystem
                 var arg = SequencerTools.GetParameter(args, 0);
                 if (DialogueDebug.logInfo) Debug.Log(string.Format("{0}: Sequencer: SetContinueMode({1})", new System.Object[] { DialogueDebug.Prefix, arg }));
                 if (DialogueManager.instance == null || DialogueManager.displaySettings == null || DialogueManager.displaySettings.subtitleSettings == null) return true;
-                if (string.Equals(arg, "true", StringComparison.OrdinalIgnoreCase))
+                if (string.Equals(arg, "original", StringComparison.OrdinalIgnoreCase))
                 {
-                    savedContinueButtonMode = DialogueManager.displaySettings.subtitleSettings.continueButton;
-                    DialogueManager.displaySettings.subtitleSettings.continueButton = DisplaySettings.SubtitleSettings.ContinueButtonMode.Always;
-                }
-                else if (string.Equals(arg, "false", StringComparison.OrdinalIgnoreCase))
-                {
-                    savedContinueButtonMode = DialogueManager.displaySettings.subtitleSettings.continueButton;
-                    DialogueManager.displaySettings.subtitleSettings.continueButton = DisplaySettings.SubtitleSettings.ContinueButtonMode.Never;
-                }
-                else if (string.Equals(arg, "original", StringComparison.OrdinalIgnoreCase))
-                {
+                    // Restore original mode:
                     if (DialogueDebug.logInfo) Debug.Log(string.Format("{0}: Sequencer: SetContinueMode({1}): Restoring original mode {2}", new System.Object[] { DialogueDebug.Prefix, arg, savedContinueButtonMode }));
                     DialogueManager.displaySettings.subtitleSettings.continueButton = savedContinueButtonMode;
                 }
                 else
                 {
-                    if (DialogueDebug.logWarnings) Debug.LogWarning(string.Format("{0}: Sequencer: SetContinueMode(true|false|original) requires a true/false/original parameter", new System.Object[] { DialogueDebug.Prefix }));
-                    return true;
+                    // Set requested mode:
+                    DisplaySettings.SubtitleSettings.ContinueButtonMode mode;
+                    if (TryGetContinueMode(arg, out mode))
+                    {
+                        savedContinueButtonMode = DialogueManager.displaySettings.subtitleSettings.continueButton;
+                        DialogueManager.displaySettings.subtitleSettings.continueButton = mode;
+                    }
+                    else
+                    {
+                        if (DialogueDebug.logWarnings) Debug.LogWarning(string.Format("{0}: Sequencer: SetContinueMode(true|false|original|...) requires a valid mode. See online manual for options.", new System.Object[] { DialogueDebug.Prefix }));
+                        return true;
+                    }
                 }
+                // If a conversation is open, update its continue button mode immediately:
                 if (DialogueManager.conversationView != null)
                 {
                     if (DialogueManager.conversationView.displaySettings.conversationOverrideSettings != null)
@@ -2628,6 +2630,43 @@ namespace PixelCrushers.DialogueSystem
                 }
                 return true;
             }
+        }
+
+        private bool TryGetContinueMode(string arg, out DisplaySettings.SubtitleSettings.ContinueButtonMode mode)
+        {
+            if (string.Equals(arg, "true", StringComparison.OrdinalIgnoreCase) || string.Equals(arg, "always", StringComparison.OrdinalIgnoreCase))
+            {
+                mode = DisplaySettings.SubtitleSettings.ContinueButtonMode.Always;
+            }
+            else if (string.Equals(arg, "false", StringComparison.OrdinalIgnoreCase) || string.Equals(arg, "never", StringComparison.OrdinalIgnoreCase))
+            {
+                mode = DisplaySettings.SubtitleSettings.ContinueButtonMode.Never;
+            }
+            else if (string.Equals(arg, "optional", StringComparison.OrdinalIgnoreCase))
+            {
+                mode = DisplaySettings.SubtitleSettings.ContinueButtonMode.Optional;
+            }
+            else
+            {
+                mode = DisplaySettings.SubtitleSettings.ContinueButtonMode.Never;
+                var found = false;
+                var enumValues = System.Enum.GetValues(typeof(DisplaySettings.SubtitleSettings.ContinueButtonMode));
+                for (int i = 0; i < enumValues.Length; i++)
+                {
+                    var enumMode = (DisplaySettings.SubtitleSettings.ContinueButtonMode)i;
+                    if (string.Equals(arg, enumMode.ToString(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        mode = enumMode;
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         /// <summary>

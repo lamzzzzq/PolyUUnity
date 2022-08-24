@@ -422,7 +422,7 @@ namespace PixelCrushers.DialogueSystem
 
                 // Focus the panel and show the subtitle:
                 m_focusedPanel = panel;
-                if (panel.addSpeakerName)
+                if (panel.addSpeakerName && !string.IsNullOrEmpty(subtitle.speakerInfo.Name))
                 {
                     subtitle.formattedText.text = string.Format(panel.addSpeakerNameFormat, new object[] { subtitle.speakerInfo.Name, subtitle.formattedText.text });
                 }

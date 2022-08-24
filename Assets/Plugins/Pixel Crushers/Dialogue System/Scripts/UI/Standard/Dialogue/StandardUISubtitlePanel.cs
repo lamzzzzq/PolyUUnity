@@ -173,6 +173,7 @@ namespace PixelCrushers.DialogueSystem
 
         protected Coroutine m_focusWhenOpenCoroutine = null;
         protected Coroutine m_showAfterClosingCoroutine = null;
+        protected Coroutine m_setAnimatorCoroutine = null;
         protected WaitForSeconds m_blockInputDelay = null;
 
         #endregion
@@ -677,12 +678,14 @@ namespace PixelCrushers.DialogueSystem
                         (speakerPanelNumber == SubtitlePanelNumber.Custom && dialogueActor.standardDialogueUISettings.customSubtitlePanel == this);
                     if (isMyPanel)
                     {
-                        StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
+                        if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
+                        m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
                     }
                 }
                 else
                 {
-                    StartCoroutine(SetAnimatorAtEndOfFrame(null));
+                    if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
+                    m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(null));
                 }
             }
         }
@@ -692,7 +695,8 @@ namespace PixelCrushers.DialogueSystem
             if (dialogueActor != null && useAnimatedPortraits && animator != null &&
                 dialogueActor.standardDialogueUISettings.portraitAnimatorController != null)
             {
-                StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
+                if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
+                m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
             }
         }
 

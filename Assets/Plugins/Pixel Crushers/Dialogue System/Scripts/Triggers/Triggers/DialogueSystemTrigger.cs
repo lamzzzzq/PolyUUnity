@@ -394,7 +394,9 @@ namespace PixelCrushers.DialogueSystem
             barkHistory = new BarkHistory(barkOrder);
             sequencer = null;
             hasSaveSystem = FindObjectOfType<SaveSystem>() != null;
-            if (hasSaveSystem && trigger == DialogueSystemTriggerEvent.OnSaveDataApplied)
+            if (hasSaveSystem && 
+                ((trigger == DialogueSystemTriggerEvent.OnSaveDataApplied) ||
+                 (trigger == DialogueSystemTriggerEvent.OnStart && DialogueManager.instance.onStartTriggerWaitForSaveDataApplied)))
             {
                 SaveSystem.saveDataApplied += OnSaveDataApplied;
             }
@@ -416,8 +418,16 @@ namespace PixelCrushers.DialogueSystem
             }
             else if (trigger == DialogueSystemTriggerEvent.OnStart)
             {
-                // Wait until end of frame to allow all other components to finish their Start() methods:
-                StartCoroutine(StartAtEndOfFrame());
+                if (hasSaveSystem && DialogueManager.instance.onStartTriggerWaitForSaveDataApplied)
+                {
+                    // Dialogue Manager option has configured OnStart to work like OnSaveDataApplied, so start check here:
+                    fireIfNoSaveDataAppliedCoroutine = StartCoroutine(FireIfNoSaveDataApplied());
+                }
+                else
+                {
+                    // Wait until end of frame to allow all other components to finish their Start() methods:
+                    StartCoroutine(StartAtEndOfFrame());
+                }
             }
             else if (trigger == DialogueSystemTriggerEvent.OnSaveDataApplied)
             {
@@ -628,9 +638,14 @@ namespace PixelCrushers.DialogueSystem
 
         public void OnDestroy()
         {
-            if (hasSaveSystem && trigger == DialogueSystemTriggerEvent.OnSaveDataApplied)
+            if (hasSaveSystem)
             {
                 SaveSystem.saveDataApplied -= OnSaveDataApplied;
+                if (fireIfNoSaveDataAppliedCoroutine != null)
+                {
+                    StopCoroutine(fireIfNoSaveDataAppliedCoroutine);
+                    fireIfNoSaveDataAppliedCoroutine = null;
+                }
             }
             if (listenForOnDestroy && trigger == DialogueSystemTriggerEvent.OnDestroy)
             {
@@ -661,7 +676,10 @@ namespace PixelCrushers.DialogueSystem
                 StopCoroutine(fireIfNoSaveDataAppliedCoroutine);
                 fireIfNoSaveDataAppliedCoroutine = null;
             }
-            TryStart(null);
+            if (enabled)
+            {
+                TryStart(null);
+            }
         }
 
         protected virtual IEnumerator FireIfNoSaveDataApplied()

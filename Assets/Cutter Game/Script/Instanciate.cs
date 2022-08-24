@@ -66,6 +66,14 @@ public class Instanciate : MonoBehaviour
 
 
     }
+    public void instantiateTopBred()
+    {
+
+        Instantiate(cloneObj, new Vector3(10.974f, 0.3f, GameFlow.plateZpos), Quaternion.identity);
+        Debug.Log("Instantiate Burger Top");
+        GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+
+    }
 
 
 

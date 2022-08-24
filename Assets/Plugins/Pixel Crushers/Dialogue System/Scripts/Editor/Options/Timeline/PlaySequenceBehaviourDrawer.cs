@@ -1,4 +1,3 @@
-// Recompile at 2022/7/7 上午 12:24:56
 #if USE_TIMELINE
 #if UNITY_2017_1_OR_NEWER
 using UnityEditor;
