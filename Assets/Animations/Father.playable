@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 6.533333333333333
+    m_Start: 6.733333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 4099183049480483248}
     m_Duration: 4.999999999999999
@@ -353,9 +353,9 @@ MonoBehaviour:
     entryID: 0
     exclusive: 0
   conversant:
-    exposedName: 
+    exposedName: 8510980add1cbdf4fb9c8840519e5f34
     defaultValue: {fileID: 0}
-  m_duration: 1
+  m_duration: 4.69
 --- !u!114 &4375379205268928546
 MonoBehaviour:
   m_ObjectHideFlags: 1

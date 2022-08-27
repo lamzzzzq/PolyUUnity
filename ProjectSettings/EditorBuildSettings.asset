@@ -23,7 +23,7 @@ EditorBuildSettings:
       type: 2}
     com.unity.addressableassets: {fileID: 11400000, guid: 87333315a9752974ebf6b7d71b9c6355,
       type: 2}
-    com.unity.input.settings: {fileID: 11400000, guid: 7c0d65f8139523c47a3ac0b1587ccdf6,
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: f328f700e9a6ebf4dbbba169e2688168,
       type: 2}

@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale
+  - m_GUID: 0b76acde776b28f4a9bdb6fe278a4c8a
+    m_Address: Chinese (Traditional, Hong Kong SAR China) (zh-HK)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fbfc8f4724b756f4ab4cba718143da1d, type: 2}
   m_SchemaSet:

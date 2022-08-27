@@ -8,9 +8,9 @@ public class MoveCookedMeat : MonoBehaviour
 
     public AudioSource audioData;
     private ParticleSystem ps;
-    private int foodValue = 0;
+    public int foodValue = 0;
     private MeshRenderer meatMat;
-    private bool cooking = true;
+    public bool cooking = true;
 
 
     public GameObject cookedMeat;
@@ -33,9 +33,20 @@ public class MoveCookedMeat : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.tag == "Player" && (Input.GetKeyDown(KeyCode.J)||InputBridge.Instance.BButtonDown))
+    /*    private void OnTriggerStay(Collider other)
+        {
+            if (other.tag == "Player" && (Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
+            {
+                Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
+                GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+                cooking = false;
+                //meatMat.material.color = defaultColor;
+                //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
+                Destroy(gameObject);
+            }
+        }*/
+
+    public void MoveMeat()
         {
             Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
             GameFlow.plateValue[GameFlow.plateNum] += foodValue;
@@ -44,19 +55,6 @@ public class MoveCookedMeat : MonoBehaviour
             //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
             Destroy(gameObject);
         }
-    }
-
-    public void instantiate()
-    {
-
-            Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
-            GameFlow.plateValue[GameFlow.plateNum] += foodValue;
-            cooking = false;
-            //meatMat.material.color = defaultColor;
-            //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
-            Destroy(gameObject);
-
-    }
 
     IEnumerator cookTimer()
     {

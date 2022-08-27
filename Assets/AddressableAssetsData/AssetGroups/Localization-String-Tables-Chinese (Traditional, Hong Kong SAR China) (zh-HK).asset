@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Chinese (Traditional, Hong Kong SAR China) (zh-HK)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Chinese (Traditional, Hong Kong SAR China)
+    (zh-HK)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7c9f6f75e103bcd4fa2a6438463795d6
+  m_SerializeEntries:
+  - m_GUID: d2c4c66eaff79ab4cae3fee2167e56d3
+    m_Address: MenuTable_zh-HK
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-HK
+    - Preload
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: fbfc8f4724b756f4ab4cba718143da1d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3cf2db84869ab5543b5b69256c693a73, type: 2}
+    - {fileID: 11400000, guid: 45270a87dfd88d24b96c2f803c0c8e9a, type: 2}

@@ -57,6 +57,10 @@ MonoBehaviour:
       value: Lucas
       type: 0
       typeString: 
+    - title: Guid
+      value: 1f0eb634-b428-4d67-bc7a-bd20969a1c99
+      type: 0
+      typeString: 
     portrait: {fileID: 2800000, guid: cd341c5a4b21d5c4ea4e9c95568c6c79, type: 3}
     spritePortrait: {fileID: 21300000, guid: eb4436191244d13428ceb6904e589af0, type: 3}
     alternatePortraits: []
@@ -83,6 +87,10 @@ MonoBehaviour:
       value: Younger Sister
       type: 0
       typeString: 
+    - title: Guid
+      value: 0094975d-7326-4937-a839-bbccc3fc3562
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 21300000, guid: 5037afb57ab0a7341be65bb703b8265f, type: 3}
     alternatePortraits: []
@@ -105,6 +113,10 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Guid
+      value: cc3d7cec-3f0a-4aea-9998-c5081df49da4
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -127,6 +139,10 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Guid
+      value: 00ccd9ab-0259-44e5-b5b9-4e414e6b7f47
+      type: 0
+      typeString: 
     portrait: {fileID: 0}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
@@ -303,6 +319,18 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 326fda54-f581-4a54-824f-48a2426da563
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -367,6 +395,18 @@ MonoBehaviour:
           robot. But it was not intentional, right? Let me help you fix it."
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 4c118e92-0f6c-4583-bdc9-58e7daad2633
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -429,6 +469,18 @@ MonoBehaviour:
       - title: en
         value: "I've just told my friend that I broke her favoirte robot. She said
           she would longer talk to me. It's all my fault.\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 509828d8-b915-4bb6-b7d7-c26fe5c88cb1
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 1
@@ -507,6 +559,18 @@ MonoBehaviour:
           fix it.
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: d5bcd738-a5a9-4bb0-8dcc-8077767ab376
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -570,6 +634,18 @@ MonoBehaviour:
         value: 'You were so careless. Your friend must be really angry about that. '
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: d32e1971-d199-4622-9b4e-66b4424367da
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -631,6 +707,18 @@ MonoBehaviour:
         typeString: CustomFieldType_Localization
       - title: en
         value: I just broke it by accident. It will be good if you can help me.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 22078c62-e8d9-4248-8364-4de438597c01
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 1
@@ -697,6 +785,18 @@ MonoBehaviour:
           be great if you can help me!
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 39c5880c-4e7e-4f0d-bfc1-6f531a658172
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -758,6 +858,18 @@ MonoBehaviour:
         typeString: CustomFieldType_Localization
       - title: en
         value: I really don't know what to do now.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 66fce9b4-fcb4-4cb6-b6ce-2e3d037fe664
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 1
@@ -823,6 +935,18 @@ MonoBehaviour:
         value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: e3503895-7cb0-4d04-b07e-e1c72971d85b
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -885,6 +1009,18 @@ MonoBehaviour:
         value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 0f2f8d2a-605d-4756-a6a0-6ce40fd197f3
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -945,6 +1081,18 @@ MonoBehaviour:
         typeString: CustomFieldType_Localization
       - title: en
         value: Let me help you fix it.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 0a0e9489-4d20-403d-a72f-caf846b865f6
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 1
@@ -1056,6 +1204,18 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: a4095629-cc1b-4996-a655-dce74574f82f
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1086,11 +1246,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -1102,21 +1262,29 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u591A\u8B1D\u4F60\u7684\u966A\u4F34\u3002\u6211\u5DF2\u7D93\u597D\u8FD4\u5566\u3002"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: "\u591A\u8B1D\u4F60\u7684\u966A\u4F34\u3002\u6211\u5DF2\u7D93\u597D\u8FD4\u5566\u3002"
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: Thank you for your companion. I am feeling better now.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 3580c846-dcf8-4f07-9eaf-b6d56c79b539
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u591A\u8B1D\u4F60\u7684\u966A\u4F34\u3002\u6211\u5DF2\u7D93\u597D\u8FD4\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       conversationID: 2
@@ -1140,8 +1308,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 91
-        y: 118
+        x: 112
+        y: 158
         width: 160
         height: 30
     - id: 2
@@ -1182,6 +1350,18 @@ MonoBehaviour:
         value: That's great!
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 908df5ab-1784-4d98-b869-506e97d0b7c2
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: "\u592A\u597D\u5566"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u592A\u597D\u5566"
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1203,7 +1383,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.76000017
   - id: 4
     fields:
     - title: Title
@@ -1286,6 +1466,18 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: a7045b76-ee54-42a7-b846-20bd97aac9c0
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1350,6 +1542,18 @@ MonoBehaviour:
           mum said she feels a bit sick. Can you help take care of her?
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: a86884a0-1534-4e10-ae88-f9da3dfb7325
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1371,8 +1575,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 99.10449
+        x: 24.827576
+        y: 97.380356
         width: 160
         height: 30
     - id: 2
@@ -1417,6 +1621,18 @@ MonoBehaviour:
         value: No problem! I will stay at home and take care of mum.
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 714d4c56-964a-4802-82e5-aadcc6d70ce2
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1451,7 +1667,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 170
+        y: 173.4483
         width: 160
         height: 30
     - id: 4
@@ -1492,6 +1708,18 @@ MonoBehaviour:
         value: "\u591A\u8B1D\u4F60\u5E6B\u624B"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: b825d493-5fad-4463-8fe2-44170a6fafde
+        type: 0
+        typeString: 
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1507,13 +1735,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 220
+        x: 33.448288
+        y: 287.24133
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.4925537, y: 1.4925537}
-    canvasZoom: 0.6700001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.58000016
   syncInfo:
     syncActors: 0
     syncItems: 0
@@ -1530,4 +1758,4 @@ MonoBehaviour:
     Item","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"locationFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Description","value":"","type":0,"typeString":""}],"variableFields":[{"title":"Name","value":"","type":0,"typeString":""},{"title":"Initial
     Value","value":"","type":0,"typeString":""},{"title":"Description","value":"","type":0,"typeString":""}],"conversationFields":[{"title":"Title","value":"","type":0,"typeString":""},{"title":"Description","value":"","type":0,"typeString":""},{"title":"Actor","value":"0","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Conversant","value":"0","type":5,"typeString":"CustomFieldType_Actor"}],"dialogueEntryFields":[{"title":"Title","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Actor","value":"","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Conversant","value":"","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Menu
     Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Dialogue
-    Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"en","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh","value":"","type":4,"typeString":"CustomFieldType_Localization"}],"actorPrimaryFieldTitles":[],"itemPrimaryFieldTitles":[],"questPrimaryFieldTitles":[],"locationPrimaryFieldTitles":[],"variablePrimaryFieldTitles":[],"conversationPrimaryFieldTitles":[],"dialogueEntryPrimaryFieldTitles":[],"npcLineColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"pcLineColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0},"repeatLineColor":{"r":0.5,"g":0.5,"b":0.5,"a":1.0}}'
+    Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"en","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-Hans","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-HK","value":"","type":4,"typeString":"CustomFieldType_Localization"}],"actorPrimaryFieldTitles":[],"itemPrimaryFieldTitles":[],"questPrimaryFieldTitles":[],"locationPrimaryFieldTitles":[],"variablePrimaryFieldTitles":[],"conversationPrimaryFieldTitles":[],"dialogueEntryPrimaryFieldTitles":[],"npcLineColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"pcLineColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0},"repeatLineColor":{"r":0.5,"g":0.5,"b":0.5,"a":1.0}}'

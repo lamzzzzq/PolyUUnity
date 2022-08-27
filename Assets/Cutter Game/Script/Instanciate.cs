@@ -26,7 +26,7 @@ public class Instanciate : MonoBehaviour
 
 
 
-    private void OnTriggerStay(Collider other)
+/*    private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Player")
         {
@@ -65,7 +65,7 @@ public class Instanciate : MonoBehaviour
         }
 
 
-    }
+    }*/
     public void instantiateTopBred()
     {
 
@@ -74,7 +74,37 @@ public class Instanciate : MonoBehaviour
         GameFlow.plateValue[GameFlow.plateNum] += foodValue;
 
     }
+    public void instantiateMeatSlice()
+    {
 
+        Instantiate(cloneObj);
+        Debug.Log("Move LunchMeatSlice");
+
+    }
+    public void instantiateCheese()
+    {
+
+        Instantiate(cloneObj, new Vector3(10.974f, 0.20f, GameFlow.plateZpos), Quaternion.identity);
+        Debug.Log("Instantiate Cheese");
+        GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+
+    }
+    public void instantiateTomato()
+    {
+
+        Instantiate(cloneObj, new Vector3(10.974f, 0.12f, GameFlow.plateZpos), Quaternion.identity);
+        Debug.Log("Instantiate Tomato");
+        GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+
+    }
+    public void instantiateBredBottom()
+    {
+
+        Instantiate(cloneObj, new Vector3(10.974f, 0.1f, GameFlow.plateZpos), Quaternion.identity);
+        Debug.Log("Instantiate Burger Bottom");
+        GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+
+    }
 
 
 }
