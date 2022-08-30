@@ -36,6 +36,24 @@ MonoBehaviour:
     m_valueType: 0
     m_literalValue: 1
     m_counterIndex: 0
+--- !u!114 &-7252186006462600636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
+  m_Name: QuestStateQuestCondition
+  m_EditorClassIdentifier: 
+  m_requiredQuestID:
+    m_text: 1.3TableFloorCleaning
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_requiredState: 2
 --- !u!114 &-6138481711543169383
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +168,24 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
+--- !u!114 &-1751025710380091905
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
+  m_Name: QuestStateQuestCondition
+  m_EditorClassIdentifier: 
+  m_requiredQuestID:
+    m_text: 1.3TableFloorCleaning
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_requiredState: 3
 --- !u!114 &-1665853672765188541
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,7 +319,9 @@ MonoBehaviour:
     m_minConditionCount: 0
     m_numTrueConditions: 0
   m_offerConditionSet:
-    m_conditionList: []
+    m_conditionList:
+    - {fileID: -7252186006462600636}
+    - {fileID: -1751025710380091905}
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0

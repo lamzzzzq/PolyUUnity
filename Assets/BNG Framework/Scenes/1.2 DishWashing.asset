@@ -192,24 +192,6 @@ MonoBehaviour:
     m_textTableFieldID: 0
   m_count: 0
   m_imageNameProxy: 
---- !u!114 &-7817653750463400597
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
-  m_Name: QuestStateQuestCondition
-  m_EditorClassIdentifier: 
-  m_requiredQuestID:
-    m_text: 1.1SandwichMaking
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_requiredState: 3
 --- !u!114 &-7644770216450596066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -478,24 +460,6 @@ MonoBehaviour:
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
   m_luaCode: Variable["Point"] = Variable["Point"] + 15
---- !u!114 &-4860019944321260857
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
-  m_Name: QuestStateQuestCondition
-  m_EditorClassIdentifier: 
-  m_requiredQuestID:
-    m_text: 1.1SandwichMaking
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_requiredState: 2
 --- !u!114 &-4384446742632606583
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -844,9 +808,7 @@ MonoBehaviour:
     m_minConditionCount: 0
     m_numTrueConditions: 0
   m_offerConditionSet:
-    m_conditionList:
-    - {fileID: -4860019944321260857}
-    - {fileID: -7817653750463400597}
+    m_conditionList: []
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0
