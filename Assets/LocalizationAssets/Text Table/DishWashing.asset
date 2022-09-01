@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9839ff07fc3994aa17c3c6b5ecfd28, type: 3}
+  m_Name: DishWashing
+  m_EditorClassIdentifier: 
+  m_languageKeys:
+  - Default
+  - en
+  - zh-Hans
+  - zh-HK
+  m_languageValues: 00000000010000000200000003000000
+  m_fieldKeys: 0100000002000000030000000400000005000000060000000700000008000000
+  m_fieldValues:
+  - m_fieldName: offer
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Could you help wash the dishes?
+    - Could you help wash the dishes?
+    - "\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u6D17??\u7897\u5440\uFF1F"
+    - "\u4F60\u53EF\u4E0D\u53EF\u4EE5\u5E6B\u5FD9\u6D17\u4E00\u4E0B\u7897\u5440\uFF1F"
+  - m_fieldName: Active_HUD
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Dish Washing
+    - Dish Washing
+    - "\u6E05\u6D17\u76E4\u5B50"
+    - "\u6E05\u6D17\u76E4\u5B50"
+  - m_fieldName: Return
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Return to meet your mom.
+    - Return to meet your mom.
+    - "\u56DE\u53BB\u627E\u5ABD\u5ABD"
+    - "\u56DE\u53BB\u627E\u5ABD\u5ABD"
+  - m_fieldName: Excelent
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Excellent! Thanks for your helping.
+    - Excellent! Thanks for your helping.
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u5440\u3002"
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u5FD9\u5440\u3002"
+  - m_fieldName: Timer
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - You can come back to meet me after you finish.
+    - You can come back to meet me after you finish.
+    - "\u505A?\u4E4B\u5F8C\u53EF\u4EE5\u7FFB?\u6435\u6211\u5440\u3002"
+    - "\u505A\u5B8C\u4E4B\u5F8C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u5440\u3002"
+  - m_fieldName: TimerActive
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - '{:Timer} seconds left'
+    - '{:Timer} seconds left'
+    - "\u4EF2\u6709{:Timer}\u79D2"
+    - "\u5269\u9918{:Timer}\u79D2"
+  - m_fieldName: Great
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Great! Thank you.
+    - Great! Thank you.
+    - "\u505A\u5F97\u5E7E\u597D\u5440\uFF01\u5514\u8A72\u66EC\u3002"
+    - "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u3002"
+  - m_fieldName: Nice
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - 'Nice. '
+    - 'Nice. '
+    - "\u505A\u5F97\u5514\u932F\u5440\u3002"
+    - "\u505A\u5F97\u4E0D\u932F\u5440\u3002"
+  m_nextLanguageID: 4
+  m_nextFieldID: 9

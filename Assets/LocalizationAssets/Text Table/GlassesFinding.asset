@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9839ff07fc3994aa17c3c6b5ecfd28, type: 3}
+  m_Name: GlassesFinding
+  m_EditorClassIdentifier: 
+  m_languageKeys:
+  - Default
+  - en
+  - zh-Hans
+  - zh-HK
+  m_languageValues: 00000000010000000200000003000000
+  m_fieldKeys: 010000000200000003000000040000000500000006000000
+  m_fieldValues:
+  - m_fieldName: offer
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - I want to read the newspaper but I can't find my glasses. Can you help me find
+      it?
+    - I want to read the newspaper but I can't find my glasses. Can you help me find
+      it?
+    - "\u60F3\u770B\u5831\u7D19\u624D\u767C\u73FE\u773C\u93E1\u4E0D\u898B\u4E86\uFF0C\u600E\u9EBC\u627E\u90FD\u627E\u4E0D\u5230\uFF0C\u4F60\u53EF\u4E0D\u53EF\u4EE5\u5E6B\u6211\u627E\u4E00\u4E0B\u5440\uFF1F"
+    - "\u60F3\u7747\u5831\u7D19\u5148?\u5514\u898B\u773C\u93E1\uFF0C\u6435\u6975\u90FD\u6435\u5514\u5230\u3002\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u6211\u6435\u4E0B\u5440?"
+  - m_fieldName: Condition 10_Active_DialogueText
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Excellent! Thanks for your helping. I can read newspaper now, you are really
+      helpful!
+    - Excellent! Thanks for your helping. I can read newspaper now, you are really
+      helpful!
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u627E\u56DE\u773C\u93E1\u3002\u6211\u73FE\u5728\u53EF\u4EE5\u770B\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u7684\u5E6B\u4E86\u5927\u5FD9\uFF01"
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u591A\u8B1D\u4F60\u5E6B\u6211\u6435\u8FD4\u526F\u773C\u93E1\u3002\u6211\u800C\u5BB6\u6709\u5F97\u7747\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u4FC2\u597D\u5E6B\u624B\u5440\uFF01"
+  - m_fieldName: dirt>=TF_True_Hud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Give the glasses to your grandma
+    - Give the glasses to your grandma
+    - "\u628A\u773C\u93E1\u62FF\u7D66\u963F\u5A46"
+    - "?\u526F\u773C\u93E1\u6BD4\u963F\u5A46"
+  - m_fieldName: Condition 8_Active_DialogueText
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - It is not my glasses, but thank you.
+    - It is not my glasses, but thank you.
+    - "\u9019\u500B\u4E0D\u662F\u6211\u90A3\u526F\u773C\u93E1\u5462\uFF0C\u4E0D\u904E\u9084\u662F\u8B1D\u8B1D\u4F60\u3002"
+    - "\u5462\u500B\u5514\u4FC2\u6211\u526F\u773C\u93E1\u558E\uFF0C\u4E0D\u904E\u90FD\u5514\u8A72\u66EC\u4F60\u3002"
+  - m_fieldName: Active_HUD
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Help grandma find her glasses.
+    - Help grandma find her glasses.
+    - "\u5E6B\u963F\u5A46\u627E\u5979\u7684\u773C\u93E1"
+    - "\u5E6B\u963F\u5A46?\u773C\u93E1"
+  - m_fieldName: 1.4Active_Dialogue
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Strange, I was using them yesterday for reading newspaper.
+    - Strange, I was using them yesterday for reading newspaper.
+    - "\u5947\u602A\uFF0C\u6211\u6628\u5929\u9084\u7528\u5B83\u4F86\u8B80\u5831\u7D19\u7684"
+    - "\u5947\u602A\uFF0C\u7434\u65E5\u5148\u7528\u4F62\u8B80\u5831\u7D19\u5676"
+  m_nextLanguageID: 4
+  m_nextFieldID: 7

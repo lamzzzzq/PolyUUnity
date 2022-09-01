@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialogue_zh-HK
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: zh-HK
+  m_SharedData: {fileID: 11400000, guid: aac95234d71834a4e87ff4b6ca7aac58, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11230126080
+    m_Localized: "\u6B61\u8FCE\u4F60\uFF01\n\n\u591A\u8B1D\u4F60\u5605\u53C3\u8207\uFF01\u4ECA\u65E5\u4F60\u6703\u55BA\u5C4B\u4F01\uFF0C\u8ACB\u55BA\u5C4B\u4F01\u4EBA\u9700\u8981\u5605\u6642\u5019\u5E6B\u4E0B\u624B\u5440\u3002\u5B8C\u6210\u6BCF\u4E00\u500B\u4EFB\u52D9\u4E4B\u5F8C\uFF0C\u4F60\u5C07\u6703\u5F97\u5230\u76F8\u61C9\u5605\u734E\u52F5\u7A4D\u5206\uFF0C\u8ACB\u722D\u53D6\u53BB\u651E\u591A\u5572\u7A4D\u5206\u5566\uFF01\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 862367653888
+    m_Localized: "\u660E\u767D\uFF0C\u958B\u59CB\u904A\u6232\uFF01\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007574458368
+    m_Localized: "\u6B61\u8FCE\uFF01"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

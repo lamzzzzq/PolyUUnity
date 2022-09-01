@@ -6,6 +6,7 @@ using PixelCrushers;
 public class NPCTalk : MonoBehaviour
 {
     public GameObject gameObject;
+    public GameObject button;
     
 
     public void StartConversationWithNPC()
@@ -13,6 +14,9 @@ public class NPCTalk : MonoBehaviour
         //PixelCrushers.QuestMachine.QuestGiver.Start
 
         gameObject.GetComponent<PixelCrushers.QuestMachine.QuestGiver>().StartDialogueWithPlayer();   //为什么这么写？
+
+        button.SetActive(false);
+
 
     }
 

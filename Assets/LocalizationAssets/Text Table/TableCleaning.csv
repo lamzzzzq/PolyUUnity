@@ -1,0 +1,11 @@
+Field,Default,en,zh-Hans,zh-HK
+offer,Could you help clean the table and floor? You can come back to meet me after you finish.,Could you help clean the table and floor? You can come back to meet me after you finish.,你可唔可以幫手抹下張?同埋清潔地板呀？做?之後可以翻?搵我呀。,你可不可以幫忙抹一下餐桌然後清潔一下地板呀？做完之後可以回來找我呀。
+activeHud,Let help mom prepare the sandwich breakfast! ,Let help mom prepare the sandwich breakfast!,讓我們幫媽媽完成三明治吧！,讓我們幫媽媽完成三明治吧！
+cleanTheTable_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 10_Active_DialogueText,Excellent! Thanks for your helping.,Excellent! Thanks for your helping.,做得非常好！唔該曬你幫我手呀。,做得非常好！謝謝你幫我忙呀。
+timerTableCleaning_Active_Hud,{:Timer} seconds left,{:Timer} seconds left,仲有{:Timer}秒,還有{:Timer}秒
+dirt>=TF_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 8_Active_DialogueText,Great! Thank you.,Great! Thank you.,做得幾好呀！唔該曬。,做得很好呀！謝謝。
+dirt<=TF_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 9_Active_DialogueText,Nice.,Nice.,做得唔錯呀。,做的不錯了！
+Title,Clean the Table and Floor,Clean the Table and Floor,抹?；掃地,抹?；掃地

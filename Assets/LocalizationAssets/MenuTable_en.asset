@@ -50,5 +50,9 @@ MonoBehaviour:
     m_Localized: Make!
     m_Metadata:
       m_Items: []
+  - m_Id: 19244958353334272
+    m_Localized: Talk
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

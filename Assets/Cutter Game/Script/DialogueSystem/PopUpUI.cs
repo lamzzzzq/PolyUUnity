@@ -17,6 +17,12 @@ public class PopUpUI : MonoBehaviour
     List<string> textList = new List<string>();
 
 
+    public GameObject popUpArrow;
+    public PopUpArrow pUArrow;
+
+    public bool isOtherOperation = true;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -24,6 +30,7 @@ public class PopUpUI : MonoBehaviour
     }
     private void OnEnable()
     {
+
         textLable.text = textList[index];
         index++;
     }
@@ -31,17 +38,37 @@ public class PopUpUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A)&& index == textList.Count)
+        if (isOtherOperation == true)
         {
-            gameObject.SetActive(false);
-            index = 0;
-            return;
-        }
+            
+            if (Input.GetKeyDown(KeyCode.U) && index == textList.Count)
+            {
+                gameObject.SetActive(false);
+                index = 0;
+                return;
+            }
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            textLable.text = textList[index];
-            index++;
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                if (index == 4 || index == 5 || index == 6 || index == 7 || index == 8)
+                {
+                    if (!isOtherOperation)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        isOtherOperation = false;
+                    }
+                }
+                popUpArrow.SetActive(true);
+                textLable.text = textList[index];
+                index++;
+            }
+
+            //当index等于某个数，activate gameObject（就是UI），且bool为真（bool为假就不给用户按键翻页，所以bool判断写在外面）
+
+
         }
     }
 

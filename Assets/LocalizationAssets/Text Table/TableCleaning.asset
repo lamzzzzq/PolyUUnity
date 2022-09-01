@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9839ff07fc3994aa17c3c6b5ecfd28, type: 3}
+  m_Name: TableCleaning
+  m_EditorClassIdentifier: 
+  m_languageKeys:
+  - Default
+  - en
+  - zh-Hans
+  - zh-HK
+  m_languageValues: 00000000010000000200000003000000
+  m_fieldKeys: 02000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+  m_fieldValues:
+  - m_fieldName: offer
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Could you help clean the table and floor? You can come back to meet me after
+      you finish.
+    - Could you help clean the table and floor? You can come back to meet me after
+      you finish.
+    - "\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u62B9\u4E0B\u5F35?\u540C\u57CB\u6E05\u6F54\u5730\u677F\u5440\uFF1F\u505A?\u4E4B\u5F8C\u53EF\u4EE5\u7FFB?\u6435\u6211\u5440\u3002"
+    - "\u4F60\u53EF\u4E0D\u53EF\u4EE5\u5E6B\u5FD9\u62B9\u4E00\u4E0B\u9910\u684C\u7136\u5F8C\u6E05\u6F54\u4E00\u4E0B\u5730\u677F\u5440\uFF1F\u505A\u5B8C\u4E4B\u5F8C\u53EF\u4EE5\u56DE\u4F86\u627E\u6211\u5440\u3002"
+  - m_fieldName: activeHud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - 'Let help mom prepare the sandwich breakfast! '
+    - Let help mom prepare the sandwich breakfast!
+    - "\u8B93\u6211\u5011\u5E6B\u5ABD\u5ABD\u5B8C\u6210\u4E09\u660E\u6CBB\u5427\uFF01"
+    - "\u8B93\u6211\u5011\u5E6B\u5ABD\u5ABD\u5B8C\u6210\u4E09\u660E\u6CBB\u5427\uFF01"
+  - m_fieldName: cleanTheTable_True_Hud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Return to meet your mom.
+    - Return to meet your mom.
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+  - m_fieldName: Condition 10_Active_DialogueText
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Excellent! Thanks for your helping.
+    - Excellent! Thanks for your helping.
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u5440\u3002"
+    - "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u5FD9\u5440\u3002"
+  - m_fieldName: timerTableCleaning_Active_Hud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - '{:Timer} seconds left'
+    - '{:Timer} seconds left'
+    - "\u4EF2\u6709{:Timer}\u79D2"
+    - "\u9084\u6709{:Timer}\u79D2"
+  - m_fieldName: dirt>=TF_True_Hud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Return to meet your mom.
+    - Return to meet your mom.
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+  - m_fieldName: Condition 8_Active_DialogueText
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Great! Thank you.
+    - Great! Thank you.
+    - "\u505A\u5F97\u5E7E\u597D\u5440\uFF01\u5514\u8A72\u66EC\u3002"
+    - "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u3002"
+  - m_fieldName: dirt<=TF_True_Hud
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Return to meet your mom.
+    - Return to meet your mom.
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+    - "\u5411\u5ABD\u5ABD\u532F\u5831\u3002"
+  - m_fieldName: Condition 9_Active_DialogueText
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Nice.
+    - Nice.
+    - "\u505A\u5F97\u5514\u932F\u5440\u3002"
+    - "\u505A\u7684\u4E0D\u932F\u4E86\uFF01"
+  - m_fieldName: Title
+    m_keys: 00000000010000000200000003000000
+    m_values:
+    - Clean the Table and Floor
+    - Clean the Table and Floor
+    - "\u62B9?\uFF1B\u6383\u5730"
+    - "\u62B9?\uFF1B\u6383\u5730"
+  m_nextLanguageID: 4
+  m_nextFieldID: 12

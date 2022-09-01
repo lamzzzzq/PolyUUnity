@@ -1,0 +1,9 @@
+Field,Default,en,zh-Hans,zh-HK
+offer,Could you help wash the dishes?,Could you help wash the dishes?,你可唔可以幫手洗??碗呀？,你可不可以幫忙洗一下碗呀？
+Active_HUD,Dish Washing,Dish Washing,清洗盤子,清洗盤子
+Return,Return to meet your mom.,Return to meet your mom.,回去找媽媽,回去找媽媽
+Excelent,Excellent! Thanks for your helping.,Excellent! Thanks for your helping.,做得非常好！唔該曬你幫我手呀。,做得非常好！謝謝你幫我忙呀。
+Timer,You can come back to meet me after you finish.,You can come back to meet me after you finish.,做?之後可以翻?搵我呀。,做完之後可以回來找我呀。
+TimerActive,{:Timer} seconds left,{:Timer} seconds left,仲有{:Timer}秒,剩餘{:Timer}秒
+Great,Great! Thank you.,Great! Thank you.,做得幾好呀！唔該曬。,做得很好呀！謝謝。
+Nice,Nice. ,Nice. ,做得唔錯呀。,做得不錯呀。

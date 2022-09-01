@@ -1,0 +1,7 @@
+Field,Default,en,zh-Hans,zh-HK
+offer,I want to read the newspaper but I can't find my glasses. Can you help me find it?,I want to read the newspaper but I can't find my glasses. Can you help me find it?,想看報紙才發現眼鏡不見了，怎麼找都找不到，你可不可以幫我找一下呀？,想睇報紙先?唔見眼鏡，搵極都搵唔到。你可唔可以幫我搵下呀?
+Condition 10_Active_DialogueText,"Excellent! Thanks for your helping. I can read newspaper now, you are really helpful!","Excellent! Thanks for your helping. I can read newspaper now, you are really helpful!",做得非常好！謝謝你幫我找回眼鏡。我現在可以看報紙啦，你真的幫了大忙！,做得非常好！多謝你幫我搵返副眼鏡。我而家有得睇報紙啦，你真係好幫手呀！
+dirt>=TF_True_Hud,Give the glasses to your grandma,Give the glasses to your grandma,把眼鏡拿給阿婆,?副眼鏡比阿婆
+Condition 8_Active_DialogueText,"It is not my glasses, but thank you.","It is not my glasses, but thank you.",這個不是我那副眼鏡呢，不過還是謝謝你。,呢個唔係我副眼鏡喎，不過都唔該曬你。
+Active_HUD,Help grandma find her glasses.,Help grandma find her glasses.,幫阿婆找她的眼鏡,幫阿婆?眼鏡
+1.4Active_Dialogue,"Strange, I was using them yesterday for reading newspaper.","Strange, I was using them yesterday for reading newspaper.",奇怪，我昨天還用它來讀報紙的,奇怪，琴日先用佢讀報紙噶

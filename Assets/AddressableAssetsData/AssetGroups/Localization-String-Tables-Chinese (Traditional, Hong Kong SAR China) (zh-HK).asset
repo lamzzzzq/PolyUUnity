@@ -24,6 +24,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-zh-HK
     - Preload
+  - m_GUID: ef5ed8add019ed840bc7f06ef3e7e9e9
+    m_Address: Dialogue_zh-HK
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-HK
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: fbfc8f4724b756f4ab4cba718143da1d, type: 2}
   m_SchemaSet:

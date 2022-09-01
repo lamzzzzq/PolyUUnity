@@ -1,0 +1,15 @@
+Field,Default,en,zh-Hans,zh-HK
+offer,"I'm feeling a bit under the weather. Could you help me make four sandwiches as breakfast?
+","I'm feeling a bit under the weather. Could you help me make four sandwiches as breakfast?
+","我有?唔舒服，你可唔可以幫手整4個三文治當早餐呀？
+
+",我有點不舒服，你可不可以幫忙做4個三文治當早餐呀？
+activeHud,Let help mom prepare the sandwich breakfast! ,Let help mom prepare the sandwich breakfast!,讓我們幫媽媽完成三明治吧！,讓我們幫媽媽完成三明治吧！
+cleanTheTable_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 10_Active_DialogueText,Thank you so much for preparing such a nice breakfast. It looks so great!,Thank you so much for preparing such a nice breakfast. It looks so great!,多謝你預備左咁豐富?早餐俾我呀，睇落仲好好食添！,謝謝你準備了這麼豐富的早餐給我呀，而且看上去很好吃！
+timerTableCleaning_Active_Hud,{:Timer} seconds left,{:Timer} seconds left,仲有{:Timer}秒,還有{:Timer}秒
+dirt>=TF_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 8_Active_DialogueText,Thank you so much for preparing a breakfast! It looks good.,Great! Thank you.,多謝你預備左早餐俾我呀，睇落幾好喎！,謝謝你準備了早餐給我呀，看上去挺好呀！
+dirt<=TF_True_Hud,Return to meet your mom.,Return to meet your mom.,向媽媽匯報。,向媽媽匯報。
+Condition 9_Active_DialogueText,Thank you so much for preparing a breakfast!,Thank you so much for preparing a breakfast!,多謝你預備?早餐俾我呀,謝謝你準備了早餐給我呀。
+title,Preparing breakfast ,Preparing breakfast ,準備早餐,準備早餐

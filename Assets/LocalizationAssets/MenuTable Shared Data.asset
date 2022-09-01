@@ -47,6 +47,10 @@ MonoBehaviour:
     m_Key: Make
     m_Metadata:
       m_Items: []
+  - m_Id: 19244958353334272
+    m_Key: Talk
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

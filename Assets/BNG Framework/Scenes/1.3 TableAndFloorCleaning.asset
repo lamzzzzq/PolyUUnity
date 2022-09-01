@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8219796002017902430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Return to meet your mom.
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-7447100736102347947
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,7 +58,7 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &-6053996848360904284
+--- !u!114 &-5040549944918739384
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,15 +67,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
-  m_Name: QuestStateQuestCondition
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_requiredQuestID:
-    m_text: 1.2 DishWashing
+  m_contentID: -1
+  m_bodyText:
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_requiredState: 3
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 2
 --- !u!114 &-4855057477583727319
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,20 +93,7 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
---- !u!114 &-4536241429303686498
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab4974ca2ca315f4791bd0e30b1300df, type: 3}
-  m_Name: TimerQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 1
---- !u!114 &-3640974595496633621
+--- !u!114 &-4590438771081617232
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,10 +107,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Great! Thank you.
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 9
+--- !u!114 &-4536241429303686498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4974ca2ca315f4791bd0e30b1300df, type: 3}
+  m_Name: TimerQuestCondition
+  m_EditorClassIdentifier: 
+  m_counterIndex: 1
 --- !u!114 &-2885128889315209789
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,6 +203,24 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_state: 0
+--- !u!114 &-2030166744481679216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 4
 --- !u!114 &-1924606068395148843
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,12 +286,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: "Could you also help clean the table and floor? You can use a dishcloth
-      to clean all the dirt on the table; use a vacuum cleaner to clean 10 dirt on
-      the floor.\r"
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 2
 --- !u!114 &-1375119685954249314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,26 +303,6 @@ MonoBehaviour:
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
   m_luaCode: Variable["Point"] = Variable["Point"] + 10
---- !u!114 &-934992096647688926
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "Could you also help clean the table and floor? You can use a dishcloth
-      to clean all the dirt on the table; use a vacuum cleaner to clean 10 dirt on
-      the floor.\r"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-617844006469743857
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,10 +351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Return to meet your mom.
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 7
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,9 +402,7 @@ MonoBehaviour:
     m_minConditionCount: 0
     m_numTrueConditions: 0
   m_offerConditionSet:
-    m_conditionList:
-    - {fileID: -6053996848360904284}
-    - {fileID: 6433347668332008884}
+    m_conditionList: []
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0
@@ -453,8 +429,8 @@ MonoBehaviour:
     - m_contentList: []
     - m_contentList: []
     - m_contentList:
-      - {fileID: 6381927027074839927}
       - {fileID: 6768681046520827685}
+      - {fileID: 8142739699169536287}
   - m_actionList: []
     m_categorizedContentList:
     - m_contentList: []
@@ -590,7 +566,7 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 170
-      y: 103
+      y: 101.93617
       width: 120
       height: 48
   - m_id:
@@ -628,7 +604,7 @@ MonoBehaviour:
       - m_contentList: []
       - m_contentList: []
       - m_contentList:
-        - {fileID: 6270919367996313482}
+        - {fileID: -2030166744481679216}
     m_conditionSet:
       m_conditionList:
       - {fileID: -2885128889315209789}
@@ -669,8 +645,7 @@ MonoBehaviour:
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList:
-        - {fileID: -934992096647688926}
-        - {fileID: 1485602582340793645}
+        - {fileID: -5040549944918739384}
       - m_contentList: []
       - m_contentList:
         - {fileID: 5482932838971668884}
@@ -688,8 +663,8 @@ MonoBehaviour:
     m_childIndexList: 0300000004000000
     m_canvasRect:
       serializedVersion: 2
-      x: 255
-      y: 181
+      x: 250.52176
+      y: 179.19704
       width: 120
       height: 48
   - m_id:
@@ -737,7 +712,7 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 171
-      y: 247
+      y: 245.93619
       width: 120
       height: 48
   - m_id:
@@ -760,7 +735,10 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
@@ -771,7 +749,7 @@ MonoBehaviour:
       - m_contentList: []
       - m_contentList: []
       - m_contentList:
-        - {fileID: -8219796002017902430}
+        - {fileID: -4590438771081617232}
     m_conditionSet:
       m_conditionList:
       - {fileID: 2649957919463990677}
@@ -953,7 +931,7 @@ MonoBehaviour:
       - {fileID: 7932044358375898548}
       m_categorizedContentList:
       - m_contentList:
-        - {fileID: -3640974595496633621}
+        - {fileID: 6907603156861880985}
       - m_contentList: []
       - m_contentList: []
     - m_actionList:
@@ -973,8 +951,8 @@ MonoBehaviour:
     m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 173.06189
-      y: 311.47864
+      x: 170.14926
+      y: 312.4495
       width: 120
       height: 48
   - m_id:
@@ -1005,7 +983,7 @@ MonoBehaviour:
       - {fileID: 67934728615147201}
       m_categorizedContentList:
       - m_contentList:
-        - {fileID: 5192800360666860460}
+        - {fileID: 4265538973399035793}
       - m_contentList: []
       - m_contentList: []
     - m_actionList:
@@ -1025,7 +1003,7 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 323.6316
+      x: 324.50116
       y: 310.73245
       width: 120
       height: 48
@@ -1168,27 +1146,6 @@ MonoBehaviour:
     m_textTableFieldID: 0
   m_count: 0
   m_imageNameProxy: 
---- !u!114 &1485602582340793645
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5acd9aaaa3b44d5419945259bebbe84a, type: 3}
-  m_Name: IconQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_image: {fileID: 21300000, guid: ca7f1ad4b14c67243b978286f886ddfb, type: 3}
-  m_caption:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_count: 0
-  m_imageNameProxy: 
 --- !u!114 &2649957919463990677
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1259,10 +1216,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Excellent! Thanks for your helping.
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 5
 --- !u!114 &3571130964152303276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1331,7 +1288,7 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &5192800360666860460
+--- !u!114 &4265538973399035793
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1345,10 +1302,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: Nice.
+    m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 10
 --- !u!114 &5482932838971668884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1363,66 +1320,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: '{:Timer} seconds left'
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &6270919367996313482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Return to meet your mom.
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &6381927027074839927
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_useQuestTitle: 1
-  m_headingText:
     m_text: 
     m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
---- !u!114 &6433347668332008884
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
-  m_Name: QuestStateQuestCondition
-  m_EditorClassIdentifier: 
-  m_requiredQuestID:
-    m_text: 1.2 DishWashing
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_requiredState: 2
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 6
 --- !u!114 &6495846066052784710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1459,6 +1360,24 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &6907603156861880985
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 8
 --- !u!114 &7097615807221025940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1514,6 +1433,26 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_questIndicatorState: 5
+--- !u!114 &8142739699169536287
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
+  m_Name: HeadingTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_useQuestTitle: 0
+  m_headingText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 11400000, guid: 49897f14c58aa644c91e0ec2d321e984, type: 2}
+    m_textTableFieldID: 11
+  m_headingLevel: 1
 --- !u!114 &8612941653988449670
 MonoBehaviour:
   m_ObjectHideFlags: 1
