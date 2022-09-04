@@ -15,6 +15,9 @@ public class MoveCookedMeat : MonoBehaviour
 
     public GameObject cookedMeat;
 
+
+    public GameObject addButton;
+
     //
     public Color colorToTurnTo;
     //public Color defaultColor;
@@ -26,7 +29,11 @@ public class MoveCookedMeat : MonoBehaviour
         audioData = GetComponent<AudioSource>();
         
         meatMat = GetComponent<MeshRenderer>();
+
+        //addButton = GameObject.Find("MeatAddButton");
         StartCoroutine(cookTimer());
+
+        
 
         ps = GameObject.Find("_meatPar").GetComponent<ParticleSystem>();
         ps.Play();
@@ -59,15 +66,15 @@ public class MoveCookedMeat : MonoBehaviour
     IEnumerator cookTimer()
     {
         yield return new WaitForSeconds(10);
+
         foodValue = 1000;
+        //addButton.SetActive(true);
         if(cooking == true)
         {   
             audioData.Play();
             meatMat.material.color = colorToTurnTo;
             ps.Pause();
             ps.Clear();
-            
-            
         }
 
     }

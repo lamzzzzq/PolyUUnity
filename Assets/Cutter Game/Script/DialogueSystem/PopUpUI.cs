@@ -84,4 +84,7 @@ public class PopUpUI : MonoBehaviour
             textList.Add(line);
         }
     }
+
+
+
 }

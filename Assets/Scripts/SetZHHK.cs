@@ -14,7 +14,7 @@ public class SetZHHK : MonoBehaviour
     }
     private void OnClick()
     {
-        DialogueManager.SetLanguage("zh-HK");
-        Debug.Log("Set-zh-HK");
+        DialogueManager.SetLanguage("zh-Hans");
+        Debug.Log("Set-zh-HansWritten");
     }
 }

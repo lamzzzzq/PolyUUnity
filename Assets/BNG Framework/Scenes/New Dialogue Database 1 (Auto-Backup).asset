@@ -53,6 +53,18 @@ MonoBehaviour:
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-Hans
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-HK
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     - title: Display Name
       value: Lucas
       type: 0
@@ -83,6 +95,18 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-Hans
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-HK
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
     - title: Display Name
       value: Younger Sister
       type: 0
@@ -113,6 +137,22 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-Hans
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-HK
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
     - title: Guid
       value: cc3d7cec-3f0a-4aea-9998-c5081df49da4
       type: 0
@@ -139,6 +179,22 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-Hans
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-HK
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
     - title: Guid
       value: 00ccd9ab-0259-44e5-b5b9-4e414e6b7f47
       type: 0
@@ -286,11 +342,11 @@ MonoBehaviour:
       - title: Title
         value: START
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -302,27 +358,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: None()
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: 
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 326fda54-f581-4a54-824f-48a2426da563
-        type: 0
-        typeString: 
       - title: zh-Hans
         value: 
         type: 4
@@ -331,6 +379,14 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 326fda54-f581-4a54-824f-48a2426da563
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -386,27 +442,27 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh
-        value: "\u5481\u6158\uFF1F\u5481\u4F60\u670B\u53CB\u4E00\u5B9A\u597D\u5B32\u5566\u3002\u4E0D\u904E\u5514\u4F7F\u558A\uFF0C\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\uFF0C\u5E0C\u671B\u4F60\u670B\u53CB\u53EF\u4EE5\u539F\u8AD2\u4F60\u5566\u3002"
-        type: 4
-        typeString: CustomFieldType_Localization
       - title: en
         value: "It seems that you feel really sorry for broking your frend\u2019s
           robot. But it was not intentional, right? Let me help you fix it."
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 4c118e92-0f6c-4583-bdc9-58e7daad2633
-        type: 0
-        typeString: 
       - title: zh-Hans
-        value: 
+        value: "\u592A\u6158\u4E86\uFF0C\u4F60\u670B\u53CB\u4E00\u5B9A\u5F88\u751F\u6C23\uFF0C\u6211\u5E6B\u4F60\u4E00\u9F4A\u4FEE\u597D\u5B83\u5427\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u597D\u60E8\u5440\uFF0C\u4F60\u670B\u53CB\u4E00\u5B9A\u597D\u5B32\u5566\u3002\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 4c118e92-0f6c-4583-bdc9-58e7daad2633
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -462,27 +518,27 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
       - title: en
         value: "I've just told my friend that I broke her favoirte robot. She said
           she would longer talk to me. It's all my fault.\r"
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 509828d8-b915-4bb6-b7d7-c26fe5c88cb1
-        type: 0
-        typeString: 
       - title: zh-Hans
-        value: 
+        value: "\u6211\u525B\u525B\u8DDF\u6211\u670B\u53CB\u8AAA\uFF0C\u6211\u628A\u5979\u6700\u559C\u6B61\u7684\u6A5F\u68B0\u4EBA\u5F04\u58DE\u4E86\uFF0C\u5979\u8AAA\u4EE5\u5F8C\u90FD\u4E0D\u8DDF\u6211\u8AAA\u8A71\u4E86\uFF0C\u90FD\u662F\u6211\u7684\u932F\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u200B\u6211\u5571\u5571\u540C\u6211\u500B\u670B\u53CB\u8B1B\uFF0C\u6211\u6574\u721B\u5497\u4F62\u6700\u937E\u610F\u5605\u6A5F\u68B0\u4EBA\uFF0C\u4F62\u8A71\u4EE5\u5F8C\u90FD\u5514\u540C\u6211\u8B1B\u5622\uFF0C\u90FD\u4FC2\u6211\u5605\u932F\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 509828d8-b915-4bb6-b7d7-c26fe5c88cb1
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -525,11 +581,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -541,36 +597,36 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u807D\u843D\u4F60\u4F3C\u4E4E\u56E0\u70BA\u6574\u58DE\u5497\u4F60\u670B\u53CB\u5605\u6A5F\u68B0\u4EBA\u800C\u89BA\u5F97\u597D\u5167\u759A\u5643\u3002\u4F46\u4F60\u5514\u4FC2\u6545\u610F\u35CE\u561B\uFF0C\u4FC2\u54AA\uFF1F\u5514\u4F7F\u64D4\u5FC3\uFF0C\u4E0D\u5982\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\uFF0C\u5E0C\u671B\u4F60\u670B\u53CB\u53EF\u4EE5\u539F\u8AD2\u4F60\uFF0C\u597D\u5514\u597D\uFF1F"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: That's really sad. Your friend must be really angry. Let me help you
           fix it.
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: d5bcd738-a5a9-4bb0-8dcc-8077767ab376
-        type: 0
-        typeString: 
       - title: zh-Hans
-        value: 
+        value: "\u807D\u8D77\u4F86\u4F60\u4F3C\u4E4E\u56E0\u70BA\u5F04\u58DE\u4E86\u4F60\u670B\u53CB\u7684\u6A5F\u68B0\u4EBA\u800C\u89BA\u5F97\u5F88\u5167\u759A\u5462\u3002\u4F46\u4F60\u4E0D\u662F\u6545\u610F\u7684\u561B\uFF0C\u5C0D\u4E0D\u5C0D\uFF1F\u4E0D\u5982\u6211\u5E6B\u4F60\u4E00\u9F4A\u4FEE\u597D\u5B83\u5427\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u807D\u843D\u4F60\u4F3C\u4E4E\u56E0\u70BA\u6574\u58DE\u5497\u4F60\u670B\u53CB\u5605\u6A5F\u68B0\u4EBA\u800C\u89BA\u5F97\u597D\u5167\u759A\u5643\u3002\u4F46\u4F60\u5514\u4FC2\u6545\u610F\u35CE\u561B\uFF0C\u4FC2\u54AA\uFF1F\u4E0D\u5982\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: d5bcd738-a5a9-4bb0-8dcc-8077767ab376
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -626,26 +682,26 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
       - title: en
         value: 'You were so careless. Your friend must be really angry about that. '
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u4F60\u9019\u9EBC\u4E0D\u5C0F\u5FC3\u5440\uFF1F\u4F60\u670B\u53CB\u4E00\u5B9A\u5F88\u751F\u6C23\u5440\u3002\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u4F60\u5481\u5514\u5C0F\u5FC3\u35CE\uFF1F\u4F60\u670B\u53CB\u4E00\u5B9A\u597D\u5B32\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: d32e1971-d199-4622-9b4e-66b4424367da
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -676,11 +732,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -692,35 +748,35 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u591A\u8B1D\u4F60\u5481\u8B1B\u3002\u4FC2\u5440\uFF0C\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u771F\u4FC2\u592A\u597D\u5566\uFF01"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: I just broke it by accident. It will be good if you can help me.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u6211\u4E0D\u662F\u6545\u610F\u7684\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u4FEE\u597D\u5B83\u5C31\u592A\u597D\u5566\u3002\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u6211\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u592A\u597D\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: 22078c62-e8d9-4248-8364-4de438597c01
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -751,11 +807,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -767,36 +823,36 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u4FC2\u5440\uFF0C\u4F62\u597D\u5B32\u6211\u5440\uFF0C\u4F46\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u771F\u4FC2\u592A\u597D\u5566\u3002"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: Thank you for saying that. Yes, I just broke it by accident. It will
           be great if you can help me!
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 39c5880c-4e7e-4f0d-bfc1-6f531a658172
-        type: 0
-        typeString: 
       - title: zh-Hans
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u80FD\u9019\u9EBC\u8AAA\uFF0C\u5C0D\u5440\uFF0C\u6211\u53EA\u662F\u4E0D\u5C0F\u5FC3\u5F04\u58DE\uFF0C\u4E0D\u662F\u6545\u610F\u7684\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u4FEE\u597D\u5B83\u5C31\u771F\u7684\u592A\u597D\u5566\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u591A\u8B1D\u4F60\u5481\u8B1B\u3002\u4FC2\u5440\uFF0C\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u771F\u4FC2\u592A\u597D\u5566\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 39c5880c-4e7e-4f0d-bfc1-6f531a658172
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -819,7 +875,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 192
-        y: 176
+        y: 175
         width: 160
         height: 30
     - id: 9
@@ -827,11 +883,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -843,35 +899,35 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u6211\u800C\u5BB6\u771F\u4FC2\u5514\u77E5\u9EDE\u7B97\u5440\u3002"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: I really don't know what to do now.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u6211\u73FE\u5728\u771F\u7684\u4E0D\u77E5\u9053\u600E\u9EBC\u8FA6\u5440\u3002\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u6211\u800C\u5BB6\u771F\u4FC2\u5514\u77E5\u9EDE\u7B97\u5440\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: 66fce9b4-fcb4-4cb6-b6ce-2e3d037fe664
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -902,11 +958,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -918,35 +974,35 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "You're welcome, I\u2019m glad I could help!"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: "You're welcome, I\u2019m glad I could help!"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u6652\u5BA2\u6C23\uFF0C\u6211\u90FD\u597D\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: e3503895-7cb0-4d04-b07e-e1c72971d85b
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -976,11 +1032,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -992,35 +1048,35 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "You're welcome, I\u2019m glad I could help!"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: "You're welcome, I\u2019m glad I could help!"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u6652\u5BA2\u6C23\uFF0C\u6211\u90FD\u597D\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: 0f2f8d2a-605d-4756-a6a0-6ce40fd197f3
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1075,26 +1131,26 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
       - title: en
         value: Let me help you fix it.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u6211\u5E6B\u4F60\u4E00\u9F4A\u4FEE\u597D\u5B83\u5427\u3002\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\u5566\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: 0a0e9489-4d20-403d-a72f-caf846b865f6
         type: 0
-        typeString: 
-      - title: zh-Hans
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -1171,11 +1227,11 @@ MonoBehaviour:
       - title: Title
         value: START
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -1187,27 +1243,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: None()
         type: 0
-        typeString: 
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: 
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: a4095629-cc1b-4996-a655-dce74574f82f
-        type: 0
-        typeString: 
       - title: zh-Hans
         value: 
         type: 4
@@ -1216,6 +1264,14 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: a4095629-cc1b-4996-a655-dce74574f82f
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1238,7 +1294,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 107
-        y: 48
+        y: 46.684204
         width: 160
         height: 30
     - id: 1
@@ -1275,22 +1331,22 @@ MonoBehaviour:
         value: Thank you for your companion. I am feeling better now.
         type: 4
         typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u591A\u4E86\uFF01\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u8A72\u6652\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u597D\u591A\uFF01\r"
+        type: 4
+        typeString: CustomFieldType_Localization
       - title: Guid
         value: 3580c846-dcf8-4f07-9eaf-b6d56c79b539
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh-Hans
+      - title: Response Menu Sequence
         value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: "\u591A\u8B1D\u4F60\u7684\u966A\u4F34\u3002\u6211\u5DF2\u7D93\u597D\u8FD4\u5566\u3002"
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1321,11 +1377,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 1
         type: 5
@@ -1337,35 +1393,35 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: "\u3010\u56DE\u8986\u53E5\u5B504\u3011"
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
-      - title: zh
-        value: "\u592A\u597D\u5566"
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
       - title: en
         value: That's great!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u592A\u597D\u5566\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u592A\u597D\u5566\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
         value: 908df5ab-1784-4d98-b869-506e97d0b7c2
         type: 0
-        typeString: 
-      - title: zh-Hans
-        value: "\u592A\u597D\u5566"
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: "\u592A\u597D\u5566"
-        type: 4
-        typeString: CustomFieldType_Localization
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 2
       isRoot: 0
       isGroup: 0
@@ -1462,18 +1518,10 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
       - title: en
         value: 
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: a7045b76-ee54-42a7-b846-20bd97aac9c0
-        type: 0
-        typeString: CustomFieldType_Text
       - title: zh-Hans
         value: 
         type: 4
@@ -1482,6 +1530,14 @@ MonoBehaviour:
         value: 
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: a7045b76-ee54-42a7-b846-20bd97aac9c0
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1542,18 +1598,22 @@ MonoBehaviour:
           mum said she feels a bit sick. Can you help take care of her?\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u6211\u800C\u5BB6\u8981\u53BB\u516C\u53F8\u8655\u7406\u5572\u7DCA\u6025\u5622\uFF0C\u9EDE\u77E5\u5481\u5571\u4F60\u5ABD\u54AA\u8A71\u4F62\u6709\u5572\u5514\u8212\u670D\uFF0C\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u7167\u9867\u4E0B\u4F62\u5440?\r"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u6211\u73FE\u5728\u8981\u53BB\u516C\u53F8\u8655\u7406\u4E00\u4E9B\u6025\u4E8B\uFF0C\u6C92\u60F3\u5230\u4F60\u5ABD\u5ABD\u8AAA\u5979\u6709\u9EDE\u4E0D\u8212\u670D\uFF0C\u4F60\u53EF\u4E0D\u53EF\u4EE5\u5E6B\u5FD9\u7167\u9867\u4E00\u4E0B\u5979\u5440?\r"
+        type: 4
+        typeString: CustomFieldType_Localization
       - title: Guid
         value: a86884a0-1534-4e10-ae88-f9da3dfb7325
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh-Hans
-        value: "\u6211\u73FE\u5728\u8981\u53BB\u516C\u53F8\u8655\u7406\u4E00\u4E9B\u6025\u4E8B\uFF0C\u6C92\u60F3\u5230\u4F60\u5ABD\u5ABD\u8AAA\u5979\u6709\u9EDE\u4E0D\u8212\u670D\uFF0C\u4F60\u53EF\u4E0D\u53EF\u4EE5\u5E6B\u5FD9\u7167\u9867\u4E00\u4E0B\u5979\u5440?\r"
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: "\u6211\u800C\u5BB6\u8981\u53BB\u516C\u53F8\u8655\u7406\u5572\u7DCA\u6025\u5622\uFF0C\u9EDE\u77E5\u5481\u5571\u4F60\u5ABD\u54AA\u8A71\u4F62\u6709\u5572\u5514\u8212\u670D\uFF0C\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u7167\u9867\u4E0B\u4F62\u5440?\r"
-        type: 4
-        typeString: CustomFieldType_Localization
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1609,18 +1669,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
       - title: en
         value: "No problem! I will stay at home and take care of mum.\r"
         type: 4
         typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 714d4c56-964a-4802-82e5-aadcc6d70ce2
-        type: 0
-        typeString: CustomFieldType_Text
       - title: zh-Hans
         value: "\u6C92\u554F\u984C\u5440\uFF01\u6211\u6703\u7559\u5728\u5BB6\u88E1\u597D\u597D\u7167\u9867\u5979\u7684\u3002\r"
         type: 4
@@ -1629,6 +1681,14 @@ MonoBehaviour:
         value: "\u5187\u554F\u984C\u5440\uFF01\u6211\u6703\u7559\u55BA\u5C4B\u4F01\u597D\u597D\u5730\u7167\u9867\u4F62\u3002\r"
         type: 4
         typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 714d4c56-964a-4802-82e5-aadcc6d70ce2
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1700,18 +1760,22 @@ MonoBehaviour:
         value: Thank you for your help.
         type: 4
         typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u591A\u8B1D\u4F60\u5E6B\u624B"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\r\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\r"
+        type: 4
+        typeString: CustomFieldType_Localization
       - title: Guid
         value: b825d493-5fad-4463-8fe2-44170a6fafde
         type: 0
         typeString: CustomFieldType_Text
-      - title: zh-Hans
-        value: "\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\r"
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-HK
-        value: "\u591A\u8B1D\u4F60\u5E6B\u624B\r"
-        type: 4
-        typeString: CustomFieldType_Localization
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 4
       isRoot: 0
       isGroup: 0
@@ -1751,5 +1815,5 @@ MonoBehaviour:
     Item","value":"False","type":2,"typeString":"CustomFieldType_Boolean"}],"locationFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"}],"variableFields":[{"title":"Name","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Initial
     Value","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"}],"conversationFields":[{"title":"Title","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Actor","value":"0","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Conversant","value":"0","type":5,"typeString":"CustomFieldType_Actor"}],"dialogueEntryFields":[{"title":"Title","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Description","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Actor","value":"","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Conversant","value":"","type":5,"typeString":"CustomFieldType_Actor"},{"title":"Menu
     Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Dialogue
-    Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"en","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-Hans","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-HK","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"Guid","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Response
+    Text","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"en","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-Hans","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"zh-HK","value":"","type":4,"typeString":"CustomFieldType_Localization"},{"title":"Guid","value":"","type":0,"typeString":"CustomFieldType_Text"},{"title":"Response
     Menu Sequence","value":"","type":0,"typeString":"CustomFieldType_Text"}],"actorPrimaryFieldTitles":[],"itemPrimaryFieldTitles":[],"questPrimaryFieldTitles":[],"locationPrimaryFieldTitles":[],"variablePrimaryFieldTitles":[],"conversationPrimaryFieldTitles":[],"dialogueEntryPrimaryFieldTitles":[],"npcLineColor":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"pcLineColor":{"r":0.0,"g":0.0,"b":1.0,"a":1.0},"repeatLineColor":{"r":0.5,"g":0.5,"b":0.5,"a":1.0}}'
