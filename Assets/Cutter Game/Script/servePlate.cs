@@ -18,9 +18,11 @@ public class servePlate : MonoBehaviour
             {
                 rightMeal = true;
                 PixelCrushers.MessageSystem.SendMessage(this,"Got","Sandwich");
+                Debug.Log("Right");
             }else
             {
                 PixelCrushers.MessageSystem.SendMessage(this,"Got","FakeSandwich");
+                Debug.Log("Wrong");
             }
 
         }

@@ -8,7 +8,8 @@ public class Instanciate : MonoBehaviour
     //public Transform genPoint;
     public Transform cloneObj;
     public int foodValue;
-    public GameObject UIObject;
+    //public GameObject UIObject;
+    public PopUpUI popUpUI;
 
 
 
@@ -103,6 +104,7 @@ public class Instanciate : MonoBehaviour
         Instantiate(cloneObj, new Vector3(10.974f, 0.1f, GameFlow.plateZpos), Quaternion.identity);
         Debug.Log("Instantiate Burger Bottom");
         GameFlow.plateValue[GameFlow.plateNum] += foodValue;
+        popUpUI.isOtherOperation = true;
 
     }
 

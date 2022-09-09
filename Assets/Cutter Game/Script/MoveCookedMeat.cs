@@ -5,9 +5,8 @@ using BNG;
 
 public class MoveCookedMeat : MonoBehaviour
 {
-
     public AudioSource audioData;
-    private ParticleSystem ps;
+    //private ParticleSystem ps;
     public int foodValue = 0;
     private MeshRenderer meatMat;
     public bool cooking = true;
@@ -32,6 +31,7 @@ public class MoveCookedMeat : MonoBehaviour
 
         parentButton = GameObject.Find("Button Group");
 
+
         //addButton = GameObject.Find("MeatAddButton");
         StartCoroutine(cookTimer());
 
@@ -40,8 +40,8 @@ public class MoveCookedMeat : MonoBehaviour
         addButton = parentButton.transform.Find("MeatAddButton").gameObject;     
         
 
-        ps = GameObject.Find("_meatPar").GetComponent<ParticleSystem>();
-        ps.Play();
+        //ps = GameObject.Find("_meatPar").GetComponent<ParticleSystem>();
+        //ps.Play();
         
     }
 
@@ -69,9 +69,8 @@ public class MoveCookedMeat : MonoBehaviour
         {   
             audioData.Play();
             meatMat.material.color = colorToTurnTo;
-            ps.Pause();
-            ps.Clear();
+            //ps.Pause();
+            //ps.Clear();
         }
-
     }
 }

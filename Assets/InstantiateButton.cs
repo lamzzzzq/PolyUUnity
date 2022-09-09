@@ -12,7 +12,7 @@ public class InstantiateButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        movecookedmeat = GameObject.Find("LunchMeatSliceToInstantiate").GetComponent<MoveCookedMeat>();
+
     }
 
     // Update is called once per frame

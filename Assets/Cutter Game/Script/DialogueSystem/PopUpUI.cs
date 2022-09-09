@@ -14,7 +14,7 @@ public class PopUpUI : MonoBehaviour
 
     public int index;
 
-    List<string> textList = new List<string>();
+    public List<string> textList = new List<string>();
 
 
     public GameObject popUpArrow;
@@ -50,7 +50,7 @@ public class PopUpUI : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.U))
             {
-                if (index == 4 || index == 5 || index == 6 || index == 7 || index == 8)
+                if (index == 5 || index == 6 || index == 7)
                 {
                     if (!isOtherOperation)
                     {
