@@ -111,11 +111,25 @@ MonoBehaviour:
     - title: Initial Value
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
       typeString: 
+  - id: 2
+    fields:
+    - title: Name
+      value: ClassEnd
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -370,7 +384,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["ClassEnd"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -381,8 +395,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 3.8835144}
+    canvasZoom: 1.03
   syncInfo:
     syncActors: 0
     syncItems: 0

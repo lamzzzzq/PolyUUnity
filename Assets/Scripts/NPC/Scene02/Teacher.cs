@@ -19,7 +19,7 @@ public class Teacher : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void WalkTowardTheDoor() 
     {
         _agent.destination = _target.transform.position;
     }

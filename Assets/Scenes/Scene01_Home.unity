@@ -83592,6 +83592,7 @@ Transform:
   - {fileID: 4307007793568650192}
   - {fileID: 482509401}
   - {fileID: 1612129488}
+  - {fileID: 543450652980113052}
   - {fileID: 2107823112}
   - {fileID: 709011121}
   - {fileID: 736227801}
@@ -83603,7 +83604,6 @@ Transform:
   - {fileID: 1054222246}
   - {fileID: 56096809}
   - {fileID: 198888715}
-  - {fileID: 543450652980113052}
   - {fileID: 230578860}
   - {fileID: 481513879}
   - {fileID: 1766520919}
@@ -91441,7 +91441,7 @@ Transform:
   - {fileID: 1299886598}
   - {fileID: 683878986}
   m_Father: {fileID: 1984994105}
-  m_RootOrder: 102
+  m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450652993504990
 Transform:
@@ -92575,6 +92575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 701851827209919779, guid: 50a511eceb3324241bc3c21de739fd76,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 701851827301178147, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
