@@ -33,5 +33,12 @@ MonoBehaviour:
     m_Localized: Welcome!
     m_Metadata:
       m_Items: []
+  - m_Id: 4314530711896064
+    m_Localized: "Welcome! \r\n\r\nThank you for playing the game! Today you are
+      at school, please try to help your teachers and classmates to solve some problems
+      when they needed. After you finish each tasks, you will get corresponding reward
+      points.  Please try your best to get higher points! "
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

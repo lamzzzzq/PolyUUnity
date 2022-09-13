@@ -16,7 +16,7 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: aac95234d71834a4e87ff4b6ca7aac58
   m_Entries:
   - m_Id: 11230126080
-    m_Key: Welcome
+    m_Key: WelcomeScene01
     m_Metadata:
       m_Items: []
   - m_Id: 862367653888
@@ -25,6 +25,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1007574458368
     m_Key: Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4314530711896064
+    m_Key: WelcomeScene02
     m_Metadata:
       m_Items: []
   m_Metadata:
