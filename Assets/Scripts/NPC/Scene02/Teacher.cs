@@ -11,6 +11,7 @@ public class Teacher : MonoBehaviour
     public Transform _target;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,12 @@ public class Teacher : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
+
     // Update is called once per frame
     public void WalkTowardTheDoor() 
     {
         _agent.destination = _target.transform.position;
+        _anim.SetTrigger("Walking");
     }
+
 }

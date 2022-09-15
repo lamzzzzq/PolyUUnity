@@ -384,10 +384,8 @@ MonoBehaviour:
   m_image: {fileID: 8847527646516662937}
   m_countText:
     m_uiText: {fileID: 8847527646516686303}
-    m_textMeshProUGUI: {fileID: 0}
   m_captionText:
     m_uiText: {fileID: 8847527646516702823}
-    m_textMeshProUGUI: {fileID: 0}
   m_button: {fileID: 8847527646516675331}
 --- !u!1 &8847527646527762169
 GameObject:
@@ -1485,10 +1483,8 @@ MonoBehaviour:
   m_image: {fileID: 8847527646516699159}
   m_countText:
     m_uiText: {fileID: 8847527646516647801}
-    m_textMeshProUGUI: {fileID: 0}
   m_captionText:
     m_uiText: {fileID: 0}
-    m_textMeshProUGUI: {fileID: 0}
 --- !u!1 &8847527646527950295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1686,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: Teacher
 --- !u!114 &8847527646516707213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1837,7 +1833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_text:
     m_uiText: {fileID: 8847527646516686931}
-    m_textMeshProUGUI: {fileID: 0}
 --- !u!1 &8847527646527955949
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3658,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_text:
     m_uiText: {fileID: 8847527646516713847}
-    m_textMeshProUGUI: {fileID: 0}
 --- !u!1 &8847527646528001661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3764,7 +3758,6 @@ MonoBehaviour:
   m_mainPanel: {fileID: 8847527646514059529}
   m_entityName:
     m_uiText: {fileID: 8847527646516661011}
-    m_textMeshProUGUI: {fileID: 0}
   m_entityImage: {fileID: 8847527646516686381}
   m_cancelButton: {fileID: 8847527646516717307}
   m_closeButton: {fileID: 8847527646516679015}
@@ -3803,7 +3796,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8847527646516714749}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: PixelCrushers.Wrappers.MessageEvents, Assembly-CSharp-firstpass
         m_MethodName: SendToMessageSystem
         m_Mode: 3
         m_Arguments:
@@ -4021,7 +4014,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_text:
     m_uiText: {fileID: 8847527646516736967}
-    m_textMeshProUGUI: {fileID: 0}
 --- !u!1 &8847527646528006577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,7 +4079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e7b393b5e90d3348a18e6df938f4c40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6555d7dc27598924bb48de2c625cfe7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

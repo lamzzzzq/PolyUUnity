@@ -1165,7 +1165,9 @@ MonoBehaviour:
         Variable["AfterSister"]
         = true;
 
-        Variable["Point"] = Variable["Point"] + 10'
+        Variable["Point"] = Variable["Point"] + 10;
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []

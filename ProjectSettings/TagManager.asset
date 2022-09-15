@@ -10,6 +10,7 @@ TagManager:
   - Disappear
   - CinemachineTarget
   - Interactive
+  - NPC
   layers:
   - Default
   - TransparentFX
