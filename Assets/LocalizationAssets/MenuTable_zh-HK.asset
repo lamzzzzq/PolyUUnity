@@ -54,5 +54,13 @@ MonoBehaviour:
     m_Localized: "\u4EA4\u8AC7"
     m_Metadata:
       m_Items: []
+  - m_Id: 24462964985569280
+    m_Localized: Level1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24462967279853568
+    m_Localized: Level2
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -51,6 +51,14 @@ MonoBehaviour:
     m_Key: Talk
     m_Metadata:
       m_Items: []
+  - m_Id: 24462964985569280
+    m_Key: Level1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24462967279853568
+    m_Key: Level2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
