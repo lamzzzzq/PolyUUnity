@@ -28,10 +28,10 @@ public class AddScore : MonoBehaviour
         {
             case 1:
                 {
-                    int value = DialogueLua.GetVariable("Point").asInt;
+                    int value = DialogueLua.GetVariable("Point_Level").asInt;
 
                     Point.text = value.ToString();
-                    Debug.Log("Using Point");
+                    Debug.Log(value);
                 }
                 break;
             case 2:

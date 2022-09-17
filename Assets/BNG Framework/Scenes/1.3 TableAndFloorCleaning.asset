@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point"] = Variable["Point"] + 20
+  m_luaCode: Variable["Point_Level"] = Variable["Point_Level"] + 20
 --- !u!114 &-1810402139583180114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point"] = Variable["Point"] + 10
+  m_luaCode: Variable["Point_Level"] = Variable["Point_Level"] + 10
 --- !u!114 &-617844006469743857
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 324.50116
+      x: 325.50116
       y: 310.73245
       width: 120
       height: 48
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point"] = Variable["Point"] + 15
+  m_luaCode: Variable["Point_Level"] = Variable["Point_Level"] + 15
 --- !u!114 &4050438476433687861
 MonoBehaviour:
   m_ObjectHideFlags: 1

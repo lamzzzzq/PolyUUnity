@@ -30890,7 +30890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 629.27, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 701, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624567786
@@ -40182,7 +40182,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Manager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8657995431426581999, guid: cc498d7dafd1d00409492613ca60658e, type: 3}
+    - {fileID: 8657995431433471652, guid: cc498d7dafd1d00409492613ca60658e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc498d7dafd1d00409492613ca60658e, type: 3}
 --- !u!1 &854429090
 GameObject:
