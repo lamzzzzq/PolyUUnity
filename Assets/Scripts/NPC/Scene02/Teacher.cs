@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,7 +8,9 @@ public class Teacher : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
 
-    public Transform _target;
+    public Transform Target;
+
+    public bool isArrived = false;
 
 
 
@@ -19,12 +21,34 @@ public class Teacher : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        if (!isArrived)
+        {
+            _agent.SetDestination(Target.transform.position);
+            //.SetTrigger("Walking");
+            Debug.Log("里面执行一次");
+        }
+        Debug.Log("外面执行一次");
 
-    // Update is called once per frame
+
+/*        if (Vector3.Distance(transform.position, Target.position)< 0.2f)
+        {
+            isArrived = true;
+            _anim.SetTrigger("Idle");
+        }*/
+    }
+
+
     public void WalkTowardTheDoor() 
     {
-        _agent.destination = _target.transform.position;
-        _anim.SetTrigger("Walking");
+/*        if(!isArrived)
+        {
+            _agent.transform.position = Target.transform.position;
+            _anim.SetTrigger("Walking");
+            Debug.Log("里面执行一次");
+        }
+        Debug.Log("外面执行一次");*/
     }
 
 }

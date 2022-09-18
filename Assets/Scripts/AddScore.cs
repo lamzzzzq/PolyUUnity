@@ -31,7 +31,6 @@ public class AddScore : MonoBehaviour
                     int value = DialogueLua.GetVariable("Point_Level").asInt;
 
                     Point.text = value.ToString();
-                    Debug.Log(value);
                 }
                 break;
             case 2:
@@ -39,7 +38,6 @@ public class AddScore : MonoBehaviour
                     int value = DialogueLua.GetVariable("Point_Level2").asInt;
 
                     Point.text = value.ToString();
-                    Debug.Log("Using Point_Level 2");
                 }
                 break;
             default:
