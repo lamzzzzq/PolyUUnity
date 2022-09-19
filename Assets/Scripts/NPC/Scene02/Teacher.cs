@@ -10,7 +10,8 @@ public class Teacher : MonoBehaviour
 
     public Transform Target;
 
-    public bool isArrived = false;
+    public FacePlayer faceplayer;
+
 
 
 
@@ -23,32 +24,21 @@ public class Teacher : MonoBehaviour
 
     private void Update()
     {
-        if (!isArrived)
+        if (Vector3.Distance(transform.position, Target.position)< 0.1f)
         {
-            _agent.SetDestination(Target.transform.position);
-            //.SetTrigger("Walking");
-            Debug.Log("里面执行一次");
+            _agent.isStopped = true;
+            _anim.SetBool("isWalking",false);
+            _anim.SetBool("isSad", true);
+            faceplayer.enabled = true;
         }
-        Debug.Log("外面执行一次");
-
-
-/*        if (Vector3.Distance(transform.position, Target.position)< 0.2f)
-        {
-            isArrived = true;
-            _anim.SetTrigger("Idle");
-        }*/
     }
 
 
     public void WalkTowardTheDoor() 
     {
-/*        if(!isArrived)
-        {
-            _agent.transform.position = Target.transform.position;
-            _anim.SetTrigger("Walking");
+            _agent.SetDestination(Target.transform.position);
+            _anim.SetBool("isWalking",true);
             Debug.Log("里面执行一次");
-        }
-        Debug.Log("外面执行一次");*/
     }
 
 }
