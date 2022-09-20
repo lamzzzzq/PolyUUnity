@@ -378,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458446}
   - component: {fileID: 11419360}
+  - component: {fileID: 5725244166123560929}
   m_Layer: 0
   m_Name: Quest Indicator UI
   m_TagString: Untagged
@@ -424,6 +425,19 @@ MonoBehaviour:
   m_interactDisabled: {fileID: 138782}
   m_interact: {fileID: 190202}
   m_custom: []
+--- !u!114 &5725244166123560929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154944}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f61df70c9818747a181aa9c42e5dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &181722
 GameObject:
   m_ObjectHideFlags: 0

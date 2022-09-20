@@ -18,24 +18,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &-8818348311309391611
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 1
-  m_counterValueMode: 0
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
 --- !u!114 &-8238713422176324956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,24 +56,6 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &-8223046442915737761
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 1
-  m_counterValueMode: 1
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
 --- !u!114 &-6993015905833415915
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,7 +73,7 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
---- !u!114 &-4191189380690491604
+--- !u!114 &-6614693901796710815
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,29 +85,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 2
+  m_counterIndex: 3
   m_counterValueMode: 0
   m_requiredCounterValue:
     m_valueType: 0
-    m_literalValue: 4
-    m_counterIndex: 0
---- !u!114 &-3633990597580896436
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 0
-  m_counterValueMode: 0
-  m_requiredCounterValue:
-    m_valueType: 3
-    m_literalValue: 5
+    m_literalValue: 15
     m_counterIndex: 0
 --- !u!114 &-3580746339676242499
 MonoBehaviour:
@@ -162,24 +108,6 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
---- !u!114 &-2760985485294749724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 0
-  m_counterValueMode: 0
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
 --- !u!114 &-2695840357512040365
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,24 +160,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &-1194521274722645548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 2
-  m_counterValueMode: 1
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,6 +361,41 @@ MonoBehaviour:
         m_textTableFieldID: 0
       m_operation: 2
       m_literalValue: 1
+  - m_name:
+      m_text: Task1 Collect
+      m_stringAsset: {fileID: 0}
+      m_textTable: {fileID: 0}
+      m_textTableFieldID: 0
+    m_currentValue: 0
+    m_randomizeInitialValue: 0
+    m_minValue: 0
+    m_maxValue: 15
+    m_updateMode: 1
+    m_messageEventList:
+    - m_senderSpecifier: 0
+      m_senderID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_targetSpecifier: 0
+      m_targetID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_message:
+        m_text: Got
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_parameter:
+        m_text: Item
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_operation: 2
+      m_literalValue: 1
   m_nodeList:
   - m_id:
       m_text: Quest-196232.start
@@ -535,9 +480,7 @@ MonoBehaviour:
         - {fileID: 8881209784636364231}
     m_conditionSet:
       m_conditionList:
-      - {fileID: -3633990597580896436}
-      - {fileID: 191376809626157449}
-      - {fileID: 6355972765308727013}
+      - {fileID: -6614693901796710815}
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
@@ -681,9 +624,8 @@ MonoBehaviour:
         - {fileID: -1885794899317833504}
     m_conditionSet:
       m_conditionList:
-      - {fileID: -2760985485294749724}
-      - {fileID: -8818348311309391611}
-      - {fileID: -4191189380690491604}
+      - {fileID: 68477188449592043}
+      - {fileID: 6737162784543369756}
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
@@ -826,10 +768,8 @@ MonoBehaviour:
       - m_contentList: []
     m_conditionSet:
       m_conditionList:
-      - {fileID: 3427631274761874447}
-      - {fileID: -8223046442915737761}
-      - {fileID: -1194521274722645548}
-      m_conditionCountMode: 2
+      - {fileID: 7766814524996660204}
+      m_conditionCountMode: 0
       m_minConditionCount: 1
       m_numTrueConditions: 0
     m_childIndexList: 08000000
@@ -937,7 +877,7 @@ MonoBehaviour:
       height: 35
   m_goalEntityTypeName: 
   m_nextContentID: 0
---- !u!114 &191376809626157449
+--- !u!114 &68477188449592043
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -949,12 +889,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 1
+  m_counterIndex: 3
   m_counterValueMode: 0
   m_requiredCounterValue:
-    m_valueType: 3
-    m_literalValue: 5
-    m_counterIndex: 1
+    m_valueType: 0
+    m_literalValue: 10
+    m_counterIndex: 0
 --- !u!114 &216907489626387466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1005,7 +945,10 @@ MonoBehaviour:
       {#File}/{>#File} Files
 
       {#Pen}/{>#Pen}
-      Pens'
+      Pens
+
+
+      {#Task1 Collect}  Num for test'
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1068,24 +1011,6 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &3427631274761874447
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 0
-  m_counterValueMode: 1
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 3
-    m_counterIndex: 0
 --- !u!114 &4205482494896845356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,7 +1049,7 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &6355972765308727013
+--- !u!114 &6737162784543369756
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1136,12 +1061,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 2
-  m_counterValueMode: 0
+  m_counterIndex: 0
+  m_counterValueMode: 1
   m_requiredCounterValue:
-    m_valueType: 3
-    m_literalValue: 5
-    m_counterIndex: 2
+    m_valueType: 0
+    m_literalValue: 14
+    m_counterIndex: 0
 --- !u!114 &7575021478454612562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1160,6 +1085,24 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &7766814524996660204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
+  m_Name: CounterQuestCondition
+  m_EditorClassIdentifier: 
+  m_counterIndex: 3
+  m_counterValueMode: 1
+  m_requiredCounterValue:
+    m_valueType: 0
+    m_literalValue: 9
+    m_counterIndex: 0
 --- !u!114 &8005335418493517439
 MonoBehaviour:
   m_ObjectHideFlags: 1

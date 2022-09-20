@@ -362,12 +362,12 @@ MonoBehaviour:
       typeString: CustomFieldType_Boolean
   locations: []
   variables:
-  - id: 1
+  - id: 6
     fields:
     - title: Name
-      value: Point_Level 1
+      value: Point_Level
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Initial Value
       value: 0
       type: 1
@@ -375,7 +375,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
   - id: 5
     fields:
     - title: Name
@@ -548,8 +548,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 19
+        x: 538
+        y: 47
         width: 160
         height: 30
     - id: 3
@@ -624,8 +624,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
-        y: 119
+        x: 358
+        y: 147
         width: 160
         height: 30
     - id: 4
@@ -712,8 +712,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 70
+        x: 538
+        y: 98
         width: 160
         height: 30
     - id: 5
@@ -788,8 +788,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 120
+        x: 538
+        y: 148
         width: 160
         height: 30
     - id: 6
@@ -863,8 +863,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 569
-        y: 120
+        x: 717
+        y: 148
         width: 160
         height: 30
     - id: 7
@@ -938,8 +938,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 178
+        x: 538
+        y: 206
         width: 160
         height: 30
     - id: 8
@@ -1014,8 +1014,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 192
-        y: 175
+        x: 340
+        y: 203
         width: 160
         height: 30
     - id: 9
@@ -1089,8 +1089,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 567
-        y: 173
+        x: 715
+        y: 201
         width: 160
         height: 30
     - id: 10
@@ -1152,19 +1152,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SendMessageSystem("Meet", "30Points");
-
-        Variable["AfterSister"]
-        = true;
-
-        Variable["Point"] = Variable["Point"] + 30'
+      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 20
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 201
-        y: 232
+        x: 352
+        y: 260
         width: 160
         height: 30
     - id: 11
@@ -1226,19 +1221,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SendMessageSystem("Meet", "20Points");
-
-        Variable["AfterSister"]
-        = true;
-
-        Variable["Point"] = Variable["Point"] + 20'
+      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 15
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 390
-        y: 230
+        x: 538
+        y: 258
         width: 160
         height: 30
     - id: 12
@@ -1300,19 +1290,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'SendMessageSystem("Meet", "10Points");
-
-        Variable["AfterSister"]
-        = true;
-
-        Variable["Point"] = Variable["Point"] + 10'
+      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 10
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 575
-        y: 229
+        x: 723
+        y: 257
         width: 160
         height: 30
     entryGroups: []
@@ -1535,7 +1520,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u3010\u56DE\u8986\u53E5\u5B504\u3011"
+        value: That's great!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1577,7 +1562,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 111.68422
+        x: 110.36842
         y: 241
         width: 160
         height: 30
@@ -2360,11 +2345,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u554A\uFF0C\u6211\u525B\u525B\u767C\u73FE\u6211\u7684\u7B46\u5FEB\u6C92\u58A8\u6C34\u4E86\uFF0C\u4F46\u6211\u4E0D\u8A18\u5F97\u591A\u5E36\u4E00\u652F\u4E86\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u5440\uFF0C\u6211\u5571\u5571\u767C\u73FE\u6211\u652F\u7B46\u5C31\u9ECE\u6C92\u58A8\u5566\uFF0C\u4F46\u4FC2\u6211\u5514\u8A18\u5F97\u5497\u5E36\u591A\u4E00\u652F\uFF01\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2441,11 +2426,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u300C\u4F60\u5481\u5927\u982D\u8766\u35CE\uFF01\u5481\u6211\u501F\u652F\u4FFE\u4F60\u5566\u3002\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u300C\u4F60\u600E\u9EBC\u9019\u9EBC\u7C97\u5FC3\uFF1F\u90A3\u6211\u501F\u4E00\u652F\u7D66\u4F60\u5427\u3002\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2516,11 +2501,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u300C\u6C92\u95DC\u4FC2\uFF0C\u4E0D\u7528\u64D4\u5FC3\uFF01\u6211\u53EF\u4EE5\u501F\u4E00\u652F\u7B46\u7D66\u4F60\uFF0C\u660E\u5929\u9084\u7D66\u6211\u5C31\u597D\u5566\u3002\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u300C\u5514\u7DCA\u8981\uFF0C\u5514\u4F7F\u64D4\u5FC3\uFF01\u6211\u53EF\u4EE5\u501F\u652F\u7B46\u6BD4\u4F60\uFF0C\u807D\u65E5\u4FFE\u756A\u6211\u5C31\u5F97\u5566\u3002\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2591,11 +2576,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u9858\u610F\u501F\u6211\u5440\uFF01\u4F60\u771F\u7684\u592A\u597D\u4EBA\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u300C\u591A\u8B1D\u4F60\u80AF\u501F\u4FFE\u6211\u5440\uFF01\u4F60\u771F\u4FC2\u592A\u597D\u4EBA\u5566\uFF01\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2666,11 +2651,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u6211\u4E5F\u4E0D\u60F3\u7684\uFF0C\u4E0D\u904E\u8B1D\u8B1D\u4F60\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u300C\u6211\u90FD\u5514\u60F3\u35CE\uFF0C\u4E0D\u904E\u591A\u8B1D\u4F60\u5440\u3002\u300D"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2741,11 +2726,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u5514\u99DB\u5BA2\u6C23\uFF0C\u6211\u90FD\u597D\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2765,14 +2750,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 20
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 220
+        y: 221.06381
         width: 160
         height: 30
     - id: 7
@@ -2810,11 +2795,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
-        value: 
+        value: "\u5514\u99DB\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -2834,7 +2819,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2846,7 +2831,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.94000006
   - id: 7
     fields:
     - title: Title
@@ -2962,8 +2947,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 276
-        y: 47
+        x: 210
+        y: 20
         width: 160
         height: 30
     - id: 1
@@ -3037,8 +3022,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 276
-        y: 97
+        x: 210
+        y: 70
         width: 160
         height: 30
     - id: 2
@@ -3126,8 +3111,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283
-        y: 149
+        x: 210
+        y: 120
         width: 160
         height: 30
     - id: 3
@@ -3203,8 +3188,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 306
-        y: 209
+        x: 30
+        y: 170
         width: 160
         height: 30
     - id: 4
@@ -3278,8 +3263,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 570
-        y: 212
+        x: 210
+        y: 170
         width: 160
         height: 30
     - id: 5
@@ -3355,8 +3340,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 73
-        y: 213
+        x: 390
+        y: 170
         width: 160
         height: 30
     - id: 6
@@ -3432,8 +3417,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 73
-        y: 263
+        x: 390
+        y: 220
         width: 160
         height: 30
     - id: 7
@@ -3495,7 +3480,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 7
+        destinationConversationID: 7
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -3503,8 +3494,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 306
-        y: 259
+        x: 30
+        y: 220
         width: 160
         height: 30
     - id: 8
@@ -3566,7 +3557,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 8
+        destinationConversationID: 7
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -3574,8 +3571,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 570
-        y: 262
+        x: 210
+        y: 220
         width: 160
         height: 30
     - id: 9
@@ -3601,7 +3598,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -3609,15 +3606,240 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Hans
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-HK
+        value: "\u5514\u99DB\u5BA2\u6C23\uFF0C\u6211\u90FD\u597D\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
         value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 9
+        destinationConversationID: 7
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 390
+        y: 270
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "You're welcome, I\u2019m glad I could help!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: "You're welcome, I\u2019m glad I could help!"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u99DB\u5BA2\u6C23\uFF0C\u6211\u90FD\u597D\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 10
+        destinationConversationID: 7
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 270
+        width: 160
+        height: 30
+    - id: 11
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 'Let me help you think about how to communicate with them. '
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 'Let me help you think about how to communicate with them. '
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u548C\u4ED6\u5011\u6E9D\u901A\u5427\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u6211\u5E6B\u4F60\u4E00\u9F4A\u8AD7\u4E0B\u9EDE\u6A23\u540C\u4F62\u5730\u6E9D\u901A\u5566\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 7
+        originDialogueID: 11
+        destinationConversationID: 7
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 210
+        y: 270
+        width: 160
+        height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you! I feel much better now!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you! I feel much better now!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u591A\u4E86\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u8A72\u6652\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u597D\u591A\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -3637,19 +3859,157 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 20
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 73
-        y: 313
+        x: 390
+        y: 320
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you. I feel better now!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you. I feel better now!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u4E00\u9EDE\u4E86\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u8A72\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u5C11\u5C11\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 320
+        width: 160
+        height: 30
+    - id: 14
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 7
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: "\u8B1D\u8B1D\u4F60\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: "\u5514\u8A72\u4F60\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 7
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 10
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 210
+        y: 320
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.94000006
   syncInfo:
     syncActors: 0
     syncItems: 0
