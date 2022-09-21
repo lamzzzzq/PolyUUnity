@@ -248,7 +248,7 @@ MonoBehaviour:
   - id: 6
     fields:
     - title: Name
-      value: Classmate_01
+      value: Amy
       type: 0
       typeString: CustomFieldType_Actor
     - title: Pictures
@@ -290,7 +290,7 @@ MonoBehaviour:
   - id: 7
     fields:
     - title: Name
-      value: Friend_01
+      value: Bill
       type: 0
       typeString: CustomFieldType_Actor
     - title: Pictures
