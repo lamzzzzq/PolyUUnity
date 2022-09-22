@@ -339,7 +339,7 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 278
-      y: 126
+      y: 124.78049
       width: 120
       height: 48
   m_goalEntityTypeName: 
