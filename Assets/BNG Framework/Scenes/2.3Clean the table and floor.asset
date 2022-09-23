@@ -112,6 +112,40 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-2944369470163461358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4e25cd4dc7a5b4c859b087bdeb27c1, type: 3}
+  m_Name: AudioQuestAction
+  m_EditorClassIdentifier: 
+  m_audioClip: {fileID: 8300000, guid: 14311145f6b7418448aa563812d16c7b, type: 3}
+  m_useAudioSourceOn:
+    m_type: 0
+    m_id: 
+  m_audioNameProxy: 
+--- !u!114 &-501693817674267067
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4e25cd4dc7a5b4c859b087bdeb27c1, type: 3}
+  m_Name: AudioQuestAction
+  m_EditorClassIdentifier: 
+  m_audioClip: {fileID: 8300000, guid: 14311145f6b7418448aa563812d16c7b, type: 3}
+  m_useAudioSourceOn:
+    m_type: 0
+    m_id: 
+  m_audioNameProxy: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +566,9 @@ MonoBehaviour:
         - {fileID: 5530557300106411084}
       - m_contentList: []
       - m_contentList: []
-    - m_actionList: []
+    - m_actionList:
+      - {fileID: -2944369470163461358}
+      - {fileID: 1743048768311003084}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -580,7 +616,9 @@ MonoBehaviour:
         - {fileID: 2904803461095106537}
       - m_contentList: []
       - m_contentList: []
-    - m_actionList: []
+    - m_actionList:
+      - {fileID: 1058696100314007594}
+      - {fileID: 78339479648832571}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -628,7 +666,9 @@ MonoBehaviour:
         - {fileID: -6271697154757483188}
       - m_contentList: []
       - m_contentList: []
-    - m_actionList: []
+    - m_actionList:
+      - {fileID: -501693817674267067}
+      - {fileID: 5948971232817467225}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -824,6 +864,19 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
+--- !u!114 &78339479648832571
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
+  m_Name: LuaQuestAction
+  m_EditorClassIdentifier: 
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
 --- !u!114 &167047641946529287
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -872,7 +925,7 @@ MonoBehaviour:
   m_Name: IconQuestContent
   m_EditorClassIdentifier: 
   m_contentID: -1
-  m_image: {fileID: 21300000, guid: 0e57f237c2518e74ab1ed0701d3f7e44, type: 3}
+  m_image: {fileID: 21300000, guid: ddcf13a645b09fa49b896e177134df51, type: 3}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -880,6 +933,36 @@ MonoBehaviour:
     m_textTableFieldID: 0
   m_count: 0
   m_imageNameProxy: 
+--- !u!114 &1058696100314007594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4e25cd4dc7a5b4c859b087bdeb27c1, type: 3}
+  m_Name: AudioQuestAction
+  m_EditorClassIdentifier: 
+  m_audioClip: {fileID: 8300000, guid: 14311145f6b7418448aa563812d16c7b, type: 3}
+  m_useAudioSourceOn:
+    m_type: 0
+    m_id: 
+  m_audioNameProxy: 
+--- !u!114 &1743048768311003084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
+  m_Name: LuaQuestAction
+  m_EditorClassIdentifier: 
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 20
 --- !u!114 &2578279246782095726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -954,6 +1037,19 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &5948971232817467225
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
+  m_Name: LuaQuestAction
+  m_EditorClassIdentifier: 
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 10
 --- !u!114 &7750377440722416936
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -55,11 +55,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24462964985569280
-    m_Localized: Level1
+    m_Localized: Home
     m_Metadata:
       m_Items: []
   - m_Id: 24462967279853568
-    m_Localized: Level2
+    m_Localized: Classroom
     m_Metadata:
       m_Items: []
   references:

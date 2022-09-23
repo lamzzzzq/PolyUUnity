@@ -73,6 +73,29 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
+--- !u!114 &-6787910614476563208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c14ca0a3639b4a4f8084914f2e7227f, type: 3}
+  m_Name: SetQuestNodeStateQuestAction
+  m_EditorClassIdentifier: 
+  m_questID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_questNodeID:
+    m_text: Failure
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &-6614693901796710815
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -492,6 +515,7 @@ MonoBehaviour:
       - m_contentList: []
     - m_actionList:
       - {fileID: 5020796620328950970}
+      - {fileID: 4648861565545437916}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -506,8 +530,8 @@ MonoBehaviour:
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 76.17516
-      y: 118.21034
+      x: 75.17516
+      y: 117.21034
       width: 120
       height: 48
   - m_id:
@@ -556,8 +580,8 @@ MonoBehaviour:
     m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
-      x: 79.41415
-      y: 200.86095
+      x: 72.81037
+      y: 199.86095
       width: 120
       height: 48
   - m_id:
@@ -602,8 +626,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 79.26681
-      y: 275.68448
+      x: 70.39889
+      y: 290.4015
       width: 120
       height: 35
   - m_id:
@@ -637,6 +661,8 @@ MonoBehaviour:
       - m_contentList: []
     - m_actionList:
       - {fileID: 3248009462459558115}
+      - {fileID: 3066458596364767581}
+      - {fileID: -6787910614476563208}
       m_categorizedContentList:
       - m_contentList: []
       - m_contentList: []
@@ -702,8 +728,8 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 260.471
-      y: 207.00868
+      x: 262.471
+      y: 204.00868
       width: 120
       height: 48
   - m_id:
@@ -748,8 +774,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 261.11584
-      y: 281.24396
+      x: 259.22906
+      y: 285.01755
       width: 120
       height: 35
   - m_id:
@@ -845,8 +871,8 @@ MonoBehaviour:
     m_childIndexList: 09000000
     m_canvasRect:
       serializedVersion: 2
-      x: 479.15778
-      y: 201.32121
+      x: 493.10114
+      y: 202.22687
       width: 120
       height: 48
   - m_id:
@@ -891,8 +917,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 485.29413
-      y: 286.23032
+      x: 492.69037
+      y: 292.24918
       width: 120
       height: 35
   m_goalEntityTypeName: 
@@ -945,7 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point"] = Variable["Point_Level 2"] + 15
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
 --- !u!114 &664513862574372682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -985,7 +1011,7 @@ MonoBehaviour:
   m_Name: IconQuestContent
   m_EditorClassIdentifier: 
   m_contentID: -1
-  m_image: {fileID: 21300000, guid: 0e57f237c2518e74ab1ed0701d3f7e44, type: 3}
+  m_image: {fileID: 21300000, guid: bced714e42252524eb7e2a58842f23dd, type: 3}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -1031,6 +1057,29 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
+--- !u!114 &3066458596364767581
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c14ca0a3639b4a4f8084914f2e7227f, type: 3}
+  m_Name: SetQuestNodeStateQuestAction
+  m_EditorClassIdentifier: 
+  m_questID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_questNodeID:
+    m_text: Condition 8
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &3248009462459558115
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1092,6 +1141,29 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
+--- !u!114 &4648861565545437916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c14ca0a3639b4a4f8084914f2e7227f, type: 3}
+  m_Name: SetQuestNodeStateQuestAction
+  m_EditorClassIdentifier: 
+  m_questID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_questNodeID:
+    m_text: Condition 5
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_state: 0
 --- !u!114 &5020796620328950970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1194,7 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point"] = Variable["Point_Level 2"] + 20
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 20
 --- !u!114 &8881209784636364231
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -55,11 +55,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24462964985569280
-    m_Localized: Level1
+    m_Localized: "\u5BB6"
     m_Metadata:
       m_Items: []
   - m_Id: 24462967279853568
-    m_Localized: Level2
+    m_Localized: "\u5B78\u6821"
     m_Metadata:
       m_Items: []
   references:
