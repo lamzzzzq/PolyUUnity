@@ -11,6 +11,7 @@ TagManager:
   - CinemachineTarget
   - Interactive
   - NPC
+  - SubPlayer
   layers:
   - Default
   - TransparentFX
