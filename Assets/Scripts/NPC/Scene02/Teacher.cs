@@ -20,6 +20,8 @@ public class Teacher : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
+
+        _anim.SetBool("isTripping", false);
     }
 
     private void Update()
@@ -27,18 +29,23 @@ public class Teacher : MonoBehaviour
         if (Vector3.Distance(transform.position, Target.position)< 0.1f)
         {
             _agent.isStopped = true;
-            _anim.SetBool("isWalking",false);
-            _anim.SetBool("isSad", true);
-            faceplayer.enabled = true;
+            _anim.SetBool("isWalking", false);
+            _anim.SetBool("isTripping", true);
+
+
+
+
+            //_anim.SetBool("isSad", true);
+            //faceplayer.enabled = true;
         }
     }
 
 
     public void WalkTowardTheDoor() 
     {
-            _agent.SetDestination(Target.transform.position);
-            _anim.SetBool("isWalking",true);
-            Debug.Log("里面执行一次");
+         _agent.SetDestination(Target.transform.position);
+         _anim.SetBool("isWalking",true);
+            
     }
 
 }
