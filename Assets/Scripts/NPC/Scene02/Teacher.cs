@@ -32,8 +32,7 @@ public class Teacher : MonoBehaviour
             _anim.SetBool("isWalking", false);
             _anim.SetBool("isTripping", true);
 
-
-
+            StartCoroutine(TurnAround(5.0f));
 
             //_anim.SetBool("isSad", true);
             //faceplayer.enabled = true;
@@ -46,6 +45,15 @@ public class Teacher : MonoBehaviour
          _agent.SetDestination(Target.transform.position);
          _anim.SetBool("isWalking",true);
             
+    }
+
+
+    private IEnumerator TurnAround(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        faceplayer.enabled = true;
+        _anim.SetBool("isSad", true);
     }
 
 }
