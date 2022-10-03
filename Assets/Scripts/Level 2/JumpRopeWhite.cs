@@ -15,12 +15,13 @@ namespace BNG
             {
                 if (snapzone.HeldItem.name == "RopeWhite")
                 {
-
-                    Debug.Log("That's right");
+                    WhiteBool = true;
+                    //Debug.Log("That's right");
                 }
                 else
                 {
-                    Debug.Log("No No No No~");
+                    WhiteBool = false;
+                    //Debug.Log("No No No No~");
                 }
             }
         }
