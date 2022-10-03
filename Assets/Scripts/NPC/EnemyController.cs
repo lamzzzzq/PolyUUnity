@@ -82,7 +82,7 @@ public class EnemyController : MonoBehaviour
         if(FoundPlayer())
         {
             enemystates = EnemyStates.READYTOTALK;
-            Debug.Log("找到Player");
+            //Debug.Log("找到Player");
         }
 
 
@@ -174,7 +174,7 @@ public class EnemyController : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, sightRadius);
+        Gizmos.DrawWireSphere(transform.position, patrolRange);
     }
 }
 
