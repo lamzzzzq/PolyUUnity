@@ -116,7 +116,7 @@ namespace BNG {
         }
 
         void Update() {
-
+            
             ClosestGrabbable = getClosestGrabbable();
 
             // Can we grab something
@@ -151,10 +151,11 @@ namespace BNG {
                     GrabGrabbable(trackedItem);
                 }
             }
+
         }
 
         Grabbable getClosestGrabbable() {
-
+            
             Grabbable closest = null;
             float lastDistance = 9999f;
 
