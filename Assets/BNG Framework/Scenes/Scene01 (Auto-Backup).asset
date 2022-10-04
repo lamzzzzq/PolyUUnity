@@ -2114,7 +2114,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 69
+        y: 67.96907
         width: 160
         height: 30
     - id: 2
@@ -2182,8 +2182,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 120
+        x: 31.030922
+        y: 121.03093
         width: 160
         height: 30
     entryGroups: []
