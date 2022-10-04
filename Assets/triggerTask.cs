@@ -6,6 +6,8 @@ public class triggerTask : MonoBehaviour
 {
     public List<GameObject> gameObject = new List<GameObject>();
 
+    public AddForce addForce;
+
     public Transform shakePoint;
     public Transform spawnPoint;
 
@@ -15,13 +17,19 @@ public class triggerTask : MonoBehaviour
     public GameObject file;
     public GameObject pen;
 
-    public Animator anim;
+    public List<Animator> anim = new List<Animator>();
+
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.name == "ShakePoint")
         {
-            anim.enabled = true;
+            for(int i = 0; i < anim.Count; i++)
+            {
+                anim[i].enabled = true;
+            }
+            addForce.enabled = true;
+
         }
 
 

@@ -10,6 +10,6 @@ public class AddForce : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(0,1,1)*thrust, ForceMode.Impulse);
+        rb.AddForce(new Vector3(1,0,1)*thrust, ForceMode.Impulse);
     }
 }
