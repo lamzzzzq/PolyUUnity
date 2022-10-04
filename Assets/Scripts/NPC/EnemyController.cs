@@ -121,6 +121,7 @@ public class EnemyController : MonoBehaviour
                 //TODO：配合動畫
                 if (!FoundPlayer())
                 {
+                    Debug.Log("没找到Player");
                     //TODO：拉脫回到上一個狀態
                     faceplayer.enabled = false;
                     enemystates = EnemyStates.PATROL;
@@ -128,6 +129,7 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("找到Player");
                     faceplayer.enabled = true;
                     isWalk = false;
                     agent.destination = transform.position;
