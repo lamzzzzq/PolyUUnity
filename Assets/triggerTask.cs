@@ -28,7 +28,7 @@ public class triggerTask : MonoBehaviour
             {
                 anim[i].enabled = true;
             }
-            addForce.enabled = true;
+            
 
         }
 
@@ -44,7 +44,7 @@ public class triggerTask : MonoBehaviour
                 Instantiate(gameObject[i], spawnPoint.transform.position, Quaternion.identity);
             }
 
-
+            addForce.enabled = true;
         }    
        
     }

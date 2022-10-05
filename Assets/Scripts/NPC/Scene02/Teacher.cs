@@ -33,7 +33,7 @@ public class Teacher : MonoBehaviour
             _anim.SetBool("Walk", false);
             _anim.SetBool("Fall", true);
 
-            StartCoroutine(TurnAround(1.5f));
+            StartCoroutine(TurnAround(3f));
 
             //_anim.SetBool("isSad", true);
             //faceplayer.enabled = true;
