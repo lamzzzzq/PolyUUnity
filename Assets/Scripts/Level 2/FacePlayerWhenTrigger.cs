@@ -6,7 +6,7 @@ public class FacePlayerWhenTrigger : MonoBehaviour
 {
     public float sightRadius;
 
-    private GameObject player;
+    private Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class FacePlayerWhenTrigger : MonoBehaviour
         {
             if (target.CompareTag("SubPlayer"))
             {
-                player = target.gameObject;
+                player = target.gameObject.transform;
                 return true;
             }
         }

@@ -114,6 +114,19 @@ MonoBehaviour:
     m_valueType: 0
     m_literalValue: 15
     m_counterIndex: 0
+--- !u!114 &-5421819193762067377
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefc1845ca94f954b991805fabd53fbd, type: 3}
+  m_Name: PlaySequenceQuestAction
+  m_EditorClassIdentifier: 
+  m_sequence: 
 --- !u!114 &-5231455490708674061
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,6 +284,7 @@ MonoBehaviour:
     - m_contentList: []
   - m_actionList:
     - {fileID: -2191044309028539565}
+    - {fileID: 6309624677109577680}
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList: []
@@ -480,8 +494,8 @@ MonoBehaviour:
     m_childIndexList: 010000000400000007000000
     m_canvasRect:
       serializedVersion: 2
-      x: 200
-      y: 17.21428
+      x: 359
+      y: 143
       width: 120
       height: 48
   - m_id:
@@ -530,8 +544,8 @@ MonoBehaviour:
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 75.17516
-      y: 117.21034
+      x: 176.87085
+      y: 234.94952
       width: 120
       height: 48
   - m_id:
@@ -580,8 +594,8 @@ MonoBehaviour:
     m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
-      x: 72.81037
-      y: 199.86095
+      x: 174.50604
+      y: 317.60013
       width: 120
       height: 48
   - m_id:
@@ -626,8 +640,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 70.39889
-      y: 290.4015
+      x: 172.09457
+      y: 408.1407
       width: 120
       height: 35
   - m_id:
@@ -678,8 +692,8 @@ MonoBehaviour:
     m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 261.0757
-      y: 125.24397
+      x: 362.7714
+      y: 242.98315
       width: 120
       height: 48
   - m_id:
@@ -728,8 +742,8 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 262.471
-      y: 204.00868
+      x: 364.1667
+      y: 321.74783
       width: 120
       height: 48
   - m_id:
@@ -774,8 +788,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 259.22906
-      y: 285.01755
+      x: 360.92474
+      y: 402.75674
       width: 120
       height: 35
   - m_id:
@@ -821,8 +835,8 @@ MonoBehaviour:
     m_childIndexList: 08000000
     m_canvasRect:
       serializedVersion: 2
-      x: 487.98132
-      y: 122.90944
+      x: 589.677
+      y: 240.64862
       width: 120
       height: 48
   - m_id:
@@ -871,8 +885,8 @@ MonoBehaviour:
     m_childIndexList: 09000000
     m_canvasRect:
       serializedVersion: 2
-      x: 493.10114
-      y: 202.22687
+      x: 594.7968
+      y: 319.96603
       width: 120
       height: 48
   - m_id:
@@ -917,8 +931,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 492.69037
-      y: 292.24918
+      x: 597.38605
+      y: 399.98834
       width: 120
       height: 35
   m_goalEntityTypeName: 
@@ -1187,6 +1201,19 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_state: 0
+--- !u!114 &6309624677109577680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefc1845ca94f954b991805fabd53fbd, type: 3}
+  m_Name: PlaySequenceQuestAction
+  m_EditorClassIdentifier: 
+  m_sequence: 
 --- !u!114 &7575021478454612562
 MonoBehaviour:
   m_ObjectHideFlags: 1
