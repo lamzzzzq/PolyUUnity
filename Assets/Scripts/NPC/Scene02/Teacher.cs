@@ -54,7 +54,14 @@ public class Teacher : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
 
         faceplayer.enabled = true;
-        _anim.SetBool("isSad", true);
+        //_anim.SetBool("Wave", true);
+        
     }
+
+/*    public void StopWave()
+    {
+        _anim.SetBool("Wave", false);
+        _anim.SetBool("Fall", false);
+    }*/
 
 }
