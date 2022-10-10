@@ -29,7 +29,7 @@ namespace PixelCrushers.QuestMachine
 
         public override string GetEditorName()
         {
-            return "Sequence: " + sequence.Replace("\n", " ");
+            return string.IsNullOrEmpty(sequence) ? "Play Sequence" : ("Sequence: " + sequence.Replace("\n", " "));
         }
 
     }
