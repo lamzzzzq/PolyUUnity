@@ -21,15 +21,13 @@ public class WaterFadeIn : MonoBehaviour
             Color c = rend.material.color;
             c.a = f;
             rend.material.color = c;
-            yield return new WaitForSeconds(0.05f);
+            //Debug.Log("Once");
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     public void StartFading()
     {
-        //Debug.Log("Yes");
         StartCoroutine("FadeIn");
-
-
     }
 }
