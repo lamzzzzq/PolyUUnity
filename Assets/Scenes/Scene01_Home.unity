@@ -125604,6 +125604,16 @@ PrefabInstance:
       propertyPath: DefaultHandsModel
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7910105054324009738, guid: 382bf98d08d9b004c844f99020bc7a67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910105055239146628, guid: 382bf98d08d9b004c844f99020bc7a67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8851691618670186076, guid: 382bf98d08d9b004c844f99020bc7a67,
         type: 3}
       propertyPath: m_AnchorMax.y
