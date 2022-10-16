@@ -47,58 +47,22 @@ MonoBehaviour:
     m_Start: 1.5833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 1495792180751113354}
-    m_Duration: 5.516666666666667
+    m_Duration: 6.533333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.2666666666666664
-    m_BlendOutDuration: 0.5
+    m_BlendOutDuration: 0.5666666666666673
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -146,7 +110,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Dwarf Idle
   - m_Version: 1
-    m_Start: 6.6
+    m_Start: 7.55
     m_ClipIn: 2.383333333333333
     m_Asset: {fileID: 4025337547133698125}
     m_Duration: 2.783333333333333
@@ -154,7 +118,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5
+    m_BlendInDuration: 0.5666666666666673
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -278,7 +242,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 7.25
+    m_Start: 8.116666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 4099183049480483248}
     m_Duration: 4.999999999999999
@@ -361,7 +325,7 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: -8703035399731986702, guid: 54fca38a184218546b0a7ab0c7fc4650, type: 3}
-  m_Position: {x: -7.4, y: -1.255749, z: -0.01301974}
+  m_Position: {x: -7.76, y: -1.255749, z: -0.01301974}
   m_EulerAngles: {x: 0.133, y: -89.126, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
