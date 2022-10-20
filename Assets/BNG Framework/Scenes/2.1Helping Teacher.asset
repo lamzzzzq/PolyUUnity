@@ -482,8 +482,8 @@ MonoBehaviour:
     m_childIndexList: 010000000400000007000000
     m_canvasRect:
       serializedVersion: 2
-      x: 359
-      y: 143
+      x: 355.52173
+      y: 143.86957
       width: 120
       height: 48
   - m_id:
@@ -680,8 +680,8 @@ MonoBehaviour:
     m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 362.7714
-      y: 242.98315
+      x: 365.75363
+      y: 242.27893
       width: 120
       height: 48
   - m_id:
@@ -776,8 +776,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 360.92474
-      y: 402.75674
+      x: 366.5851
+      y: 411.2473
       width: 120
       height: 35
   - m_id:
@@ -873,8 +873,8 @@ MonoBehaviour:
     m_childIndexList: 09000000
     m_canvasRect:
       serializedVersion: 2
-      x: 594.7968
-      y: 319.96603
+      x: 593.14923
+      y: 323.8462
       width: 120
       height: 48
   - m_id:
@@ -919,8 +919,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 597.38605
-      y: 399.98834
+      x: 592.66907
+      y: 409.4223
       width: 120
       height: 35
   m_goalEntityTypeName: 

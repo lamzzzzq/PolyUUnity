@@ -35,6 +35,7 @@ public class AddScore : MonoBehaviour
                 break;
             case 2:
                 {
+                    //Debug.Log("¦bscene 2");
                     int value = DialogueLua.GetVariable("Point_Level2").asInt;
 
                     Point.text = value.ToString();

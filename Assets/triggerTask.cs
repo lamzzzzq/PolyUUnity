@@ -10,6 +10,7 @@ public class triggerTask : MonoBehaviour
 
     public Transform shakePoint;
     public Transform spawnPoint;
+    public GameObject cube;
 
     public GameObject obj1;
     public GameObject obj2;
@@ -18,6 +19,7 @@ public class triggerTask : MonoBehaviour
     public GameObject pen;
 
     public List<Animator> anim = new List<Animator>();
+    
 
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +30,7 @@ public class triggerTask : MonoBehaviour
             {
                 anim[i].enabled = true;
             }
+
             
 
         }
@@ -44,6 +47,7 @@ public class triggerTask : MonoBehaviour
                 Instantiate(gameObject[i], spawnPoint.transform.position, Quaternion.identity);
             }
 
+            cube.SetActive(true);
             addForce.enabled = true;
         }    
        

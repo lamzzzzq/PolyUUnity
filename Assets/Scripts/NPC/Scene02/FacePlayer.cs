@@ -6,6 +6,8 @@ using UnityEngine;
 public class FacePlayer : MonoBehaviour
 {
     public Transform target;
+
+    public GameObject cube;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,8 @@ public class FacePlayer : MonoBehaviour
         Vector3 dir = target.transform.position - transform.position;
         dir = new Vector3(dir.x, 0, dir.z);
         transform.rotation = Quaternion.LookRotation(dir);
+
+        cube.SetActive(false);
 
     }
 }
