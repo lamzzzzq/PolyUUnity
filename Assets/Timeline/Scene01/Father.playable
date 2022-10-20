@@ -47,22 +47,58 @@ MonoBehaviour:
     m_Start: 1.5833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 1495792180751113354}
-    m_Duration: 6.533333333333334
+    m_Duration: 4.1000000000000005
     m_TimeScale: 1
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: 0.2666666666666664
-    m_BlendOutDuration: 0.5666666666666673
+    m_BlendOutDuration: 0.5166666666666666
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -95,7 +131,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -110,15 +164,15 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Dwarf Idle
   - m_Version: 1
-    m_Start: 7.55
-    m_ClipIn: 2.383333333333333
+    m_Start: 5.166666666666667
+    m_ClipIn: 0
     m_Asset: {fileID: 4025337547133698125}
-    m_Duration: 2.783333333333333
+    m_Duration: 5.166666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 0.5666666666666673
+    m_BlendInDuration: 0.5166666666666666
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -242,7 +296,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 8.116666666666667
+    m_Start: 5.683333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 4099183049480483248}
     m_Duration: 4.999999999999999
