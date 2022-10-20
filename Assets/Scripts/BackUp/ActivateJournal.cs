@@ -13,11 +13,11 @@ public class ActivateJournal : MonoBehaviour
     {
         //
         //if(InputBridge.Instance.AButtonDown)
-        if(Input.GetKeyDown(KeyCode.M))
+/*        if(Input.GetKeyDown(KeyCode.M))
         {
             PixelCrushers.QuestMachine.QuestMachine.GetQuestJournal().ToggleJournalUI();
             Debug.Log("V");
-        }
+        }*/
 
     }
 }
