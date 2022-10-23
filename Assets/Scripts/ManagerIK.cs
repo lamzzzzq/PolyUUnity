@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Tutorial from :https://www.youtube.com/watch?v=SLAYPZ7lukY&t=669s
 public class ManagerIK : MonoBehaviour
 {
 
@@ -9,6 +11,8 @@ public class ManagerIK : MonoBehaviour
     public bool ikActive = false;
     public Transform objTarget;
     public float lookAtWeight;
+    public float disireDist;
+
 
     //dummy pivot
     GameObject objPivot;
@@ -27,18 +31,23 @@ public class ManagerIK : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // target position 1
         objPivot.transform.LookAt(objTarget);
         float pivotRotY = objPivot.transform.localRotation.y;
         //Debug.Log(pivotRotY);
-        if((-0.07f > pivotRotY && pivotRotY > -0.859f) || (pivotRotY>0.866f && pivotRotY < 0.993f))
+
+        float dist = Vector3.Distance(objPivot.transform.position, objTarget.position);
+        //Debug.Log(dist);
+
+        if(((-0.2f > pivotRotY && pivotRotY > -0.860f) || (pivotRotY>0.866f && pivotRotY < 0.95f)) && dist<disireDist)
         {
-            lookAtWeight = Mathf.Lerp(lookAtWeight, 1, Time.deltaTime);
+            lookAtWeight = Mathf.Lerp(lookAtWeight, 1, Time.deltaTime*2.5f);
 
 
         }
         else
         {
-            lookAtWeight = 0f;
+            lookAtWeight = Mathf.Lerp(lookAtWeight, 0, Time.deltaTime * 2.5f);
         }
 
     }
