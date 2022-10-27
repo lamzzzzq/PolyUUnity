@@ -664,8 +664,8 @@ MonoBehaviour:
     m_childIndexList: 0300000004000000
     m_canvasRect:
       serializedVersion: 2
-      x: 250.52176
-      y: 179.19704
+      x: 251.52176
+      y: 178.19704
       width: 120
       height: 48
   - m_id:
@@ -712,7 +712,7 @@ MonoBehaviour:
     m_childIndexList: 08000000
     m_canvasRect:
       serializedVersion: 2
-      x: 171
+      x: 173
       y: 245.93619
       width: 120
       height: 48
@@ -760,7 +760,7 @@ MonoBehaviour:
     m_childIndexList: 09000000
     m_canvasRect:
       serializedVersion: 2
-      x: 322
+      x: 323
       y: 245.82352
       width: 120
       height: 48

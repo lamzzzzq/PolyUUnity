@@ -37,7 +37,7 @@ public class ManagerIK : MonoBehaviour
         //Debug.Log(pivotRotY);
 
         float dist = Vector3.Distance(objPivot.transform.position, objTarget.position);
-        //Debug.Log(dist);
+        Debug.Log(dist);
 
         if(((-0.2f > pivotRotY && pivotRotY > -0.860f) || (pivotRotY>0.866f && pivotRotY < 0.95f)) && dist<disireDist)
         {

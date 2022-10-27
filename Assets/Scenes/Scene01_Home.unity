@@ -8925,13 +8925,7 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: cebbced7d4a31734496a2136cb9b8e64, type: 2}
---- !u!95 &96417052 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95505144815439886, guid: f85a780eda2a82547837ff2d30732dd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 388400376}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &96417053
+--- !u!114 &96417051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8940,13 +8934,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 96417048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7878ab32733a5414cbd6d64e0cda0a1a, type: 3}
+  m_Script: {fileID: 11500000, guid: bc3cb78dd09ecba4f9afa452a6356d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ikActive: 1
   objTarget: {fileID: 226556137}
-  lookAtWeight: 0
-  disireDist: 1
+  lookAtWeight: 0.8
+  disireDist: 0
+--- !u!95 &96417052 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95505144815439886, guid: f85a780eda2a82547837ff2d30732dd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 388400376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &99306697
 GameObject:
   m_ObjectHideFlags: 0

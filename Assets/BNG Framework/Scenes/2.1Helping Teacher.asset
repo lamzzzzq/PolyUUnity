@@ -108,11 +108,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 3
+  m_counterIndex: 2
   m_counterValueMode: 0
   m_requiredCounterValue:
     m_valueType: 0
-    m_literalValue: 15
+    m_literalValue: 1
+    m_counterIndex: 0
+--- !u!114 &-6286364800749464599
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
+  m_Name: CounterQuestCondition
+  m_EditorClassIdentifier: 
+  m_counterIndex: 2
+  m_counterValueMode: 1
+  m_requiredCounterValue:
+    m_valueType: 0
+    m_literalValue: 0
+    m_counterIndex: 0
+--- !u!114 &-6174032405594410508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
+  m_Name: CounterQuestCondition
+  m_EditorClassIdentifier: 
+  m_counterIndex: 0
+  m_counterValueMode: 0
+  m_requiredCounterValue:
+    m_valueType: 0
+    m_literalValue: 6
     m_counterIndex: 0
 --- !u!114 &-5231455490708674061
 MonoBehaviour:
@@ -126,11 +162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 3
-  m_counterValueMode: 1
+  m_counterIndex: 2
+  m_counterValueMode: 0
   m_requiredCounterValue:
     m_valueType: 0
-    m_literalValue: 14
+    m_literalValue: 1
     m_counterIndex: 0
 --- !u!114 &-3580746339676242499
 MonoBehaviour:
@@ -300,14 +336,14 @@ MonoBehaviour:
     - m_contentList: []
   m_counterList:
   - m_name:
-      m_text: Book
+      m_text: Right Item
       m_stringAsset: {fileID: 0}
       m_textTable: {fileID: 0}
       m_textTableFieldID: 0
     m_currentValue: 0
     m_randomizeInitialValue: 0
     m_minValue: 0
-    m_maxValue: 5
+    m_maxValue: 7
     m_updateMode: 1
     m_messageEventList:
     - m_senderSpecifier: 0
@@ -323,28 +359,17 @@ MonoBehaviour:
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_message:
-        m_text: Got
+        m_text: Right
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_parameter:
-        m_text: Book
+        m_text: Place
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_operation: 2
       m_literalValue: 1
-  - m_name:
-      m_text: File
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_currentValue: 0
-    m_randomizeInitialValue: 0
-    m_minValue: 0
-    m_maxValue: 5
-    m_updateMode: 1
-    m_messageEventList:
     - m_senderSpecifier: 0
       m_senderID:
         m_text: 
@@ -358,26 +383,26 @@ MonoBehaviour:
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_message:
-        m_text: Got
+        m_text: Right
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_parameter:
-        m_text: File
+        m_text: PlaceTakeOff
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_operation: 2
-      m_literalValue: 1
+      m_literalValue: -1
   - m_name:
-      m_text: Pen
+      m_text: Placed
       m_stringAsset: {fileID: 0}
       m_textTable: {fileID: 0}
       m_textTableFieldID: 0
     m_currentValue: 0
     m_randomizeInitialValue: 0
     m_minValue: 0
-    m_maxValue: 5
+    m_maxValue: 7
     m_updateMode: 1
     m_messageEventList:
     - m_senderSpecifier: 0
@@ -393,42 +418,7 @@ MonoBehaviour:
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_message:
-        m_text: Got
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_parameter:
-        m_text: Pen
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_operation: 2
-      m_literalValue: 1
-  - m_name:
-      m_text: Task1 Collect
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_currentValue: 0
-    m_randomizeInitialValue: 0
-    m_minValue: 0
-    m_maxValue: 15
-    m_updateMode: 1
-    m_messageEventList:
-    - m_senderSpecifier: 0
-      m_senderID:
-        m_text: 
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_targetSpecifier: 0
-      m_targetID:
-        m_text: 
-        m_stringAsset: {fileID: 0}
-        m_textTable: {fileID: 0}
-        m_textTableFieldID: 0
-      m_message:
-        m_text: Got
+        m_text: Place
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
@@ -439,6 +429,76 @@ MonoBehaviour:
         m_textTableFieldID: 0
       m_operation: 2
       m_literalValue: 1
+    - m_senderSpecifier: 0
+      m_senderID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_targetSpecifier: 0
+      m_targetID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_message:
+        m_text: Place
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_parameter:
+        m_text: ItemTakeOff
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_operation: 2
+      m_literalValue: -1
+  - m_name:
+      m_text: Dustbin
+      m_stringAsset: {fileID: 0}
+      m_textTable: {fileID: 0}
+      m_textTableFieldID: 0
+    m_currentValue: 0
+    m_randomizeInitialValue: 0
+    m_minValue: 0
+    m_maxValue: 1
+    m_updateMode: 1
+    m_messageEventList:
+    - m_senderSpecifier: 0
+      m_senderID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_targetSpecifier: 0
+      m_targetID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_message:
+        m_text: Place
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_parameter:
+        m_text: Dustbin
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_operation: 2
+      m_literalValue: 1
+  - m_name:
+      m_text: Timer
+      m_stringAsset: {fileID: 0}
+      m_textTable: {fileID: 0}
+      m_textTableFieldID: 0
+    m_currentValue: 240
+    m_randomizeInitialValue: 0
+    m_minValue: 0
+    m_maxValue: 999
+    m_updateMode: 1
+    m_messageEventList: []
   m_nodeList:
   - m_id:
       m_text: Quest-196232.start
@@ -526,14 +586,15 @@ MonoBehaviour:
     m_conditionSet:
       m_conditionList:
       - {fileID: -6614693901796710815}
+      - {fileID: -6174032405594410508}
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
     m_childIndexList: 02000000
     m_canvasRect:
       serializedVersion: 2
-      x: 176.87085
-      y: 234.94952
+      x: 169.10385
+      y: 401.93982
       width: 120
       height: 48
   - m_id:
@@ -582,8 +643,8 @@ MonoBehaviour:
     m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
-      x: 174.50604
-      y: 317.60013
+      x: 166.73904
+      y: 484.59042
       width: 120
       height: 48
   - m_id:
@@ -628,8 +689,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 172.09457
-      y: 408.1407
+      x: 164.32758
+      y: 575.1308
       width: 120
       height: 35
   - m_id:
@@ -672,7 +733,6 @@ MonoBehaviour:
         - {fileID: -1885794899317833504}
     m_conditionSet:
       m_conditionList:
-      - {fileID: 68477188449592043}
       - {fileID: -5231455490708674061}
       m_conditionCountMode: 1
       m_minConditionCount: 0
@@ -680,8 +740,8 @@ MonoBehaviour:
     m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 365.75363
-      y: 242.27893
+      x: 475.75366
+      y: 412.27893
       width: 120
       height: 48
   - m_id:
@@ -730,8 +790,8 @@ MonoBehaviour:
     m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
-      x: 364.1667
-      y: 321.74783
+      x: 472.1667
+      y: 491.7478
       width: 120
       height: 48
   - m_id:
@@ -776,8 +836,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 366.5851
-      y: 411.2473
+      x: 474.58508
+      y: 581.2473
       width: 120
       height: 35
   - m_id:
@@ -817,14 +877,15 @@ MonoBehaviour:
     m_conditionSet:
       m_conditionList:
       - {fileID: 7766814524996660204}
+      - {fileID: -6286364800749464599}
       m_conditionCountMode: 1
       m_minConditionCount: 1
       m_numTrueConditions: 0
     m_childIndexList: 08000000
     m_canvasRect:
       serializedVersion: 2
-      x: 589.677
-      y: 240.64862
+      x: 697.677
+      y: 410.64862
       width: 120
       height: 48
   - m_id:
@@ -873,8 +934,8 @@ MonoBehaviour:
     m_childIndexList: 09000000
     m_canvasRect:
       serializedVersion: 2
-      x: 593.14923
-      y: 323.8462
+      x: 701.14923
+      y: 492.8462
       width: 120
       height: 48
   - m_id:
@@ -919,30 +980,12 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 592.66907
-      y: 409.4223
+      x: 700.66907
+      y: 579.4223
       width: 120
       height: 35
   m_goalEntityTypeName: 
   m_nextContentID: 0
---- !u!114 &68477188449592043
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 3
-  m_counterValueMode: 0
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 10
-    m_counterIndex: 0
 --- !u!114 &216907489626387466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -988,15 +1031,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: '{#Book}/{>#Book} Books
-
-      {#File}/{>#File} Files
-
-      {#Pen}/{>#Pen}
-      Pens
+    m_text: '{#Right Item}  Place Right Item
 
 
-      {#Task1 Collect}  Num for test'
+      {#Placed} Ever Placed Item
+
+
+      {#Dustbin}
+      Place Dustbin?'
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1232,11 +1274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
-  m_counterIndex: 3
+  m_counterIndex: 1
   m_counterValueMode: 1
   m_requiredCounterValue:
     m_valueType: 0
-    m_literalValue: 9
+    m_literalValue: 0
     m_counterIndex: 0
 --- !u!114 &8005335418493517439
 MonoBehaviour:
@@ -1294,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722a17429c6ad18448893e6cfdb4de76, type: 3}
   m_Name: LuaQuestAction
   m_EditorClassIdentifier: 
-  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 20
+  m_luaCode: Variable["Point_Level2"] = Variable["Point_Level2"] + 30
 --- !u!114 &8881209784636364231
 MonoBehaviour:
   m_ObjectHideFlags: 1
