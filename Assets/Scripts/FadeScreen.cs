@@ -9,6 +9,8 @@ public class FadeScreen : MonoBehaviour
     public float fadeDuration = 2;
     public Color fadeColor;
     private Renderer rend;
+
+    public GameObject FadeScreenObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,8 @@ public class FadeScreen : MonoBehaviour
         newColor2.a = Mathf.Lerp(alphaIn, alphaOut, timer / fadeDuration);  //The usage of Mathf.Lerp
 
         rend.material.SetColor("_Color", newColor2);
+
+        FadeScreenObj.SetActive(false);
 
     }
 }

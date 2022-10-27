@@ -2520,7 +2520,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("Find a pen", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2732,15 +2732,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: SetQuestState("Find a pen", "active")
+      conditionsString: 
       userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 740
-        y: 88.33333
+        x: 746.01447
+        y: 81.59828
         width: 160
         height: 30
     - id: 8
@@ -2888,21 +2888,15 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      - originConversationID: 6
-        originDialogueID: 9
-        destinationConversationID: 6
-        destinationDialogueID: 13
-        isConnector: 0
-        priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("Find a pen", "grantable")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 377.7273
-        y: 308.40906
+        x: 371.0754
+        y: 290.3104
         width: 160
         height: 30
     - id: 10
@@ -2976,8 +2970,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 377.7273
-        y: 358.40906
+        x: 207.27277
+        y: 390.22723
         width: 160
         height: 30
     - id: 11
@@ -3045,8 +3039,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 562.27277
-        y: 386.81818
+        x: 561.0532
+        y: 472.18405
         width: 160
         height: 30
     - id: 12
@@ -3120,8 +3114,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 562.27277
-        y: 286.81818
+        x: 590.32153
+        y: 281.94012
         width: 160
         height: 30
     - id: 13
@@ -3195,8 +3189,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 562.27277
-        y: 336.81818
+        x: 574.46796
+        y: 641.69617
         width: 160
         height: 30
     - id: 14
@@ -3264,8 +3258,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 742.27277
-        y: 378.48483
+        x: 773.31476
+        y: 652.487
         width: 160
         height: 30
     - id: 15
@@ -3333,8 +3327,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 742.27277
-        y: 311.81818
+        x: 785.59326
+        y: 280.38803
         width: 160
         height: 30
     - id: 16
@@ -3408,7 +3402,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasZoom: 0.8200002
   - id: 7
     fields:
     - title: Title
@@ -4765,19 +4759,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level2"] = Variable["Point_Level2"] + 15
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 187
-        y: 147
+        x: 190
+        y: 148
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 30.385284, y: 10.486227}
+    canvasZoom: 1.0899999
   syncInfo:
     syncActors: 0
     syncItems: 0
