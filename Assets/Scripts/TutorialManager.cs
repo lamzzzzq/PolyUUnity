@@ -22,7 +22,7 @@ public class TutorialManager : MonoBehaviour
         }
         if(popUpIndex == 0)
         {
-            if()
+            
         }
     }
 }

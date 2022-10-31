@@ -22,7 +22,7 @@ public class SceneTransitionManager : MonoBehaviour
     IEnumerator GoToSceneRoutine(string scene)
     {
         fadeScreen.FadeOut();
-        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);  
 
         PixelCrushers.SaveSystem.LoadScene(scene);
     }*/
@@ -49,9 +49,11 @@ public class SceneTransitionManager : MonoBehaviour
         while(timer <= fadeScreen.fadeDuration && !operation.isDone)
         {
             timer += Time.deltaTime;
+
+            Debug.Log(operation.progress);
             yield return null;
         }
 
-        operation.allowSceneActivation = true;
+        //operation.allowSceneActivation = true;
     }
 }
