@@ -14,6 +14,10 @@ TagManager:
   - SubPlayer
   - Ball
   - Ruler
+  - Bread
+  - Meat
+  - Cheese
+  - Tomato
   layers:
   - Default
   - TransparentFX
@@ -27,7 +31,7 @@ TagManager:
   - Player
   - Grabbable
   - Post Processing
-  - 
+  - Floor
   - 
   - 
   - 

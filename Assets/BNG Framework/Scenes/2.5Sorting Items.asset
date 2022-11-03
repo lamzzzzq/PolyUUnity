@@ -123,12 +123,36 @@ MonoBehaviour:
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_parameter:
-        m_text: Ruler
+        m_text: RoundRuler
         m_stringAsset: {fileID: 0}
         m_textTable: {fileID: 0}
         m_textTableFieldID: 0
       m_operation: 2
       m_literalValue: 1
+    - m_senderSpecifier: 0
+      m_senderID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_targetSpecifier: 0
+      m_targetID:
+        m_text: 
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_message:
+        m_text: Drop
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_parameter:
+        m_text: RoundRuler
+        m_stringAsset: {fileID: 0}
+        m_textTable: {fileID: 0}
+        m_textTableFieldID: 0
+      m_operation: 2
+      m_literalValue: -1
   - m_name:
       m_text: JumpRope
       m_stringAsset: {fileID: 0}
@@ -380,8 +404,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 644.34174
-      y: 261.0633
+      x: 634.93
+      y: 251.65152
       width: 120
       height: 48
   m_goalEntityTypeName: 

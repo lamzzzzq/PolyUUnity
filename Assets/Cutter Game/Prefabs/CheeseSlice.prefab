@@ -434,9 +434,10 @@ GameObject:
   - component: {fileID: 5530353122127409514}
   - component: {fileID: 2976028128101035742}
   - component: {fileID: 2785400401419323317}
+  - component: {fileID: 9028766586520485139}
   m_Layer: 0
   m_Name: CheeseSlice
-  m_TagString: Untagged
+  m_TagString: Cheese
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,6 +619,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LocalPositionOffset: {x: 0, y: 0, z: 0}
   LocalRotationOffset: {x: 45, y: 0, z: 90}
+--- !u!114 &9028766586520485139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174658024000292766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539ae839f9d203d4586c6fee2d925df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToCreate: {fileID: 0}
 --- !u!1001 &1079842396054207849
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -61,7 +61,8 @@ public class MoveCookedMeat : MonoBehaviour
 
     IEnumerator cookTimer()
     {
-        yield return new WaitForSeconds(10);
+        Debug.Log("KKL");
+        yield return new WaitForSeconds(5);
         
         foodValue = 1000;
         addButton.SetActive(true);
