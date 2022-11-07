@@ -22,21 +22,21 @@ public class LoadManager : MonoBehaviour
 
         operation.allowSceneActivation = false;
 
+        float progress = 0;
+
         while(!operation.isDone)
         {
-            slider.value = operation.progress;
+            progress = Mathf.MoveTowards(progress, operation.progress, Time.deltaTime);
 
-            text.text = operation.progress * 100 + "%";
+            slider.value = progress;
 
-            if(operation.progress >= 0.9f)
+            text.text = progress * 100 + "%";
+
+            if( progress >= 0.9f)
             {
                 slider.value = 1;
-                text.text = "Press AnyKey to Continue";
+                operation.allowSceneActivation = true;
 
-                if(Input.GetKeyDown(KeyCode.H))
-                {
-                    operation.allowSceneActivation = true;
-                }
             }
 
             yield return null;
