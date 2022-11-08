@@ -11,7 +11,7 @@ public class ToggleWristMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.BButtonDown))
+        if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.XButtonDown))
         {
             Show = !Show;
         }

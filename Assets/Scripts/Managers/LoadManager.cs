@@ -31,12 +31,9 @@ public class LoadManager : MonoBehaviour
             if(operation.progress >= 0.9f)
             {
                 slider.value = 1;
-                text.text = "Press AnyKey to Continue";
 
-                if(Input.GetKeyDown(KeyCode.H))
-                {
-                    operation.allowSceneActivation = true;
-                }
+                operation.allowSceneActivation = true;
+
             }
 
             yield return null;

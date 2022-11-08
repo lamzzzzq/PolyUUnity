@@ -64,25 +64,21 @@ public class Cooker : MonoBehaviour
         if (other.CompareTag("Bread"))
         {
             Score = Score - 1000;
-            Debug.Log(Score);
         }
 
         if (other.CompareTag("Meat"))
         {
             Score = Score - 100;
-            Debug.Log(Score);
         }
 
         if (other.CompareTag("Tomato"))
         {
             Score = Score - 10;
-            Debug.Log(Score);
         }
 
         if (other.CompareTag("Cheese"))
         {
             Score = Score - 1;
-            Debug.Log(Score);
         }
     }
 }
