@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Start: 1.5833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 1495792180751113354}
-    m_Duration: 4.1000000000000005
+    m_Duration: 3.216666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
@@ -164,10 +164,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Dwarf Idle
   - m_Version: 1
-    m_Start: 5.166666666666667
-    m_ClipIn: 0
+    m_Start: 4.283333333333333
+    m_ClipIn: 0.2833333333333332
     m_Asset: {fileID: 4025337547133698125}
-    m_Duration: 5.166666666666666
+    m_Duration: 4.883333333333333
     m_TimeScale: 1
     m_ParentTrack: {fileID: 467114153767870062}
     m_EaseInDuration: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 5.683333333333334
+    m_Start: 5
     m_ClipIn: 0
     m_Asset: {fileID: 4099183049480483248}
     m_Duration: 4.999999999999999
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: AnimationPlayableAsset
   m_EditorClassIdentifier: 
   m_Clip: {fileID: -8703035399731986702, guid: 54fca38a184218546b0a7ab0c7fc4650, type: 3}
-  m_Position: {x: -7.76, y: -1.255749, z: -0.01301974}
+  m_Position: {x: -6.89, y: -1.255749, z: -0.01301974}
   m_EulerAngles: {x: 0.133, y: -89.126, z: 0}
   m_UseTrackMatchFields: 1
   m_MatchTargetFields: 63
