@@ -36,6 +36,24 @@ MonoBehaviour:
     m_valueType: 0
     m_literalValue: 10
     m_counterIndex: 0
+--- !u!114 &-6936482045527532184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
+  m_Name: QuestStateQuestCondition
+  m_EditorClassIdentifier: 
+  m_requiredQuestID:
+    m_text: 2.1HelpingTeacher
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_requiredState: 2
 --- !u!114 &-6271697154757483188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,6 +127,24 @@ MonoBehaviour:
     m_text: '{#water stains} / {>#water stains}
 
       {#water dirt} / {>#water dirt}'
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+--- !u!114 &-4191732431788672445
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: Miss Chan needs our help!
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -193,11 +229,14 @@ MonoBehaviour:
     m_minConditionCount: 0
     m_numTrueConditions: 0
   m_offerConditionSet:
-    m_conditionList: []
+    m_conditionList:
+    - {fileID: -6936482045527532184}
+    - {fileID: 446999746619845942}
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0
-  m_offerConditionsUnmetContentList: []
+  m_offerConditionsUnmetContentList:
+  - {fileID: -4191732431788672445}
   m_offerContentList:
   - {fileID: 7750377440722416936}
   - {fileID: 964470004092244280}
@@ -894,6 +933,24 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
+--- !u!114 &446999746619845942
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
+  m_Name: QuestStateQuestCondition
+  m_EditorClassIdentifier: 
+  m_requiredQuestID:
+    m_text: 2.1HelpingTeacher
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_requiredState: 3
 --- !u!114 &795198404249476271
 MonoBehaviour:
   m_ObjectHideFlags: 1
