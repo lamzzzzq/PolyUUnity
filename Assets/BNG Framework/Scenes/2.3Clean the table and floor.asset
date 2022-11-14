@@ -165,6 +165,24 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
+--- !u!114 &-638733505716976933
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
+  m_Name: QuestStateQuestCondition
+  m_EditorClassIdentifier: 
+  m_requiredQuestID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_requiredState: 0
 --- !u!114 &-501693817674267067
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +250,7 @@ MonoBehaviour:
     m_conditionList:
     - {fileID: -6936482045527532184}
     - {fileID: 446999746619845942}
+    - {fileID: -638733505716976933}
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0
