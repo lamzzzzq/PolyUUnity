@@ -346,13 +346,19 @@ namespace PixelCrushers.QuestMachine
 
         private void OnEnable()
         {
-            QuestMachineConfiguration.quitting -= ResetRuntimeValues;
-            QuestMachineConfiguration.quitting += ResetRuntimeValues;
+            if (QuestMachineConfiguration.instance != null)
+            {
+                QuestMachineConfiguration.instance.quitting -= ResetRuntimeValues;
+                QuestMachineConfiguration.instance.quitting += ResetRuntimeValues;
+            }
         }
 
         private void OnDisable()
         {
-            QuestMachineConfiguration.quitting -= ResetRuntimeValues;
+            if (QuestMachineConfiguration.instance != null)
+            {
+                QuestMachineConfiguration.instance.quitting -= ResetRuntimeValues;
+            }
         }
 
     }

@@ -68,6 +68,10 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private bool m_rememberIfAbandoned;
 
+        [Tooltip("Delete when completed even if Quest Journal specifies Remember Completed Quests.")]
+        [SerializeField]
+        private bool m_deleteWhenComplete;
+
         [Tooltip("If specified, conditions that autostart the quest when true.")]
         [SerializeField]
         private QuestConditionSet m_autostartConditionSet;
@@ -124,6 +128,10 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private List<QuestNode> m_nodeList;
 
+        [Tooltip("Text table that will be assigned by default to all quest content fields.")]
+        [SerializeField]
+        private TextTable m_textTable = null;
+
         [HideInInspector]
         [SerializeField]
         private string m_goalEntityTypeName = null;
@@ -175,6 +183,14 @@ namespace PixelCrushers.QuestMachine
         public bool isProcedurallyGenerated
         {
             get { return isInstance && originalAsset == null; }
+        }
+
+        /// <summary>
+        /// Default text table used when adding new content.
+        /// </summary>
+        public TextTable textTable
+        {
+            get { return m_textTable; }
         }
 
         /// <summary>
@@ -300,6 +316,15 @@ namespace PixelCrushers.QuestMachine
         {
             get { return m_rememberIfAbandoned; }
             set { m_rememberIfAbandoned = value; }
+        }
+
+        /// <summary>
+        /// Delete when completed even if Quest Journal specifies Remember Completed Quests.
+        /// </summary>
+        public bool deleteWhenComplete
+        { 
+            get { return m_deleteWhenComplete; }
+            set { m_deleteWhenComplete = value; }
         }
 
         /// <summary>
@@ -789,6 +814,13 @@ namespace PixelCrushers.QuestMachine
             }
         }
 
+        public void ResetStartConditions()
+        {
+            if (!Application.isPlaying) return;
+            autostartConditionSet.ResetConditions();
+            offerConditionSet.ResetConditions();
+        }
+
         private void Autostart()
         {
             SetState(QuestState.Active);
@@ -866,6 +898,7 @@ namespace PixelCrushers.QuestMachine
 
             m_state = newState;
 
+            if (m_state == QuestState.WaitingToStart) ResetStartConditions();
             SetStartChecking(m_state == QuestState.WaitingToStart);
             SetCounterListeners(m_state == QuestState.Active || (m_state == QuestState.WaitingToStart && (hasAutostartConditions || hasOfferConditions)));
             if (m_state != QuestState.Active) StopNodeListeners();
@@ -1217,6 +1250,72 @@ namespace PixelCrushers.QuestMachine
             }
             indicatorStates.Clear();
             QuestMachineMessages.RefreshIndicators(questGiverID);
+        }
+
+        #endregion
+
+        #region Compress Generated Content
+
+        /// <summary>
+        /// If quest is procedurally generated and completed, destroys all content and 
+        /// conditions not needed to show in UIs.
+        /// </summary>
+        public void CompressGeneratedContent()
+        {
+            var canCompress = isProcedurallyGenerated && (GetState() == QuestState.Successful || GetState() == QuestState.Failed);
+            if (!canCompress) return;
+            CompressGeneratedContent(autostartConditionSet);
+            CompressGeneratedContent(offerConditionSet);
+            CompressGeneratedContent(offerConditionsUnmetContentList);
+            CompressGeneratedContent(offerContentList);
+            var stateCount = Enum.GetNames(typeof(QuestState)).Length;
+            for (int j = 0; j < stateCount; j++)
+            {
+                if (j == (int)QuestState.Successful || j == (int)QuestState.Failed) continue;
+                var stateInfo = QuestStateInfo.GetStateInfo(stateInfoList, (QuestNodeState)j);
+                if (stateInfo != null)
+                {
+                    stateInfo.DestroySubassets();
+                    stateInfo.actionList.Clear();
+                    for (int k = 0; k < stateInfo.categorizedContentList.Count; k++)
+                    {
+                        stateInfo.categorizedContentList[k].contentList.Clear();
+                    }
+                }
+            }
+            for (int i = 0; i < nodeList.Count; i++)
+            {
+                var node = nodeList[i];
+                if (node == null) continue;
+                CompressGeneratedContent(node.conditionSet);
+                var nodeStateCount = Enum.GetNames(typeof(QuestNodeState)).Length;
+                for (int j = 0; j < nodeStateCount; j++)
+                {
+                    if (j == (int)QuestNodeState.True) continue;
+                    var stateInfo = QuestStateInfo.GetStateInfo(stateInfoList, (QuestNodeState)j);
+                    if (stateInfo != null)
+                    {
+                        stateInfo.DestroySubassets();
+                        stateInfo.actionList.Clear();
+                        for (int k = 0; k < stateInfo.categorizedContentList.Count; k++)
+                        {
+                            stateInfo.categorizedContentList[k].contentList.Clear();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CompressGeneratedContent(QuestConditionSet conditionSet)
+        {
+            conditionSet.DestroySubassets();
+            conditionSet.conditionList.Clear();
+        }
+
+        private void CompressGeneratedContent(List<QuestContent> contentList)
+        {
+            QuestContent.DestroyList(contentList);
+            contentList.Clear();
         }
 
         #endregion

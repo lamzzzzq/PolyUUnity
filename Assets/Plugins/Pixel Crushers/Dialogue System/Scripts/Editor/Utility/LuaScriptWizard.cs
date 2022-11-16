@@ -398,6 +398,7 @@ namespace PixelCrushers.DialogueSystem
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], item.scriptQuestEntryNames);
                                 break;
                             case CustomLuaParameterType.Variable:
+                            case CustomLuaParameterType.VariableName:
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], variablePopupNames);
                                 break;
                             case CustomLuaParameterType.Item:
@@ -468,7 +469,17 @@ namespace PixelCrushers.DialogueSystem
             try
             {
                 StringBuilder sb = new StringBuilder();
-                if (append && !string.IsNullOrEmpty(savedLuaCode)) sb.AppendFormat("{0};\n", savedLuaCode);
+                if (append && !string.IsNullOrEmpty(savedLuaCode))
+                {
+                    if (savedLuaCode.TrimEnd().EndsWith(";"))
+                    {
+                        sb.AppendFormat("{0}\n", savedLuaCode);
+                    }
+                    else
+                    {
+                        sb.AppendFormat("{0};\n", savedLuaCode);
+                    }
+                }
                 string endText = (scriptItems.Count > 1) ? ";\n" : string.Empty;
                 for (int i = 0; i < scriptItems.Count; i++)
                 {
@@ -678,7 +689,11 @@ namespace PixelCrushers.DialogueSystem
                                         break;
                                     case CustomLuaParameterType.Variable:
                                         var variableIndex = (int)item.customParamValues[p];
-                                        sb.Append((0 <= variableIndex && variableIndex < variableNames.Length) ? ("Variable[\"" + variableNames[variableIndex] + "\"]") : "\"\"");
+                                        sb.Append((0 <= variableIndex && variableIndex < variableNames.Length) ? ("Variable[\"" + DialogueLua.StringToTableIndex(variableNames[variableIndex]) + "\"]") : "\"\"");
+                                        break;
+                                    case CustomLuaParameterType.VariableName:
+                                        var variableNameIndex = (int)item.customParamValues[p];
+                                        sb.Append((0 <= variableNameIndex && variableNameIndex < variableNames.Length) ? ("\"" + variableNames[variableNameIndex] + "\"") : "\"\"");
                                         break;
                                     case CustomLuaParameterType.Item:
                                         var itemIndex = (int)item.customParamValues[p];
@@ -1113,6 +1128,7 @@ namespace PixelCrushers.DialogueSystem
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], item.scriptQuestEntryNames);
                                 break;
                             case CustomLuaParameterType.Variable:
+                            case CustomLuaParameterType.VariableName:
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], variablePopupNames);
                                 break;
                             case CustomLuaParameterType.Item:

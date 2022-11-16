@@ -54,7 +54,21 @@ namespace PixelCrushers.QuestMachine
             if (QuestEditorPrefs.questListContainerSaveSettingsFoldout)
             {
                 var rememberProperty = serializedObject.FindProperty("m_rememberCompletedQuests");
-                if (rememberProperty != null) EditorGUILayout.PropertyField(rememberProperty);
+                if (rememberProperty != null)
+                {
+                    EditorGUILayout.PropertyField(rememberProperty);
+                    if (rememberProperty.boolValue)
+                    {
+                        var onlyRememberHandwrittenProperty = serializedObject.FindProperty("m_onlyRememberHandwrittenQuests");
+                        if (onlyRememberHandwrittenProperty != null)
+                        {
+                            EditorGUILayout.PropertyField(onlyRememberHandwrittenProperty);
+                        }
+                        var compressCompletedProcgenQuestsProperty = serializedObject.FindProperty("m_compressCompletedProcgenQuests");
+                        if (compressCompletedProcgenQuestsProperty != null) EditorGUILayout.PropertyField(compressCompletedProcgenQuestsProperty,
+                            new GUIContent("Compress Generated Quests", "When procedurally generated quests complete, pare down saved data to only success/failure content."));
+                    }
+                }
             }
         }
     }

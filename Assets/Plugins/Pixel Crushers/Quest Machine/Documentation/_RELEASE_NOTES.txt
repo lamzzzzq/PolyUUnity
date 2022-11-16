@@ -4,6 +4,100 @@ Copyright © Pixel Crushers
 RELEASE NOTES
 -------------
 
+Version 1.2.32.2:
+[November 9, 2022]
+- Improved: Procedurally generated quests now show rewards in journal text.
+- Fixed bug introduced in 1.2.32 when assigning Text Table asset to quest's main info.
+- Fixed bug introduced in 1.2.32 when adding heading or icon content.
+
+
+Version 1.2.32:
+[November 8, 2022]
+- Changed: In Unity UI Journal UI, quest groups now start expanded by default.
+- Improved: Can now assign a text table to quest's main info which will be applied to all newly-added string content.
+- Fixed: When reverting quest to inactive state, now properly resets quest conditions.
+- Fixed: Issue when loading a hand-written quest from saved game where quest asset's conditions list has changed since save.
+- Fixed: Execution order of running quest node state's actions and enabling checking.
+- Fixed: Potential NullReferenceException when exiting editor playmode while Message quest condition is active.
+- Fixed: Harmless editor error messages that could occur when adding or removing a quest from a quest database.
+- Fixed: Return To NPC wizard now adds "Return to {QUESTGIVER}" alert to Active state, not True state.
+- Fixed: Added 2-pixel margin to dialogue UI prefab content area to accommodate UI Text Outline.
+- Dialogue System: Fixes Play Sequence command.
+- Save System: Changed default Frames To Wait Before Apply Data to 0.
+- Save System: Exposed SavedGameData.Dict.
+
+
+Version 1.2.31:
+[September 18, 2022]
+- Fixed: Execution order issue that could prevent EntityTypes from resetting runtime drive values in editor play mode with domain reloading disabled.
+- Fixed: LocalizeUI issue when no localized fonts asset was assigned that could report NullReferenceException.
+- Fixed: Save System issue where loading a saved game would unload additively-loaded scenes but would not clear SaveSystem.addedScenes list.
+- Changed: Message System now allows listeners to receive messages on same frame they registered.
+- Improved: UIPanel has additional safeguards to SetFocus() to handle EventSystem issues.
+
+
+Version 1.2.30:
+[September 5, 2022]
+- CHANGED: New property QuestStateSerializer.version = 1 for saved in version 1.2.29 and earlier; version = 2 saves quest condition alreadyTrue.
+- Added missing PlayerEntityType asset.
+- Improved: Added SaveSystem.validSceneName delegate.
+- Added: Localized Fonts.
+- Added: ListExtensions.Shuffle.
+- Fixed: DiskSavedGameDataStorer.RetrieveSavedGameData checks if save file is empty.
+- Dialogue System: Can now jump to procedurally-generated quest's conversation from an existing conversation.
+- Inventory Engine: Fixed Has Item Count condition to return true immediately if condition is true when quest node becomes active.
+
+
+Version 1.2.29:
+[July 25, 2022]
+- Behavior Designer: Added integration.
+- Corgi Engine: Updated integration for version 7.6.
+- TopDown Engine: Updated integration for version 3.
+
+
+Version 1.2.28:
+[July 6, 2022]
+- Added: Ability to abandon failed quests.
+- Fixed: Abandon button stayed visible in journal UI after abandoning quest.
+- Changed: Forward to Listeners checkbox is now ticked by default when adding a new Quest Journal.
+- Improved: UILocalizationManager can now reference more than one text table asset.
+
+
+Version 1.2.27.1:
+[June 9, 2022]
+- Fixed: Abandon button stayed visible in journal UI after abandoning quest.
+
+
+Version 1.2.27:
+[June 7, 2022]
+- InstantiateQuestAction now has option to remove "(Clone)".
+- Added SaveSystem.framesToWaitBeforeSaveDataAppliedEvent; SpawnedObjectList asset type.
+- Added EqualWeight option to procedural generation UrgentFactionSelectionCriterion.
+- Added option to only remember handwritten quests.
+- Added option to compress data of completed procgen quests.
+- Added Delete When Complete checkbox option to quests.
+- Added QuestMachineMessageEvents component.
+- Added Color tint option to IconQuestContent & ButtonQuestContent.
+- Procedurally generated quests no longer double up completed quest journal text of final action.
+- StringAsset text area now expands to accommodate large text passages.
+- Fixed: Internal fixes for empty elements in quest content lists and action lists.
+- Fixed: Error if alert UI was configured inactive.
+- Fixed: SaveSystem.saveDataApplied was called before QuestJournal's restored quests were listening for messages.
+- Fixed: Positioning issue in KeepRectTransformOnscreen component.
+- Corgi Engine: Added PixelCrushersMMLoadingSceneManager to tie save system to Corgi scene loader.
+- Dialogue System:
+  - Lua Variable condition can now check <, <=, >, >= in addition to ==.
+  - Added Start Conversation action, HasOfferableOrActiveQuest() Lua function. 
+  - Added DialogueSystemQuestAlertUI option to delay alert if dialogue UI is open.
+- Emerald AI: Added EmeraldAIQuestGiver subclass that stops AI during dialogue.
+- Makinom: Updated for Makinom 2.4.
+- Opsive Character Controllers: UCCSaver can now save mouse sensitivity settings.
+- ORK Framework: Updated for ORK 3.3.
+- PlayMaker: If Start Dialogue action's Player field is unassigned, will now use default player.
+- TopDown Engine: Added PixelCrushersMMLoadingSceneManager to tie save system to TDE scene loader.
+- uMMORPG 2D Remastered: Updated for version 2.11.
+
+
 Version 1.2.26:
 [April 9, 2022]
 - Fixed: QuestJournal/QuestGiver.ResetToOriginalState() clears deleted static quests list.

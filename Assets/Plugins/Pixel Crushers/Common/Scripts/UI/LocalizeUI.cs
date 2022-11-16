@@ -1,7 +1,4 @@
-// Recompile at 2022/9/16 1:21:46
-
-
-// Copyright (c) Pixel Crushers. All rights reserved.
+﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
 using UnityEngine;
 using System.Collections.Generic;
@@ -17,14 +14,24 @@ namespace PixelCrushers
         [SerializeField]
         private TextTable m_textTable;
 
+        [Tooltip("Overrides the UILocalizationManager's Localized Fonts.")]
+        [SerializeField]
+        private LocalizedFonts m_localizedFonts;
+
         [Tooltip("(Optional) If assigned, use this instead of the UI element's text's value as the field lookup value.")]
         [SerializeField]
         private string m_fieldName = string.Empty;
 
         public TextTable textTable
         {
-            get { return m_textTable; }// return (m_textTable != null) ? m_textTable : (UILocalizationManager.instance.textTable != null) ? UILocalizationManager.instance.textTable : GlobalTextTable.textTable; }
+            get { return m_textTable; }
             set { m_textTable = value; }
+        }
+
+        public LocalizedFonts localizedFonts
+        {
+            get { return m_localizedFonts; }
+            set { m_localizedFonts = value; }
         }
 
         public string fieldName
@@ -106,6 +113,10 @@ namespace PixelCrushers
                 //return; //--- Allow to continue and use default language value.
             }
 
+            // Get LocalizedFonts asset:
+            var localizedFonts = (m_localizedFonts != null) ? m_localizedFonts : UILocalizationManager.instance.localizedFonts;
+            var localizedFont = (localizedFonts != null) ? localizedFonts.GetFont(language) : null;
+
             // Make sure we have localizable UI components:
             if (text == null && dropdown == null)
             {
@@ -114,6 +125,7 @@ namespace PixelCrushers
             }
             var hasLocalizableComponent = text != null || dropdown != null;
 #if TMP_PRESENT
+            var localizedTextMeshProFont = (localizedFonts != null) ? localizedFonts.GetTextMeshProFont(language) : null;
             if (!m_lookedForTMP)
             {
                 m_lookedForTMP = true;
@@ -148,6 +160,7 @@ namespace PixelCrushers
                 else
                 {
                     text.text = GetLocalizedText(fieldName);
+                    if (localizedFont != null) text.font = localizedFont;
                 }
             }
 
@@ -162,6 +175,11 @@ namespace PixelCrushers
                     }
                 }
                 dropdown.captionText.text = GetLocalizedText(fieldNames[dropdown.value]);
+                if (localizedFont != null)
+                {
+                    dropdown.captionText.font = localizedFont;
+                    dropdown.itemText.font = localizedFont;
+                }
             }
 
 #if TMP_PRESENT
@@ -184,6 +202,7 @@ namespace PixelCrushers
                 else
                 {
                     textMeshPro.text = GetLocalizedText(fieldName);
+                    if (localizedTextMeshProFont != null) textMeshPro.font = localizedTextMeshProFont;
                 }
             }
             if (textMeshProUGUI != null)
@@ -199,6 +218,7 @@ namespace PixelCrushers
                 else
                 {
                     textMeshProUGUI.text = GetLocalizedText(fieldName);
+                    if (localizedTextMeshProFont != null) textMeshProUGUI.font = localizedTextMeshProFont;
                 }
             }
 #endif

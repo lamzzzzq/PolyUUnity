@@ -17,6 +17,7 @@ namespace PixelCrushers.QuestMachine
         {
             if (serializedObject == null) return;
             var imageProperty = serializedObject.FindProperty("m_image");
+            var colorProperty = serializedObject.FindProperty("m_color");
             var captionProperty = serializedObject.FindProperty("m_caption");
             var countProperty = serializedObject.FindProperty("m_count");
             UnityEngine.Assertions.Assert.IsNotNull(imageProperty, "Quest Machine: Internal error - m_image is null.");
@@ -24,6 +25,7 @@ namespace PixelCrushers.QuestMachine
             UnityEngine.Assertions.Assert.IsNotNull(countProperty, "Quest Machine: Internal error - m_count is null.");
             if (imageProperty == null || captionProperty == null || countProperty == null) return;
             EditorGUILayout.PropertyField(imageProperty, true);
+            if (colorProperty != null) EditorGUILayout.PropertyField(colorProperty, true);
             EditorGUILayout.PropertyField(captionProperty, true);
             EditorGUILayout.PropertyField(countProperty, true);
         }

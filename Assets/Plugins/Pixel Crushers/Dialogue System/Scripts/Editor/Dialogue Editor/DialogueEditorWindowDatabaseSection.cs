@@ -62,37 +62,37 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
         [SerializeField]
         private bool mergeConversations = true;
 
-        private enum ExportFormat { ChatMapperXML, JSON, CSV, VoiceoverScript, LanguageText, Screenplay };
+        public enum ExportFormat { ChatMapperXML, JSON, CSV, VoiceoverScript, LanguageText, Screenplay };
         [SerializeField]
-        private ExportFormat exportFormat = ExportFormat.ChatMapperXML;
+        public ExportFormat exportFormat = ExportFormat.ChatMapperXML;
         [SerializeField]
-        private string chatMapperExportPath = string.Empty;
+        public string chatMapperExportPath = string.Empty;
         [SerializeField]
-        private string csvExportPath = string.Empty;
+        public string csvExportPath = string.Empty;
         [SerializeField]
-        private string jsonExportPath = string.Empty;
+        public string jsonExportPath = string.Empty;
         [SerializeField]
-        private string voiceoverExportPath = string.Empty;
+        public string voiceoverExportPath = string.Empty;
         [SerializeField]
-        private string languageTextExportPath = string.Empty;
+        public string languageTextExportPath = string.Empty;
         [SerializeField]
-        private string screenplayExportPath = string.Empty;
+        public string screenplayExportPath = string.Empty;
         [SerializeField]
-        private static bool exportActors = true;
+        public static bool exportActors = true;
         [SerializeField]
-        private static bool exportItems = true;
+        public static bool exportItems = true;
         [SerializeField]
-        private static bool exportLocations = true;
+        public static bool exportLocations = true;
         [SerializeField]
-        private static bool exportVariables = true;
+        public static bool exportVariables = true;
         [SerializeField]
-        private static bool exportConversations = true;
+        public static bool exportConversations = true;
         [SerializeField]
-        private static bool exportCanvasRect = true;
+        public static bool exportCanvasRect = true;
         [SerializeField]
-        private static bool exportConversationsAfterEntries = false;
+        public static bool exportConversationsAfterEntries = false;
         [SerializeField]
-        private static bool omitNoneSequenceEntriesInScreenplay = false;
+        public static bool omitNoneSequenceEntriesInScreenplay = false;
         [SerializeField]
         private EntrytagFormat entrytagFormat = EntrytagFormat.ActorName_ConversationID_EntryID;
         [SerializeField]
@@ -102,6 +102,11 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
         private static GUIContent RegexSearchLabel = new GUIContent("Regex", "Use regular expressions in searches.");
 
         private Regex globalSearchRegex;
+
+        private void ResetDatabaseTab()
+        {
+            ResetLocalizationFoldout();
+        }
 
         #endregion
 
@@ -743,7 +748,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             }
         }
 
-        private void TryExportToCSV()
+        public void TryExportToCSV()
         {
             string newCSVExportPath = EditorUtility.SaveFilePanel("Save CSV", EditorWindowTools.GetDirectoryName(csvExportPath), csvExportPath, "csv");
             if (!string.IsNullOrEmpty(newCSVExportPath))
@@ -758,7 +763,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             }
         }
 
-        private void TryExportToJSON()
+        public void TryExportToJSON()
         {
             string newJSONExportPath = EditorUtility.SaveFilePanel("Save JSON", EditorWindowTools.GetDirectoryName(jsonExportPath), jsonExportPath, "json");
             if (!string.IsNullOrEmpty(newJSONExportPath))
@@ -773,7 +778,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             }
         }
 
-        private void TryExportToVoiceoverScript()
+        public void TryExportToVoiceoverScript()
         {
             string newVoiceoverPath = EditorUtility.SaveFilePanel("Save Voiceover Scripts", EditorWindowTools.GetDirectoryName(voiceoverExportPath), voiceoverExportPath, "csv");
             if (!string.IsNullOrEmpty(newVoiceoverPath))
@@ -788,7 +793,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             }
         }
 
-        private void TryExportToScreenplay()
+        public void TryExportToScreenplay()
         {
             string newScreenplayPath = EditorUtility.SaveFilePanel("Save Screenplays", EditorWindowTools.GetDirectoryName(screenplayExportPath), voiceoverExportPath, "txt");
             if (!string.IsNullOrEmpty(newScreenplayPath))
@@ -803,7 +808,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             }
         }
 
-        private void TryExportToLanguageText()
+        public void TryExportToLanguageText()
         {
             string newLanguageTextPath = EditorUtility.SaveFilePanel("Save Language Text", EditorWindowTools.GetDirectoryName(languageTextExportPath), languageTextExportPath, "txt");
             if (!string.IsNullOrEmpty(newLanguageTextPath))

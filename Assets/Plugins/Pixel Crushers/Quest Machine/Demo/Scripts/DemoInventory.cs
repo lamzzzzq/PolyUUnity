@@ -36,6 +36,8 @@ namespace PixelCrushers.QuestMachine.Demo
         public Slot[] slots;
 
         public GameObject wandBarrel; // Handles barrel containing magic polymorph wand.
+        public EntityType wandEntityType; // Used for quest generator.
+        public DomainType playerInventoryDomainType; // Used for quest generator.
 
         public int usingIndex { get; private set; }
 
@@ -43,6 +45,16 @@ namespace PixelCrushers.QuestMachine.Demo
         {
             base.Awake();
             usingIndex = -1;
+        }
+
+        public override void Start()
+        {
+            base.Start();
+            // Tell quest generators about our inventory:
+            foreach (var generator in FindObjectsOfType<QuestGeneratorEntity>())
+            {
+                generator.updateWorldModel += OnUpdateWorldModel;
+            }
         }
 
         public override void OnEnable()
@@ -103,6 +115,16 @@ namespace PixelCrushers.QuestMachine.Demo
             return (0 <= index && index < slots.Length) ? slots[index] : null;
         }
 
+        private void OnUpdateWorldModel(WorldModel worldModel)
+        {
+            var hasWand = GetItemCount(WandSlot) >= 1;
+            if (hasWand)
+            {
+                // Player has wand, so add that fact to the world model:
+                worldModel.AddFact(new Fact(playerInventoryDomainType, wandEntityType, 1));
+            }
+        }
+
         private void ListenForMessages()
         {
             // Listen for messages for getting and dropping items:
@@ -117,6 +139,7 @@ namespace PixelCrushers.QuestMachine.Demo
 
         public void OnMessage(MessageArgs messageArgs)
         {
+            if (wandBarrel == null) return;
             if (messageArgs.message == "Activate Wand Barrel")
             {
                 // Make the wand barrel appear:

@@ -276,6 +276,7 @@ namespace PixelCrushers.DialogueSystem
                     EditorGUILayout.PropertyField(cameraSettings.FindPropertyRelative("defaultPlayerSequence"), true);
                     EditorGUILayout.PropertyField(cameraSettings.FindPropertyRelative("defaultResponseMenuSequence"), true);
                     EditorGUILayout.PropertyField(cameraSettings.FindPropertyRelative("entrytagFormat"), true);
+                    EditorGUILayout.PropertyField(cameraSettings.FindPropertyRelative("reportMissingAudioFiles"), true);
                     EditorGUILayout.PropertyField(cameraSettings.FindPropertyRelative("disableInternalSequencerCommands"), true);
                 }
                 finally
@@ -331,6 +332,7 @@ namespace PixelCrushers.DialogueSystem
                     EditorGUILayout.PropertyField(barkSettings.FindPropertyRelative("allowBarksDuringConversations"), true);
                     EditorGUILayout.PropertyField(barkSettings.FindPropertyRelative("barkCharsPerSecond"), true);
                     EditorGUILayout.PropertyField(barkSettings.FindPropertyRelative("minBarkSeconds"), true);
+                    EditorGUILayout.PropertyField(barkSettings.FindPropertyRelative("defaultBarkSequence"), true);
                 }
                 finally
                 {

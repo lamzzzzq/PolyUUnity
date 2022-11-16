@@ -525,6 +525,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1208,7 +1210,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 20
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 20;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1277,13 +1282,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 15
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 15;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
+        x: 537
         y: 258
         width: 160
         height: 30
@@ -1346,7 +1354,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 10
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 10;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1357,8 +1368,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 201, y: 14}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 121.8396, y: 0}
+    canvasZoom: 0.85000014
   - id: 2
     fields:
     - title: Title
@@ -1395,6 +1406,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1624,7 +1637,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.76000017
+    canvasZoom: 0.7000002
   - id: 4
     fields:
     - title: Title
@@ -1661,6 +1674,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -2015,6 +2030,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -2281,6 +2298,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -3439,6 +3458,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -4542,6 +4563,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 

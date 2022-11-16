@@ -58,6 +58,12 @@ namespace PixelCrushers.QuestMachine
             return useQuestTitle ? "Heading: <Quest Title>" : "Heading: " + headingText;
         }
 
+        public override void SetDefaultTextTable(TextTable textTable)
+        {
+            if (m_headingText == null) m_headingText = new StringField();
+            m_headingText.SetDefaultTextTable(textTable);
+        }
+
     }
 
 }

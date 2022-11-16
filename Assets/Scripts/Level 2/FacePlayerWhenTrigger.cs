@@ -28,6 +28,9 @@ public class FacePlayerWhenTrigger : MonoBehaviour
             Vector3 dir = player.transform.position - transform.position;
             dir = new Vector3(dir.x, 0, dir.z);
             transform.rotation = Quaternion.LookRotation(dir);
+
+
+
         }
     }
 

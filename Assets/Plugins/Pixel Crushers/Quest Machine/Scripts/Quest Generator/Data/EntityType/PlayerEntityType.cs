@@ -18,7 +18,7 @@ namespace PixelCrushers.QuestMachine
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void InitStaticVariables()
         {
-            instance = null;
+            //--- Don't undo OnEnable assignment: instance = null;
         }
 #endif
 

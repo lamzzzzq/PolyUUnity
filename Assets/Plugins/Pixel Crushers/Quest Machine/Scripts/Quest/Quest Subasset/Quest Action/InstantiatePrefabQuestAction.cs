@@ -19,6 +19,10 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private StringField m_locationTransform;
 
+        [Tooltip("Remove '(Clone)' from end of instantiated object's name.")]
+        [SerializeField]
+        private bool m_useOriginalName;
+
         /// <summary>
         /// Prefab to instantiate.
         /// </summary>
@@ -37,6 +41,15 @@ namespace PixelCrushers.QuestMachine
             set { m_locationTransform = value; }
         }
 
+        /// <summary>
+        /// Remove '(Clone)' from end of instantiated object's name.
+        /// </summary>
+        public bool useOriginalName
+        {
+            get { return m_useOriginalName; }
+            set { m_useOriginalName = value; }
+        }
+
         public override string GetEditorName()
         {
             if (prefab == null) return "Instantiate";
@@ -47,16 +60,25 @@ namespace PixelCrushers.QuestMachine
         public override void Execute()
         {
             if (prefab == null) return;
+            GameObject instance = null;
             var location = StringField.IsNullOrEmpty(locationTransform) ? null : GameObjectUtility.GameObjectHardFind(StringField.GetStringValue(locationTransform));
             if (location == null)
             {
                 if (QuestMachine.debug) Debug.Log("Quest Machine: Instantiating prefab '" + prefab + "'.", prefab);
-                Instantiate(prefab);
+                instance = Instantiate(prefab);
             }
             else
             {
                 if (QuestMachine.debug) Debug.Log("Quest Machine: Instantiating prefab '" + prefab + "' at " + locationTransform + ".", prefab);
-                Instantiate(prefab, location.transform.position, location.transform.rotation);
+                instance = Instantiate(prefab, location.transform.position, location.transform.rotation);
+            }
+            if (instance != null && useOriginalName)
+            {
+                var index = instance.name.LastIndexOf("(Clone)");
+                if (index != -1)
+                {
+                    instance.name = instance.name.Substring(0, index).TrimEnd();
+                }
             }
         }
 

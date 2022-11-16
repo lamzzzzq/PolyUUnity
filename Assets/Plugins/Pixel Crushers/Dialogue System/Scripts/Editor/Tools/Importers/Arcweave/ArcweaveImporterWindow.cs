@@ -53,6 +53,8 @@ namespace PixelCrushers.DialogueSystem.ArcweaveSupport
 
 #region Variables
 
+        public static bool isOpen;
+
         public override string prefsKey { get { return "DialogueSystem.ArcweavePrefs"; } }
 
         protected enum BoardType { Ignore, Conversation, Quest }
@@ -97,15 +99,30 @@ namespace PixelCrushers.DialogueSystem.ArcweaveSupport
         protected BoardNode rootBoardNode = null;
         protected Dictionary<string, Board> leafBoards = new Dictionary<string, Board>();
 
+        public ArcweaveImporterWindowPrefs importerPrefs { get { return prefs; } }
+
 #endregion
 
 #region GUI
 
         [MenuItem("Tools/Pixel Crushers/Dialogue System/Import/Arcweave...", false, 1)]
-        public static void Init()
+        public static ArcweaveImporterWindow Init()
         {
-            var window = EditorWindow.GetWindow(typeof(ArcweaveImporterWindow), false, "Arcweave Import");
+            var window = EditorWindow.GetWindow<ArcweaveImporterWindow>(false, "Arcweave Import");
             window.minSize = new Vector2(840f, 300f);
+            return window;
+        }
+
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            isOpen = true;
+        }
+
+        public override void OnDisable()
+        {
+            base.OnDisable();
+            isOpen = false;
         }
 
         protected override void DrawControls()
@@ -322,6 +339,15 @@ namespace PixelCrushers.DialogueSystem.ArcweaveSupport
 #endregion
 
 #region Load JSON
+
+        public void LoadAndConvert()
+        {
+            LoadJson();
+            if (IsReadyToConvert())
+            {
+                Convert();
+            }
+        }
 
         protected bool IsJsonLoaded()
         {
@@ -911,9 +937,10 @@ namespace PixelCrushers.DialogueSystem.ArcweaveSupport
 
         protected int GetActorIDFromTitle(Element element, int currentNpcID)
         {
-            if (element != null && element.title != null && element.title.StartsWith("Speaker:"))
+            if (element != null && element.title != null && element.title.Contains("Speaker:"))
             {
-                var actorName = element.title.Substring("Speaker:".Length).Trim();
+                var strippedTitle = Tools.StripRichTextCodes(element.title);
+                var actorName = strippedTitle.Substring("Speaker:".Length).Trim();
                 var actor = database.GetActor(actorName);
                 if (actor != null) return actor.id;
             }
@@ -973,7 +1000,8 @@ namespace PixelCrushers.DialogueSystem.ArcweaveSupport
                         var jumper = LookupArcweave<Jumper>(jumperGuid);
                         var jumperEntry = dialogueEntryLookup[jumperGuid];
                         if (jumper == null || jumperEntry == null) continue;
-                        var destinationEntry = dialogueEntryLookup[jumper.elementId];
+                        DialogueEntry destinationEntry;
+                        if (!dialogueEntryLookup.TryGetValue(jumper.elementId, out destinationEntry)) continue;
                         if (destinationEntry == null) continue;
                         var destinationText = destinationEntry.Title;
                         if (string.IsNullOrEmpty(destinationText)) destinationText = destinationEntry.DialogueText;

@@ -39,6 +39,7 @@ namespace PixelCrushers.QuestMachine
             var instance = Instantiate<UnityUIIconTemplate>(iconTemplate);
             AddInstanceToContainer(instance);
             instance.image.sprite = icon.image;
+            instance.image.color = icon.color;
             instance.countText.text = icon.count.ToString();
             instance.countText.enabled = icon.count > 1;
             instance.captionText.text = icon.runtimeText;

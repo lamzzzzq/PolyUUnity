@@ -19,6 +19,10 @@ namespace PixelCrushers.QuestMachine
 
         private bool m_isChecking = false;
 
+        [HideInInspector]
+        [SerializeField]
+        private bool m_alreadyTrue = false;
+
         /// <summary>
         /// True if the condition is currently monitoring the requirements that would make it true.
         /// </summary>
@@ -26,6 +30,12 @@ namespace PixelCrushers.QuestMachine
         {
             get { return m_isChecking; }
             set { m_isChecking = value; }
+        }
+
+        public virtual bool alreadyTrue
+        {
+            get { return m_alreadyTrue; }
+            set { m_alreadyTrue = value; }
         }
 
         public override void SetRuntimeReferences(Quest quest, QuestNode questNode)
@@ -58,9 +68,19 @@ namespace PixelCrushers.QuestMachine
         /// </summary>
         public virtual void SetTrue()
         {
+            if (alreadyTrue) return;
             if (QuestMachine.debug) Debug.Log("Quest Machine: " + GetType().Name + ".SetTrue()", quest);
+            alreadyTrue = true;
             StopChecking();
             trueAction();
+        }
+
+        /// <summary>
+        /// Resets back to the non-true state.
+        /// </summary>
+        public virtual void ResetState()
+        {
+            alreadyTrue = false;
         }
 
     }

@@ -271,6 +271,10 @@ namespace PixelCrushers.QuestMachine
 
         public void SelectQuest(Quest quest, QuestListContainer questListContainer, int questListIndex)
         {
+            if (quest != m_quest)
+            {
+                QuestEditorAssetUtility.DeleteUnusedSubassets(quest);
+            }
             showQuestRelations = false;
             m_quest = quest;
             m_questSerializedObject = (quest != null) ? new SerializedObject(quest) : null;

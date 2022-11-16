@@ -17,6 +17,10 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private Sprite m_image;
 
+        [Tooltip("Image color.")]
+        [SerializeField]
+        private Color m_color = Color.white;
+
         [Tooltip("The caption. Can be blank.")]
         [SerializeField]
         private StringField m_caption;
@@ -36,6 +40,15 @@ namespace PixelCrushers.QuestMachine
         {
             get { return m_image; }
             set { m_image = value; }
+        }
+
+        /// <summary>
+        /// Image color.
+        /// </summary>
+        public Color color
+        {
+            get { return m_color; }
+            set { m_color = value; }
         }
 
         /// <summary>
@@ -81,6 +94,12 @@ namespace PixelCrushers.QuestMachine
             base.OnAfterProxyDeserialization();
             m_image = QuestMachine.GetImage(m_imageNameProxy);
             m_imageNameProxy = null; // Free memory.
+        }
+
+        public override void SetDefaultTextTable(TextTable textTable)
+        {
+            if (m_caption == null) m_caption = new StringField();
+            m_caption.SetDefaultTextTable(textTable);
         }
 
     }

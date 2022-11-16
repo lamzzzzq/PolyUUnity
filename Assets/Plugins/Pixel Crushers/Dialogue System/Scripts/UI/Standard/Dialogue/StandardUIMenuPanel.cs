@@ -1,7 +1,4 @@
-// Recompile at 2022/9/16 1:21:46
-
-
-// Copyright (c) Pixel Crushers. All rights reserved.
+﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -155,7 +152,9 @@ namespace PixelCrushers.DialogueSystem
                 pcImage.sprite = portraitSprite;
                 if (usePortraitNativeSize && portraitSprite != null)
                 {
-                    pcImage.rectTransform.sizeDelta = new Vector2(portraitSprite.texture.width, portraitSprite.texture.height);
+                    pcImage.rectTransform.sizeDelta = portraitSprite.packed ?
+                        new Vector2(portraitSprite.rect.width, portraitSprite.rect.height) :
+                        new Vector2(portraitSprite.texture.width, portraitSprite.texture.height);
                 }
             }
             pcName.text = portraitName;
@@ -359,7 +358,7 @@ namespace PixelCrushers.DialogueSystem
             // Prep autonumber format:
             if (autonumber.enabled)
             {
-                m_processedAutonumberFormat = autonumber.format.Replace("\\t", "\t").Replace("\\n", "\n");
+                m_processedAutonumberFormat = FormattedText.Parse(autonumber.format.Replace("\\t", "\t").Replace("\\n", "\n")).text;
             }
 
             if ((buttons != null) && (responses != null))

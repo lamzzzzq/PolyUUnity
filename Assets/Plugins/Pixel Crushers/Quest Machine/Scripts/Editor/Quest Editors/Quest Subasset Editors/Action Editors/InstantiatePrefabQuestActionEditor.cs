@@ -21,8 +21,10 @@ namespace PixelCrushers.QuestMachine
             serializedObject.Update();
             var prefabProperty = serializedObject.FindProperty("m_prefab");
             var locationTransformProperty = serializedObject.FindProperty("m_locationTransform");
+            var useOriginalNameProperty = serializedObject.FindProperty("m_useOriginalName");
             UnityEngine.Assertions.Assert.IsNotNull(prefabProperty, "Quest Machine: Internal error - m_prefab is null.");
             UnityEngine.Assertions.Assert.IsNotNull(locationTransformProperty, "Quest Machine: Internal error - m_locationTransform is null.");
+            UnityEngine.Assertions.Assert.IsNotNull(prefabProperty, "Quest Machine: Internal error - m_useOriginalName is null.");
             if (prefabProperty == null || locationTransformProperty == null) return;
             EditorGUILayout.PropertyField(prefabProperty, new GUIContent("Prefab to Instantiate"), true);
             EditorGUILayout.PropertyField(locationTransformProperty, new GUIContent("Location Transform", "Name of GameObject (usually an empty GameObject) where prefab should be instantiated. You can drag and drop a scene object here."), true);
@@ -51,6 +53,11 @@ namespace PixelCrushers.QuestMachine
                         }
                     }
                     break;
+            }
+
+            if (useOriginalNameProperty != null)
+            {
+                EditorGUILayout.PropertyField(useOriginalNameProperty, true);
             }
 
             serializedObject.ApplyModifiedProperties();

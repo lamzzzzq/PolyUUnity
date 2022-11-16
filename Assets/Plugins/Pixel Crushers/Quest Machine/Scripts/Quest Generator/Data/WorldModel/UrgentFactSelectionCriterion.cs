@@ -10,7 +10,8 @@ namespace PixelCrushers.QuestMachine
     {
         SameAsGlobalSetting,
         Weighted,
-        WeightedSquared
+        WeightedSquared,
+        EqualWeight
     }
 
     /// <summary>
@@ -55,9 +56,20 @@ namespace PixelCrushers.QuestMachine
                     return urgency;
                 case UrgentFactionSelectionCriterion.WeightedSquared:
                     return urgency * urgency;
+                case UrgentFactionSelectionCriterion.EqualWeight:
+                    return 1;
                 case UrgentFactionSelectionCriterion.SameAsGlobalSetting:
                     var globalCriterion = (QuestMachineConfiguration.instance != null) ? QuestMachineConfiguration.instance.generatorSettings.goalSelectionCriterion : mostUrgent;
-                    return (globalCriterion.criterion == UrgentFactionSelectionCriterion.WeightedSquared) ? (urgency * urgency) : urgency;
+                    switch (globalCriterion.criterion)
+                    {
+                        default:
+                        case UrgentFactionSelectionCriterion.Weighted:
+                            return urgency;
+                        case UrgentFactionSelectionCriterion.WeightedSquared:
+                            return urgency * urgency;
+                        case UrgentFactionSelectionCriterion.EqualWeight:
+                            return 1;
+                    }
             }
         }
 

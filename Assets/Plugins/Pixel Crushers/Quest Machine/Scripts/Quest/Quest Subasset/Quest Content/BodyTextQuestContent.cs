@@ -36,6 +36,12 @@ namespace PixelCrushers.QuestMachine
             return (bodyText == null) ? "Body Text" : "Text: " + bodyText;
         }
 
+        public override void SetDefaultTextTable(TextTable textTable)
+        {
+            if (m_bodyText == null) m_bodyText = new StringField();
+            m_bodyText.SetDefaultTextTable(textTable);
+        }
+
     }
 
 }

@@ -859,6 +859,7 @@ namespace PixelCrushers.DialogueSystem
 
         public static void Preload()
         {
+            // Cache sequencer commands:
             var assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
             for (int i = 0; i < assemblies.Length; i++)
             {
@@ -880,6 +881,13 @@ namespace PixelCrushers.DialogueSystem
                     // Ignore exceptions.
                 }
             }
+
+            // Call parser to get JIT compilation out of the way for editor and .NET builds:
+            var parser = new SequenceParser();
+            parser.Parse("None();");
+
+            // Preload default camera angles prefab:
+            Resources.Load<GameObject>(DefaultCameraAnglesResourceName);
         }
 
         public System.Type GetTypeFromName(string typeName)
@@ -1595,6 +1603,15 @@ namespace PixelCrushers.DialogueSystem
             Transform subject = SequencerTools.GetSubject(SequencerTools.GetParameter(args, 1), m_speaker, m_listener);
             float crossfadeDuration = SequencerTools.GetParameterAsFloat(args, 2);
             int layer = SequencerTools.GetParameterAsInt(args, 3, -1);
+            bool noactivate = false;
+            for (int i = 1; i < args.Length; i++)
+            {
+                if (string.Equals("noactivate", args[i], StringComparison.OrdinalIgnoreCase))
+                {
+                    noactivate = true;
+                    break;
+                }
+            }
             if (DialogueDebug.logInfo) Debug.Log(string.Format("{0}: Sequencer: AnimatorPlay({1}, {2}, fade={3}, layer={4})", new System.Object[] { DialogueDebug.Prefix, stateName, Tools.GetObjectName(subject), crossfadeDuration, layer }));
             if (subject == null)
             {
@@ -1613,14 +1630,17 @@ namespace PixelCrushers.DialogueSystem
                 }
                 else
                 {
-                    if (!animator.gameObject.activeSelf) animator.gameObject.SetActive(true);
-                    if (Tools.ApproximatelyZero(crossfadeDuration))
+                    if (!animator.gameObject.activeSelf && !noactivate) animator.gameObject.SetActive(true);
+                    if (animator.gameObject.activeInHierarchy)
                     {
-                        animator.Play(stateName, layer);
-                    }
-                    else
-                    {
-                        animator.CrossFadeInFixedTime(stateName, crossfadeDuration, layer);
+                        if (Tools.ApproximatelyZero(crossfadeDuration))
+                        {
+                            animator.Play(stateName, layer);
+                        }
+                        else
+                        {
+                            animator.CrossFadeInFixedTime(stateName, crossfadeDuration, layer);
+                        }
                     }
                 }
             }

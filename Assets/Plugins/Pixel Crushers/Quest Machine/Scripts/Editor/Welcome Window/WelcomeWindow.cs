@@ -81,7 +81,7 @@ namespace PixelCrushers.QuestMachine
             if (!string.IsNullOrEmpty(m_version))
             {
                 var versionSize = EditorStyles.label.CalcSize(new GUIContent(m_version));
-                GUI.Label(new Rect(position.width - (versionSize.x + 15), 47 - versionSize.y, versionSize.x, versionSize.y), m_version);
+                GUI.Label(new Rect(position.width - (versionSize.x + 31), 47 - versionSize.y, versionSize.x + 16, versionSize.y), m_version, EditorStyles.label);
             }
         }
 
@@ -254,7 +254,7 @@ namespace PixelCrushers.QuestMachine
 
         private void DrawFooter()
         {
-            var newShowOnStart = EditorGUI.ToggleLeft(new Rect(5, position.height - 5 - EditorGUIUtility.singleLineHeight, position.width - (155+70), EditorGUIUtility.singleLineHeight), "Show at start", showOnStart);
+            var newShowOnStart = EditorGUI.ToggleLeft(new Rect(5, position.height - 5 - EditorGUIUtility.singleLineHeight, position.width - 80, EditorGUIUtility.singleLineHeight), "Show at start", showOnStart);
             if (newShowOnStart != showOnStart)
             {
                 showOnStart = newShowOnStart;

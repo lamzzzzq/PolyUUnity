@@ -78,6 +78,7 @@ namespace PixelCrushers.QuestMachine
             node.conditionSet.conditionList.Add(condition);
             AddAndSaveSubasset(condition);
 
+            // ----- Active state:
             // Set node's UI content:
             var stateInfo = node.GetStateInfo(QuestNodeState.Active);
 
@@ -87,16 +88,17 @@ namespace PixelCrushers.QuestMachine
             var journalContentList = stateInfo.GetContentList(QuestContentCategory.Journal);
             journalContentList.Add(CreateBodyContent(journalText));
 
-            // Add dialogue content to true state, since node becomes true as soon as player talks:
-            stateInfo = node.GetStateInfo(QuestNodeState.True);
-            var dialogueContentList = stateInfo.GetContentList(QuestContentCategory.Dialogue);
-            dialogueContentList.Add(CreateBodyContent(dialogueText));
-
             // Add alert action to show when player talks to quest giver:
             var alertAction = ScriptableObjectUtility.CreateScriptableObject<AlertQuestAction>();
             alertAction.contentList.Add(CreateBodyContent(hudText));
             stateInfo.actionList.Add(alertAction);
             AddAndSaveSubasset(alertAction);
+
+            // ----- True state:
+            // Add dialogue content to true state, since node becomes true as soon as player talks:
+            stateInfo = node.GetStateInfo(QuestNodeState.True);
+            var dialogueContentList = stateInfo.GetContentList(QuestContentCategory.Dialogue);
+            dialogueContentList.Add(CreateBodyContent(dialogueText));
 
             // Update quest's internal references:
             quest.SetRuntimeReferences();

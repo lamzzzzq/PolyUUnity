@@ -57,10 +57,12 @@ namespace PixelCrushers.QuestMachine
                 var groupProperty = serializedObject.FindProperty("m_group");
                 var labelsProperty = serializedObject.FindProperty("m_labels");
                 var questGiverIDProperty = serializedObject.FindProperty("m_questGiverID");
+                var textTableProperty = serializedObject.FindProperty("m_textTable");
                 var isTrackableProperty = serializedObject.FindProperty("m_isTrackable");
                 var showInTrackHUDProperty = serializedObject.FindProperty("m_showInTrackHUD");
                 var isAbandonableProperty = serializedObject.FindProperty("m_isAbandonable");
                 var rememberIfAbandonedProperty = serializedObject.FindProperty("m_rememberIfAbandoned");
+                var deleteWhenCompleteProperty = serializedObject.FindProperty("m_deleteWhenComplete");
                 var maxTimesProperty = serializedObject.FindProperty("m_maxTimes");
                 var timesAcceptedProperty = serializedObject.FindProperty("m_timesAccepted");
                 var cooldownSecondsProperty = serializedObject.FindProperty("m_cooldownSeconds");
@@ -98,10 +100,24 @@ namespace PixelCrushers.QuestMachine
                 QuestEditorUtility.EditorGUILayoutEndIndent();
                 EditorGUILayout.PropertyField(iconProperty);
                 EditorGUILayout.PropertyField(questGiverIDProperty, true);
+                if (textTableProperty != null)
+                {
+                    EditorGUI.BeginChangeCheck();
+                    EditorGUILayout.PropertyField(textTableProperty, true);
+                    if (EditorGUI.EndChangeCheck() && textTableProperty.objectReferenceValue != null)
+                    {
+                        var textTable = textTableProperty.objectReferenceValue as TextTable;
+                        QuestEditorUtility.SetDefaultTextTable(idProperty, textTable);
+                        QuestEditorUtility.SetDefaultTextTable(titleProperty, textTable);
+                        QuestEditorUtility.SetDefaultTextTable(groupProperty, textTable);
+                        QuestEditorUtility.SetDefaultTextTable(questGiverIDProperty, textTable);
+                    }
+                }
                 EditorGUILayout.PropertyField(isTrackableProperty);
                 if (isTrackableProperty.boolValue) EditorGUILayout.PropertyField(showInTrackHUDProperty);
                 EditorGUILayout.PropertyField(isAbandonableProperty);
                 if (isAbandonableProperty.boolValue) EditorGUILayout.PropertyField(rememberIfAbandonedProperty);
+                if (deleteWhenCompleteProperty != null) EditorGUILayout.PropertyField(deleteWhenCompleteProperty);
                 EditorGUILayout.PropertyField(maxTimesProperty);
                 if (maxTimesProperty.intValue > 1)
                 {

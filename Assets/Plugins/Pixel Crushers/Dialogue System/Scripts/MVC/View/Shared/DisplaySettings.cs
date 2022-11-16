@@ -258,6 +258,14 @@ namespace PixelCrushers.DialogueSystem
             public EntrytagFormat entrytagFormat = EntrytagFormat.ActorName_ConversationID_EntryID;
 
             /// <summary>
+            /// By default, Audio() and AudioWait() sequencer commands don't report 
+            /// missing audio files to reduce Console spam during development. Set this
+            /// true to report missing audio files.
+            /// </summary>
+            [Tooltip("By default, Audio() and AudioWait() sequencer commands don't report missing audio files to reduce Console spam during development.")]
+            public bool reportMissingAudioFiles = false;
+
+            /// <summary>
             /// Set <c>true</c> to disable the internal sequencer commands -- for example, if you
             /// want to replace them with your own.
             /// </summary>
@@ -364,6 +372,12 @@ namespace PixelCrushers.DialogueSystem
             /// </summary>
             [Tooltip("Show barks  for at least this many seconds. If zero, use Subtitle Settings > Min Subtitle Seconds.")]
             public float minBarkSeconds = 0;
+
+            /// <summary>
+            /// If non-blank, play this sequence with barks that don't specify their own Sequence.
+            /// </summary>
+            [Tooltip("If non-blank, play this sequence with barks that don't specify their own Sequence.")]
+            public string defaultBarkSequence = string.Empty;
 
         }
 
@@ -505,6 +519,18 @@ namespace PixelCrushers.DialogueSystem
         {
             return ShouldUseInputOverrides() ? conversationOverrideSettings.responseTimeout :
                 ((inputSettings != null) ? inputSettings.responseTimeout : 0);
+        }
+
+        public EmTag GetEmTagForOldResponses()
+        {
+            return ShouldUseInputOverrides() ? conversationOverrideSettings.emTagForOldResponses :
+                ((inputSettings != null) ? inputSettings.emTagForOldResponses : EmTag.None);
+        }
+
+        public EmTag GetEmTagForInvalidResponses()
+        {
+            return ShouldUseInputOverrides() ? conversationOverrideSettings.emTagForInvalidResponses :
+                ((inputSettings != null) ? inputSettings.emTagForInvalidResponses : EmTag.None);
         }
 
         public InputTrigger GetCancelSubtitleInput()

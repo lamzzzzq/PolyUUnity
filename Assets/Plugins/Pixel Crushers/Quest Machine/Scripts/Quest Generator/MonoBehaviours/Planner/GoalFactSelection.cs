@@ -25,7 +25,12 @@ namespace PixelCrushers.QuestMachine
         /// Weight fact urgencies by the square of the urgency value. This adds more
         /// importance to differences in urgency values.
         /// </summary>
-        WeightedSquared
+        WeightedSquared, 
+
+        /// <summary>
+        /// Randomly choose from list without regard to relative urgency.
+        /// </summary>
+        EqualWeight
     }
 
 }

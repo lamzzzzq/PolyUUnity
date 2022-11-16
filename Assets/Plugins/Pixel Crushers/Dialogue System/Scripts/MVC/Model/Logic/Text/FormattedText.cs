@@ -1,6 +1,3 @@
-// Recompile at 2022/9/16 1:21:46
-
-
 // Copyright (c) Pixel Crushers. All rights reserved.
 
 using System.Collections.Generic;

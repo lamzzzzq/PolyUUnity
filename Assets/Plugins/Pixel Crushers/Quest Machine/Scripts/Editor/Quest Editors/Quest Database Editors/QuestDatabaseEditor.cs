@@ -100,7 +100,12 @@ namespace PixelCrushers.QuestMachine
             {
                 if (!isQuestAssigned)
                 {
-                    questProperty.objectReferenceValue = QuestEditorAssetUtility.CreateNewQuestAssetFromDialog();
+                    try
+                    {
+                        questProperty.objectReferenceValue = QuestEditorAssetUtility.CreateNewQuestAssetFromDialog();
+                    }
+                    catch (System.NullReferenceException)
+                    { } // Property might not be serialized yet.
                 }
                 QuestEditorWindow.ShowWindow();
                 SetQuestInEditorWindow(index);
@@ -139,6 +144,7 @@ namespace PixelCrushers.QuestMachine
             }
             ReorderableList.defaultBehaviours.DoRemoveButton(list);
             OnChangeSelection(list);
+            GUIUtility.ExitGUI();
         }
 
         private void OnAddElement(ReorderableList list)

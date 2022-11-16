@@ -202,6 +202,12 @@ namespace PixelCrushers
                 GetInputAxis = DefaultGetAxis;
                 if (singleton)
                 {
+#if UNITY_EDITOR
+                    if (Application.isPlaying)
+                    { // If GameObject is hidden in Scene view, DontDestroyOnLoad will report (harmless) error.
+                        UnityEditor.SceneVisibilityManager.instance.Show(gameObject, true);
+                    }
+#endif
                     transform.SetParent(null);
                     DontDestroyOnLoad(gameObject);
                 }

@@ -219,7 +219,7 @@ namespace PixelCrushers.QuestMachine
         protected override UnityUIIconListTemplate currentIconListTemplate { get { return isDrawingSelectionPanel ? null : iconListTemplate; } }
         protected override UnityUIButtonListTemplate currentButtonListTemplate { get { return isDrawingSelectionPanel ? null : buttonListTemplate; } }
 
-        protected List<string> expandedGroupNames = new List<string>();
+        protected List<string> collapsedGroupNames = new List<string>(); // Groups now start expanded.
         protected Quest selectedQuest { get; set; }
         protected QuestJournal questJournal { get; set; }
 
@@ -290,7 +290,7 @@ namespace PixelCrushers.QuestMachine
         /// </summary>
         public virtual bool IsGroupExpanded(string groupName)
         {
-            return alwaysExpandAllGroups || expandedGroupNames.Contains(groupName);
+            return alwaysExpandAllGroups || !collapsedGroupNames.Contains(groupName);
         }
 
         /// <summary>
@@ -301,11 +301,11 @@ namespace PixelCrushers.QuestMachine
         {
             if (IsGroupExpanded(groupName))
             {
-                expandedGroupNames.Remove(groupName);
+                collapsedGroupNames.Add(groupName);
             }
             else
             {
-                expandedGroupNames.Add(groupName);
+                collapsedGroupNames.Remove(groupName);
             }
         }
 
@@ -625,13 +625,14 @@ namespace PixelCrushers.QuestMachine
             currentContentManager.Clear();
             currentIconList = null;
             currentButtonList = null;
+            if (abandonButtonTemplate != null) abandonButtonTemplate.gameObject.SetActive(false);
             if (selectedQuest != null)
             {
                 var contents = GetQuestContents(selectedQuest);
                 AddContents(contents);
                 var isQuestActive = selectedQuest.GetState() == QuestState.Active;
                 var showTrack = showTrackButtonInDetails && isQuestActive && selectedQuest.isTrackable;
-                var showAbandon = isQuestActive && selectedQuest.isAbandonable;
+                var showAbandon = selectedQuest.isAbandonable && (isQuestActive || selectedQuest.GetState() == QuestState.Abandoned);
                 if (trackButtonTemplate != null) trackButtonTemplate.gameObject.SetActive(showTrack);
                 if (abandonButtonTemplate != null) abandonButtonTemplate.gameObject.SetActive(showAbandon);
                 if (m_questDetailsButtonContainer != null) m_questDetailsButtonContainer.transform.SetAsLastSibling();

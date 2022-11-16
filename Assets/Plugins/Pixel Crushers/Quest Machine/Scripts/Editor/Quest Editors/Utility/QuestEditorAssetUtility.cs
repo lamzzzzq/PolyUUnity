@@ -204,6 +204,8 @@ namespace PixelCrushers.QuestMachine
 
         public static void DeleteUnusedSubassets(Quest quest)
         {
+            if (quest == null) return;
+
             // Get all assets in quest:
             var assetPath = AssetDatabase.GetAssetPath(quest);
             if (string.IsNullOrEmpty(assetPath)) return;
@@ -225,6 +227,30 @@ namespace PixelCrushers.QuestMachine
                      AssetUtility.DeleteFromAsset(subasset, quest);
                 }
             }
+
+            // Remove nulls from lists:
+            RemoveNulls(quest.offerConditionSet.conditionList);
+            RemoveNulls(quest.offerConditionsUnmetContentList);
+            RemoveNulls(quest.offerContentList);
+            RemoveNulls(quest.stateInfoList);
+        }
+
+        private static void RemoveNulls(List<QuestStateInfo> stateInfoList)
+        {
+            foreach (var stateInfo in stateInfoList)
+            {
+                foreach (var contentSet in stateInfo.categorizedContentList)
+                {
+                    RemoveNulls(contentSet.contentList);
+                }
+                RemoveNulls(stateInfo.actionList);
+            }
+        }
+
+        private static void RemoveNulls<T>(List<T> list) where T : UnityEngine.Object
+        {
+            if (list == null) return;
+            list.RemoveAll(x => x == null);
         }
 
         public static void AddSubassetsToList(Quest quest, List<QuestSubasset> subassets)

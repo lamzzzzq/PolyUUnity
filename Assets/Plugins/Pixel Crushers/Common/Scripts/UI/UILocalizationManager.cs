@@ -26,6 +26,10 @@ namespace PixelCrushers
         [SerializeField]
         private List<TextTable> m_additionalTextTables = null;
 
+        [Tooltip("Table of fonts to use for specific languages.")]
+        [SerializeField]
+        private LocalizedFonts m_localizedFonts;
+
         [Tooltip("When starting, set current language to value saved in PlayerPrefs.")]
         [SerializeField]
         private bool m_saveLanguageInPlayerPrefs = true;
@@ -39,6 +43,8 @@ namespace PixelCrushers
         private bool m_useDefaultLanguageForBlankTranslations = true;
 
         private string m_currentLanguage = string.Empty;
+
+        public LocalizedFonts localizedFonts { get { return m_localizedFonts; } set { m_localizedFonts = value; } }
 
         private static UILocalizationManager s_instance = null;
 

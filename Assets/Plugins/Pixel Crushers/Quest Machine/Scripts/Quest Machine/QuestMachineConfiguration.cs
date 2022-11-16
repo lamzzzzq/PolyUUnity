@@ -213,7 +213,8 @@ namespace PixelCrushers.QuestMachine
             set { m_debugSettings = value; }
         }
 
-        public static event System.Action quitting = delegate { };
+        public event System.Action quitting = delegate { };
+
         public static bool isQuitting = false;
 
         #endregion
@@ -237,7 +238,11 @@ namespace PixelCrushers.QuestMachine
         /// </summary>
         public static QuestMachineConfiguration instance
         {
-            get { return m_instance; }
+            get 
+            {
+                if (m_instance == null) m_instance = FindObjectOfType<QuestMachineConfiguration>();
+                return m_instance;
+            }
         }
 
 #if UNITY_2019_3_OR_NEWER && UNITY_EDITOR
@@ -245,6 +250,7 @@ namespace PixelCrushers.QuestMachine
         static void InitStaticVariables()
         {
             m_instances = new List<QuestMachineConfiguration>();
+            isQuitting = false;
         }
 #endif
 

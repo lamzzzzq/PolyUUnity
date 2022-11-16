@@ -248,6 +248,9 @@ namespace PixelCrushers.DialogueSystem
         [Tooltip("Start at this entry ID.")]
         public int startConversationEntryID = -1;
 
+        [Tooltip("Start at entry with this Title.")]
+        public string startConversationEntryTitle;
+
         /// <summary>
         /// Only start if no other conversation is active.
         /// </summary>
@@ -976,7 +979,9 @@ namespace PixelCrushers.DialogueSystem
                     var registeredTransform = (conversationConversantActor != null) ? CharacterInfo.GetRegisteredActorTransform(conversationConversantActor.Name) : null;
                     conversantTransform = (registeredTransform != null) ? registeredTransform : this.transform;
                 }
-                if (skipIfNoValidEntries && !DialogueManager.ConversationHasValidEntry(conversation, actorTransform, conversantTransform, startConversationEntryID))
+                var entryID = !string.IsNullOrEmpty(startConversationEntryTitle) ? GetEntryIDFromTitle(conversation, startConversationEntryTitle)
+                    : startConversationEntryID;
+                if (skipIfNoValidEntries && !DialogueManager.ConversationHasValidEntry(conversation, actorTransform, conversantTransform, entryID))
                 {
                     if (DialogueDebug.logInfo) Debug.Log("Dialogue System: Conversation triggered on " + name + " but skipping because no entries are currently valid.", this);
                 }
@@ -993,7 +998,7 @@ namespace PixelCrushers.DialogueSystem
                         DialogueManager.instance.conversationEnded += OnConversationEndAnywhere;
                     }
 
-                    DialogueManager.StartConversation(conversation, actorTransform, conversantTransform, startConversationEntryID);
+                    DialogueManager.StartConversation(conversation, actorTransform, conversantTransform, entryID);
                     activeConversation = DialogueManager.instance.activeConversation;
                     earliestTimeToAllowTriggerExit = Time.time + MarginToAllowTriggerExit;
                     if (stopConversationIfTooFar)
@@ -1002,6 +1007,16 @@ namespace PixelCrushers.DialogueSystem
                     }
                 }
             }
+        }
+
+        private int GetEntryIDFromTitle(string conversation, string entryTitle)
+        {
+            if (string.IsNullOrEmpty(conversation) || string.IsNullOrEmpty(entryTitle)) return -1;
+            var conversationAsset = DialogueManager.MasterDatabase.GetConversation(conversation);
+            if (conversationAsset == null) return -1;
+            var entry = conversationAsset.dialogueEntries.Find(x => string.Equals(x.Title, entryTitle));
+            if (entry == null) return -1;
+            return entry.id;
         }
 
         protected virtual void StopActiveConversation()

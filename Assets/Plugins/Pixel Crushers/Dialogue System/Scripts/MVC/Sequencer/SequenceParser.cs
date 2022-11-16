@@ -32,7 +32,7 @@ namespace PixelCrushers.DialogueSystem
         /// </summary>
         /// <param name="sequence">Sequence to parse.</param>
         /// <returns>A list of command records.</returns>
-        public List<QueuedSequencerCommand> Parse(string sequence)
+        public List<QueuedSequencerCommand> Parse(string sequence, bool throwExceptions = false)
         {
             var list = new List<QueuedSequencerCommand>();
             try
@@ -53,6 +53,7 @@ namespace PixelCrushers.DialogueSystem
             {
                 if (DialogueDebug.logWarnings) Debug.LogWarning(DialogueDebug.Prefix + ": Syntax error '" + e.Message + "' at column " + column + " row " + row + " parsing: " + sequence);
                 list.Clear();
+                if (throwExceptions) throw e;
             }
             return list;
         }

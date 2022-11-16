@@ -756,6 +756,8 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
                 settings.alwaysForceResponseMenu = EditorGUILayout.Toggle("Always Force Response Menu", settings.alwaysForceResponseMenu);
                 settings.includeInvalidEntries = EditorGUILayout.Toggle("Include Invalid Entries", settings.includeInvalidEntries);
                 settings.responseTimeout = EditorGUILayout.FloatField("Response Timeout", settings.responseTimeout);
+                settings.emTagForOldResponses = (EmTag)EditorGUILayout.EnumPopup("Em Tag For Old Responses", settings.emTagForOldResponses);
+                settings.emTagForInvalidResponses= (EmTag)EditorGUILayout.EnumPopup("Em Tag For Invalid Responses", settings.emTagForInvalidResponses);
                 settings.cancelSubtitle.key = (KeyCode)EditorGUILayout.EnumPopup("Cancel Subtitle Key", settings.cancelSubtitle.key);
                 settings.cancelSubtitle.buttonName = EditorGUILayout.TextField("Cancel Subtitle Button", settings.cancelSubtitle.buttonName);
                 settings.cancelConversation.key = (KeyCode)EditorGUILayout.EnumPopup("Cancel Conversation Key", settings.cancelConversation.key);

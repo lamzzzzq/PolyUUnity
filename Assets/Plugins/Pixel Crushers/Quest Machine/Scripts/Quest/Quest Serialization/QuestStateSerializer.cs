@@ -25,6 +25,12 @@ namespace PixelCrushers.QuestMachine
     {
 
         /// <summary>
+        /// - Version 2: Added quest condition "alreadyTrue" values.
+        /// - Version 1: Use for compatibility with saves made in QM version 1.2.29 or earlier.
+        /// </summary>
+        public static int version = 2;
+
+        /// <summary>
         /// Returns minimum save data for a design-time quest.
         /// </summary>
         /// <param name="quest">The quest to serialize.</param>
@@ -109,6 +115,14 @@ namespace PixelCrushers.QuestMachine
         {
             if (conditionSet == null) return;
             binaryWriter.Write((byte)conditionSet.numTrueConditions);
+            if (version >= 2)
+            {
+                for (int i = 0; i < conditionSet.conditionList.Count; i++)
+                {
+                    if (conditionSet.conditionList[i] == null) continue;
+                    binaryWriter.Write(conditionSet.conditionList[i].alreadyTrue);
+                }
+            }
         }
 
         private static void WriteTagDictionaryToStream(BinaryWriter binaryWriter, TagDictionary tags, string questOrNodeName)
@@ -185,6 +199,14 @@ namespace PixelCrushers.QuestMachine
         private static void ReadConditionSetDataFromStream(BinaryReader binaryReader, QuestConditionSet conditionSet)
         {
             conditionSet.numTrueConditions = binaryReader.ReadByte();
+            if (version >= 2)
+            {
+                for (int i = 0; i < conditionSet.conditionList.Count; i++)
+                {
+                    if (conditionSet.conditionList[i] == null) continue;
+                    conditionSet.conditionList[i].alreadyTrue = binaryReader.ReadBoolean();
+                }
+            }
         }
 
         private static void ReadTagDictionaryFromStream(BinaryReader binaryReader, TagDictionary tags, string questOrNodeName)

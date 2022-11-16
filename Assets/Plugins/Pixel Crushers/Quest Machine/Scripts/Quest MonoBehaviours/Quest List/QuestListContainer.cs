@@ -146,7 +146,12 @@ namespace PixelCrushers.QuestMachine
         {
             base.Awake();
             originalQuestList = questList;
+        }
+
+        public override void Start()
+        {
             InstantiateQuestAssets();
+            base.Start();
         }
 
         public override void OnDestroy()
@@ -414,6 +419,7 @@ namespace PixelCrushers.QuestMachine
             try
             {
                 QuestMachine.isLoadingGame = true;
+                MessageSystem.allowReceiveSameFrameAdded = false;
 
                 var saveData = SaveSystem.Deserialize<SaveData>(data);
                 if (saveData == null) return;
@@ -507,6 +513,7 @@ namespace PixelCrushers.QuestMachine
             }
             finally
             {
+                SaveSystem.framesToWaitBeforeSaveDataAppliedEvent = 1;
                 StartCoroutine(SetIsLoadingGameFalseAfter2Frames());
             }
         }
@@ -514,6 +521,7 @@ namespace PixelCrushers.QuestMachine
         protected IEnumerator SetIsLoadingGameFalseAfter2Frames()
         {
             yield return null; // Delayed startup waits one frame.
+            MessageSystem.allowReceiveSameFrameAdded = true;
             yield return null; // Wait another frame to allow delayed startup to complete.
             QuestMachine.isLoadingGame = false;
         }

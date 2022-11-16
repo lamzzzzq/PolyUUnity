@@ -124,6 +124,10 @@ namespace PixelCrushers.QuestMachine
             m_contentEditor = null;
             if (isSelectedQuest)
             {
+                if (QuestEditorWindow.selectedQuest != null)
+                {
+                    m_selectedQuestContent.SetDefaultTextTable(QuestEditorWindow.selectedQuest.textTable);
+                }
                 AssetUtility.AddToAsset(content, QuestEditorWindow.selectedQuestSerializedObject.targetObject);
                 QuestEditorWindow.UpdateSelectedQuestSerializedObject();
             }

@@ -135,7 +135,7 @@ namespace PixelCrushers.QuestMachine
 
         protected UnityUIInstancedContentManager contentManager { get; set; }
         protected override RectTransform currentContentContainer { get { return contentContainer; } }
-        protected override UnityUIInstancedContentManager currentContentManager { get { return contentManager; } }
+        protected override UnityUIInstancedContentManager currentContentManager { get { if (contentManager == null) contentManager = new UnityUIInstancedContentManager(); return contentManager; } }
         protected override UnityUITextTemplate currentHeadingTemplate { get { return headingTemplate; } }
         protected override UnityUITextTemplate[] currentSubheadingTemplates { get { return subheadingTemplates; } }
         protected override UnityUITextTemplate currentBodyTemplate { get { return bodyTemplate; } }

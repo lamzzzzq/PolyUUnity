@@ -1,7 +1,7 @@
 ﻿/*
 --------------------------
       Quest Machine
-      Version 1.2.26
+     Version 1.2.32.2
 
 Copyright © Pixel Crushers
 --------------------------
@@ -15,8 +15,12 @@ please contact us any time at support@pixelcrushers.com.
 
 Getting Started:
 ----------------
-o If you want to use 2D physics you must define scripting symbol USE_PHYSICS2D.
-  (Welcome Window or Tools > Pixel Crushers > Common > Misc > Enable Physics 2D Support)
+o IMPORTANT NOTE FOR 2D:
+  If you want to use 2D physics you must define scripting symbol USE_PHYSICS2D.
+  (Tick checkbox in Tools > Pixel Crushers > Quest Machine > Welcome Window.)
+o IMPORTANT NOTE FOR TEXTMESH PRO:
+  If you want to use TextMesh Pro you must define scripting symbol TMP_PRESENT.
+  (Tick checkbox in Tools > Pixel Crushers > Quest Machine > Welcome Window.)
 o Read the manual in Plugins/Pixel Crushers/Quest Machine/Documentation.
 o Play the scene in  Plugins/Pixel Crushers/Quest Machine/Demo. (Uses 2D physics.)
 o Video tutorials: https://www.youtube.com/playlist?list=PLwJBdHXwa-RqjEEWt1RrBAnePgiilk9vJ

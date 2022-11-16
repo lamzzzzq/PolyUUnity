@@ -149,6 +149,17 @@ namespace PixelCrushers.QuestMachine
             UnityEditorInternal.ReorderableList.defaultBehaviours.DoRemoveButton(list);
         }
 
+        public static void SetDefaultTextTable(SerializedProperty stringFieldProperty, TextTable textTable)
+        {
+            // Set TextTable only if string field doesn't already have content.
+            if (stringFieldProperty == null || textTable == null) return;
+            if (!string.IsNullOrEmpty(stringFieldProperty.FindPropertyRelative("m_text").stringValue)) return;
+            if (stringFieldProperty.FindPropertyRelative("m_stringAsset").objectReferenceValue != null) return;
+            var textTableSubproperty = stringFieldProperty.FindPropertyRelative("m_textTable");
+            if (textTableSubproperty == null || textTableSubproperty.objectReferenceValue != null) return;
+            textTableSubproperty.objectReferenceValue = textTable;
+        }
+
         public static string[] GetCounterNames()
         {
             if (QuestEditorWindow.selectedQuest == null || QuestEditorWindow.selectedQuest.counterList == null) return null;

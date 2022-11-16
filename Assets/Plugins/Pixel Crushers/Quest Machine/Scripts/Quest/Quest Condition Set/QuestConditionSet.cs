@@ -125,7 +125,10 @@ namespace PixelCrushers.QuestMachine
             for (int i = 0; i < conditionList.Count; i++)
             {
                 //---Suppress warning: UnityEngine.Assertions.Assert.IsNotNull(conditionList[i], "Quest Machine: conditionList element " + i + " is null. Does your Conditions list have an invalid entry?");
-                if (conditionList[i] != null) conditionList[i].StartChecking(OnTrueCondition);
+                if (conditionList[i] != null && !conditionList[i].alreadyTrue)
+                {
+                    conditionList[i].StartChecking(OnTrueCondition);
+                }
             }
         }
 
@@ -142,6 +145,19 @@ namespace PixelCrushers.QuestMachine
                 if (conditionList[i] != null) conditionList[i].StopChecking();
             }
             m_isChecking = false;
+        }
+
+        /// <summary>
+        /// Resets the condition set to the state where none of the conditions are marked true yet.
+        /// </summary>
+        public void ResetConditions()
+        {
+            for (int i = 0; i < conditionList.Count; i++)
+            {
+                if (conditionList[i] != null) conditionList[i].ResetState();
+            }
+            m_isChecking = false;
+            numTrueConditions = 0;
         }
 
         /// <summary>

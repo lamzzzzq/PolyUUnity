@@ -14,7 +14,7 @@ namespace PixelCrushers.QuestMachine
 
         #region Serialized Fields
 
-        [Tooltip("The ID that uniquely identifies this entity. If unassigneduses Quest Entity's Display Name if present.")]
+        [Tooltip("The ID that uniquely identifies this entity. If unassigned, uses Quest Entity's Display Name if present.")]
         [SerializeField]
         protected StringField m_id = new StringField();
 

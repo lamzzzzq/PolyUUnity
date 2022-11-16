@@ -32,7 +32,7 @@ namespace PixelCrushers
 
         [Tooltip("When loading a game/scene, wait this many frames before applying saved data to allow other scripts to initialize first.")]
         [SerializeField]
-        private int m_framesToWaitBeforeApplyData = 1;
+        private int m_framesToWaitBeforeApplyData = 0;
 
         [Tooltip("Log debug info.")]
         [SerializeField]
@@ -143,7 +143,7 @@ namespace PixelCrushers
         /// Note: This value is reset to zero after every call to ApplySavedGameData.
         /// </summary>
         public static int framesToWaitBeforeSaveDataAppliedEvent
-        { 
+        {
             get { return m_framesToWaitBeforeSaveDataAppliedEvent; }
             set { m_framesToWaitBeforeSaveDataAppliedEvent = value; }
         }
@@ -288,6 +288,15 @@ namespace PixelCrushers
             }
         }
 
+        public delegate string ValidateSceneNameDelegate(string sceneName, SceneValidationMode sceneValidationMode);
+
+        /// <summary>
+        /// Invoked before loading a scene by name. Should return the sceneName, or a different
+        /// scene if the sceneName isn't valid (e.g., was renamed or removed from build settings),
+        /// or a blank string to not load any scene.
+        /// </summary>
+        public static ValidateSceneNameDelegate validateNameScene = null;
+
         public delegate void SceneLoadedDelegate(string sceneName, int sceneIndex);
 
         /// <summary>
@@ -327,6 +336,12 @@ namespace PixelCrushers
             if (m_instance == null)
             {
                 m_instance = this;
+#if UNITY_EDITOR
+                if (Application.isPlaying)
+                { // If GameObject is hidden in Scene view, DontDestroyOnLoad will report (harmless) error.
+                    UnityEditor.SceneVisibilityManager.instance.Show(gameObject, true);
+                }
+#endif
                 if (transform.parent != null) transform.SetParent(null);
                 DontDestroyOnLoad(gameObject);
             }
@@ -377,8 +392,9 @@ namespace PixelCrushers
             return UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
         }
 
-        private static IEnumerator LoadSceneInternal(string sceneName)
+        private static IEnumerator LoadSceneInternal(string sceneName, SceneValidationMode sceneValidationMode)
         {
+            m_addedScenes.Clear();
             if (sceneTransitionManager == null)
             {
                 if (sceneName.StartsWith("index:"))
@@ -388,18 +404,25 @@ namespace PixelCrushers
                 }
                 else
                 {
+                    if (validateNameScene != null) sceneName = validateNameScene(sceneName, sceneValidationMode);
+                    if (string.IsNullOrEmpty(sceneName))
+                    {
+                        if (debug) Debug.LogWarning("Scene '" + sceneName + "' is not a valid scene to load.");
+                        yield break;
+                    }
                     UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
                 }
                 yield break;
             }
             else
             {
-                yield return instance.StartCoroutine(LoadSceneInternalTransitionCoroutine(sceneName));
+                yield return instance.StartCoroutine(LoadSceneInternalTransitionCoroutine(sceneName, sceneValidationMode));
             }
         }
 
-        private static IEnumerator LoadSceneInternalTransitionCoroutine(string sceneName)
+        private static IEnumerator LoadSceneInternalTransitionCoroutine(string sceneName, SceneValidationMode sceneValidationMode)
         {
+            m_addedScenes.Clear();
             yield return instance.StartCoroutine(sceneTransitionManager.LeaveScene());
             if (sceneName.StartsWith("index:"))
             {
@@ -408,6 +431,12 @@ namespace PixelCrushers
             }
             else
             {
+                if (validateNameScene != null) sceneName = validateNameScene(sceneName, sceneValidationMode);
+                if (string.IsNullOrEmpty(sceneName))
+                {
+                    if (debug) Debug.LogWarning("Scene '" + sceneName + "' is not a valid scene to load.");
+                    yield break;
+                }
                 m_currentAsyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
             }
             while (m_currentAsyncOperation != null && !m_currentAsyncOperation.isDone)
@@ -420,8 +449,10 @@ namespace PixelCrushers
             instance.StartCoroutine(sceneTransitionManager.EnterScene());
         }
 
-        public static IEnumerator LoadAdditiveSceneInternal(string sceneName)
+        public static IEnumerator LoadAdditiveSceneInternal(string sceneName, SceneValidationMode sceneValidationMode)
         {
+            if (validateNameScene != null) sceneName = validateNameScene(sceneName, sceneValidationMode);
+            if (string.IsNullOrEmpty(sceneName)) yield break;
             yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
             var scene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(sceneName);
             if (!scene.IsValid()) yield break;
@@ -788,7 +819,7 @@ namespace PixelCrushers
             }
             else if (saveCurrentScene)
             {
-                instance.StartCoroutine(LoadSceneCoroutine(savedGameData, null));
+                instance.StartCoroutine(LoadSceneCoroutine(savedGameData, null, SceneValidationMode.LoadingSavedGame));
             }
             else
             {
@@ -815,10 +846,10 @@ namespace PixelCrushers
             }
             var savedGameData = RecordSavedGameData();
             savedGameData.sceneName = sceneName;
-            instance.StartCoroutine(LoadSceneCoroutine(savedGameData, spawnpointName));
+            instance.StartCoroutine(LoadSceneCoroutine(savedGameData, spawnpointName, SceneValidationMode.LoadingScene));
         }
 
-        private static IEnumerator LoadSceneCoroutine(SavedGameData savedGameData, string spawnpointName)
+        private static IEnumerator LoadSceneCoroutine(SavedGameData savedGameData, string spawnpointName, SceneValidationMode sceneValidationMode)
         {
             if (savedGameData == null) yield break;
             if (debug) Debug.Log("Save System: Loading scene " + savedGameData.sceneName +
@@ -826,7 +857,7 @@ namespace PixelCrushers
             m_savedGameData = savedGameData;
             BeforeSceneChange();
             if (autoUnloadAdditiveScenes) UnloadAllAdditiveScenes();
-            yield return LoadSceneInternal(savedGameData.sceneName);
+            yield return LoadSceneInternal(savedGameData.sceneName, sceneValidationMode);
             ApplyDataImmediate();
             // Allow other scripts to spin up scene first:
             for (int i = 0; i < framesToWaitBeforeApplyData; i++)
@@ -882,7 +913,7 @@ namespace PixelCrushers
             if (string.IsNullOrEmpty(sceneName) || m_addedScenes.Contains(sceneName)) return;
             m_addedScenes.Add(sceneName);
             instance.m_isLoadingAdditiveScene = true;
-            instance.StartCoroutine(LoadAdditiveSceneInternal(sceneName));
+            instance.StartCoroutine(LoadAdditiveSceneInternal(sceneName, SceneValidationMode.LoadingScene));
         }
 
         /// <summary>
@@ -915,7 +946,7 @@ namespace PixelCrushers
         public static void RestartGame(string startingSceneName)
         {
             ResetGameState();
-            instance.StartCoroutine(LoadSceneInternal(startingSceneName));
+            instance.StartCoroutine(LoadSceneInternal(startingSceneName, SceneValidationMode.RestartingGame));
         }
 
         /// <summary>

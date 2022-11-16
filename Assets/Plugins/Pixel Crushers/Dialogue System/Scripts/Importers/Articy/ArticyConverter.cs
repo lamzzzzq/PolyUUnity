@@ -272,6 +272,9 @@ namespace PixelCrushers.DialogueSystem.Articy
                             if (prefs.UseTechnicalNames)
                             {
                                 Field.SetValue(actor.fields, "Name", articyEntity.technicalName, FieldType.Text);
+                            }
+                            if (prefs.UseTechnicalNames || prefs.SetDisplayName)
+                            { 
                                 Field.SetValue(actor.fields, "Display Name", articyEntity.displayName.DefaultText, FieldType.Text);
                             }
                             if (prefs.CustomDisplayName) UseCustomDisplayName(actor.fields);
@@ -291,6 +294,9 @@ namespace PixelCrushers.DialogueSystem.Articy
                             if (prefs.UseTechnicalNames)
                             {
                                 Field.SetValue(item.fields, "Name", articyEntity.technicalName, FieldType.Text);
+                            }
+                            if (prefs.UseTechnicalNames || prefs.SetDisplayName)
+                            { 
                                 Field.SetValue(item.fields, "Display Name", articyEntity.displayName.DefaultText, FieldType.Text);
                             }
                             if (prefs.CustomDisplayName) UseCustomDisplayName(item.fields);
@@ -1100,13 +1106,19 @@ namespace PixelCrushers.DialogueSystem.Articy
             ConvertLocalizableText(entry, "Menu Text", fragment.menuText, true);
             ConvertLocalizableText(entry, "Title", fragment.displayName);
             SetFeatureFields(entry.fields, fragment.features);
-            if (prefs.StageDirectionsAreSequences)
+            switch (prefs.StageDirectionsMode)
             {
-                var defaultSequenceText = fragment.stageDirections.DefaultText;
-                if (!string.IsNullOrEmpty(defaultSequenceText) && (defaultSequenceText.Contains("(") || defaultSequenceText.Contains("{{")))
-                {
-                    ConvertLocalizableText(entry, "Sequence", fragment.stageDirections);
-                }
+                case ConverterPrefs.StageDirModes.Sequences:
+                    var defaultSequenceText = fragment.stageDirections.DefaultText;
+                    if (!string.IsNullOrEmpty(defaultSequenceText) && (defaultSequenceText.Contains("(") || defaultSequenceText.Contains("{{")))
+                    {
+                        ConvertLocalizableText(entry, "Sequence", fragment.stageDirections);
+                    }
+                    break;
+                case ConverterPrefs.StageDirModes.Description:
+                    var description = fragment.stageDirections.DefaultText;
+                    Field.SetValue(entry.fields, "Description", description);
+                    break;
             }
             var scriptField = Field.Lookup(entry.fields, "Script");
             if (scriptField != null) // Script is handled differently.

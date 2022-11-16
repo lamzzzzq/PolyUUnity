@@ -174,7 +174,6 @@ namespace PixelCrushers.DialogueSystem
         protected Coroutine m_focusWhenOpenCoroutine = null;
         protected Coroutine m_showAfterClosingCoroutine = null;
         protected Coroutine m_setAnimatorCoroutine = null;
-        protected WaitForSeconds m_blockInputDelay = null;
 
         #endregion
 
@@ -471,7 +470,7 @@ namespace PixelCrushers.DialogueSystem
         {
             if (blockInputDuration > 0)
             {
-                StartCoroutine(ShowContinueButtonAfterBlockDuration());
+                DialogueManager.instance.StartCoroutine(ShowContinueButtonAfterBlockDuration());
             }
             else
             {
@@ -483,8 +482,7 @@ namespace PixelCrushers.DialogueSystem
         {
             if (continueButton == null) yield break;
             continueButton.interactable = false;
-            if (m_blockInputDelay == null) m_blockInputDelay = new WaitForSeconds(blockInputDuration);
-            yield return m_blockInputDelay;
+            yield return DialogueManager.instance.StartCoroutine(DialogueTime.WaitForSeconds(blockInputDuration));
             continueButton.interactable = true;
             ShowContinueButtonNow();
         }
@@ -568,7 +566,7 @@ namespace PixelCrushers.DialogueSystem
 
             if (waitForOpen && panelState != PanelState.Open)
             {
-                StartCoroutine(SetSubtitleTextContentAfterOpen(subtitle));
+                DialogueManager.instance.StartCoroutine(SetSubtitleTextContentAfterOpen(subtitle));
             }
             else
             {
@@ -612,7 +610,7 @@ namespace PixelCrushers.DialogueSystem
             }
             else if (delayTypewriterUntilOpen && !hasFocus)
             {
-                StartCoroutine(StartTypingWhenFocused(subtitleText, subtitleText.text, previousChars));
+                DialogueManager.instance.StartCoroutine(StartTypingWhenFocused(subtitleText, subtitleText.text, previousChars));
             }
             else
             {
@@ -658,7 +656,9 @@ namespace PixelCrushers.DialogueSystem
             portraitImage.sprite = sprite;
             if (usePortraitNativeSize && sprite != null)
             {
-                portraitImage.rectTransform.sizeDelta = new Vector2(sprite.texture.width, sprite.texture.height);
+                portraitImage.rectTransform.sizeDelta = sprite.packed ?
+                    new Vector2(sprite.rect.width, sprite.rect.height) :
+                    new Vector2(sprite.texture.width, sprite.texture.height);
             }
         }
 
@@ -679,13 +679,13 @@ namespace PixelCrushers.DialogueSystem
                     if (isMyPanel)
                     {
                         if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
-                        m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
+                        m_setAnimatorCoroutine = DialogueManager.instance.StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
                     }
                 }
                 else
                 {
                     if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
-                    m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(null));
+                    m_setAnimatorCoroutine = DialogueManager.instance.StartCoroutine(SetAnimatorAtEndOfFrame(null));
                 }
             }
         }
@@ -696,12 +696,13 @@ namespace PixelCrushers.DialogueSystem
                 dialogueActor.standardDialogueUISettings.portraitAnimatorController != null)
             {
                 if (m_setAnimatorCoroutine != null) StopCoroutine(m_setAnimatorCoroutine);
-                m_setAnimatorCoroutine = StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
+                m_setAnimatorCoroutine = DialogueManager.instance.StartCoroutine(SetAnimatorAtEndOfFrame(dialogueActor.standardDialogueUISettings.portraitAnimatorController));
             }
         }
 
         protected virtual IEnumerator SetAnimatorAtEndOfFrame(RuntimeAnimatorController animatorController)
         {
+            if (animator == null) yield break;
             if (animator.runtimeAnimatorController != animatorController)
             {
                 animator.runtimeAnimatorController = animatorController;
@@ -719,6 +720,7 @@ namespace PixelCrushers.DialogueSystem
             {
                 Tools.SetGameObjectActive(portraitImage, portraitImage.sprite != null);
             }
+            animator.enabled = animatorController != null;
         }
 
         #endregion

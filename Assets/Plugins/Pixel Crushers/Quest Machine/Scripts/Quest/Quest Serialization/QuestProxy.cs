@@ -317,7 +317,7 @@ namespace PixelCrushers.QuestMachine
         {
             return (int)counterQuestCondition.counterValueMode + ";" + (int)counterQuestCondition.requiredCounterValue.valueType + ";" +
                 counterQuestCondition.requiredCounterValue.literalValue + ";" + counterQuestCondition.requiredCounterValue.counterIndex + ";" +
-                counterQuestCondition.counterIndex;
+                counterQuestCondition.counterIndex + ";" + (counterQuestCondition.alreadyTrue ? "1" : "0");
         }
 
         private static void ApplyCounterQuestConditionProxyData(CounterQuestCondition counterQuestCondition, string s)
@@ -344,6 +344,7 @@ namespace PixelCrushers.QuestMachine
                     break;
             }
             counterQuestCondition.counterIndex = SafeConvert.ToInt(fields[4]);
+            counterQuestCondition.alreadyTrue = (fields.Length > 5) ? (fields[5] == "1") : false;
         }
 
         private static string GetMessageQuestConditionProxyData(MessageQuestCondition messageQuestCondition)
@@ -351,7 +352,8 @@ namespace PixelCrushers.QuestMachine
             var valueType = (messageQuestCondition.value != null) ? messageQuestCondition.value.valueType : MessageValueType.None;
             var s = ((int)messageQuestCondition.senderSpecifier).ToString() + ";" + messageQuestCondition.senderID + ";" + 
                 ((int)messageQuestCondition.targetSpecifier).ToString() + ";" + messageQuestCondition.targetID + ";" + 
-                messageQuestCondition.message + ";" + messageQuestCondition.parameter + ";" + (int)valueType;
+                messageQuestCondition.message + ";" + messageQuestCondition.parameter + ";" + (int)valueType +
+                ";" + (messageQuestCondition.alreadyTrue ? "1" : "0");
             switch (valueType)
             {
                 case MessageValueType.Int:
@@ -388,17 +390,21 @@ namespace PixelCrushers.QuestMachine
                     messageQuestCondition.value = new MessageValue();
                     break;
             }
+            messageQuestCondition.alreadyTrue = (fields.Length > 7) ? (fields[7] == "1") : false;
         }
 
         private static string GetTimerQuestConditionProxyData(TimerQuestCondition timerQuestCondition)
         {
-            return timerQuestCondition.counterIndex.ToString();
+            return timerQuestCondition.counterIndex.ToString() + ";" + (timerQuestCondition.alreadyTrue ? "1" : "0");
         }
 
         private static void ApplyTimerQuestConditionProxyData(TimerQuestCondition timerQuestCondition, string s)
         {
             if (timerQuestCondition == null || s == null) return;
-            timerQuestCondition.counterIndex = SafeConvert.ToInt(s);
+            var fields = s.Split(';');
+            if (fields.Length < 1) return;
+            timerQuestCondition.counterIndex = SafeConvert.ToInt(fields[0]);
+            timerQuestCondition.alreadyTrue = (fields.Length > 1) ? (fields[1] == "1") : false;
         }
 
     }
@@ -563,6 +569,7 @@ namespace PixelCrushers.QuestMachine
 
         private static string GetIconQuestContentProxyData(IconQuestContent iconQuestContent)
         {
+            // Note: Procedural quest generation doesn't provide a way to specify color tint, so we don't serialize color.
             return iconQuestContent.count + ";" + ((iconQuestContent.image != null) ? iconQuestContent.image.name : string.Empty) + ";" + 
                 StringField.GetStringValue(iconQuestContent.originalText);
 
@@ -575,11 +582,13 @@ namespace PixelCrushers.QuestMachine
             if (fields.Length < 3) return;
             iconQuestContent.count = SafeConvert.ToInt(fields[0]);
             iconQuestContent.image = string.IsNullOrEmpty(fields[1]) ? null : QuestMachine.GetImage(fields[1]);
+            iconQuestContent.color = Color.white;
             iconQuestContent.originalText = new StringField(fields[2]);
         }
 
         private static string GetButtonQuestContentProxyData(ButtonQuestContent buttonQuestContent)
         {
+            // Note: Procedural quest generation doesn't provide a way to specify color tint, so we don't serialize color.
             return buttonQuestContent.count + ";" + ((buttonQuestContent.image != null) ? buttonQuestContent.image.name : string.Empty) + ";" + 
                 StringField.GetStringValue(buttonQuestContent.originalText) + ";" + JsonUtility.ToJson(buttonQuestContent.m_actionsProxy);
         }
@@ -591,6 +600,7 @@ namespace PixelCrushers.QuestMachine
             if (fields.Length < 4) return;
             buttonQuestContent.count = SafeConvert.ToInt(fields[0]);
             buttonQuestContent.image = string.IsNullOrEmpty(fields[1]) ? null : QuestMachine.GetImage(fields[1]);
+            buttonQuestContent.color = Color.white;
             buttonQuestContent.originalText = new StringField(fields[2]);
             buttonQuestContent.m_actionsProxy = JsonUtility.FromJson<QuestActionProxyContainer>(fields[3]);
         }

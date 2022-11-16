@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Pixel Crushers. All rights reserved.
 
-using UnityEngine;
 using System;
+using System.Collections;
+using UnityEngine;
 
 namespace PixelCrushers.QuestMachine
 {
@@ -119,6 +120,8 @@ namespace PixelCrushers.QuestMachine
             return StringField.IsNullOrEmpty(message) ? "Message" : "Message: " + message.value + " " + StringField.GetStringValue(parameter) + " " + value.EditorNameValue();
         }
 
+        private Coroutine addListenerCoroutine = null;
+
         public override void AddTagsToDictionary()
         {
             AddTagsToDictionary(senderID);
@@ -131,13 +134,32 @@ namespace PixelCrushers.QuestMachine
         public override void StartChecking(System.Action trueAction)
         {
             base.StartChecking(trueAction);
-            MessageSystem.AddListener(this, runtimeMessage, runtimeParameter);
+            if (addListenerCoroutine == null)
+            {
+                // Wait for end of frame so we don't incorrect respond to message that
+                // set this node active, in case it listens for the same message.
+                addListenerCoroutine = QuestMachineConfiguration.instance.StartCoroutine(AddListenerAtEndOfFrame());
+            }
         }
 
         public override void StopChecking()
         {
             base.StopChecking();
+            if (addListenerCoroutine != null)
+            {
+                if (QuestMachineConfiguration.instance != null)
+                {
+                    QuestMachineConfiguration.instance.StopCoroutine(addListenerCoroutine);
+                }
+                addListenerCoroutine = null;
+            }
             MessageSystem.RemoveListener(this);
+        }
+
+        private IEnumerator AddListenerAtEndOfFrame()
+        {
+            yield return new WaitForEndOfFrame();
+            MessageSystem.AddListener(this, runtimeMessage, runtimeParameter);
         }
 
         void IMessageHandler.OnMessage(MessageArgs messageArgs)

@@ -44,6 +44,10 @@ namespace PixelCrushers.QuestMachine
             AddTagsToDictionary(originalText);
         }
 
+        public virtual void SetDefaultTextTable(TextTable textTable) 
+        {
+        }
+
     }
 
 }

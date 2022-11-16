@@ -26,6 +26,14 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private bool m_rememberCompletedQuests = true;
 
+        [Tooltip("Keep only handwritten completed quests in the journal, not procedurally generated quests.")]
+        [SerializeField]
+        private bool m_onlyRememberHandwrittenQuests = false;
+
+        [Tooltip("When procedurally generated quests complete, pare down saved data to only success/failure content.")]
+        [SerializeField]
+        private bool m_compressCompletedProcgenQuests = false;
+
         [Tooltip("If tracking is enabled for a quest, disable tracking for other quests.")]
         [SerializeField]
         private bool m_onlyTrackOneQuestAtATime;
@@ -58,6 +66,24 @@ namespace PixelCrushers.QuestMachine
         }
 
         /// <summary>
+        /// Keep only handwritten completed quests in the journal, not procedurally generated quests.
+        /// </summary>
+        public bool onlyRememberHandwrittenQuests
+        {
+            get { return m_onlyRememberHandwrittenQuests; }
+            set { m_onlyRememberHandwrittenQuests = value; }
+        }
+
+        /// <summary>
+        /// When procedurally generated quests complete, pare down saved data to only success/failure content.
+        /// </summary>
+        public bool compressCompletedProcgenQuests
+        {
+            get { return m_compressCompletedProcgenQuests; }
+            set { m_compressCompletedProcgenQuests = value; }
+        }
+
+        /// <summary>
         /// If tracking is enabled for a quest, disable tracking for other quests.
         /// </summary>
         public bool onlyTrackOneQuestAtATime
@@ -70,6 +96,7 @@ namespace PixelCrushers.QuestMachine
         {
             base.Reset();
             includeInSavedGameData = true;
+            forwardEventsToListeners = true;
         }
 
         public override void Start()
@@ -121,16 +148,23 @@ namespace PixelCrushers.QuestMachine
         /// <param name="messageArgs"></param>
         protected virtual void CheckQuestState(MessageArgs messageArgs)
         {
-            if (!rememberCompletedQuests)
+            if (messageArgs.firstValue == null &&
+                (messageArgs.values.Length >= 2 && messageArgs.values[1] != null &&
+                messageArgs.values[1].GetType() == typeof(QuestState)))
             {
-                if (messageArgs.firstValue == null &&
-                    (messageArgs.values.Length >= 2 && messageArgs.values[1] != null &&
-                    messageArgs.values[1].GetType() == typeof(QuestState)))
+                var quest = FindQuest(messageArgs.parameter);
+                if (quest == null) return;
+                var state = (QuestState)(messageArgs.values[1]);
+                if (state == QuestState.Successful || state == QuestState.Failed)
                 {
-                    var state = (QuestState)(messageArgs.values[1]);
-                    if (state == QuestState.Successful || state == QuestState.Failed)
+                    var shouldDelete = quest.deleteWhenComplete || !rememberCompletedQuests || (onlyRememberHandwrittenQuests && quest.isProcedurallyGenerated);
+                    if (shouldDelete)
                     {
                         DeleteQuest(FindQuest(messageArgs.parameter));
+                    }
+                    else if (quest.isProcedurallyGenerated)
+                    {
+                        quest.CompressGeneratedContent();
                     }
                 }
             }

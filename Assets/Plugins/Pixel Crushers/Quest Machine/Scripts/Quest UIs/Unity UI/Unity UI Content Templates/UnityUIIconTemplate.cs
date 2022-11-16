@@ -62,7 +62,16 @@ namespace PixelCrushers.QuestMachine
 
         public virtual void Assign(Sprite sprite, int count, string caption)
         {
-            if (image != null) image.sprite = sprite;
+            Assign(sprite, Color.white, count, caption);
+        }
+
+        public virtual void Assign(Sprite sprite, Color color, int count, string caption)
+        {
+            if (image != null)
+            {
+                image.sprite = sprite;
+                image.color = color;
+            }
             if (countText != null)
             {
                 countText.text = count.ToString();

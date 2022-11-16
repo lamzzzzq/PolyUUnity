@@ -23,7 +23,8 @@ namespace PixelCrushers.DialogueSystem
     /// object will receive an "OnUse" message.
     /// 
     /// You can hook into SelectedUsableObject and DeselectedUsableObject to get notifications
-    /// when the current target has changed.
+    /// when the current target has changed and Enabled and Disabled when the component is 
+    /// enabled or disabled.
     /// </summary>
     [AddComponentMenu("")] // Use wrapper.
     public class Selector : MonoBehaviour
@@ -240,6 +241,10 @@ namespace PixelCrushers.DialogueSystem
         /// </summary>
         public event DeselectedUsableObjectDelegate DeselectedUsableObject = null;
 
+        public event System.Action Enabled = null;
+
+        public event System.Action Disabled = null;
+
         protected GameObject selection = null; // Currently under the selection point.
         protected Usable usable = null; // Usable component of the current selection.
         protected GameObject clickedDownOn = null; // Selection when the mouse button was pressed down.
@@ -273,6 +278,16 @@ namespace PixelCrushers.DialogueSystem
                 }
             }
 #endif
+        }
+
+        protected virtual void OnEnable()
+        {
+            Enabled?.Invoke();
+        }
+
+        protected virtual void OnDisable()
+        {
+            Disabled?.Invoke();
         }
 
         public virtual void Start()

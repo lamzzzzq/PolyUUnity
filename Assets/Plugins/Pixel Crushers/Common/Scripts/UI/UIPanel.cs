@@ -238,6 +238,7 @@ namespace PixelCrushers
         public virtual void Close()
         {
             PopFromPanelStack();
+            if (gameObject == null) return;
             if (gameObject.activeInHierarchy) CancelInvoke();
             if (panelState == PanelState.Closed || panelState == PanelState.Closing) return;
             panelState = PanelState.Closing;
@@ -323,13 +324,22 @@ namespace PixelCrushers
             m_lastSelected = selectable;
             if (InputDeviceManager.autoFocus)
             {
-                UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
-                UIUtility.Select(m_lastSelected.GetComponent<UnityEngine.UI.Selectable>());
+                if (UnityEngine.EventSystems.EventSystem.current != null)
+                {
+                    UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+                }
+                if (m_lastSelected != null)
+                {
+                    UIUtility.Select(m_lastSelected.GetComponent<UnityEngine.UI.Selectable>());
+                }
                 CheckFocus();
             }
             else
             {
-                UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(selectable);
+                if (UnityEngine.EventSystems.EventSystem.current != null)
+                {
+                    UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(selectable);
+                }
             }
         }
 

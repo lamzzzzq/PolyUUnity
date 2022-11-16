@@ -178,7 +178,7 @@ namespace PixelCrushers.DialogueSystem
         /// </param>
         public DialogueEntry GetDialogueEntry(int dialogueEntryID)
         {
-            return dialogueEntries.Find(e => string.Equals(e.id, dialogueEntryID));
+            return dialogueEntries.Find(e => e.id == dialogueEntryID);
         }
 
         /// <summary>

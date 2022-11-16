@@ -298,7 +298,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             return ((database != null) && (entry != null) && database.IsPlayerID(entry.ActorID)) ? pcLinkButtonGUIStyle : npcLinkButtonGUIStyle;
         }
 
-    private string GetDialogueEntryText(DialogueEntry entry)
+        private string GetDialogueEntryText(DialogueEntry entry)
         {
             if (entry == null) return string.Empty;
             if (!dialogueEntryText.ContainsKey(entry.id) || (dialogueEntryText[entry.id] == null))
@@ -683,7 +683,14 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
                 // Sequence (including localized if defined):
                 EditorWindowTools.EditorGUILayoutBeginGroup();
 
-                entry.Sequence = SequenceEditorTools.DrawLayout(new GUIContent("Sequence", "Cutscene played when speaking this entry. If set, overrides Dialogue Manager's Default Sequence. Drag audio clips to add AudioWait() commands."), entry.Sequence, ref sequenceRect, ref sequenceSyntaxState);
+                var sequence = entry.Sequence;
+                EditorGUI.BeginChangeCheck();
+                sequence = SequenceEditorTools.DrawLayout(new GUIContent("Sequence", "Cutscene played when speaking this entry. If set, overrides Dialogue Manager's Default Sequence. Drag audio clips to add AudioWait() commands."), entry.Sequence, ref sequenceRect, ref sequenceSyntaxState);
+                if (EditorGUI.EndChangeCheck())
+                {
+                    entry.Sequence = sequence;
+                    dialogueEntryNodeHasSequence[entry.id] = !string.IsNullOrEmpty(sequence);
+                }
                 DrawLocalizedVersions(entry.fields, "Sequence {0}", false, FieldType.Text, true);
 
                 // Response Menu Sequence:
@@ -820,7 +827,11 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
                 var sequence = GetMultinodeSelectionFieldValue(DialogueSystemFields.Sequence);
                 EditorGUI.BeginChangeCheck();
                 sequence = SequenceEditorTools.DrawLayout(new GUIContent("Sequence", "Cutscene played when speaking these entries. If set, overrides Dialogue Manager's Default Sequence. Drag audio clips to add AudioWait() commands."), sequence, ref sequenceRect, ref sequenceSyntaxState);
-                if (EditorGUI.EndChangeCheck()) { changed = true; SetMultinodeSelectionFieldValue(DialogueSystemFields.Sequence, sequence); }
+                if (EditorGUI.EndChangeCheck()) 
+                { 
+                    changed = true; 
+                    SetMultinodeSelectionFieldValue(DialogueSystemFields.Sequence, sequence); 
+                }
 
                 // Response Menu Sequence:
                 bool hasResponseMenuSequence = entry.HasResponseMenuSequence();

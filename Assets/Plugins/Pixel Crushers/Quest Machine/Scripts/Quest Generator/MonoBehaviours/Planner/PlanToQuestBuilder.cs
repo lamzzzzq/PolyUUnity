@@ -68,6 +68,9 @@ namespace PixelCrushers.QuestMachine
             // Success node:
             questBuilder.AddSuccessNode(previousNode);
 
+            // Add unconnected rewards node to show rewards at bottom of journal text:
+            AddRewardsNode(questBuilder, rewardsContentIndex);
+
             return questBuilder.ToQuest();
         }
 
@@ -214,6 +217,7 @@ namespace PixelCrushers.QuestMachine
             for (int i = 0; i < plan.steps.Count; i++)
             {
                 var step = plan.steps[i];
+                var isLastStep = i == plan.steps.Count - 1;
 
                 // Create next condition node:
                 var targetEntity = step.fact.entityType.name;
@@ -231,7 +235,7 @@ namespace PixelCrushers.QuestMachine
 
                 var activeState = conditionNode.stateInfoList[(int)QuestNodeState.Active];
 
-                AddStepNodeText(questBuilder, conditionNode, activeState, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue, step, step.action.actionText.activeText);
+                AddStepNodeText(questBuilder, conditionNode, activeState, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue, step, step.action.actionText.activeText, false);
 
                 // Actions when active:
                 if (!StringField.IsNullOrEmpty(step.action.actionText.activeText.alertText))
@@ -250,7 +254,7 @@ namespace PixelCrushers.QuestMachine
 
                 var trueState = conditionNode.stateInfoList[(int)QuestNodeState.True];
 
-                AddStepNodeText(questBuilder, conditionNode, trueState, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue, step, step.action.actionText.completedText);
+                AddStepNodeText(questBuilder, conditionNode, trueState, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue, step, step.action.actionText.completedText, isLastStep);
 
                 // Actions when completed:
                 if (!StringField.IsNullOrEmpty(step.action.sendMessageOnCompletion))
@@ -326,9 +330,20 @@ namespace PixelCrushers.QuestMachine
 
         /// <summary>
         /// Adds the text for a step.
+        /// Now calls variant that has isLastStepCompletion parameter, passing false.
         /// </summary>
         protected virtual void AddStepNodeText(QuestBuilder questBuilder, QuestNode conditionNode, QuestStateInfo state, string targetEntity, string targetDescriptor, string domainName,
             string counterName, int requiredCounterValue, PlanStep step, ActionStateText actionStateText)
+        {
+            AddStepNodeText(questBuilder, conditionNode, state, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue, step, actionStateText, false);
+        }
+
+        /// <summary>
+        /// Adds the text for a step.
+        /// API change: Added isLastStep.
+        /// </summary>
+        protected virtual void AddStepNodeText(QuestBuilder questBuilder, QuestNode conditionNode, QuestStateInfo state, string targetEntity, string targetDescriptor, string domainName,
+            string counterName, int requiredCounterValue, PlanStep step, ActionStateText actionStateText, bool isLastStepCompletion)
         {
             var taskText = ReplaceStepTags(actionStateText.dialogueText.value, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue);
             if (!string.IsNullOrEmpty(taskText))
@@ -339,7 +354,7 @@ namespace PixelCrushers.QuestMachine
             }
 
             var jrlText = ReplaceStepTags(actionStateText.journalText.value, targetEntity, targetDescriptor, domainName, counterName, requiredCounterValue);
-            if (!string.IsNullOrEmpty(jrlText))
+            if (!(string.IsNullOrEmpty(jrlText) || isLastStepCompletion)) // Last step's completion text goes to main quest success text, not step node.
             {
                 var jrlbodyText = questBuilder.CreateBodyContent(jrlText);
                 var journalList = state.categorizedContentList[(int)QuestContentCategory.Journal];
@@ -439,6 +454,24 @@ namespace PixelCrushers.QuestMachine
             indicatorAction = questBuilder.CreateSetIndicatorAction(questBuilder.quest.id, entity.id, QuestIndicatorState.None);
             actionList = returnNode.GetStateInfo(QuestNodeState.True).actionList;
             actionList.Add(indicatorAction);
+        }
+
+        /// <summary>
+        /// Adds rewards text content to unconnected node at end so it appears in journal.
+        /// </summary>
+        protected virtual void AddRewardsNode(QuestBuilder questBuilder, int rewardsContentIndex = 9999)
+        {
+            var node = questBuilder.AddPassthroughNode(questBuilder.quest.startNode, "Rewards", "Rewards");
+            QuestStateInfo.ValidateStateInfoListCount(node.stateInfoList);
+            var journalList = node.stateInfoList[(int)QuestNodeState.True].categorizedContentList[(int)QuestContentCategory.Journal];
+            var offerContentList = questBuilder.quest.offerContentList;
+            for (int i = rewardsContentIndex; i < offerContentList.Count; i++)
+            {
+                var original = offerContentList[i];
+                var copy = QuestContent.Instantiate(original) as QuestContent;
+                original.CloneSubassetsInto(copy);
+                journalList.contentList.Add(copy);
+            }
         }
 
         /// <summary>

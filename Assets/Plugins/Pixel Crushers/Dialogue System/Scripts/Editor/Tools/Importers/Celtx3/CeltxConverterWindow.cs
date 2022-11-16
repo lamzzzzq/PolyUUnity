@@ -169,6 +169,9 @@ namespace PixelCrushers.DialogueSystem
             // Check Sequence syntax:
             prefs.checkSequenceSyntax = EditorGUILayout.Toggle(new GUIContent("Check Sequence Syntax", "Check the syntax of [SEQ] sequencer commands."), prefs.checkSequenceSyntax);
 
+            // Import Breakdown content:
+            prefs.importBreakdownCatalogContent = EditorGUILayout.Toggle(new GUIContent("Import Breakdown Items", "Import breakdown and mult-tag breakdown items as custom fields."), prefs.importBreakdownCatalogContent);
+
             // Save To:
             if (string.IsNullOrEmpty(prefs.outputFolder))
             {
@@ -295,7 +298,7 @@ namespace PixelCrushers.DialogueSystem
                         if (prefs.sortConversationTitles) database.conversations.Sort((x, y) => x.Title.CompareTo(y.Title));
                         SaveDatabase(database, databaseAssetName);
                         Debug.Log(string.Format("{0}: Created database '{1}' containing {2} actors, {3} conversations, {4} items (quests), {5} variables, and {6} locations.",
-                            DialogueDebug.Prefix, databaseAssetName, database.actors.Count, database.conversations.Count, database.items.Count, database.variables.Count, database.locations.Count));
+                            DialogueDebug.Prefix, databaseAssetName, database.actors.Count, database.conversations.Count, database.items.Count, database.variables.Count, database.locations.Count), database);
                     }
                 }
             }

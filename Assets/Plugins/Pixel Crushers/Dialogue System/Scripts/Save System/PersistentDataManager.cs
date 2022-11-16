@@ -468,7 +468,7 @@ namespace PixelCrushers.DialogueSystem
                     var database = DialogueManager.masterDatabase;
                     for (int i = 0; i < database.items.Count; i++)
                     {
-                        itemsInDatabase.Add(database.items[i].Name);
+                        itemsInDatabase.Add(DialogueLua.StringToTableIndex(database.items[i].Name));
                     }
                 }
 

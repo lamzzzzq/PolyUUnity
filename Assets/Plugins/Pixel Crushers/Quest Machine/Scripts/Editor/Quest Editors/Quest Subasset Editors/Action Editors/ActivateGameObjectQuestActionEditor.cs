@@ -20,8 +20,12 @@ namespace PixelCrushers.QuestMachine
         protected override void OnEnable()
         {
             base.OnEnable();
-            gameObjectNameProperty = serializedObject.FindProperty("m_gameObjectName");
-            stateProperty = serializedObject.FindProperty("m_state");
+            try
+            {
+                gameObjectNameProperty = (serializedObject != null) ? serializedObject.FindProperty("m_gameObjectName") : null;
+                stateProperty = (serializedObject != null) ? serializedObject.FindProperty("m_state") : null;
+            }
+            catch (System.ArgumentException) { }
         }
 
         protected override void Draw()

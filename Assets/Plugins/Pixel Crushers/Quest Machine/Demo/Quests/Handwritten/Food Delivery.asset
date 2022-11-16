@@ -191,8 +191,8 @@ MonoBehaviour:
     m_childIndexList: 
     m_canvasRect:
       serializedVersion: 2
-      x: 34.49813
-      y: 122.1496
+      x: 30
+      y: 120
       width: 120
       height: 48
   - m_id:
@@ -242,7 +242,7 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 180
-      y: 118.98631
+      y: 120
       width: 120
       height: 48
   - m_id:

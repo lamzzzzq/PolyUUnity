@@ -411,6 +411,10 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
                     UpdateConversationTitles();
                     ResetNodeEditorConversationList();
                 }
+                if (toolbar.current == Toolbar.Tab.Database)
+                {
+                    ResetDatabaseTab();
+                }
                 if (toolbar.Current == Toolbar.Tab.Items)
                 {
                     BuildLanguageListFromItems();

@@ -12,30 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 0
   m_counterValueMode: 0
   m_requiredCounterValue:
     m_valueType: 3
     m_literalValue: 0
     m_counterIndex: 0
---- !u!114 &-6683751127708348964
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u591A\u8B1D\u4F60\u5E6B\u6211\u6435\u8FD4\u526F\u773C\u93E1\u3002\u6211\u800C\u5BB6\u6709\u5F97\u7747\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u4FC2\u597D\u5E6B\u624B\u5440\uFF01"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-6480226494628196809
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,6 +33,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_image: {fileID: 21300000, guid: 74a98d9e481042745988ca38465f0784, type: 3}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -57,24 +41,6 @@ MonoBehaviour:
     m_textTableFieldID: 0
   m_count: 0
   m_imageNameProxy: 
---- !u!114 &-6434672008952360326
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u591A\u8B1D\u4F60\u5E6B\u6211\u6435\u8FD4\u526F\u773C\u93E1\u3002\u6211\u800C\u5BB6\u6709\u5F97\u7747\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u4FC2\u597D\u5E6B\u624B\u5440\uFF01"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-6401098594209196640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 1.2 DishWashing
     m_stringAsset: {fileID: 0}
@@ -146,24 +113,6 @@ MonoBehaviour:
   m_contentID: -1
   m_bodyText:
     m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
---- !u!114 &-5701422944495295187
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u591A\u8B1D\u4F60\u5E6B\u6211\u6435\u8FD4\u526F\u773C\u93E1\u3002\u6211\u800C\u5BB6\u6709\u5F97\u7747\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u4FC2\u597D\u5E6B\u624B\u5440\uFF01"
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -274,62 +223,6 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_questIndicatorState: 5
---- !u!114 &-2512092084626531450
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
-  m_Name: MessageQuestCondition
-  m_EditorClassIdentifier: 
-  m_senderSpecifier: 0
-  m_senderID:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_targetSpecifier: 0
-  m_targetID:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_message:
-    m_text: Discussed Quest
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_parameter:
-    m_text: returnGlasses
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_value:
-    m_valueType: 0
-    m_intValue: 0
-    m_stringValue: 
---- !u!114 &-2390194573392139309
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u5462\u500B\u5514\u4FC2\u6211\u526F\u773C\u93E1\u558E\uFF0C\u4E0D\u904E\u90FD\u5514\u8A72\u66EC\u4F60\u3002"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-1764432036124152411
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -383,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -444,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -505,30 +400,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 1.2 DishWashing
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_requiredState: 3
---- !u!114 &-896491436734089857
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-759814581701926727
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,6 +421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_image: {fileID: 21300000, guid: 74a98d9e481042745988ca38465f0784, type: 3}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -568,24 +447,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 11400000, guid: c37223e1e0a2db0408af9587f91675d2, type: 2}
     m_textTableFieldID: 4
---- !u!114 &-497433843708187835
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u591A\u8B1D\u4F60\u5E6B\u6211\u6435\u8FD4\u526F\u773C\u93E1\u3002\u6211\u800C\u5BB6\u6709\u5F97\u7747\u5831\u7D19\u5566\uFF0C\u4F60\u771F\u4FC2\u597D\u5E6B\u624B\u5440\uFF01"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &-336834503009164258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,6 +524,7 @@ MonoBehaviour:
   m_showInTrackHUD: 1
   m_isAbandonable: 0
   m_rememberIfAbandoned: 0
+  m_deleteWhenComplete: 0
   m_autostartConditionSet:
     m_conditionList: []
     m_conditionCountMode: 0
@@ -693,7 +555,7 @@ MonoBehaviour:
     - m_contentList: []
     - m_contentList: []
   - m_actionList:
-    - {fileID: 8551561310420447153, guid: 5a4e1cbf451b0fe4782dd0a27e463ee0, type: 2}
+    - {fileID: 0}
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList: []
@@ -1181,6 +1043,7 @@ MonoBehaviour:
       y: 133.16513
       width: 120
       height: 48
+  m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
   m_nextContentID: 0
 --- !u!114 &1189760860311951203
@@ -1238,24 +1101,6 @@ MonoBehaviour:
     m_type: 0
     m_id: 
   m_audioNameProxy: 
---- !u!114 &3649570627185794024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: "\u5462\u500B\u5514\u4FC2\u6211\u526F\u773C\u93E1\u558E\uFF0C\u4E0D\u904E\u90FD\u5514\u8A72\u66EC\u4F60\u3002"
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &4326944988186130484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1281,6 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 1
   m_counterValueMode: 0
   m_requiredCounterValue:

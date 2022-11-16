@@ -44,7 +44,7 @@ namespace PixelCrushers.QuestMachine
         public UnityUIButtonTemplate AddButton(ButtonQuestContent button)
         {
             var instance = CreateInstance();
-            instance.Assign(button.image, button.count, button.runtimeText, button.actionList);
+            instance.Assign(button.image, button.color, button.count, button.runtimeText, button.actionList);
             instance.groupNumber = button.groupNumber;
             return instance;
         }

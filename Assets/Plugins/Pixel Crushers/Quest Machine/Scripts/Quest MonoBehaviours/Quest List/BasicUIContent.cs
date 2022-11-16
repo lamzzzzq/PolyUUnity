@@ -54,6 +54,7 @@ namespace PixelCrushers.QuestMachine
                 var iconContent = ScriptableObjectUtility.CreateScriptableObject<IconQuestContent>();
                 iconContent.name = "Icon";
                 iconContent.image = icon;
+                iconContent.color = Color.white;
                 list.Add(iconContent);
             }
             if (!StringField.IsNullOrEmpty(m_headingText))

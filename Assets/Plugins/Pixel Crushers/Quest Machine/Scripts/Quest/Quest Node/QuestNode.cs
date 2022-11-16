@@ -409,9 +409,15 @@ namespace PixelCrushers.QuestMachine
 
             m_state = newState;
 
-            SetConditionChecking(newState == QuestNodeState.Active);
+            if (newState == QuestNodeState.Inactive) ResetConditions();
 
-            if (!informListeners) return;
+            if (!informListeners)
+            {
+                // We don't inform listeners or run state actions when applying saved game state,
+                // but we do need to enable condition checking if switching to active state:
+                SetConditionChecking(newState == QuestNodeState.Active);
+                return;
+            }
 
             // Execute state actions:
             var stateInfo = GetStateInfo(m_state);
@@ -423,6 +429,8 @@ namespace PixelCrushers.QuestMachine
                     stateInfo.actionList[i].Execute();
                 }
             }
+
+            SetConditionChecking(newState == QuestNodeState.Active);
 
             // Notify that state changed:
             QuestMachineMessages.QuestNodeStateChanged(this, quest.id, id, m_state);
@@ -494,6 +502,12 @@ namespace PixelCrushers.QuestMachine
                 conditionSet.StopChecking();
             }
             m_isCheckingConditions = enable;
+        }
+
+        public void ResetConditions()
+        {
+            if (!Application.isPlaying) return;
+            conditionSet.ResetConditions();
         }
 
         private void OnConditionsTrue()

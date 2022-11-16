@@ -41,7 +41,7 @@ namespace PixelCrushers.DialogueSystem.DialogueEditor
             OpenConversation(currentConv);
         }
 
-        private void ReorderIDsAllConversations()
+        public void ReorderIDsAllConversations()
         {
             if (database == null) return;
             foreach (var conversation in database.conversations)

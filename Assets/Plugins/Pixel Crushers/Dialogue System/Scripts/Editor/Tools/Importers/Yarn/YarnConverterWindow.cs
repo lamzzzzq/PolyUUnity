@@ -312,6 +312,51 @@ namespace PixelCrushers.DialogueSystem.Yarn
             }
         }
 
+        protected override void DrawOverwriteCheckbox()
+        {
+            prefs.overwrite = EditorGUILayout.Toggle(new GUIContent("Overwrite", "Overwrite database if it already exists"),
+                                                     prefs.overwrite);
+            if (prefs.overwrite)
+            {
+                prefs.merge = EditorGUILayout.Toggle(new GUIContent("Merge Variables", "Merge variables into existing database instead of overwriting"),
+                                                     prefs.merge);
+            }
+        }
+
+        protected override DialogueDatabase LoadOrCreateDatabase()
+        {
+            string assetPath = string.Format("{0}/{1}.asset", prefs.outputFolder, prefs.databaseFilename);
+            DialogueDatabase database = null;
+            if (prefs.overwrite)
+            {
+                database = AssetDatabase.LoadAssetAtPath(assetPath, typeof(DialogueDatabase)) as DialogueDatabase;
+                // if ((database != null) && !prefs.merge) database.Clear();
+                if (database != null)
+                {
+                    // NOTE: The only thing we'll keep in a DB merge is variables.
+                    //       That way they stay persistent between imports.
+                    if (!prefs.merge)
+                    {
+                        database.variables.Clear();
+                    }
+
+                    database.actors.Clear();
+                    database.items.Clear();
+                    database.locations.Clear();
+                    database.conversations.Clear();
+                    database.ResetCache();
+                }
+            }
+            if (database == null)
+            {
+                assetPath = AssetDatabase.GenerateUniqueAssetPath(string.Format("{0}/{1}.asset", prefs.outputFolder, prefs.databaseFilename));
+                database = DatabaseUtility.CreateDialogueDatabaseInstance();
+                database.name = prefs.databaseFilename;
+                AssetDatabase.CreateAsset(database, assetPath);
+            }
+            return database;
+        }
+
         protected override void ClearPrefs()
         {
             base.ClearPrefs();

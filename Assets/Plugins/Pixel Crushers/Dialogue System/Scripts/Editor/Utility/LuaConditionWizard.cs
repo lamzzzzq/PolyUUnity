@@ -335,6 +335,7 @@ namespace PixelCrushers.DialogueSystem
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], item.conditionsQuestEntryNames);
                                 break;
                             case CustomLuaParameterType.Variable:
+                            case CustomLuaParameterType.VariableName:
                                 item.customParamValues[i] = EditorGUILayout.Popup((int)item.customParamValues[i], variablePopupNames);
                                 break;
                             case CustomLuaParameterType.Item:
@@ -656,7 +657,12 @@ namespace PixelCrushers.DialogueSystem
                                     case CustomLuaParameterType.Variable:
                                         if (item.customParamValues[p] == null) item.customParamValues[p] = (int)0;
                                         var variableIndex = (int)item.customParamValues[p];
-                                        sb.Append((0 <= variableIndex && variableIndex < variableNames.Length) ? ("Variable[\"" + variableNames[variableIndex] + "\"]") : "\"\"");
+                                        sb.Append((0 <= variableIndex && variableIndex < variableNames.Length) ? ("Variable[\"" + DialogueLua.StringToTableIndex(variableNames[variableIndex]) + "\"]") : "\"\"");
+                                        break;
+                                    case CustomLuaParameterType.VariableName:
+                                        if (item.customParamValues[p] == null) item.customParamValues[p] = (int)0;
+                                        var variableNameIndex = (int)item.customParamValues[p];
+                                        sb.Append((0 <= variableNameIndex && variableNameIndex < variableNames.Length) ? ("\"" + variableNames[variableNameIndex] + "\"") : "\"\"");
                                         break;
                                     case CustomLuaParameterType.Item:
                                         if (item.customParamValues[p] == null) item.customParamValues[p] = (int)0;
@@ -1080,6 +1086,7 @@ namespace PixelCrushers.DialogueSystem
                                 item.customParamValues[i] = EditorGUI.Popup(rect, (int)item.customParamValues[i], item.conditionsQuestEntryNames);
                                 break;
                             case CustomLuaParameterType.Variable:
+                            case CustomLuaParameterType.VariableName:
                                 item.customParamValues[i] = EditorGUI.Popup(rect, (int)item.customParamValues[i], variablePopupNames);
                                 break;
                             case CustomLuaParameterType.Item:

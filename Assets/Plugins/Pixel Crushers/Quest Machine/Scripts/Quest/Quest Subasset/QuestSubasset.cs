@@ -142,7 +142,8 @@ namespace PixelCrushers.QuestMachine
                 }
                 else
                 { 
-                    if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: QuestSubasset.CloneList<" + typeof(T).Name + ">: Element " + i + " is null.");
+                    //--- No need to worry anyone. This is harmless.
+                    //if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: QuestSubasset.CloneList<" + typeof(T).Name + ">: Element " + i + " is null.");
                 }
             }
             return copy;
