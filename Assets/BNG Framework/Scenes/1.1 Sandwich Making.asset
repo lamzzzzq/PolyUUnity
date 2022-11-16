@@ -30,6 +30,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 1
   m_counterValueMode: 0
   m_requiredCounterValue:
@@ -48,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 1.3TableFloorCleaning
     m_stringAsset: {fileID: 0}
@@ -97,42 +99,6 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_state: 0
---- !u!114 &-4622764743978667018
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 11400000, guid: 64a1de4cbef33ce418f143b622fe9c51, type: 2}
-    m_textTableFieldID: 1
---- !u!114 &-3760303010797490661
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
-  m_Name: CounterQuestCondition
-  m_EditorClassIdentifier: 
-  m_counterIndex: 0
-  m_counterValueMode: 0
-  m_requiredCounterValue:
-    m_valueType: 0
-    m_literalValue: 1
-    m_counterIndex: 0
 --- !u!114 &-2866094235037093711
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 1.3TableFloorCleaning
     m_stringAsset: {fileID: 0}
@@ -215,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -300,6 +268,7 @@ MonoBehaviour:
   m_showInTrackHUD: 1
   m_isAbandonable: 0
   m_rememberIfAbandoned: 0
+  m_deleteWhenComplete: 0
   m_autostartConditionSet:
     m_conditionList: []
     m_conditionCountMode: 0
@@ -468,7 +437,7 @@ MonoBehaviour:
       m_conditionCountMode: 0
       m_minConditionCount: 0
       m_numTrueConditions: 0
-    m_childIndexList: 010000000200000003000000
+    m_childIndexList: 0100000002000000
     m_canvasRect:
       serializedVersion: 2
       x: 241
@@ -513,62 +482,15 @@ MonoBehaviour:
         - {fileID: -317271433240617770}
     m_conditionSet:
       m_conditionList:
-      - {fileID: -3760303010797490661}
+      - {fileID: 2142528455729967515}
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
-    m_childIndexList: 04000000
+    m_childIndexList: 03000000
     m_canvasRect:
       serializedVersion: 2
       x: 145.62881
-      y: 168.35645
-      width: 120
-      height: 48
-  - m_id:
-      m_text: 1.1 Reminder
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_internalName:
-      m_text: 
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_nodeType: 4
-    m_isOptional: 0
-    m_state: 0
-    m_speaker:
-      m_text: 
-      m_stringAsset: {fileID: 0}
-      m_textTable: {fileID: 0}
-      m_textTableFieldID: 0
-    m_stateInfoList:
-    - m_actionList: []
-      m_categorizedContentList:
-      - m_contentList: []
-      - m_contentList: []
-      - m_contentList: []
-    - m_actionList: []
-      m_categorizedContentList:
-      - m_contentList:
-        - {fileID: -4622764743978667018}
-      - m_contentList: []
-      - m_contentList: []
-    - m_actionList: []
-      m_categorizedContentList:
-      - m_contentList: []
-      - m_contentList: []
-      - m_contentList: []
-    m_conditionSet:
-      m_conditionList: []
-      m_conditionCountMode: 1
-      m_minConditionCount: 0
-      m_numTrueConditions: 0
-    m_childIndexList: 
-    m_canvasRect:
-      serializedVersion: 2
-      x: 527.142
-      y: 169.86598
+      y: 167.35645
       width: 120
       height: 48
   - m_id:
@@ -613,11 +535,11 @@ MonoBehaviour:
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
-    m_childIndexList: 05000000
+    m_childIndexList: 04000000
     m_canvasRect:
       serializedVersion: 2
-      x: 324
-      y: 169
+      x: 327.1915
+      y: 159.48936
       width: 120
       height: 48
   - m_id:
@@ -663,11 +585,11 @@ MonoBehaviour:
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
-    m_childIndexList: 06000000
+    m_childIndexList: 05000000
     m_canvasRect:
       serializedVersion: 2
-      x: 146.62881
-      y: 235.35645
+      x: 151.02441
+      y: 233.15863
       width: 120
       height: 48
   - m_id:
@@ -713,7 +635,7 @@ MonoBehaviour:
       m_conditionCountMode: 1
       m_minConditionCount: 0
       m_numTrueConditions: 0
-    m_childIndexList: 07000000
+    m_childIndexList: 06000000
     m_canvasRect:
       serializedVersion: 2
       x: 327.46362
@@ -812,8 +734,28 @@ MonoBehaviour:
       y: 304
       width: 120
       height: 35
+  m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
   m_nextContentID: 0
+--- !u!114 &2142528455729967515
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
+  m_Name: CounterQuestCondition
+  m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
+  m_counterIndex: 0
+  m_counterValueMode: 0
+  m_requiredCounterValue:
+    m_valueType: 0
+    m_literalValue: 1
+    m_counterIndex: 0
 --- !u!114 &2997330939016169298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -920,6 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -973,6 +916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_image: {fileID: 21300000, guid: 0e57f237c2518e74ab1ed0701d3f7e44, type: 3}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}

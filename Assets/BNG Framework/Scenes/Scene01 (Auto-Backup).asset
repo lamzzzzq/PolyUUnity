@@ -525,6 +525,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -631,7 +633,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u5481\u6158\uFF1F\u5481\u4F60\u670B\u53CB\u4E00\u5B9A\u597D\u5B32\u5566\u3002\u4E0D\u904E\u5514\u4F7F\u558A\uFF0C\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\uFF0C\u5E0C\u671B\u4F60\u670B\u53CB\u53EF\u4EE5\u539F\u8AD2\u4F60\u5566\u3002"
+        value: "It seems that you feel really sorry for broking your frend\u2019s
+          robot. But it was not intentional, right? Let me help you fix it."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -707,7 +710,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u6211\u6574\u58DE\u5497\u6211\u670B\u53CB\u6700\u9418\u610F\u5605\u6A5F\u68B0\u4EBA\uFF0C\u6240\u4EE5\u4F62\u8A71\u4EE5\u5F8C\u90FD\u5514\u540C\u6211\u73A9\u5566\uFF0C\u90FD\u4FC2\u6211\u5605\u932F\u3002"
+        value: "I've just told my friend that I broke her favoirte robot. She said
+          she would longer talk to me. It's all my fault.\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -768,7 +772,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
+        x: 539.17645
         y: 98
         width: 160
         height: 30
@@ -795,7 +799,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u807D\u843D\u4F60\u4F3C\u4E4E\u56E0\u70BA\u6574\u58DE\u5497\u4F60\u670B\u53CB\u5605\u6A5F\u68B0\u4EBA\u800C\u89BA\u5F97\u597D\u5167\u759A\u5643\u3002\u4F46\u4F60\u5514\u4FC2\u6545\u610F\u35CE\u561B\uFF0C\u4FC2\u54AA\uFF1F\u5514\u4F7F\u64D4\u5FC3\uFF0C\u4E0D\u5982\u6211\u5E6B\u4F60\u4E00\u9F4A\u6574\u8FD4\u597D\u4F62\uFF0C\u5E0C\u671B\u4F60\u670B\u53CB\u53EF\u4EE5\u539F\u8AD2\u4F60\uFF0C\u597D\u5514\u597D\uFF1F"
+        value: That's really sad. Your friend must be really angry. Let me help you
+          fix it.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -845,7 +850,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 538
-        y: 148
+        y: 149.17648
         width: 160
         height: 30
     - id: 6
@@ -871,7 +876,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u4F60\u5481\u5514\u5C0F\u5FC3\u35CE\uFF1F\u4F60\u670B\u53CB\u4E00\u5B9A\u597D\u5B32\u5566\u3002\u4F60\u6709\u5187\u8AD7\u904E\u8981\u505A\u5572\u4E5C\u5622\u5148\u53EF\u4EE5\u4EE4\u4F62\u539F\u8AD2\u4F60\u5462\uFF1F"
+        value: 'You were so careless. Your friend must be really angry about that. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -946,7 +951,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u591A\u8B1D\u4F60\u5481\u8B1B\u3002\u4FC2\u5440\uFF0C\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u771F\u4FC2\u592A\u597D\u5566\uFF01"
+        value: I just broke it by accident. It will be good if you can help me.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1021,7 +1026,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u4FC2\u5440\uFF0C\u4F62\u597D\u5B32\u6211\u5440\uFF0C\u4F46\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u4E00\u9F4A\u6574\u756A\u597D\u4F62\u5C31\u771F\u4FC2\u592A\u597D\u5566\u3002"
+        value: Thank you for saying that. Yes, I just broke it by accident. It will
+          be great if you can help me!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1097,7 +1103,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u6211\u53EA\u4FC2\u5514\u5C0F\u5FC3\u6574\u58DE\uFF0C\u5514\u4FC2\u7279\u767B\u35CE\u3002\u6211\u800C\u5BB6\u771F\u4FC2\u5514\u77E5\u9EDE\u7B97\u5440\u3002"
+        value: I really don't know what to do now.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1145,7 +1151,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 715
+        x: 717.3529
         y: 201
         width: 160
         height: 30
@@ -1208,7 +1214,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 20
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 20;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1277,13 +1286,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 15
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 15;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 538
+        x: 537
         y: 258
         width: 160
         height: 30
@@ -1346,7 +1358,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level"] = Variable["Point_Level"] + 10
+      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 10;
+
+        Variable["AfterSister"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1357,8 +1372,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 201, y: 14}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 121.8396, y: 0}
+    canvasZoom: 0.85000014
   - id: 2
     fields:
     - title: Title
@@ -1395,6 +1410,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1501,7 +1518,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u591A\u8B1D\u4F60\u7684\u966A\u4F34\u3002\u6211\u5DF2\u7D93\u597D\u8FD4\u5566\u3002"
+        value: Thank you for your companion. I am feeling better now.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1624,7 +1641,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.76000017
+    canvasZoom: 0.7000002
   - id: 4
     fields:
     - title: Title
@@ -1661,6 +1678,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1767,7 +1786,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u6211\u800C\u8981\u53BB\u6A5F\u5834\u63A5\u500B\u670B\u53CB\uFF0C\u9EDE\u77E5\u5481\u5571\u4F60\u5ABD\u54AA\u8A71\u4F62\u6709\u5572\u5514\u8212\u670D\uFF0C\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u7167\u9867\u4E0B\u4F62\u5440?"
+        value: "I have to go to company and handle some urgent work now.  But your
+          mum said she feels a bit sick. Can you help take care of her?\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1843,7 +1863,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\u5187\u554F\u984C\u5440\uFF01\u6211\u6703\u7559\u55BA\u5C4B\u4F01\u597D\u597D\u5730\u7167\u9867\u4F62\u3002"
+        value: "No problem! I will stay at home and take care of mum.\r"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1903,7 +1923,7 @@ MonoBehaviour:
             m_CallState: 0
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 33.278687
         y: 171.72412
         width: 160
         height: 30
@@ -2015,6 +2035,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -2281,6 +2303,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -3439,6 +3463,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -4542,6 +4568,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 2
   m_counterValueMode: 0
   m_requiredCounterValue:
@@ -30,6 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 2
   m_counterValueMode: 0
   m_requiredCounterValue:
@@ -48,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 2.1HelpingTeacher
     m_stringAsset: {fileID: 0}
@@ -68,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: "\u5514\u8A72\u66EC\u3002"
+    m_text: Thank you all the same.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -84,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -177,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -241,6 +246,7 @@ MonoBehaviour:
   m_showInTrackHUD: 1
   m_isAbandonable: 0
   m_rememberIfAbandoned: 0
+  m_deleteWhenComplete: 0
   m_autostartConditionSet:
     m_conditionList: []
     m_conditionCountMode: 0
@@ -882,6 +888,7 @@ MonoBehaviour:
       y: 248
       width: 120
       height: 35
+  m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
   m_nextContentID: 0
 --- !u!114 &65946787491741566
@@ -896,6 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -964,6 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 732e99ba3b575dc4dad61a69b0417c96, type: 3}
   m_Name: QuestStateQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_requiredQuestID:
     m_text: 2.1HelpingTeacher
     m_stringAsset: {fileID: 0}
@@ -982,6 +991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 2
   m_counterValueMode: 1
   m_requiredCounterValue:
@@ -1002,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_image: {fileID: 21300000, guid: ddcf13a645b09fa49b896e177134df51, type: 3}
+  m_color: {r: 1, g: 1, b: 1, a: 1}
   m_caption:
     m_text: 
     m_stringAsset: {fileID: 0}
@@ -1051,6 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
   m_Name: MessageQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_senderSpecifier: 0
   m_senderID:
     m_text: 
@@ -1091,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: "\u592A\u597D\u5566\uFF01\u5514\u8A72\u66EC\u3002"
+    m_text: Great! Thank you.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1109,7 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: "\u771F\u4FC2\u592A\u597D\u5566\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u5440\u3002"
+    m_text: It's very kind of you! Thank you for helping me.
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1140,7 +1152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: -1
   m_bodyText:
-    m_text: "\u4E0D\u597D\u610F\u601D\uFF0C\u6211\u4E0D\u5C0F\u5FC3\u6253\u7FFB\u4E86\u6211\u7684\u6C34\u74F6\uFF0C\u4F60\u53EF\u4E0D\u53EF\u4EE5\u518D\u5E6B\u5FD9\u62B9\u4E00\u4E0B\u684C\u5B50\u7136\u5F8C\u6E05\u6F54\u4E00\u4E0B\u5730\u677F\u5440\uFF1F"
+    m_text: Excuse me, I accidently knocked over my cup, would you mind help me cleaning
+      these water?
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -1156,6 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a976671aaa12c2e428b2aac89a260302, type: 3}
   m_Name: CounterQuestCondition
   m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
   m_counterIndex: 2
   m_counterValueMode: 1
   m_requiredCounterValue:

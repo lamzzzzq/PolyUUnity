@@ -11,7 +11,7 @@ public class WaterFadeInExecute : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("SubPlayer") && (waterPoured == false) && Input.GetKeyDown(KeyCode.Y) )
+        if(other.gameObject.CompareTag("SubPlayer") && (waterPoured == false) )
         {
 
             Debug.Log(QuestMachine.GetQuestState("2.1HelpingTeacher"));
