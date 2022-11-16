@@ -39,7 +39,7 @@ public class Teacher : MonoBehaviour
             _anim.SetBool("Fall", true);
 
             StartCoroutine(GoToTheSecondPoint(3f));           //写在这里？？
-            Debug.Log("first");
+            //Debug.Log("first");
 
             //_anim.SetBool("isSad", true);
             //faceplayer.enabled = true;
@@ -50,7 +50,7 @@ public class Teacher : MonoBehaviour
             _agent.isStopped = true;
             StartCoroutine(Delay(10f));
             faceplayer.enabled = true;
-            Debug.Log("second");
+            //Debug.Log("second");
         }
     }
 
