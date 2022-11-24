@@ -10,7 +10,7 @@ public class ResetPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((InputBridge.Instance.XButton || Input.GetKeyDown(KeyCode.T)) && transform.parent == XRrig.transform)
+        if ((InputBridge.Instance.XButtonDown || Input.GetKeyDown(KeyCode.T)) && transform.parent == XRrig.transform)
         {
 
             Debug.Log("press");
