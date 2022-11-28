@@ -18,6 +18,7 @@ TagManager:
   - Meat
   - Cheese
   - Tomato
+  - Money
   layers:
   - Default
   - TransparentFX
