@@ -6,7 +6,7 @@ using PixelCrushers.DialogueSystem;
 
 public class NPCTalkDialogue : MonoBehaviour
 {
-    public GameObject gameObject;
+    public GameObject npc;
     public GameObject button;
 
 
@@ -14,7 +14,10 @@ public class NPCTalkDialogue : MonoBehaviour
     {
         //PixelCrushers.QuestMachine.QuestGiver.Start
 
-        gameObject.GetComponent<DialogueSystemTrigger>().OnUse();
+        foreach (var trigger in npc.GetComponents<DialogueSystemTrigger>())
+        {
+            trigger.OnUse();
+        }
 
         button.SetActive(false);
 

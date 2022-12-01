@@ -23,13 +23,13 @@ public class BlindPeople : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, Target.position) < 0.5f)
         {
-            Debug.Log("Hey0");
+            //Debug.Log("Hey0");
             _agent.isStopped = true;
 
-            Debug.Log("Hey1");
+            //Debug.Log("Hey1");
             _anim.SetBool("Idle", true);
             _anim.SetBool("Walk", false);
-            Debug.Log("Hey2");
+            //Debug.Log("Hey2");
         }
 
     }

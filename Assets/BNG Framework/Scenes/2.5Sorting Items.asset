@@ -41,6 +41,7 @@ MonoBehaviour:
   m_showInTrackHUD: 1
   m_isAbandonable: 0
   m_rememberIfAbandoned: 0
+  m_deleteWhenComplete: 0
   m_autostartConditionSet:
     m_conditionList: []
     m_conditionCountMode: 0
@@ -266,7 +267,7 @@ MonoBehaviour:
     m_childIndexList: 010000000200000003000000
     m_canvasRect:
       serializedVersion: 2
-      x: 435
+      x: 452.4757
       y: 110
       width: 120
       height: 48
@@ -408,6 +409,7 @@ MonoBehaviour:
       y: 251.65152
       width: 120
       height: 48
+  m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
   m_nextContentID: 0
 --- !u!114 &2306484582652786758
