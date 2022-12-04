@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: Level2
     m_Metadata:
       m_Items: []
+  - m_Id: 53322171369267200
+    m_Key: Level3
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
