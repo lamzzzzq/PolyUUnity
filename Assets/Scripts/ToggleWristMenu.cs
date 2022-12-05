@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BNG;
+using PixelCrushers.DialogueSystem;
 
 public class ToggleWristMenu : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ToggleWristMenu : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.XButtonDown))
         {
             Show = !Show;
+            int score = DialogueLua.GetVariable("TASK_3_1_CASH").AsInt;
+            Debug.Log(score);
         }
 
         if(Show)
