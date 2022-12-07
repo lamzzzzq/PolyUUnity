@@ -7,7 +7,7 @@ public class BlindPeople : MonoBehaviour
 {
     private NavMeshAgent _agent;
     private Animator _anim;
-
+    //public AudioSource _audio;
     public Transform Target;
     
 
@@ -16,6 +16,8 @@ public class BlindPeople : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponentInChildren<Animator>();
+
+        
     }
 
     // Update is called once per frame
@@ -29,6 +31,9 @@ public class BlindPeople : MonoBehaviour
             //Debug.Log("Hey1");
             _anim.SetBool("Idle", true);
             _anim.SetBool("Walk", false);
+
+            //_audio.Play();
+           
             //Debug.Log("Hey2");
         }
 
