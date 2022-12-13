@@ -61,7 +61,6 @@ public class EnemyController : MonoBehaviour
     {
         SwitchStates();
         SwitchAnimation();
-
     }
 
     void SwitchAnimation()
@@ -69,12 +68,6 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("Walk", isWalk);
         anim.SetBool("Talk", isTalk);
     }
-
-
-
-
-
-
 
     void SwitchStates()
     {   
@@ -84,7 +77,6 @@ public class EnemyController : MonoBehaviour
             enemystates = EnemyStates.READYTOTALK;
             //Debug.Log("找到Player");
         }
-
 
         //如果發現player 要切換到追擊狀態chase
         switch (enemystates)
