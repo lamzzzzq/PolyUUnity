@@ -14,10 +14,11 @@ public class BlindPeople : MonoBehaviour
     public GameObject Block;
     public GameObject BlockNewRoad;
 
+
     Transform target;
 
     private bool Task_3_2_help;
-    
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class BlindPeople : MonoBehaviour
     {
         Task_3_2_help = DialogueLua.GetVariable("TASK_3_2_HELP").asBool;
 
-        Debug.Log(Task_3_2_help + "Update");
+        //Debug.Log(Task_3_2_help + "Update");
         if (Vector3.Distance(transform.position, target.position) < 0.5f)
         {
             _agent.isStopped = true;
@@ -42,7 +43,10 @@ public class BlindPeople : MonoBehaviour
         if(Task_3_2_help == true)
         {
             StartCoroutine(WalkCrossTheRoad());
+
+            //Switch the state
         }
+
         
     }
     //从外部call这个function 只执行一次
@@ -71,5 +75,7 @@ public class BlindPeople : MonoBehaviour
         _anim.SetBool("Walk",true);
         _anim.SetBool("Idle", false);
         BlockNewRoad.SetActive(false);
+
+        DialogueLua.SetVariable("TASK_3_2_HELP", false);
     }
 }
