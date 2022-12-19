@@ -29,7 +29,7 @@ public class InstantiateAndGrab : MonoBehaviour
 
     private void Update()
     {
-        if((Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.BButtonDown))
+        if((Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.RightGripDown))
         {
             grabbable.CanBeDropped = true;
             grabber.TryRelease();
