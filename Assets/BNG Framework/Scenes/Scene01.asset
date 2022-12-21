@@ -838,6 +838,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 22
+    fields:
+    - title: Name
+      value: TASK_3_4_LEAVE
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   - id: 19
     fields:
     - title: Name
@@ -5745,7 +5759,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 22
-        y: 197.23532
+        y: 196.38788
         width: 160
         height: 30
     - id: 8
@@ -5892,13 +5906,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 433.38037
-        y: 201.24878
+        x: 441.0075
+        y: 196.16403
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1799998
+    canvasZoom: 0.90999997
   - id: 12
     fields:
     - title: Title

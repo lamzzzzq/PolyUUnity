@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using PixelCrushers.DialogueSystem;
 
 public enum DogStates { PATROL, READYTOTALK }
 [RequireComponent(typeof(NavMeshAgent))]
@@ -11,6 +12,9 @@ public class DogWander : MonoBehaviour
     private NavMeshAgent agent;
     private Animator anim;
     public FacePlayer faceplayer;
+    public Transform SleepPoint;
+
+    public DogSleepTriggerOnPlayer DogSleep;
 
     [Header("Basic Settings")]
     public float sightRadius;
@@ -51,8 +55,16 @@ public class DogWander : MonoBehaviour
 
     private void Update()
     {
-        SwitchStates();
-        SwitchAnimation();
+        if((DogSleep.PlayerLeave == true ) && (DialogueLua.GetVariable("TASK_3_4_ARRIVE").asBool == false))
+        {
+            agent.destination = SleepPoint.position;
+            isSleep = true;
+        }
+        else
+        {
+            SwitchStates();
+            SwitchAnimation();
+        }
     }
 
     void SwitchAnimation()
