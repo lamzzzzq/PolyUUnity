@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BubbleGun : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent onShootEvent;
+
+    private void Update()
     {
-        
+        if (onShootEvent != null)
+        {
+            onShootEvent.Invoke();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
-        
+        if(Input.GetKey(KeyCode.O))
+        {
+            Debug.Log("That's right!");
+        }
     }
+
 }
