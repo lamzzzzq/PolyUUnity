@@ -12,7 +12,8 @@ public class MainManager : MonoBehaviour
     public GameObject InputField;
     private VRTextInput vrTextInput;
 
-    public string combinedString;
+    public string task_4_1;
+    public string task_4_4;
     Scene scene;
 
     private string userID;
@@ -93,10 +94,12 @@ public class MainManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SaveString(combinedString);
+            SaveString(task_4_1 + task_4_4);
+            
         }
 
-        combinedString = string.Concat(userID," ","4_1_OPTION IS:", "", DialogueLua.GetVariable("4_1_OPTION_1").asString, "", DialogueLua.GetVariable("4_1_OPTION_2").asString, "", DialogueLua.GetVariable("4_1_OPTION_3").asString) ;
+        task_4_1 = string.Concat(userID," ","4_1_OPTION IS:", "", DialogueLua.GetVariable("4_1_OPTION_1").asString, "", DialogueLua.GetVariable("4_1_OPTION_2").asString, "", DialogueLua.GetVariable("4_1_OPTION_3").asString) ;
+        task_4_4 = string.Concat(userID, " ", "4_4_OPTION IS:", "", DialogueLua.GetVariable("4_4_OPTION_1").asString, "", DialogueLua.GetVariable("4_4_OPTION_2").asString, "", DialogueLua.GetVariable("4_4_OPTION_3").asString);
 
     }
 
@@ -114,9 +117,6 @@ public class MainManager : MonoBehaviour
         Debug.Log(timeID); 
 
         StreamWriter sw = new StreamWriter(filePath);
-
-        sw.WriteLine("hello!");
-        sw.WriteLine("lucky");
         sw.WriteLine(timeID);
         sw.WriteLine(str);
         sw.Close();

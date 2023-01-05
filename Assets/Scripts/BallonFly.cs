@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class BallonFly : MonoBehaviour
 {
@@ -17,7 +18,21 @@ public class BallonFly : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("HELP" + DialogueLua.GetVariable("TASK_4_4_HELP").asBool);
+        Debug.Log("HELP" + DialogueLua.GetVariable("TASK_4_4_ARRIVE").asBool);
+        Debug.Log("HELP" + DialogueLua.GetVariable("GetBallon").asBool);
+
+
         // Move towards the target position
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+/*        if(other.tag == "SubPlayer")
+        {
+            DialogueLua.SetVariable("TASK_4_4_ARRIVE", true);
+        }*/
+
     }
 }

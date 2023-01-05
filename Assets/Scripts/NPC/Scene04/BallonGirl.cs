@@ -28,7 +28,7 @@ public class BallonGirl : MonoBehaviour
         {
             Debug.Log("I am walking");
             _agent.isStopped = false;
-            _anim.SetBool("Walk", true);
+            _anim.SetBool("Run", true);
             facePlayer.enabled = false;
         }
 
@@ -36,7 +36,7 @@ public class BallonGirl : MonoBehaviour
         {
             Debug.Log("I am stop");
             _agent.isStopped = true;
-            _anim.SetBool("Walk", false);
+            _anim.SetBool("Run", false);
             _anim.SetBool("Fall", false);
 
             facePlayer.enabled = true;
