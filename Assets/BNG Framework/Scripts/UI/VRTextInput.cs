@@ -16,6 +16,8 @@ namespace BNG {
 
         bool isFocused, wasFocused = false;
 
+        public string userID;
+
         void Awake() {
             thisInputField = GetComponent<UnityEngine.UI.InputField>();
             
@@ -37,6 +39,9 @@ namespace BNG {
             }
 
             wasFocused = isFocused;
+
+            //for getting content input by user
+            userID = thisInputField.text;
         }
 
         public void OnInputSelect() {

@@ -1104,6 +1104,48 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 26
+    fields:
+    - title: Name
+      value: 4_1_OPTION_1
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 1_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 27
+    fields:
+    - title: Name
+      value: 4_1_OPTION_2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 2_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 28
+    fields:
+    - title: Name
+      value: 4_1_OPTION_3
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 3_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -9967,8 +10009,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 18
-        y: 207
+        x: 26
+        y: 197
         width: 160
         height: 30
     - id: 3
@@ -10042,8 +10084,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 611
-        y: 192
+        x: 615
+        y: 200
         width: 160
         height: 30
     - id: 4
@@ -10117,7 +10159,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 265
+        x: 269
         y: 195
         width: 160
         height: 30
@@ -10249,14 +10291,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 15
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 15;
+
+        Variable["4_1_OPTION_2"]
+        = "2_True"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 265
-        y: 274
+        x: 267
+        y: 283
         width: 160
         height: 30
     - id: 7
@@ -10318,14 +10363,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 10
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 10;
+
+        Variable["4_1_OPTION_3"]
+        = "3_True"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 613
-        y: 286
+        x: 615
+        y: 285
         width: 160
         height: 30
     entryGroups: []
@@ -11702,14 +11750,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 20
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 20;
+
+        Variable["4_1_OPTION_1"]
+        = "1_True"'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 70
+        y: 69
         width: 160
         height: 30
     entryGroups: []
