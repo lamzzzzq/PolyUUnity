@@ -22,39 +22,6 @@ public class MainManager : MonoBehaviour
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        switch (scene.buildIndex)
-        {
-            case 1:
-                {
-
-                }
-                break;
-
-            case 2:
-                {
-
-                }
-                break;
-
-            case 3:
-                {
-
-                }
-                break;
-
-            case 4:
-                {
-                    
-                }
-                break;
-
-            default:
-                //Debug.Log("you don't do anything");
-                break;
-        }
-
-
     }
 
     void OnDisable()
@@ -94,19 +61,19 @@ public class MainManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            SaveString(task_4_1 + task_4_4);
+            SaveString(task_4_1 + "," + task_4_4);
             
         }
 
-        task_4_1 = string.Concat(userID," ","4_1_OPTION IS:", "", DialogueLua.GetVariable("4_1_OPTION_1").asString, "", DialogueLua.GetVariable("4_1_OPTION_2").asString, "", DialogueLua.GetVariable("4_1_OPTION_3").asString) ;
-        task_4_4 = string.Concat(userID, " ", "4_4_OPTION IS:", "", DialogueLua.GetVariable("4_4_OPTION_1").asString, "", DialogueLua.GetVariable("4_4_OPTION_2").asString, "", DialogueLua.GetVariable("4_4_OPTION_3").asString);
+        task_4_1 = string.Concat(userID,",","4_1_OPTION IS:", ",", DialogueLua.GetVariable("4_1_OPTION_1").asString, ",", DialogueLua.GetVariable("4_1_OPTION_2").asString, ",", DialogueLua.GetVariable("4_1_OPTION_3").asString) ;
+        task_4_4 = string.Concat(userID, " ,", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
 
     }
 
     void SaveString(string str)
     {
-        string filePath = Application.persistentDataPath + "/myDemoSavegame.funkay";
-        print("saving to" + filePath);
+        //string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".txt";
+        //print("saving to" + filePath);
 
         Debug.Log("Scene build index: " + scene.buildIndex);
         Debug.Log("Active scene name: " + scene.name);
@@ -114,9 +81,9 @@ public class MainManager : MonoBehaviour
         //long time = new System.DateTimeOffset(System.DateTime.Now).ToUnixTimeSeconds();
         //string timeID = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "," + time.ToString() + ",";
         string timeID = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ",";
-        Debug.Log(timeID); 
+        Debug.Log(timeID);
 
-        StreamWriter sw = new StreamWriter(filePath);
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + ".csv");
         sw.WriteLine(timeID);
         sw.WriteLine(str);
         sw.Close();
