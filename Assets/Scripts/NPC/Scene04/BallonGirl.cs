@@ -42,4 +42,8 @@ public class BallonGirl : MonoBehaviour
             facePlayer.enabled = true;
         }
     }
+    public void GetBallon()
+    {
+        DialogueLua.SetVariable("TASK_4_4_ARRIVE", true);
+    }
 }

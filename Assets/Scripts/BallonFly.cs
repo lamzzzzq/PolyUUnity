@@ -26,13 +26,4 @@ public class BallonFly : MonoBehaviour
         // Move towards the target position
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-/*        if(other.tag == "SubPlayer")
-        {
-            DialogueLua.SetVariable("TASK_4_4_ARRIVE", true);
-        }*/
-
-    }
 }

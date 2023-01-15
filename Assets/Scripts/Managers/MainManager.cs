@@ -72,8 +72,8 @@ public class MainManager : MonoBehaviour
 
     void SaveString(string str)
     {
-        //string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".txt";
-        //print("saving to" + filePath);
+        string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".txt";
+        print("saving to" + filePath);
 
         Debug.Log("Scene build index: " + scene.buildIndex);
         Debug.Log("Active scene name: " + scene.name);

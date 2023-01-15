@@ -707,6 +707,48 @@ MonoBehaviour:
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
+  - id: 17
+    fields:
+    - title: Name
+      value: GunBoy
+      type: 0
+      typeString: CustomFieldType_Actor
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: en
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-Hans
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: zh-HK
+      value: 
+      type: 4
+      typeString: CustomFieldType_Localization
+    - title: Display Name
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Guid
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
   items:
   - id: 1
     fields:
@@ -10654,8 +10696,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 85
+        y: 102
         width: 160
         height: 30
     - id: 2
@@ -10879,8 +10921,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 590
-        y: 175
+        x: 591
+        y: 190
         width: 160
         height: 30
     - id: 5
@@ -10933,6 +10975,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: a508043e-8844-41fb-bb09-0d804faf66ce
+        type: 0
+        typeString: 
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -10942,14 +10988,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 10
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 10;
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 592
-        y: 294
+        x: 589.17645
+        y: 283.17648
         width: 160
         height: 30
     - id: 6
@@ -11002,6 +11050,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 3e376a35-ab4b-4425-b059-85131bad3d09
+        type: 0
+        typeString: 
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -11017,8 +11069,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 286
-        y: 290
+        x: 293
+        y: 284
         width: 160
         height: 30
     - id: 7
@@ -11071,6 +11123,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: be552a0a-a15f-4499-824e-84cc14d8f942
+        type: 0
+        typeString: 
       conversationID: 23
       isRoot: 0
       isGroup: 0
@@ -11086,13 +11142,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
-        y: 290
+        x: 27
+        y: 280
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 2.3529358}
+    canvasZoom: 0.85000014
   - id: 24
     fields:
     - title: Title
@@ -11567,8 +11623,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 241
-        y: 205
+        x: 240.02911
+        y: 205.97089
         width: 160
         height: 30
     - id: 4
@@ -12560,8 +12616,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 33
+        y: 101
         width: 160
         height: 30
     entryGroups: []
@@ -12758,8 +12814,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32
-        y: 70
+        x: 39
+        y: 99
         width: 160
         height: 30
     entryGroups: []
