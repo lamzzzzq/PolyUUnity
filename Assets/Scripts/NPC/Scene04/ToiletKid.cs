@@ -18,10 +18,6 @@ public class ToiletKid : MonoBehaviour
     private Animator _anim;
     private Transform target;
 
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {

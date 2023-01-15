@@ -1258,6 +1258,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 34
+    fields:
+    - title: Name
+      value: TASK_4_2_AGREE
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -11063,7 +11077,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 15
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 15;
+
+        Variable["TASK_4_2_AGREE"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11136,14 +11153,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level4"] = Variable["Point_Level4"] + 20
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 20;
+
+        Variable["TASK_4_2_AGREE"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 27
-        y: 280
+        y: 278.82352
         width: 160
         height: 30
     entryGroups: []
@@ -11752,6 +11772,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: ea5073a5-7149-472f-8071-21edc0034f00
+        type: 0
+        typeString: 
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -11826,6 +11850,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1da62306-6336-4edc-bf53-3cbedc126a1a
+        type: 0
+        typeString: 
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -12794,6 +12822,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: d4047700-2735-44ab-a01e-db59262ac28a
+        type: 0
+        typeString: 
       conversationID: 30
       isRoot: 0
       isGroup: 0

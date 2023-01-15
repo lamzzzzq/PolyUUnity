@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using PixelCrushers.DialogueSystem;
 public class GunBoy : MonoBehaviour
 {
     public Transform target;
@@ -24,25 +25,33 @@ public class GunBoy : MonoBehaviour
 
     void Update()
     {
-        _agent.SetDestination(target.transform.position);
-        if (Vector3.Distance(transform.position, target.position) > WalkValue)
+        bool agree = DialogueLua.GetVariable("TASK_4_2_AGREE").asBool;
+        if (agree == true)
         {
-            Debug.Log("I am walking");
-            _agent.isStopped = false;
-            _anim.SetBool("Walk", true);
-            facePlayer.enabled = false;
-        }
-
-        if (Vector3.Distance(transform.position, target.position) < StopValue)
-        {
-            Debug.Log("I am stop");
             _agent.isStopped = true;
-            _anim.SetBool("Walk", false);
-            _anim.SetBool("Fall", false);
-            GunBoyTalking.Invoke();
-            facePlayer.enabled = true;
-
+            transform.position = new Vector3(0.62f, 0, -149.6f);
         }
+        else
+        {
+            _agent.SetDestination(target.transform.position);
+            if (Vector3.Distance(transform.position, target.position) > WalkValue)
+            {
+                Debug.Log("I am walking");
+                _agent.isStopped = false;
+                _anim.SetBool("Walk", true);
+                facePlayer.enabled = false;
+            }
+
+            if (Vector3.Distance(transform.position, target.position) < StopValue)
+            {
+                Debug.Log("I am stop");
+                _agent.isStopped = true;
+                _anim.SetBool("Walk", false);
+                _anim.SetBool("Fall", false);
+                GunBoyTalking.Invoke();
+                facePlayer.enabled = true;
+            }
+        }     
     }
 
 
