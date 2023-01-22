@@ -12,7 +12,7 @@ public class ToiletKid : MonoBehaviour
 
     public Transform targetPoint;
 
-    public FacePlayer facePlayer;
+    public FacePlayerNormal facePlayer;
 
     private NavMeshAgent _agent;
     private Animator _anim;

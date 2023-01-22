@@ -14,15 +14,11 @@ public class BallonFly : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     void Update()
     {
-        Debug.Log("HELP" + DialogueLua.GetVariable("TASK_4_4_HELP").asBool);
-        Debug.Log("HELP" + DialogueLua.GetVariable("TASK_4_4_ARRIVE").asBool);
-        Debug.Log("HELP" + DialogueLua.GetVariable("GetBallon").asBool);
-
-
         // Move towards the target position
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
     }

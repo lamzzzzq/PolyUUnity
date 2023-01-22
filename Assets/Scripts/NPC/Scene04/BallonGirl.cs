@@ -7,7 +7,7 @@ using PixelCrushers.DialogueSystem;
 public class BallonGirl : MonoBehaviour
 {
     public Transform target;
-    public FacePlayer facePlayer;
+    public FacePlayerNormal facePlayer;
     public float WalkValue;
     public float StopValue;
 
@@ -44,6 +44,8 @@ public class BallonGirl : MonoBehaviour
     }
     public void GetBallon()
     {
-        DialogueLua.SetVariable("TASK_4_4_ARRIVE", true);
+        //DialogueLua.SetVariable("TASK_4_4_ARRIVE", true);
+
+        QuestLog.SetQuestEntryState("Get the Balloon", 1, QuestState.Success);
     }
 }
