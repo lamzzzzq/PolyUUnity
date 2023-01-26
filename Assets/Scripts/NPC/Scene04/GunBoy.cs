@@ -7,7 +7,7 @@ using PixelCrushers.DialogueSystem;
 public class GunBoy : MonoBehaviour
 {
     public Transform target;
-    public FacePlayer facePlayer;
+    public FacePlayerNormal facePlayer;
     public float WalkValue;
     public float StopValue;
     public UnityEvent GunBoyTalking;
@@ -57,7 +57,7 @@ public class GunBoy : MonoBehaviour
 
     public void OnJet()
     {
-        transform.position = new Vector3(0.6f, -0.07f, -149f);
+        transform.position = new Vector3(0.62f, -0.1031058f, -149f);
         transform.rotation = Quaternion.Euler(0, 2.5f, 0);
     }
 
