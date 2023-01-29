@@ -18,6 +18,7 @@ public class FadeWithinScene : MonoBehaviour
         
     }
 
+
     IEnumerator FadeIn()
     {
         animator.SetBool("FadeIn", true);
