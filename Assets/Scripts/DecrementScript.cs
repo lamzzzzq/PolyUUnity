@@ -19,7 +19,7 @@ public class DecrementScript : MonoBehaviour
         decrementButton.onClick.AddListener(DecrementNumber);
     }
 
-    private void DecrementNumber()
+    public void DecrementNumber()
     {
         string numberString = numberText.text;
         if (int.TryParse(numberString, out int currentNumber))

@@ -34,4 +34,9 @@ public class BubbleGun : MonoBehaviour
             audioSource.Stop();
         }
     }
+
+    public void Shoot()
+    {
+        particleSystem.Play();
+    }
 }
