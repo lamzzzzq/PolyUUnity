@@ -9,8 +9,8 @@ public class DialoguePanelFacePlayer : MonoBehaviour
 
     void Update()
     {
-        transform.localRotation = Quaternion.identity;
-        transform.LookAt(player.transform);
+        //transform.localRotation = Quaternion.identity;
+        transform.LookAt(player.transform, Vector3.up);
         transform.Rotate(0, -180, 0);
     }
 }
