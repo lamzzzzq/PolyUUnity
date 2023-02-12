@@ -57,7 +57,7 @@ public class GunBoy : MonoBehaviour
 
     public void OnJet()
     {
-        transform.position = new Vector3(0.62f, -0.1031058f, -149f);
+        transform.position = new Vector3(-4.71f, -0.1f, -147.56f);
         transform.rotation = Quaternion.Euler(0, 2.5f, 0);
     }
 

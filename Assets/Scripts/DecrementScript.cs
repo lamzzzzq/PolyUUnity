@@ -24,7 +24,7 @@ public class DecrementScript : MonoBehaviour
         string numberString = numberText.text;
         if (int.TryParse(numberString, out int currentNumber))
         {
-            if (currentNumber == 5)
+            if (currentNumber == 3)
             {
                 onNumberFive.Invoke();
                 particleSystem.SetActive(false);
