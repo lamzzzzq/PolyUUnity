@@ -12932,8 +12932,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 402.53156, y: 1.2658386}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 140.29846, y: 0}
+    canvasZoom: 0.6700003
   - id: 25
     fields:
     - title: Title
@@ -14049,8 +14049,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 433.26276, y: 0}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 91.89493, y: 0}
+    canvasZoom: 0.85000014
   - id: 26
     fields:
     - title: Title
@@ -15863,6 +15863,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5c1e138a-9ab1-4e9d-a426-02049d1f0be7
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -15935,6 +15939,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: f10649d6-aa7a-4dde-8b6f-188e77139120
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -16007,6 +16015,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: d2f118bd-ecc8-4603-8520-d0815e822949
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -16026,7 +16038,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 439
-        y: 196
+        y: 194.86362
         width: 160
         height: 30
     - id: 5

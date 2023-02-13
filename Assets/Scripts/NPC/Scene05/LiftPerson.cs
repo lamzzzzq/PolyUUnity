@@ -11,23 +11,22 @@ public class LiftPerson : MonoBehaviour
     public LiftButton liftButton;
     public Transform targetPosition;
 
+    public Transform LiftTargetPosition;
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponentInChildren<Animator>();
     }
 
-    private void Update()
-    {
-        if(liftButton.isTriggerActive == true)
-        {
-            StartCoroutine(WalkTowardTheLift());
-        }
-    }
 
-    IEnumerator WalkTowardTheLift()
+    public void WalkTowardTheLift()
     {
         _agent.SetDestination(targetPosition.position);
-        yield return new WaitForSeconds(2);
+    }
+
+    public void WalkIntoTheLift()
+    {
+        _agent.SetDestination(LiftTargetPosition.position);
     }
 }
