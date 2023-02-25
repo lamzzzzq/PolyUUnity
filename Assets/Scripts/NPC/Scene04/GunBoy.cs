@@ -11,6 +11,7 @@ public class GunBoy : MonoBehaviour
     public float WalkValue;
     public float StopValue;
     public UnityEvent GunBoyTalking;
+    public Transform OnJetTarget;
 
     public Transform walkAwayTarget;
 
@@ -29,7 +30,7 @@ public class GunBoy : MonoBehaviour
         if (agree == true)
         {
             _agent.isStopped = true;
-            transform.position = new Vector3(0.62f, 0, -149.6f);
+            transform.position = OnJetTarget.position;
         }
         else
         {
@@ -57,7 +58,7 @@ public class GunBoy : MonoBehaviour
 
     public void OnJet()
     {
-        transform.position = new Vector3(-4.71f, -0.1f, -147.56f);
+        transform.position = OnJetTarget.position;
         transform.rotation = Quaternion.Euler(0, 2.5f, 0);
     }
 

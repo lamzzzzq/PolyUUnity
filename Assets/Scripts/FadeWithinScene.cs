@@ -7,19 +7,12 @@ public class FadeWithinScene : MonoBehaviour
     // Start is called before the first frame update
     public Animator animator;
 
-    private void Start()
-    {
-        
-    }
-
     public void Fade()
     {
         StartCoroutine(FadeIn());
-        
     }
 
-
-    IEnumerator FadeIn()
+    public IEnumerator FadeIn()
     {
         animator.SetBool("FadeIn", true);
         animator.SetBool("FadeOut", false);
@@ -27,12 +20,13 @@ public class FadeWithinScene : MonoBehaviour
         StartCoroutine(FadeOut());
     }
 
-    IEnumerator FadeOut()
+    public IEnumerator FadeOut()
     {
         animator.SetBool("FadeOut", true);
         animator.SetBool("FadeIn", false);
-        yield return null;
+
+        //Calculate the duration of the fade-out animation 
+        float fadeOutDuration = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSecondsRealtime(fadeOutDuration);
     }
-
-
 }

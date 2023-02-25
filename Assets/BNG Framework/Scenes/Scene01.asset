@@ -11305,8 +11305,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 286
-        y: 192
+        x: 291.71426
+        y: 196.2857
         width: 160
         height: 30
     - id: 4
@@ -11614,7 +11614,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30.529404
-        y: 284.70584
+        y: 283.5294
         width: 160
         height: 30
     - id: 8
@@ -11907,7 +11907,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasZoom: 0.7000003
   - id: 24
     fields:
     - title: Title
@@ -15802,15 +15802,15 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("HoldLift") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33.272736
-        y: 98.27272
+        x: 37.978622
+        y: 111.21388
         width: 160
         height: 30
     - id: 2
@@ -15885,8 +15885,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.27272
-        y: 199.40912
+        x: 35.9786
+        y: 202.9385
         width: 160
         height: 30
     - id: 3
@@ -15961,8 +15961,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 229
-        y: 199
+        x: 236.05884
+        y: 197.82355
         width: 160
         height: 30
     - id: 4
@@ -16038,7 +16038,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 439
-        y: 194.86362
+        y: 192.51068
         width: 160
         height: 30
     - id: 5
@@ -16099,20 +16099,20 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("HoldLift") == "active"
+      conditionsString: CurrentQuestState("HoldLift") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 639.09094
-        y: 121.13637
+        x: 648.5027
+        y: 108.195206
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasZoom: 0.8200002
   syncInfo:
     syncActors: 0
     syncItems: 0

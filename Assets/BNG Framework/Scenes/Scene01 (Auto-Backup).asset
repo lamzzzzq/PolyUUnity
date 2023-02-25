@@ -1141,7 +1141,7 @@ MonoBehaviour:
   - id: 8
     fields:
     - title: Name
-      value: New Item 8
+      value: Dust
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -10642,8 +10642,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 200
+        x: 554.0244
+        y: 198.78049
         width: 160
         height: 30
     - id: 4
@@ -10930,8 +10930,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 615
-        y: 285
+        x: 554.0244
+        y: 283.7805
         width: 160
         height: 30
     entryGroups: []
@@ -12569,7 +12569,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 664.4296
-        y: 183.74553
+        y: 176.15059
         width: 160
         height: 30
     - id: 8
@@ -12637,8 +12637,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1067.1349
-        y: 180.69147
+        x: 1082.3248
+        y: 166.76743
         width: 160
         height: 30
     - id: 9
@@ -12761,7 +12761,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: 69371c53-af88-4de4-9c3c-c73cb71cab91
         type: 0
         typeString: 
       conversationID: 24
@@ -12785,8 +12785,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 864.1604
-        y: 174.6815
+        x: 861.6287
+        y: 175.94734
         width: 160
         height: 30
     - id: 11
@@ -12928,12 +12928,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 864.1606
-        y: 231.01059
+        y: 228.47894
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 45.605743}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 140.29846, y: 0}
+    canvasZoom: 0.6700003
   - id: 25
     fields:
     - title: Title
@@ -13589,6 +13589,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 6593eca7-6e63-46ab-b87d-3f856edc03ee
+        type: 0
+        typeString: 
       conversationID: 25
       isRoot: 0
       isGroup: 0
@@ -13607,7 +13611,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 37.63159
-        y: 294.99994
+        y: 293.73413
         width: 160
         height: 30
     - id: 8
@@ -13682,7 +13686,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 812.6314
-        y: 242.36838
+        y: 240.9985
         width: 160
         height: 30
     - id: 9
@@ -13784,7 +13788,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Any troubles? You may need a ladder to help you get the balloon.
+        value: Look! There are some Legos under the tree. Maybe you can grab one
+          Lego to help you get the balloon!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -13859,7 +13864,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Get it. Let me have a try.
+        value: You are clever. Let me have a try!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -13970,8 +13975,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 812.6314
-        y: 302.89468
+        x: 811.26154
+        y: 301.5248
         width: 160
         height: 30
     - id: 13
@@ -14044,8 +14049,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 277.21515, y: 0}
-    canvasZoom: 0.7900002
+    canvasScrollPosition: {x: 91.89493, y: 0}
+    canvasZoom: 0.85000014
   - id: 26
     fields:
     - title: Title
@@ -14331,8 +14336,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28.705887
-        y: 178.17645
+        x: 29.97171
+        y: 184.50555
         width: 160
         height: 30
     - id: 3
@@ -14400,8 +14405,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 264.17715
-        y: 176.32909
+        x: 284.43033
+        y: 177.5949
         width: 160
         height: 30
     - id: 4
@@ -14469,7 +14474,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 493.29102
+        x: 507.21503
         y: 177.59494
         width: 160
         height: 30
@@ -14531,14 +14536,14 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("CollectDust") == "active"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 732.53143
+        x: 727.46814
         y: 177.5949
         width: 160
         height: 30
@@ -15797,15 +15802,15 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("HoldLift") == "unassigned"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33.272736
-        y: 98.27272
+        x: 37.978622
+        y: 111.21388
         width: 160
         height: 30
     - id: 2
@@ -15858,6 +15863,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 5c1e138a-9ab1-4e9d-a426-02049d1f0be7
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -15876,8 +15885,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.27272
-        y: 199.40912
+        x: 35.9786
+        y: 202.9385
         width: 160
         height: 30
     - id: 3
@@ -15930,6 +15939,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: f10649d6-aa7a-4dde-8b6f-188e77139120
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -15948,8 +15961,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 229
-        y: 199
+        x: 236.05884
+        y: 197.82355
         width: 160
         height: 30
     - id: 4
@@ -16002,6 +16015,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: d2f118bd-ecc8-4603-8520-d0815e822949
+        type: 0
+        typeString: 
       conversationID: 32
       isRoot: 0
       isGroup: 0
@@ -16021,7 +16038,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 439
-        y: 196
+        y: 192.51068
         width: 160
         height: 30
     - id: 5
@@ -16082,20 +16099,20 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: CurrentQuestState("HoldLift") == "active"
+      conditionsString: CurrentQuestState("HoldLift") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 639.09094
-        y: 121.13637
+        x: 648.5027
+        y: 108.195206
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasZoom: 0.8200002
   syncInfo:
     syncActors: 0
     syncItems: 0

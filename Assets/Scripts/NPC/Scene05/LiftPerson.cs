@@ -9,7 +9,10 @@ public class LiftPerson : MonoBehaviour
     private Animator _anim;
 
     public LiftButton liftButton;
+    private Transform target;
     public Transform targetPosition;
+    public float WalkValue;
+    public float StopValue;
 
     public Transform LiftTargetPosition;
 
@@ -19,14 +22,33 @@ public class LiftPerson : MonoBehaviour
         _anim = GetComponentInChildren<Animator>();
     }
 
+    private void Update()
+    {
+        if(Vector3.Distance(transform.position,target.position)> WalkValue)
+        {
+            _agent.isStopped = false;
+            _anim.SetBool("Walk", true);
+        }
+
+        if(Vector3.Distance(transform.position, target.position)< StopValue)
+        {
+            _agent.isStopped = true;
+            _anim.SetBool("Walk", false);
+            _anim.SetBool("Fall", false);
+        }
+    }
+
 
     public void WalkTowardTheLift()
     {
-        _agent.SetDestination(targetPosition.position);
+        target = targetPosition;
+        _agent.SetDestination(target.position);
     }
 
     public void WalkIntoTheLift()
     {
-        _agent.SetDestination(LiftTargetPosition.position);
+        Debug.Log("Hi");
+        target = LiftTargetPosition;
+        _agent.SetDestination(target.position);
     }
 }
