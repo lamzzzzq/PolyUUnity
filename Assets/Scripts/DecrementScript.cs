@@ -8,7 +8,8 @@ using TMPro;
 public class DecrementScript : MonoBehaviour
 {
     public TMP_Text numberText;
-    public UnityEvent onNumberFive;
+    public UnityEvent onNumberSeven;
+    public UnityEvent onNumberFour;
     public GameObject particleSystem;
     public GameObject canvas;
     public GameObject exitBtn;
@@ -24,12 +25,18 @@ public class DecrementScript : MonoBehaviour
         string numberString = numberText.text;
         if (int.TryParse(numberString, out int currentNumber))
         {
-            if (currentNumber == 3)
+            if (currentNumber == 7)
             {
-                onNumberFive.Invoke();
+                onNumberSeven.Invoke();
                 particleSystem.SetActive(false);
                 exitBtn.SetActive(true);
-                return;
+                currentNumber--;
+            }
+            if(currentNumber ==4)
+            {
+                onNumberFour.Invoke();
+
+                particleSystem.SetActive(false);
             }
             currentNumber--;
             numberText.text = currentNumber.ToString();
@@ -50,3 +57,4 @@ public class DecrementScript : MonoBehaviour
         canvas.SetActive(true);
     }
 }
+

@@ -7,10 +7,10 @@ using PixelCrushers.DialogueSystem;
 public class GunBoy : MonoBehaviour
 {
     public Transform target;
+    private Transform towardPlayerTarget;
     public FacePlayerNormal facePlayer;
     public float WalkValue;
     public float StopValue;
-    public UnityEvent GunBoyTalking;
     public Transform OnJetTarget;
 
     public Transform walkAwayTarget;
@@ -20,39 +20,38 @@ public class GunBoy : MonoBehaviour
 
     private void Start()
     {
+        towardPlayerTarget = target;
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
     }
 
     void Update()
     {
-        bool agree = DialogueLua.GetVariable("TASK_4_2_AGREE").asBool;
-        if (agree == true)
+        /*        bool agree = DialogueLua.GetVariable("TASK_4_2_AGREE").asBool;
+                if (agree == true)
+                {
+                    _agent.isStopped = true;
+                    transform.position = OnJetTarget.position;
+                }*/
+        _agent.SetDestination(target.transform.position);
+        if (Vector3.Distance(transform.position, target.position) > WalkValue)
         {
-            _agent.isStopped = true;
-            transform.position = OnJetTarget.position;
+            //Debug.Log("I am walking");
+            _agent.isStopped = false;
+            _anim.SetBool("Walk", true);
+            facePlayer.enabled = false;
         }
-        else
-        {
-            _agent.SetDestination(target.transform.position);
-            if (Vector3.Distance(transform.position, target.position) > WalkValue)
-            {
-                Debug.Log("I am walking");
-                _agent.isStopped = false;
-                _anim.SetBool("Walk", true);
-                facePlayer.enabled = false;
-            }
 
-            if (Vector3.Distance(transform.position, target.position) < StopValue)
-            {
-                Debug.Log("I am stop");
-                _agent.isStopped = true;
-                _anim.SetBool("Walk", false);
-                _anim.SetBool("Fall", false);
-                GunBoyTalking.Invoke();
-                facePlayer.enabled = true;
-            }
-        }     
+        if (Vector3.Distance(transform.position, target.position) < StopValue)
+        {
+            //Debug.Log("I am stop");
+            _agent.isStopped = true;
+            _anim.SetBool("Walk", false);
+            _anim.SetBool("Fall", false);
+            //GunBoyTalking.Invoke();
+            facePlayer.enabled = true;
+        }
+    
     }
 
 
@@ -60,11 +59,29 @@ public class GunBoy : MonoBehaviour
     {
         transform.position = OnJetTarget.position;
         transform.rotation = Quaternion.Euler(0, 2.5f, 0);
+
+        _anim.SetTrigger("Drive");
+
     }
 
     public void WalkAway()
     {
+        _agent.isStopped = false;
         target = walkAwayTarget;
         _agent.SetDestination(target.transform.position);
     }
+
+    public void WalkToPlayer()
+    {
+        _agent.isStopped = false;
+        _agent.SetDestination(target.transform.position);
+    }
+
+    public void WalkToPlayerSecond()
+    {
+        _agent.isStopped = false;
+        target = towardPlayerTarget;
+        _agent.SetDestination(target.transform.position);
+    }
+
 }
