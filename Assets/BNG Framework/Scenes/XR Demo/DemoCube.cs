@@ -13,6 +13,17 @@ namespace BNG {
         public Material HighlightMaterial;
         public Material ActiveMaterial;
 
+        public LineRenderer lineRenderer;
+        public GameObject objectToMove;
+
+        public Transform pointer;
+
+        [Header("Select To Include In Drag")]
+        public bool x;
+        public bool y;
+        public bool z;
+
+
         // Currently activating the object?
         bool active = false;
 
@@ -32,6 +43,7 @@ namespace BNG {
             active = true;
 
             UpdateMaterial();
+            //UpdateGameObjectPosition();
         }
 
         // No longer ohlding down activate
@@ -39,6 +51,7 @@ namespace BNG {
             active = false;
 
             UpdateMaterial();
+            
         }
 
         // Hovering over our object
@@ -46,6 +59,7 @@ namespace BNG {
             hovering = true;
 
             UpdateMaterial();
+            
         }
 
         // No longer hovering over our object
@@ -54,6 +68,7 @@ namespace BNG {
             active = false;
 
             UpdateMaterial();
+            
         }
 
         public void UpdateMaterial() {
@@ -67,6 +82,23 @@ namespace BNG {
                 render.sharedMaterial = initialMaterial;
             }
         }
+
+        /*        public void UpdateGameObjectPosition()
+                {
+                    int lastPositionIndex = lineRenderer.positionCount - 1;
+                    Vector3 lastPosition = lineRenderer.GetPosition(lastPositionIndex); // Get the last position in the line
+
+                    objectToMove.transform.position = lastPosition; // Move the object to the last position
+                }*/
+
+        public void Drag()
+        {
+            float newX = x ? pointer.position.x : transform.position.x;
+            float newY = y ? pointer.position.y : transform.position.y;
+            float newZ = z ? pointer.position.z : transform.position.z;
+            transform.position = new Vector3(newX, newY, newZ);
+        }
+
     }
 }
 

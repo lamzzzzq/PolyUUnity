@@ -1,16 +1,15 @@
 ﻿/*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 using UnityEditor;
-using UnityEngine;
 using System.Reflection;
-using Facebook.WitAi.Data.Entities;
 
-namespace Facebook.WitAi.Windows
+namespace Meta.WitAi.Windows
 {
     public class WitEntityPropertyDrawer : WitPropertyDrawer
     {
@@ -33,6 +32,8 @@ namespace Facebook.WitAi.Windows
                         return WitTexts.Texts.ConfigurationEntitiesLookupsLabel;
                     case "roles":
                         return WitTexts.Texts.ConfigurationEntitiesRolesLabel;
+                    case "keywords":
+                        return WitTexts.Texts.ConfigurationEntitiesKeywordsLabel;
             }
 
             // Default to base
@@ -44,7 +45,6 @@ namespace Facebook.WitAi.Windows
             switch (subfield.Name)
             {
                 case "name":
-                case "keywords":
                     return false;
             }
             return base.ShouldLayoutField(property, subfield);

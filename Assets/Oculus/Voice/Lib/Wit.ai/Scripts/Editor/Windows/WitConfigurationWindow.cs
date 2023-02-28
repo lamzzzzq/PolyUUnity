@@ -1,18 +1,21 @@
 ﻿/*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
-using Facebook.WitAi.Data.Configuration;
+using Meta.WitAi.Data.Configuration;
 
-namespace Facebook.WitAi.Windows
+namespace Meta.WitAi.Windows
 {
     public abstract class WitConfigurationWindow : BaseWitWindow
     {
+        // Configuration data
         protected int witConfigIndex = -1;
         protected WitConfiguration witConfiguration;
 
@@ -20,7 +23,12 @@ namespace Facebook.WitAi.Windows
         {
             get
             {
-                string appID = WitConfigurationUtility.GetAppID(witConfiguration);
+                if (witConfiguration == null)
+                {
+                    return "";
+                }
+
+                string appID = witConfiguration.GetApplicationId();
                 if (!string.IsNullOrEmpty(appID))
                 {
                     return WitTexts.GetAppURL(appID, HeaderEndpointType);
@@ -45,15 +53,49 @@ namespace Facebook.WitAi.Windows
         }
         protected override void LayoutContent()
         {
+            // Reload if config is removed
+            if (witConfiguration == null && witConfigIndex != -1)
+            {
+                WitConfigurationUtility.ReloadConfigurationData();
+                SetConfiguration(-1);
+            }
+
             // Layout popup
             int index = witConfigIndex;
-            WitConfigurationEditorUI.LayoutConfigurationSelect(ref index);
+            WitConfigurationEditorUI.LayoutConfigurationSelect(ref index, OpenConfigGenerationWindow);
             GUILayout.Space(WitStyles.ButtonMargin);
             // Selection changed
             if (index != witConfigIndex)
             {
                 SetConfiguration(index);
             }
+        }
+        // Generate new configuration via setup
+        protected virtual void OpenConfigGenerationWindow()
+        {
+            WitWindowUtility.OpenSetupWindow(OnConfigGenerated);
+        }
+        // On configuration generated
+        protected virtual void OnConfigGenerated(WitConfiguration newConfiguration)
+        {
+            // Apply to this settings window
+            if (newConfiguration != null)
+            {
+                // Get index if possible
+                List<WitConfiguration> configs = new List<WitConfiguration>(WitConfigurationUtility.WitConfigs);
+                int newIndex = configs.IndexOf(newConfiguration);
+                if (newIndex != -1)
+                {
+                    // Apply configuration
+                    SetConfiguration(newIndex);
+
+                    // Refresh app info
+                    newConfiguration.RefreshAppInfo();
+                }
+            }
+
+            // Open this window if needed
+            WitWindowUtility.OpenConfigurationWindow();
         }
     }
 }

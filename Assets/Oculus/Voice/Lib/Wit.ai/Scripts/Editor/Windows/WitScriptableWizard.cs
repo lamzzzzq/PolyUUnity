@@ -1,15 +1,15 @@
 ﻿/*
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
-using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace Facebook.WitAi.Windows
+namespace Meta.WitAi.Windows
 {
     public abstract class WitScriptableWizard : ScriptableWizard
     {
@@ -42,7 +42,7 @@ namespace Facebook.WitAi.Windows
             // Set wizard to max width
             size.x = WitStyles.WindowMaxWidth;
             // Wizards add additional padding
-            size.y += 70f;
+            size.y += 120f;
 
             // Clamp wizard sizes
             maxSize = minSize = size;
