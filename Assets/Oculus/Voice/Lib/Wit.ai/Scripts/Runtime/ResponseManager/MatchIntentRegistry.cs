@@ -1,6 +1,5 @@
 ﻿/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
@@ -9,10 +8,9 @@
 using System;
 using System.Reflection;
 using System.Threading;
-using Meta.WitAi.Utilities;
-using UnityEngine;
+using Facebook.WitAi.Utilities;
 
-namespace Meta.WitAi
+namespace Facebook.WitAi
 {
     internal class RegisteredMatchIntent
     {
@@ -59,33 +57,21 @@ namespace Meta.WitAi
             var dictionary = new DictionaryList<string, RegisteredMatchIntent>();
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                try {
-                    foreach (Type t in assembly.GetTypes()) {
-                        try {
-                            foreach (var method in t.GetMethods()) {
-                                try {
-                                    foreach (var attribute in method.GetCustomAttributes(typeof(MatchIntent))) {
-                                        try {
-                                            var mi = (MatchIntent)attribute;
-                                            dictionary[mi.Intent].Add(new RegisteredMatchIntent() {
-                                                type = t,
-                                                method = method,
-                                                matchIntent = mi
-                                            });
-                                        } catch (Exception e) {
-                                            Debug.LogError(e);
-                                        }
-                                    }
-                                } catch (Exception e) {
-                                    Debug.LogError(e);
-                                }
-                            }
-                        } catch (Exception e) {
-                            Debug.LogError(e);
+                foreach (Type t in assembly.GetTypes())
+                {
+                    foreach (var method in t.GetMethods())
+                    {
+                        foreach (var attribute in method.GetCustomAttributes(typeof(MatchIntent)))
+                        {
+                            var mi = (MatchIntent) attribute;
+                            dictionary[mi.Intent].Add(new RegisteredMatchIntent()
+                            {
+                                type = t,
+                                method = method,
+                                matchIntent = mi
+                            });
                         }
                     }
-                } catch (Exception e) {
-                    Debug.LogError(e);
                 }
             }
 

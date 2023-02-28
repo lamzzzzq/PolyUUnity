@@ -1,141 +1,96 @@
-﻿/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+﻿/**************************************************************************************************
+ * Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
  *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
+ * Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
  * https://developer.oculus.com/licenses/oculussdk/
  *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+ * Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+ * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ **************************************************************************************************/
 
-using Meta.WitAi;
-using Meta.WitAi.Events;
-using Meta.WitAi.Json;
+using Facebook.WitAi.Events;
+using Facebook.WitAi.Lib;
 using UnityEngine;
 
 namespace Oculus.Voice.Bindings.Android
 {
     public class VoiceSDKListenerBinding : AndroidJavaProxy
     {
-        private IVoiceService _voiceService;
-        private readonly IVCBindingEvents _bindingEvents;
+        private VoiceEvents voiceEvents;
 
-        public VoiceEvents VoiceEvents => _voiceService.VoiceEvents;
+        public VoiceEvents VoiceEvents => voiceEvents;
 
-        public enum StoppedListeningReason : int {
-            NoReasonProvided = 0,
-            Inactivity = 1,
-            Timeout = 2,
-            Deactivation = 3,
+        public VoiceSDKListenerBinding(VoiceEvents voiceEvents) : base(
+            "com.oculus.assistant.api.unity.dictation.UnityDictationListener")
+        {
+            this.voiceEvents = voiceEvents;
         }
 
-        public VoiceSDKListenerBinding(IVoiceService voiceService, IVCBindingEvents bindingEvents) : base(
-            "com.oculus.assistant.api.voicesdk.immersivevoicecommands.IVCEventsListener")
+        public void onResponse(string response)
         {
-            _voiceService = voiceService;
-            _bindingEvents = bindingEvents;
+            voiceEvents.OnResponse?.Invoke(WitResponseNode.Parse(response));
         }
 
-        public void onResponse(string responseJson)
+        public void onError(string error, string message)
         {
-            WitResponseNode responseData = WitResponseNode.Parse(responseJson);
-            if (responseData != null)
-            {
-                VoiceEvents.OnResponse?.Invoke(responseData);
-            }
-        }
-
-        public void onPartialResponse(string responseJson)
-        {
-            WitResponseNode responseData = WitResponseNode.Parse(responseJson);
-            if (responseData != null && responseData.HasResponse())
-            {
-                VoiceEvents.OnPartialResponse?.Invoke(responseData);
-            }
-        }
-
-        public void onError(string error, string message, string errorBody)
-        {
-            VoiceEvents.OnError?.Invoke(error, message);
-        }
-
-        public void onAborted()
-        {
-            VoiceEvents.OnAborted?.Invoke();
-        }
-
-        public void onRequestCompleted()
-        {
-            VoiceEvents.OnRequestCompleted?.Invoke();
+            voiceEvents.OnError?.Invoke(error, message);
         }
 
         public void onMicLevelChanged(float level)
         {
-            VoiceEvents.OnMicLevelChanged?.Invoke(level);
+            voiceEvents.OnMicLevelChanged?.Invoke(level);
         }
 
         public void onRequestCreated()
         {
-            VoiceEvents.OnRequestCreated?.Invoke(null);
+            voiceEvents.OnRequestCreated?.Invoke(null);
         }
 
         public void onStartListening()
         {
-            VoiceEvents.OnStartListening?.Invoke();
+            voiceEvents.OnStartListening?.Invoke();
         }
 
-        public void onStoppedListening(int reason)
+        public void onStoppedListening()
         {
-            VoiceEvents.OnStoppedListening?.Invoke();
-            switch((StoppedListeningReason)reason){
-                case StoppedListeningReason.NoReasonProvided:
-                    break;
-                case StoppedListeningReason.Inactivity:
-                    VoiceEvents.OnStoppedListeningDueToInactivity?.Invoke();
-                    break;
-                case StoppedListeningReason.Timeout:
-                    VoiceEvents.OnStoppedListeningDueToTimeout?.Invoke();
-                    break;
-                case StoppedListeningReason.Deactivation:
-                    VoiceEvents.OnStoppedListeningDueToDeactivation?.Invoke();
-                    break;
-            }
+            voiceEvents.OnStoppedListening?.Invoke();
+        }
+
+        public void onStoppedListeningDueToInactivity()
+        {
+            voiceEvents.OnStoppedListeningDueToInactivity?.Invoke();
+        }
+
+        public void onStoppedListeningDueToTimeout()
+        {
+            voiceEvents.OnStoppedListeningDueToTimeout?.Invoke();
+        }
+
+        public void onStoppedListeningDueToDeactivation()
+        {
+            voiceEvents.OnStoppedListeningDueToDeactivation?.Invoke();
         }
 
         public void onMicDataSent()
         {
-            VoiceEvents.OnMicDataSent?.Invoke();
+            voiceEvents.OnMicDataSent?.Invoke();
         }
 
         public void onMinimumWakeThresholdHit()
         {
-            VoiceEvents.OnMinimumWakeThresholdHit?.Invoke();
+            voiceEvents.OnMinimumWakeThresholdHit?.Invoke();
         }
 
         public void onPartialTranscription(string transcription)
         {
-            VoiceEvents.OnPartialTranscription?.Invoke(transcription);
+            voiceEvents.OnPartialTranscription?.Invoke(transcription);
         }
 
         public void onFullTranscription(string transcription)
         {
-            VoiceEvents.OnFullTranscription?.Invoke(transcription);
-        }
-
-        public void onServiceNotAvailable(string error, string message)
-        {
-            Debug.LogWarning($"Platform service is not available: {error} - {message}");
-            _bindingEvents.OnServiceNotAvailable(error, message);
+            voiceEvents.OnFullTranscription?.Invoke(transcription);
         }
     }
 }

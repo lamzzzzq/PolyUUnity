@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -34,11 +26,6 @@ public class OVRRuntimeController : MonoBehaviour
 	/// </summary>
 	public Shader m_controllerModelShader;
 
-	/// <summary>
-	/// Support render model animation
-	/// </summary>
-	public bool m_supportAnimation;
-
 	private GameObject m_controllerObject;
 
 	private static string leftControllerModelPath = "/model_fb/controller/left";
@@ -50,10 +37,9 @@ public class OVRRuntimeController : MonoBehaviour
 	private bool m_hasInputFocus = true;
 	private bool m_hasInputFocusPrev = false;
 	private bool m_controllerConnectedPrev = false;
-	private Dictionary<OVRGLTFInputNode, OVRGLTFAnimatinonNode> m_animationNodes;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
 	{
 		if (m_controller == OVRInput.Controller.LTouch)
 			m_controllerModelPath = leftControllerModelPath;
@@ -84,14 +70,9 @@ public class OVRRuntimeController : MonoBehaviour
 			m_hasInputFocusPrev = m_hasInputFocus;
 			m_controllerConnectedPrev = controllerConnected;
 		}
+	}
 
-        if(controllerConnected)
-        {
-            UpdateControllerAnimation();
-        }
-    }
-
-    private bool IsModelSupported(string modelPath)
+	private bool IsModelSupported(string modelPath)
 	{
 		string[] modelPaths = OVRPlugin.GetRenderModelPaths();
 		if (modelPaths.Length == 0)
@@ -105,7 +86,7 @@ public class OVRRuntimeController : MonoBehaviour
 			if (modelPaths[i].Equals(modelPath))
 				return true;
 		}
-		Debug.LogError("Render model path " + modelPath + " not supported by this device.");
+		Debug.LogError("Render model path not supported by this device.");
 		return false;
 	}
 	private bool LoadControllerModel(string modelPath)
@@ -121,9 +102,7 @@ public class OVRRuntimeController : MonoBehaviour
 				{
 					OVRGLTFLoader loader = new OVRGLTFLoader(modelData);
 					loader.SetModelShader(m_controllerModelShader);
-					OVRGLTFScene scene = loader.LoadGLB(m_supportAnimation);
-					m_controllerObject = scene.root;
-					m_animationNodes = scene.animationNodes;
+					m_controllerObject = loader.LoadGLB().root;
 
 					if (m_controllerObject != null)
 					{
@@ -136,9 +115,9 @@ public class OVRRuntimeController : MonoBehaviour
 					}
 				}
 			}
-			Debug.LogError("Retrived a null model key of " + modelPath);
+			Debug.LogError("Retrived a null model key.");
 		}
-		Debug.LogError("Failed to load controller model of " + modelPath);
+		Debug.LogError("Failed to load controller model");
 		return false;
 	}
 
@@ -151,44 +130,11 @@ public class OVRRuntimeController : MonoBehaviour
 			{
 				LoadControllerModel(m_controllerModelPath);
 			}
-
 			yield return new WaitForSeconds(.5f);
 		}
 	}
 
-	private void UpdateControllerAnimation()
-	{
-		if(m_animationNodes == null)
-		{
-			return;
-		}
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.Button_A_X))
-			m_animationNodes[OVRGLTFInputNode.Button_A_X].UpdatePose(
-				OVRInput.Get(m_controller == OVRInput.Controller.LTouch ? OVRInput.RawButton.X : OVRInput.RawButton.A));
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.Button_B_Y))
-			m_animationNodes[OVRGLTFInputNode.Button_B_Y].UpdatePose(
-				OVRInput.Get(m_controller == OVRInput.Controller.LTouch ? OVRInput.RawButton.Y : OVRInput.RawButton.B));
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.Button_Oculus_Menu))
-			m_animationNodes[OVRGLTFInputNode.Button_Oculus_Menu].UpdatePose(
-				OVRInput.Get(OVRInput.RawButton.Start));
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.Trigger_Grip))
-			m_animationNodes[OVRGLTFInputNode.Trigger_Grip].UpdatePose(
-				OVRInput.Get(m_controller == OVRInput.Controller.LTouch ? OVRInput.RawAxis1D.LHandTrigger : OVRInput.RawAxis1D.RHandTrigger));
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.Trigger_Front))
-			m_animationNodes[OVRGLTFInputNode.Trigger_Front].UpdatePose(
-				OVRInput.Get(m_controller == OVRInput.Controller.LTouch ? OVRInput.RawAxis1D.LIndexTrigger : OVRInput.RawAxis1D.RIndexTrigger));
-
-		if (m_animationNodes.ContainsKey(OVRGLTFInputNode.ThumbStick))
-			m_animationNodes[OVRGLTFInputNode.ThumbStick].UpdatePose(
-				OVRInput.Get(m_controller == OVRInput.Controller.LTouch ? OVRInput.RawAxis2D.LThumbstick : OVRInput.RawAxis2D.RThumbstick));
-	}
-
-    public void InputFocusAquired()
+	public void InputFocusAquired()
 	{
 		m_hasInputFocus = true;
 	}

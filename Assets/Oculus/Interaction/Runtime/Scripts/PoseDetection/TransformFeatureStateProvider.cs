@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
 using System;
@@ -146,23 +138,6 @@ namespace Oculus.Interaction.PoseDetection
         }
     }
 
-    public interface ITransformFeatureStateProvider
-    {
-        bool IsStateActive(TransformConfig config, TransformFeature feature,
-            FeatureStateActiveMode mode, string stateId);
-
-        bool GetCurrentState(TransformConfig config, TransformFeature transformFeature,
-            out string currentState);
-
-        void RegisterConfig(TransformConfig transformConfig);
-
-        void UnRegisterConfig(TransformConfig transformConfig);
-
-        void GetFeatureVectorAndWristPos(TransformConfig config,
-            TransformFeature transformFeature, bool isHandVector, ref Vector3? featureVec,
-            ref Vector3? wristPos);
-    }
-
     /// <summary>
     /// Interprets transform feature values from a <see cref="TransformFeatureValueProvider"/>
     /// and uses the given <see cref="TransformFeatureStateThresholds"/> to quantize
@@ -171,15 +146,11 @@ namespace Oculus.Interaction.PoseDetection
     /// frame and the given state thresholds to apply a buffer between
     /// state transition edges.
     /// </summary>
-    public class TransformFeatureStateProvider : MonoBehaviour, ITransformFeatureStateProvider
+    public class TransformFeatureStateProvider : MonoBehaviour
     {
         [SerializeField, Interface(typeof(IHand))]
         private MonoBehaviour _hand;
         public IHand Hand { get; private set; }
-
-        [SerializeField, Interface(typeof(IHmd))]
-        private MonoBehaviour _hmd;
-        public IHmd Hmd { get; private set; }
 
         [SerializeField, Interface(typeof(ITrackingToWorldTransformer))]
         private MonoBehaviour _trackingToWorldTransformer;
@@ -203,13 +174,12 @@ namespace Oculus.Interaction.PoseDetection
         protected virtual void Awake()
         {
             Hand = _hand as IHand;
-            Hmd = _hmd as IHmd;
             TrackingToWorldTransformer = _trackingToWorldTransformer as ITrackingToWorldTransformer;
             _transformFeatureStateCollection = new TransformFeatureStateCollection();
             _timeProvider = () => Time.time;
         }
 
-        public void RegisterConfig(TransformConfig transformConfig)
+        public void RegisterNewConfig(TransformConfig transformConfig)
         {
             //Register time provider indirectly in case reference changes
             Func<float> getTime = () => _timeProvider();
@@ -224,10 +194,9 @@ namespace Oculus.Interaction.PoseDetection
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Hand, nameof(Hand));
-            this.AssertField(Hmd, nameof(Hmd));
-            this.AssertField(_timeProvider, nameof(_timeProvider));
-            this.AssertField(TrackingToWorldTransformer, nameof(TrackingToWorldTransformer));
+            Assert.IsNotNull(Hand);
+            Assert.IsNotNull(_timeProvider);
+            Assert.IsNotNull(TrackingToWorldTransformer);
             this.EndStart(ref _started);
         }
 
@@ -256,7 +225,7 @@ namespace Oculus.Interaction.PoseDetection
         private void UpdateJointData()
         {
             _jointData.IsValid = Hand.GetRootPose(out _jointData.WristPose) &&
-                                 Hmd.TryGetRootPose(out _jointData.CenterEyePose);
+                                 Hand.GetCenterEyePose(out _jointData.CenterEyePose);
             if (!_jointData.IsValid)
             {
                 return;
@@ -352,10 +321,9 @@ namespace Oculus.Interaction.PoseDetection
         }
 
         #region Inject
-        public void InjectAllTransformFeatureStateProvider(IHand hand, IHmd hmd, bool disableProactiveEvaluation)
+        public void InjectAllTransformFeatureStateProvider(IHand hand, bool disableProactiveEvaluation)
         {
-            InjectHand(hand);
-            InjectHmd(hmd);
+            Hand = hand;
             _disableProactiveEvaluation = disableProactiveEvaluation;
         }
 
@@ -363,12 +331,6 @@ namespace Oculus.Interaction.PoseDetection
         {
             _hand = hand as MonoBehaviour;
             Hand = hand;
-        }
-
-        public void InjectHmd(IHmd hand)
-        {
-            _hmd = hand as MonoBehaviour;
-            Hmd = hand;
         }
 
         public void InjectDisableProactiveEvaluation(bool disabled)

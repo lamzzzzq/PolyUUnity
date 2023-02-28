@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
@@ -54,9 +46,6 @@ namespace Oculus.Interaction
 
         public static event Action<PointableCanvasEventArgs> WhenSelectableUnhovered;
 
-        [Tooltip("If true, the initial press position will be used as the drag start " +
-            "position, rather than the position when drag threshold is exceeded. This is used " +
-            "to prevent the pointer position shifting relative to the surface while dragging.")]
         [SerializeField]
         private bool _useInitialPressPositionForDrag = true;
 
@@ -76,7 +65,7 @@ namespace Oculus.Interaction
 
         public static void RegisterPointableCanvas(IPointableCanvas pointerCanvas)
         {
-            Assert.IsNotNull(Instance, $"A <b>{nameof(PointableCanvasModule)}</b> is required in the scene.");
+            Assert.IsNotNull(Instance, "A PointableCanvasModule is required in the scene.");
             Instance.AddPointerCanvas(pointerCanvas);
         }
 
@@ -88,19 +77,19 @@ namespace Oculus.Interaction
         private Dictionary<int, Pointer> _pointerMap = new Dictionary<int, Pointer>();
         private List<RaycastResult> _raycastResultCache = new List<RaycastResult>();
         private List<Pointer> _pointersForDeletion = new List<Pointer>();
-        private Dictionary<IPointableCanvas, Action<PointerEvent>> _pointerCanvasActionMap =
-            new Dictionary<IPointableCanvas, Action<PointerEvent>>();
+        private Dictionary<IPointableCanvas, Action<PointerArgs>> _pointerCanvasActionMap =
+            new Dictionary<IPointableCanvas, Action<PointerArgs>>();
 
         private void AddPointerCanvas(IPointableCanvas pointerCanvas)
         {
-            Action<PointerEvent> pointerCanvasAction = (args) => HandlePointerEvent(pointerCanvas.Canvas, args);
+            Action<PointerArgs> pointerCanvasAction = (args) => HandlePointerEvent(pointerCanvas.Canvas, args);
             _pointerCanvasActionMap.Add(pointerCanvas, pointerCanvasAction);
             pointerCanvas.WhenPointerEventRaised += pointerCanvasAction;
         }
 
         private void RemovePointerCanvas(IPointableCanvas pointerCanvas)
         {
-            Action<PointerEvent> pointerCanvasAction = _pointerCanvasActionMap[pointerCanvas];
+            Action<PointerArgs> pointerCanvasAction = _pointerCanvasActionMap[pointerCanvas];
             _pointerCanvasActionMap.Remove(pointerCanvas);
             pointerCanvas.WhenPointerEventRaised -= pointerCanvasAction;
 
@@ -119,41 +108,41 @@ namespace Oculus.Interaction
             }
         }
 
-        private void HandlePointerEvent(Canvas canvas, PointerEvent evt)
+        private void HandlePointerEvent(Canvas canvas, PointerArgs args)
         {
             Pointer pointer;
 
-            switch (evt.Type)
+            switch (args.PointerEvent)
             {
-                case PointerEventType.Hover:
+                case PointerEvent.Hover:
                     pointer = new Pointer(canvas);
                     pointer.PointerEventData = new PointerEventData(eventSystem);
-                    pointer.SetPosition(evt.Pose.position);
-                    _pointerMap.Add(evt.Identifier, pointer);
+                    pointer.SetPosition(args.Pose.position);
+                    _pointerMap.Add(args.Identifier, pointer);
                     break;
-                case PointerEventType.Unhover:
-                    pointer = _pointerMap[evt.Identifier];
-                    _pointerMap.Remove(evt.Identifier);
+                case PointerEvent.Unhover:
+                    pointer = _pointerMap[args.Identifier];
+                    _pointerMap.Remove(args.Identifier);
                     pointer.MarkForDeletion();
                     _pointersForDeletion.Add(pointer);
                     break;
-                case PointerEventType.Select:
-                    pointer = _pointerMap[evt.Identifier];
-                    pointer.SetPosition(evt.Pose.position);
+                case PointerEvent.Select:
+                    pointer = _pointerMap[args.Identifier];
+                    pointer.SetPosition(args.Pose.position);
                     pointer.Press();
                     break;
-                case PointerEventType.Unselect:
-                    pointer = _pointerMap[evt.Identifier];
-                    pointer.SetPosition(evt.Pose.position);
+                case PointerEvent.Unselect:
+                    pointer = _pointerMap[args.Identifier];
+                    pointer.SetPosition(args.Pose.position);
                     pointer.Release();
                     break;
-                case PointerEventType.Move:
-                    pointer = _pointerMap[evt.Identifier];
-                    pointer.SetPosition(evt.Pose.position);
+                case PointerEvent.Move:
+                    pointer = _pointerMap[args.Identifier];
+                    pointer.SetPosition(args.Pose.position);
                     break;
-                case PointerEventType.Cancel:
-                    pointer = _pointerMap[evt.Identifier];
-                    _pointerMap.Remove(evt.Identifier);
+                case PointerEvent.Cancel:
+                    pointer = _pointerMap[args.Identifier];
+                    _pointerMap.Remove(args.Identifier);
                     ClearPointerSelection(pointer.PointerEventData);
                     pointer.MarkForDeletion();
                     _pointersForDeletion.Add(pointer);
@@ -232,7 +221,7 @@ namespace Oculus.Interaction
 
         protected override void Start()
         {
-            this.BeginStart(ref _started, () => base.Start());
+            this.BeginStart(ref _started, base.Start);
             this.EndStart(ref _started);
         }
 

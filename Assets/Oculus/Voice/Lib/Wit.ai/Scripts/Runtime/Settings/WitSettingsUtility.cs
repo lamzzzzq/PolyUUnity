@@ -1,6 +1,5 @@
 /*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
@@ -12,7 +11,7 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Meta.WitAi
+namespace Facebook.WitAi
 {
     public static class WitSettingsUtility
     {
@@ -52,10 +51,6 @@ namespace Meta.WitAi
 
             // Get file path
             string settingsFilePath = GetSettingsFilePath();
-            if (string.IsNullOrEmpty(settingsFilePath))
-            {
-                return;
-            }
             if (!File.Exists(settingsFilePath))
             {
                 Debug.LogWarning($"Wit Settings Utility - Generating new settings file\nPath{settingsFilePath}");
@@ -87,6 +82,7 @@ namespace Meta.WitAi
             {
                 Debug.LogError($"Wit Settings Utility - Failed to decode settings file\nPath{settingsFilePath}\nError: {e}");
                 _settings = new WitSettings();
+                return;
             }
         }
         // Save Settings

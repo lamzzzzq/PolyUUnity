@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System;
 
@@ -24,16 +16,8 @@ namespace Oculus.Interaction
 {
     public struct InteractorStateChangeArgs
     {
-        public InteractorState PreviousState { get; }
-        public InteractorState NewState { get; }
-
-        public InteractorStateChangeArgs(
-            InteractorState previousState,
-            InteractorState newState)
-        {
-            PreviousState = previousState;
-            NewState = newState;
-        }
+        public InteractorState PreviousState;
+        public InteractorState NewState;
     }
 
     /// <summary>
@@ -42,10 +26,9 @@ namespace Oculus.Interaction
     public interface IInteractorView
     {
         int Identifier { get; }
-        public object Data { get; }
 
         bool HasCandidate { get; }
-        object CandidateProperties { get; }
+        object Candidate { get; }
 
         bool HasInteractable { get; }
         bool HasSelectedInteractable { get; }
@@ -53,28 +36,19 @@ namespace Oculus.Interaction
         InteractorState State { get; }
         event Action<InteractorStateChangeArgs> WhenStateChanged;
         event Action WhenPreprocessed;
-        event Action WhenProcessed;
         event Action WhenPostprocessed;
-    }
-
-    public interface IUpdateDriver
-    {
-        bool IsRootDriver { get; set; }
-        void Drive();
     }
 
     /// <summary>
     /// IInteractor defines an object that can interact with other objects
     /// and can handle selection events to change its state.
     /// </summary>
-    public interface IInteractor : IInteractorView, IUpdateDriver
+    public interface IInteractor : IInteractorView
     {
 
         void Preprocess();
-        void Process();
         void Postprocess();
-
-        void ProcessCandidate();
+        void UpdateCandidate();
         void Enable();
         void Disable();
         void Hover();
@@ -86,5 +60,7 @@ namespace Oculus.Interaction
         bool ShouldUnhover { get; }
         bool ShouldSelect { get; }
         bool ShouldUnselect { get; }
+
+        bool IsRootDriver { get; set; }
     }
 }

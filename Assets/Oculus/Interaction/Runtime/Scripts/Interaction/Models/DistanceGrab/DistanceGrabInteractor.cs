@@ -1,37 +1,30 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-using Oculus.Interaction.Throw;
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
+
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
+using Oculus.Interaction.Throw;
 
 namespace Oculus.Interaction
 {
-    /// <summary>
-    /// This interactor allows grabbing objects at a distance and will move them using configurable IMovements.
-    /// It uses a IDistantCandidateComputer in order to Hover the best candidate.
-    /// </summary>
     public class DistanceGrabInteractor : PointerInteractor<DistanceGrabInteractor, DistanceGrabInteractable>,
         IDistanceInteractor
     {
         [SerializeField, Interface(typeof(ISelector))]
         private MonoBehaviour _selector;
+
+        [SerializeField]
+        private ConicalFrustum _selectionFrustum;
 
         [SerializeField, Optional]
         private Transform _grabCenter;
@@ -39,23 +32,15 @@ namespace Oculus.Interaction
         [SerializeField, Optional]
         private Transform _grabTarget;
 
+        private IMovement _movement;
+
+        public ConicalFrustum PointerFrustum => _selectionFrustum;
+
+        public float BestInteractableWeight { get; private set; } = float.MaxValue;
+
         [SerializeField, Interface(typeof(IVelocityCalculator)), Optional]
         private MonoBehaviour _velocityCalculator;
         public IVelocityCalculator VelocityCalculator { get; set; }
-
-        [SerializeField]
-        private DistantCandidateComputer<DistanceGrabInteractable> _distantCandidateComputer
-            = new DistantCandidateComputer<DistanceGrabInteractable>();
-
-        private IMovement _movement;
-
-        public Pose Origin => _distantCandidateComputer.Origin;
-
-        public Vector3 HitPoint { get; private set; }
-
-        public IRelativeToRef DistanceInteractable => this.Interactable;
-
-        public float BestInteractableWeight { get; private set; } = float.MaxValue;
 
         protected override void Awake()
         {
@@ -66,9 +51,9 @@ namespace Oculus.Interaction
 
         protected override void Start()
         {
-            this.BeginStart(ref _started, () => base.Start());
-            this.AssertField(Selector, nameof(Selector));
-            this.AssertField(_distantCandidateComputer, nameof(_distantCandidateComputer));
+            this.BeginStart(ref _started, base.Start);
+            Assert.IsNotNull(Selector);
+            Assert.IsNotNull(_selectionFrustum);
 
             if (_grabCenter == null)
             {
@@ -82,7 +67,7 @@ namespace Oculus.Interaction
 
             if (_velocityCalculator != null)
             {
-                this.AssertField(VelocityCalculator, nameof(VelocityCalculator));
+                Assert.IsNotNull(VelocityCalculator);
             }
             this.EndStart(ref _started);
         }
@@ -95,16 +80,32 @@ namespace Oculus.Interaction
 
         protected override DistanceGrabInteractable ComputeCandidate()
         {
-            DistanceGrabInteractable bestCandidate = _distantCandidateComputer.ComputeCandidate(
-                () => DistanceGrabInteractable.Registry.List(this),
-                out Vector3 hitPoint);
-            HitPoint = hitPoint;
-            return bestCandidate;
+            DistanceGrabInteractable closestInteractable = null;
+            float bestScore = float.NegativeInfinity;
+
+            IEnumerable<DistanceGrabInteractable> interactables = DistanceGrabInteractable.Registry.List(this);
+            foreach (DistanceGrabInteractable interactable in interactables)
+            {
+                Collider[] colliders = interactable.Colliders;
+                foreach (Collider collider in colliders)
+                {
+                    if (_selectionFrustum.HitsCollider(collider, out float score, out Vector3 hitPoint)
+                        && score > bestScore)
+                    {
+                        bestScore = score;
+                        closestInteractable = interactable;
+                    }
+                }
+            }
+
+            BestInteractableWeight = bestScore;
+            return closestInteractable;
         }
 
         protected override void InteractableSelected(DistanceGrabInteractable interactable)
         {
-            _movement = interactable.GenerateMovement(_grabTarget.GetPose());
+            Pose target = _grabTarget.GetPose();
+            _movement = interactable.GenerateAligner(_grabTarget.GetPose());
             base.InteractableSelected(interactable);
             interactable.WhenPointerEventRaised += HandleOtherPointerEventRaised;
         }
@@ -122,25 +123,25 @@ namespace Oculus.Interaction
             interactable.ApplyVelocities(throwVelocity.LinearVelocity, throwVelocity.AngularVelocity);
         }
 
-        private void HandleOtherPointerEventRaised(PointerEvent evt)
+        private void HandleOtherPointerEventRaised(PointerArgs args)
         {
             if (SelectedInteractable == null)
             {
                 return;
             }
 
-            if (evt.Type == PointerEventType.Select || evt.Type == PointerEventType.Unselect)
+            if (args.PointerEvent == PointerEvent.Select || args.PointerEvent == PointerEvent.Unselect)
             {
                 Pose toPose = _grabTarget.GetPose();
                 if (SelectedInteractable.ResetGrabOnGrabsUpdated)
                 {
-                    _movement = SelectedInteractable.GenerateMovement(toPose);
+                    _movement = SelectedInteractable.GenerateAligner(toPose);
                     SelectedInteractable.PointableElement.ProcessPointerEvent(
-                        new PointerEvent(Identifier, PointerEventType.Move, _movement.Pose, Data));
+                        new PointerArgs(Identifier, PointerEvent.Move, _movement.Pose));
                 }
             }
 
-            if (evt.Identifier == Identifier && evt.Type == PointerEventType.Cancel)
+            if (args.Identifier == Identifier && args.PointerEvent == PointerEvent.Cancel)
             {
                 SelectedInteractable.WhenPointerEventRaised -= HandleOtherPointerEventRaised;
             }
@@ -168,11 +169,10 @@ namespace Oculus.Interaction
         }
 
         #region Inject
-        public void InjectAllDistanceGrabInteractor(ISelector selector,
-            DistantCandidateComputer<DistanceGrabInteractable> distantCandidateComputer)
+        public void InjectAllGrabInteractor(ISelector selector, ConicalFrustum selectionFrustum)
         {
             InjectSelector(selector);
-            InjectDistantCandidateComputer(distantCandidateComputer);
+            InjectSelectionFrustum(selectionFrustum);
         }
 
         public void InjectSelector(ISelector selector)
@@ -181,9 +181,9 @@ namespace Oculus.Interaction
             Selector = selector;
         }
 
-        public void InjectDistantCandidateComputer(DistantCandidateComputer<DistanceGrabInteractable> distantCandidateComputer)
+        public void InjectSelectionFrustum(ConicalFrustum selectionFrustum)
         {
-            _distantCandidateComputer = distantCandidateComputer;
+            _selectionFrustum = selectionFrustum;
         }
 
         public void InjectOptionalGrabCenter(Transform grabCenter)

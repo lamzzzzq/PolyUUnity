@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
 using System;
@@ -26,11 +18,11 @@ using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
-    public class HandVisual : MonoBehaviour, IHandVisual
+    public class HandVisual : MonoBehaviour
     {
         [SerializeField, Interface(typeof(IHand))]
         private MonoBehaviour _hand;
-        public IHand Hand { get; private set; }
+        public IHand Hand;
 
         [SerializeField]
         private SkinnedMeshRenderer _skinnedMeshRenderer;
@@ -56,7 +48,7 @@ namespace Oculus.Interaction
 
         private int _wristScalePropertyId;
 
-        public IList<Transform> Joints => _jointTransforms;
+        public List<Transform> Joints => _jointTransforms;
 
         public bool ForceOffVisibility { get; set; }
 
@@ -74,8 +66,8 @@ namespace Oculus.Interaction
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Hand, nameof(Hand));
-            this.AssertField(_skinnedMeshRenderer, nameof(_skinnedMeshRenderer));
+            Assert.IsNotNull(Hand);
+            Assert.IsNotNull(_skinnedMeshRenderer);
             if (_handMaterialPropertyBlockEditor != null)
             {
                 _wristScalePropertyId = Shader.PropertyToID("_WristScale");
@@ -125,8 +117,8 @@ namespace Oculus.Interaction
             {
                 if (_root != null && Hand.GetRootPose(out Pose handRootPose))
                 {
-                    _root.position = handRootPose.position;
-                    _root.rotation = handRootPose.rotation;
+                    _root.localPosition = handRootPose.position;
+                    _root.localRotation = handRootPose.rotation;
                 }
             }
 
@@ -134,8 +126,7 @@ namespace Oculus.Interaction
             {
                 if (_root != null)
                 {
-                    float parentScale = _root.parent != null ? _root.parent.lossyScale.x : 1f;
-                    _root.localScale = Hand.Scale / parentScale * Vector3.one;
+                    _root.localScale = new Vector3(Hand.Scale, Hand.Scale, Hand.Scale);
                 }
             }
 
@@ -163,11 +154,6 @@ namespace Oculus.Interaction
         public Transform GetTransformByHandJointId(HandJointId handJointId)
         {
             return _jointTransforms[(int)handJointId];
-        }
-
-        public Pose GetJointPose(HandJointId jointId, Space space)
-        {
-            return GetTransformByHandJointId(jointId).GetPose(space);
         }
 
         #region Inject
@@ -208,7 +194,6 @@ namespace Oculus.Interaction
         {
             _handMaterialPropertyBlockEditor = editor;
         }
-
         #endregion
     }
 }

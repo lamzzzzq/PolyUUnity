@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System;
 using System.Collections.Generic;
@@ -64,7 +56,7 @@ namespace Oculus.Interaction
         }
         #endregion
 
-        public event Action<PointerEvent> WhenPointerEventRaised = delegate { };
+        public event Action<PointerArgs> WhenPointerEventRaised = delegate { };
 
         public List<Pose> Points => _points;
         public int PointsCount => _points.Count;
@@ -91,7 +83,7 @@ namespace Oculus.Interaction
 
             if (_forwardElement)
             {
-                this.AssertField(ForwardElement, nameof(ForwardElement));
+                Assert.IsNotNull(ForwardElement);
             }
 
             _points = new List<Pose>();
@@ -119,11 +111,6 @@ namespace Oculus.Interaction
         {
             if (_started)
             {
-                while (_selectingPoints.Count > 0)
-                {
-                    Cancel(new PointerEvent(_selectingPointIds[0], PointerEventType.Cancel, _selectingPoints[0]));
-                }
-
                 if (ForwardElement != null)
                 {
                     ForwardElement.WhenPointerEventRaised -= HandlePointerEventRaised;
@@ -131,76 +118,76 @@ namespace Oculus.Interaction
             }
         }
 
-        private void HandlePointerEventRaised(PointerEvent evt)
+        private void HandlePointerEventRaised(PointerArgs args)
         {
-            if (evt.Type == PointerEventType.Cancel)
+            if (args.PointerEvent == PointerEvent.Cancel)
             {
-                ProcessPointerEvent(evt);
+                ProcessPointerEvent(args);
             }
         }
 
-        public virtual void ProcessPointerEvent(PointerEvent evt)
+        public virtual void ProcessPointerEvent(PointerArgs args)
         {
-            switch (evt.Type)
+            switch (args.PointerEvent)
             {
-                case PointerEventType.Hover:
-                    Hover(evt);
+                case PointerEvent.Hover:
+                    Hover(args);
                     break;
-                case PointerEventType.Unhover:
-                    Unhover(evt);
+                case PointerEvent.Unhover:
+                    Unhover(args);
                     break;
-                case PointerEventType.Move:
-                    Move(evt);
+                case PointerEvent.Move:
+                    Move(args);
                     break;
-                case PointerEventType.Select:
-                    Select(evt);
+                case PointerEvent.Select:
+                    Select(args);
                     break;
-                case PointerEventType.Unselect:
-                    Unselect(evt);
+                case PointerEvent.Unselect:
+                    Unselect(args);
                     break;
-                case PointerEventType.Cancel:
-                    Cancel(evt);
+                case PointerEvent.Cancel:
+                    Cancel(args);
                     break;
             }
         }
 
-        private void Hover(PointerEvent evt)
+        private void Hover(PointerArgs args)
         {
             if (_addNewPointsToFront)
             {
-                _pointIds.Insert(0, evt.Identifier);
-                _points.Insert(0, evt.Pose);
+                _pointIds.Insert(0, args.Identifier);
+                _points.Insert(0, args.Pose);
             }
             else
             {
-                _pointIds.Add(evt.Identifier);
-                _points.Add(evt.Pose);
+                _pointIds.Add(args.Identifier);
+                _points.Add(args.Pose);
             }
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        private void Move(PointerEvent evt)
+        private void Move(PointerArgs args)
         {
-            int index = _pointIds.IndexOf(evt.Identifier);
+            int index = _pointIds.IndexOf(args.Identifier);
             if (index == -1)
             {
                 return;
             }
-            _points[index] = evt.Pose;
+            _points[index] = args.Pose;
 
-            index = _selectingPointIds.IndexOf(evt.Identifier);
+            index = _selectingPointIds.IndexOf(args.Identifier);
             if (index != -1)
             {
-                _selectingPoints[index] = evt.Pose;
+                _selectingPoints[index] = args.Pose;
             }
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        private void Unhover(PointerEvent evt)
+        private void Unhover(PointerArgs args)
         {
-            int index = _pointIds.IndexOf(evt.Identifier);
+            int index = _pointIds.IndexOf(args.Identifier);
             if (index == -1)
             {
                 return;
@@ -209,33 +196,33 @@ namespace Oculus.Interaction
             _pointIds.RemoveAt(index);
             _points.RemoveAt(index);
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        private void Select(PointerEvent evt)
+        private void Select(PointerArgs args)
         {
             if (_selectingPoints.Count == 1 && _transferOnSecondSelection)
             {
-                Cancel(new PointerEvent(_selectingPointIds[0], PointerEventType.Cancel, _selectingPoints[0]));
+                Cancel(new PointerArgs(_selectingPointIds[0], PointerEvent.Cancel, _selectingPoints[0]));
             }
 
             if (_addNewPointsToFront)
             {
-                _selectingPointIds.Insert(0, evt.Identifier);
-                _selectingPoints.Insert(0, evt.Pose);
+                _selectingPointIds.Insert(0, args.Identifier);
+                _selectingPoints.Insert(0, args.Pose);
             }
             else
             {
-                _selectingPointIds.Add(evt.Identifier);
-                _selectingPoints.Add(evt.Pose);
+                _selectingPointIds.Add(args.Identifier);
+                _selectingPoints.Add(args.Pose);
             }
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        private void Unselect(PointerEvent evt)
+        private void Unselect(PointerArgs args)
         {
-            int index = _selectingPointIds.IndexOf(evt.Identifier);
+            int index = _selectingPointIds.IndexOf(args.Identifier);
             if (index == -1)
             {
                 return;
@@ -244,19 +231,19 @@ namespace Oculus.Interaction
             _selectingPointIds.RemoveAt(index);
             _selectingPoints.RemoveAt(index);
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        private void Cancel(PointerEvent evt)
+        private void Cancel(PointerArgs args)
         {
-            int index = _selectingPointIds.IndexOf(evt.Identifier);
+            int index = _selectingPointIds.IndexOf(args.Identifier);
             if (index != -1)
             {
                 _selectingPointIds.RemoveAt(index);
                 _selectingPoints.RemoveAt(index);
             }
 
-            index = _pointIds.IndexOf(evt.Identifier);
+            index = _pointIds.IndexOf(args.Identifier);
             if (index != -1)
             {
                 _pointIds.RemoveAt(index);
@@ -267,16 +254,17 @@ namespace Oculus.Interaction
                 return;
             }
 
-            PointableElementUpdated(evt);
+            PointableElementUpdated(args);
         }
 
-        protected virtual void PointableElementUpdated(PointerEvent evt)
+
+        protected virtual void PointableElementUpdated(PointerArgs args)
         {
             if (ForwardElement != null)
             {
-                ForwardElement.ProcessPointerEvent(evt);
+                ForwardElement.ProcessPointerEvent(args);
             }
-            WhenPointerEventRaised.Invoke(evt);
+            WhenPointerEventRaised.Invoke(args);
         }
 
         #region Inject

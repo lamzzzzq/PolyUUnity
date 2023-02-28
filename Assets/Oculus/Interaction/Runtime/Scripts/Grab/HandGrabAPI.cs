@@ -1,72 +1,43 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
-using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Oculus.Interaction.GrabAPI
 {
-    /// <summary>
-    /// The HandGrabAPI wraps under the hood several IFingerAPIs to detect if
-    /// the fingers are grabbing or not. It differentiates between pinch and
-    /// palm grabs but via Inject it is possible to modify the detectors.
-    /// </summary>
     public class HandGrabAPI : MonoBehaviour
     {
         [SerializeField, Interface(typeof(IHand))]
         private MonoBehaviour _hand;
-
         public IHand Hand { get; private set; }
 
-        [SerializeField, Interface(typeof(IHmd)), Optional]
-        private MonoBehaviour _hmd;
+        private IFingerAPI _fingerPinchGrabAPI = new FingerPinchGrabAPI();
+        private IFingerAPI _fingerPalmGrabAPI = new FingerPalmGrabAPI();
 
-        public IHmd Hmd { get; private set; } = null;
-
-        private IFingerAPI _fingerPinchGrabAPI = null;
-        private IFingerAPI _fingerPalmGrabAPI = null;
-
-        private bool _started = false;
+        private bool _started;
 
         protected virtual void Awake()
         {
             Hand = _hand as IHand;
-            Hmd = _hmd as IHmd;
         }
 
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Hand, nameof(Hand));
-            if (_fingerPinchGrabAPI == null)
-            {
-                _fingerPinchGrabAPI = new FingerPinchGrabAPI(Hmd);
-            }
-            if (_fingerPalmGrabAPI == null)
-            {
-                _fingerPalmGrabAPI = new FingerPalmGrabAPI();
-            }
+            Assert.IsNotNull(Hand);
+            Assert.IsNotNull(_fingerPinchGrabAPI);
+            Assert.IsNotNull(_fingerPalmGrabAPI);
             this.EndStart(ref _started);
         }
 
@@ -357,12 +328,6 @@ namespace Oculus.Interaction.GrabAPI
             Hand = hand;
         }
 
-        public void InjectOptionalHmd(IHmd hmd)
-        {
-            Hmd = hmd;
-            _hmd = hmd as MonoBehaviour;
-        }
-
         public void InjectOptionalFingerPinchAPI(IFingerAPI fingerPinchAPI)
         {
             _fingerPinchGrabAPI = fingerPinchAPI;
@@ -372,6 +337,7 @@ namespace Oculus.Interaction.GrabAPI
         {
             _fingerPalmGrabAPI = fingerGrabAPI;
         }
+
         #endregion
     }
 }

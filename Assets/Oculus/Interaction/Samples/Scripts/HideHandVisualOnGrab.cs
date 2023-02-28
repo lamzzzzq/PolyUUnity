@@ -1,26 +1,20 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
-using Oculus.Interaction.HandGrab;
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
+
+using Oculus.Interaction.HandPosing;
+using System;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Serialization;
 
 namespace Oculus.Interaction.Samples
 {
@@ -29,19 +23,12 @@ namespace Oculus.Interaction.Samples
         [SerializeField]
         private HandGrabInteractor _handGrabInteractor;
 
-        [SerializeField, Interface(typeof(IHandVisual))]
-        private MonoBehaviour _handVisual;
-
-        private IHandVisual HandVisual;
-
-        protected virtual void Awake()
-        {
-            HandVisual = _handVisual as IHandVisual;
-        }
+        [SerializeField]
+        private HandVisual _handVisual;
 
         protected virtual void Start()
         {
-            this.AssertField(HandVisual, nameof(HandVisual));
+            Assert.IsNotNull(_handVisual);
         }
 
         protected virtual void Update()
@@ -57,19 +44,19 @@ namespace Oculus.Interaction.Samples
             {
                 if (shouldHideHandComponent.TryGetComponent(out ShouldHideHandOnGrab component))
                 {
-                    HandVisual.ForceOffVisibility = true;
+                    _handVisual.ForceOffVisibility = true;
                 }
             }
             else
             {
-                HandVisual.ForceOffVisibility = false;
+                _handVisual.ForceOffVisibility = false;
             }
         }
 
         #region Inject
 
         public void InjectAll(HandGrabInteractor handGrabInteractor,
-             IHandVisual handVisual)
+             HandVisual handVisual)
         {
             InjectHandGrabInteractor(handGrabInteractor);
             InjectHandVisual(handVisual);
@@ -79,10 +66,9 @@ namespace Oculus.Interaction.Samples
             _handGrabInteractor = handGrabInteractor;
         }
 
-        private void InjectHandVisual(IHandVisual handVisual)
+        private void InjectHandVisual(HandVisual handVisual)
         {
-            _handVisual = handVisual as MonoBehaviour;
-            HandVisual = handVisual;
+            _handVisual = handVisual;
         }
 
 

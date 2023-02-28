@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System;
 using UnityEngine;
@@ -41,16 +33,7 @@ namespace Oculus.Interaction
         }
 
         [SerializeField]
-        private OneGrabTranslateConstraints _constraints =
-            new OneGrabTranslateConstraints()
-        {
-            MinX = new FloatConstraint(),
-            MaxX = new FloatConstraint(),
-            MinY = new FloatConstraint(),
-            MaxY = new FloatConstraint(),
-            MinZ = new FloatConstraint(),
-            MaxZ = new FloatConstraint()
-        };
+        private OneGrabTranslateConstraints _constraints;
 
         public OneGrabTranslateConstraints Constraints
         {
@@ -67,8 +50,11 @@ namespace Oculus.Interaction
         }
 
         private OneGrabTranslateConstraints _parentConstraints = null;
-        private Vector3 _initialPosition;
-        private Vector3 _grabOffsetInLocalSpace;
+
+        private Vector3 _initialPosition = new Vector3();
+        private Vector3 _positionDelta = new Vector3();
+
+        private Pose _previousGrabPose;
 
         private IGrabbable _grabbable;
 
@@ -78,7 +64,6 @@ namespace Oculus.Interaction
             _initialPosition = _grabbable.Transform.localPosition;
             GenerateParentConstraints();
         }
-
         private void GenerateParentConstraints()
         {
             if (!_constraints.ConstraintsAreRelative)
@@ -131,18 +116,27 @@ namespace Oculus.Interaction
 
         public void BeginTransform()
         {
-            var grabPoint = _grabbable.GrabPoints[0];
+            // Save initial position in parent space
             Transform targetTransform = _grabbable.Transform;
-            _grabOffsetInLocalSpace = targetTransform.InverseTransformVector(
-                    grabPoint.position - targetTransform.position);
+            _initialPosition = targetTransform.localPosition;
+            _positionDelta = Vector3.zero;
+            var grabPoint = _grabbable.GrabPoints[0];
+            _previousGrabPose = grabPoint;
         }
 
         public void UpdateTransform()
         {
             var grabPoint = _grabbable.GrabPoints[0];
             var targetTransform = _grabbable.Transform;
-            var constrainedPosition = grabPoint.position -
-                                      targetTransform.TransformVector(_grabOffsetInLocalSpace);
+
+            var initialPositionWorldSpace = _initialPosition;
+            if (targetTransform.parent != null)
+            {
+                initialPositionWorldSpace = targetTransform.parent.TransformPoint(_initialPosition);
+            }
+
+            _positionDelta += grabPoint.position - _previousGrabPose.position;
+            var constrainedPosition = _positionDelta + initialPositionWorldSpace;
 
             // the translation constraints occur in parent space
             if (targetTransform.parent != null)
@@ -182,6 +176,8 @@ namespace Oculus.Interaction
             }
 
             targetTransform.position = constrainedPosition;
+
+            _previousGrabPose = grabPoint;
         }
 
         public void EndTransform() { }

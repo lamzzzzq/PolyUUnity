@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,17 +55,17 @@ namespace Oculus.Interaction
 
         protected override void Start()
         {
-            this.BeginStart(ref _started, () => base.Start());
+            this.BeginStart(ref _started, base.Start);
 
-            if (_oneGrabTransformer != null)
+            if (OneGrabTransformer != null)
             {
-                this.AssertField(OneGrabTransformer, nameof(OneGrabTransformer));
+                Assert.IsNotNull(OneGrabTransformer);
                 OneGrabTransformer.Initialize(this);
             }
 
-            if (_twoGrabTransformer != null)
+            if (TwoGrabTransformer != null)
             {
-                this.AssertField(TwoGrabTransformer, nameof(TwoGrabTransformer));
+                Assert.IsNotNull(TwoGrabTransformer);
                 TwoGrabTransformer.Initialize(this);
             }
 
@@ -90,32 +82,32 @@ namespace Oculus.Interaction
             this.EndStart(ref _started);
         }
 
-        public override void ProcessPointerEvent(PointerEvent evt)
+        public override void ProcessPointerEvent(PointerArgs args)
         {
-            switch (evt.Type)
+            switch (args.PointerEvent)
             {
-                case PointerEventType.Select:
+                case PointerEvent.Select:
                     EndTransform();
                     break;
-                case PointerEventType.Unselect:
+                case PointerEvent.Unselect:
                     EndTransform();
                     break;
-                case PointerEventType.Cancel:
+                case PointerEvent.Cancel:
                     EndTransform();
                     break;
             }
 
-            base.ProcessPointerEvent(evt);
+            base.ProcessPointerEvent(args);
 
-            switch (evt.Type)
+            switch (args.PointerEvent)
             {
-                case PointerEventType.Select:
+                case PointerEvent.Select:
                     BeginTransform();
                     break;
-                case PointerEventType.Unselect:
+                case PointerEvent.Unselect:
                     BeginTransform();
                     break;
-                case PointerEventType.Move:
+                case PointerEvent.Move:
                     UpdateTransform();
                     break;
             }
@@ -174,16 +166,6 @@ namespace Oculus.Interaction
             }
             _activeTransformer.EndTransform();
             _activeTransformer = null;
-        }
-
-        protected override void OnDisable()
-        {
-            if (_started)
-            {
-                EndTransform();
-            }
-
-            base.OnDisable();
         }
 
         #region Inject

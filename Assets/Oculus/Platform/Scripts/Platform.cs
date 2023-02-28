@@ -97,45 +97,6 @@ namespace Oculus.Platform
       return request;
     }
 
-    /// (BETA) For use on platforms where the Oculus service isn't running with additional
-    /// config options to pass in.
-    ///
-    /// eg:
-    ///
-    ///  var config = new Dictionary<InitConfigOptions, bool>{
-    ///    [InitConfigOptions.DisableP2pNetworking] = true
-    ///  };
-    /// Platform.Core.AsyncInitialize("{access_token}", config);
-    public static Request<Models.PlatformInitialize> AsyncInitialize(string accessToken, Dictionary<InitConfigOptions, bool> initConfigOptions, string appId = null) {
-      appId = getAppID(appId);
-
-      Request<Models.PlatformInitialize> request;
-      if (UnityEngine.Application.isEditor ||
-        UnityEngine.Application.platform == RuntimePlatform.WindowsEditor ||
-        UnityEngine.Application.platform == RuntimePlatform.WindowsPlayer) {
-
-        var platform = new StandalonePlatform();
-        request = platform.AsyncInitializeWithAccessTokenAndOptions(appId, accessToken, initConfigOptions);
-      }
-      else {
-        throw new NotImplementedException("Initializing with access token is not implemented on this platform yet.");
-      }
-
-      IsPlatformInitialized = (request != null);
-
-      if (!IsPlatformInitialized)
-      {
-        throw new UnityException("Oculus Standalone Platform failed to initialize. Check if the access token or app id is correct.");
-      }
-
-      if (LogMessages) {
-        Debug.LogWarning("Oculus.Platform.Core.LogMessages is set to true. This will cause extra heap allocations, and should not be used outside of testing and debugging.");
-      }
-
-      // Create the GameObject that will run the callbacks
-      (new GameObject("Oculus.Platform.CallbackRunner")).AddComponent<CallbackRunner>();
-      return request;
-    }
 
     public static void Initialize(string appId = null)
     {
@@ -197,7 +158,6 @@ namespace Oculus.Platform
   public static partial class Rooms
   {
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static Request<Models.Room> UpdateDataStore(UInt64 roomID, Dictionary<string, string> data)
     {
       if (Core.IsInitialized())
@@ -215,7 +175,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     [Obsolete("Deprecated in favor of SetRoomInviteAcceptedNotificationCallback")]
     public static void SetRoomInviteNotificationCallback(Message<string>.Callback callback)
     {
@@ -224,16 +183,13 @@ namespace Oculus.Platform
 
   }
 
-  /// DEPRECATED. Will be removed from headers at version v51.
   public static partial class Matchmaking
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
     public class CustomQuery
     {
       public Dictionary<string, object> data;
       public Criterion[] criteria;
 
-      /// DEPRECATED. Will be removed from headers at version v51.
       public struct Criterion
       {
         public Criterion(string key_, MatchmakingCriterionImportance importance_)
@@ -249,7 +205,6 @@ namespace Oculus.Platform
         public Dictionary<string, object> parameters;
       }
 
-      /// DEPRECATED. Will be removed from headers at version v51.
       public IntPtr ToUnmanaged()
       {
         var customQueryUnmanaged = new CAPI.ovrMatchmakingCustomQueryData();
@@ -302,7 +257,6 @@ namespace Oculus.Platform
       }
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static Request ReportResultsInsecure(UInt64 roomID, Dictionary<string, int> data)
     {
       if(Core.IsInitialized())
@@ -321,7 +275,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static Request<Models.MatchmakingStats> GetStats(string pool, uint maxLevel, MatchmakingStatApproach approach = MatchmakingStatApproach.Trailing)
     {
       if (Core.IsInitialized())
@@ -334,11 +287,8 @@ namespace Oculus.Platform
     }
   }
 
-
-  /// DEPRECATED. Will be removed from headers at version v51.
   public static partial class Net
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static Packet ReadPacket()
     {
       if (!Core.IsInitialized())
@@ -357,7 +307,6 @@ namespace Oculus.Platform
       return new Packet(packetHandle);
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static bool SendPacket(UInt64 userID, byte[] bytes, SendPolicy policy)
     {
       if(Core.IsInitialized())
@@ -368,7 +317,6 @@ namespace Oculus.Platform
       return false;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static void Connect(UInt64 userID)
     {
       if (Core.IsInitialized())
@@ -377,7 +325,6 @@ namespace Oculus.Platform
       }
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static void Accept(UInt64 userID)
     {
       if(Core.IsInitialized())
@@ -386,7 +333,6 @@ namespace Oculus.Platform
       }
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static void Close(UInt64 userID)
     {
       if(Core.IsInitialized())
@@ -395,13 +341,11 @@ namespace Oculus.Platform
       }
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static bool IsConnected(UInt64 userID)
     {
       return Core.IsInitialized() && CAPI.ovr_Net_IsConnected(userID);
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static bool SendPacketToCurrentRoom(byte[] bytes, SendPolicy policy)
     {
       if (Core.IsInitialized())
@@ -412,7 +356,6 @@ namespace Oculus.Platform
       return false;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static bool AcceptForCurrentRoom()
     {
       if (Core.IsInitialized())
@@ -423,7 +366,6 @@ namespace Oculus.Platform
       return false;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static void CloseForCurrentRoom()
     {
       if (Core.IsInitialized())
@@ -432,7 +374,6 @@ namespace Oculus.Platform
       }
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
     public static Request<Models.PingResult> Ping(UInt64 userID)
     {
       if(Core.IsInitialized())
@@ -627,31 +568,6 @@ namespace Oculus.Platform
 
   public static partial class AbuseReport
   {
-    /// The currently running application has indicated they want to show their in-
-    /// app reporting flow or that they choose to ignore the request.
-    ///
-    public static Request ReportRequestHandled(ReportRequestResponse response)
-    {
-      if (Core.IsInitialized())
-      {
-        return new Request(CAPI.ovr_AbuseReport_ReportRequestHandled(response));
-      }
-
-      Debug.LogError(Oculus.Platform.Core.PlatformUninitializedError);
-      return null;
-    }
-
-    /// The user has tapped the report button in the panel that appears after
-    /// pressing the Oculus button.
-    ///
-    public static void SetReportButtonPressedNotificationCallback(Message<string>.Callback callback)
-    {
-      Callback.SetNotificationCallback(
-        Message.MessageType.Notification_AbuseReport_ReportButtonPressed,
-        callback
-      );
-    }
-
   }
 
   public static partial class Achievements
@@ -1014,19 +930,10 @@ namespace Oculus.Platform
 
   public static partial class Avatar
   {
-    /// Launches the Avatar Editor
-    ///
-    public static Request<Models.AvatarEditorResult> LaunchAvatarEditor(AvatarEditorOptions options = null)
-    {
-      if (Core.IsInitialized())
-      {
-        return new Request<Models.AvatarEditorResult>(CAPI.ovr_Avatar_LaunchAvatarEditor((IntPtr)options));
-      }
+  }
 
-      Debug.LogError(Oculus.Platform.Core.PlatformUninitializedError);
-      return null;
-    }
-
+  public static partial class Cal
+  {
   }
 
   public static partial class Challenges
@@ -1087,7 +994,7 @@ namespace Oculus.Platform
     /// Requests a block of challenge entries.
     /// \param challengeID The id of the challenge whose entries to return.
     /// \param limit Defines the maximum number of entries to return.
-    /// \param filter By using ovrLeaderboard_FilterFriends, this allows you to filter the returned values to bidirectional followers.
+    /// \param filter Allows you to restrict the returned values by friends.
     /// \param startAt Defines whether to center the query on the user or start at the top of the challenge.
     ///
     public static Request<Models.ChallengeEntryList> GetEntries(UInt64 challengeID, int limit, LeaderboardFilterType filter, LeaderboardStartAt startAt)
@@ -1191,8 +1098,6 @@ namespace Oculus.Platform
 
   public static partial class CloudStorage
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Deletes the specified save data buffer. Conflicts are handled just like
     /// Saves.
     /// \param bucket The name of the storage bucket.
@@ -1209,8 +1114,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Loads the saved entry for the specified bucket and key. If a conflict
     /// exists with the key then an error message is returned.
     /// \param bucket The name of the storage bucket.
@@ -1227,8 +1130,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Loads all the metadata for the saves in the specified bucket, including
     /// conflicts.
     /// \param bucket The name of the storage bucket.
@@ -1244,8 +1145,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Loads the metadata for this bucket-key combination that need to be manually
     /// resolved.
     /// \param bucket The name of the storage bucket
@@ -1262,8 +1161,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Loads the data specified by the storage handle.
     ///
     public static Request<Models.CloudStorageData> LoadHandle(string handle)
@@ -1277,8 +1174,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// load the metadata for the specified key
     /// \param bucket The name of the storage bucket.
     /// \param key The name for this saved data.
@@ -1294,8 +1189,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Selects the local save for manual conflict resolution.
     /// \param bucket The name of the storage bucket.
     /// \param key The name for this saved data.
@@ -1312,8 +1205,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Selects the remote save for manual conflict resolution.
     /// \param bucket The name of the storage bucket.
     /// \param key The name for this saved data.
@@ -1330,8 +1221,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Note: Cloud Storage is only available for Rift apps.
     ///
     /// Send a save data buffer to the platform. CloudStorage.Save() passes a
@@ -1364,8 +1253,6 @@ namespace Oculus.Platform
 
   public static partial class CloudStorage2
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Get the directory path for the current user/app pair that will be used
     /// during cloud storage synchronization
     ///
@@ -1380,6 +1267,10 @@ namespace Oculus.Platform
       return null;
     }
 
+  }
+
+  public static partial class Colocation
+  {
   }
 
   public static partial class Entitlements
@@ -1399,6 +1290,10 @@ namespace Oculus.Platform
 
   }
 
+  public static partial class GraphAPI
+  {
+  }
+
   public static partial class GroupPresence
   {
     /// Clear group presence for running app
@@ -1415,7 +1310,7 @@ namespace Oculus.Platform
     }
 
     /// Returns a list of users that can be invited to your current lobby. These
-    /// are pulled from your bidirectional followers and recently met lists.
+    /// are pulled from your friends and recently met lists.
     ///
     public static Request<Models.UserList> GetInvitableUsers(InviteOptions options)
     {
@@ -1428,7 +1323,8 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// Get the application invites which have been sent by the user.
+    /// Returns a list of users that can be invited to your current lobby. These
+    /// are pulled from your friends and recently met lists.
     ///
     public static Request<Models.ApplicationInviteList> GetSentInvites()
     {
@@ -1499,7 +1395,8 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// Send application invites to the passed in userIDs.
+    /// Returns a list of users that can be invited to your current lobby. These
+    /// are pulled from your friends and recently met lists.
     ///
     public static Request<Models.SendInvitesResult> SendInvites(UInt64[] userIDs)
     {
@@ -1519,21 +1416,6 @@ namespace Oculus.Platform
       if (Core.IsInitialized())
       {
         return new Request(CAPI.ovr_GroupPresence_Set((IntPtr)groupPresenceOptions));
-      }
-
-      Debug.LogError(Oculus.Platform.Core.PlatformUninitializedError);
-      return null;
-    }
-
-    /// Set the user's deeplink message while keeping the other group presence
-    /// parameters the same. If the destination of the user is not set, the
-    /// deeplink message cannot be set as there's no deeplink message to override.
-    ///
-    public static Request SetDeeplinkMessageOverride(string deeplink_message)
-    {
-      if (Core.IsInitialized())
-      {
-        return new Request(CAPI.ovr_GroupPresence_SetDeeplinkMessageOverride(deeplink_message));
       }
 
       Debug.LogError(Oculus.Platform.Core.PlatformUninitializedError);
@@ -1636,6 +1518,10 @@ namespace Oculus.Platform
       );
     }
 
+  }
+
+  public static partial class HTTP
+  {
   }
 
   public static partial class IAP
@@ -1779,7 +1665,7 @@ namespace Oculus.Platform
     /// Requests a block of leaderboard entries.
     /// \param leaderboardName The name of the leaderboard whose entries to return.
     /// \param limit Defines the maximum number of entries to return.
-    /// \param filter By using ovrLeaderboard_FilterFriends, this allows you to filter the returned values to bidirectional followers.
+    /// \param filter Allows you to restrict the returned values by friends.
     /// \param startAt Defines whether to center the query on the user or start at the top of the leaderboard.
     ///
     /// <b>Error codes</b>
@@ -1898,7 +1784,7 @@ namespace Oculus.Platform
 
   public static partial class Matchmaking
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use Browse2.
     /// \param pool A BROWSE type matchmaking pool.
     /// \param customQueryData Optional. Custom query data.
     ///
@@ -1917,8 +1803,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: BROWSE
     ///
     /// See overview documentation above.
@@ -1950,7 +1834,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use Cancel2.
     /// \param pool The pool in question.
     /// \param requestHash Used to find your entry in a queue.
     ///
@@ -1971,8 +1855,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: QUICKMATCH, BROWSE
     ///
     /// Makes a best effort to cancel a previous Enqueue request before a match
@@ -1999,7 +1881,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use CreateAndEnqueueRoom2.
     /// \param pool The matchmaking pool to use, which is defined for the app.
     /// \param maxUsers Overrides the Max Users value, which is configured in pool settings of the Developer Dashboard.
     /// \param subscribeToUpdates If true, sends a message with type MessageType.Notification_Room_RoomUpdate when the room data changes, such as when users join or leave.
@@ -2022,8 +1904,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: BROWSE, QUICKMATCH (Advanced; Can Users Create Rooms = true)
     ///
     /// See overview documentation above.
@@ -2054,7 +1934,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use CreateRoom2.
     /// \param pool The matchmaking pool to use, which is defined for the app.
     /// \param maxUsers Overrides the Max Users value, which is configured in pool settings of the Developer Dashboard.
     /// \param subscribeToUpdates If true, sends a message with type MessageType.Notification_Room_RoomUpdate when room data changes, such as when users join or leave.
@@ -2070,8 +1950,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Create a matchmaking room and join it, but do not enqueue the room. After
     /// creation, you can call EnqueueRoom2. However, Oculus recommends using
     /// CreateAndEnqueueRoom2 instead.
@@ -2098,7 +1976,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use Enqueue2.
     /// \param pool The pool to enqueue in.
     /// \param customQueryData Optional.  See "Custom criteria" section above.
     ///
@@ -2117,8 +1995,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: QUICKMATCH
     ///
     /// See overview documentation above.
@@ -2148,7 +2024,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Please use Matchmaking.EnqueueRoom2() instead.
     /// \param roomID Returned either from MessageType.Notification_Matchmaking_MatchFound or from Matchmaking.CreateRoom().
     /// \param customQueryData Optional.  See the "Custom criteria" section above.
     ///
@@ -2170,8 +2046,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: BROWSE (for Rooms only), ROOM
     ///
     /// See the overview documentation above. Enqueue yourself to await an
@@ -2203,8 +2077,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: QUICKMATCH, BROWSE
     ///
     /// Used to debug the state of the current matchmaking pool queue. This is not
@@ -2221,7 +2093,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use ovr_Room_Join2.
     /// \param roomID ID of a room previously returned from MessageType.Notification_Matchmaking_MatchFound or Matchmaking.Browse().
     /// \param subscribeToUpdates If true, sends a message with type MessageType.Notification_Room_RoomUpdate when room data changes, such as when users join or leave.
     ///
@@ -2236,8 +2108,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Modes: QUICKMATCH, BROWSE (+ Skill Pool)
     ///
     /// For pools with skill-based matching. See overview documentation above.
@@ -2261,8 +2131,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Indicates that a match has been found, for example after calling
     /// Matchmaking.Enqueue(). Use Message.GetRoom() to extract the matchmaking
     /// room.
@@ -2330,8 +2198,6 @@ namespace Oculus.Platform
 
   public static partial class Net
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Indicates that a connection has been established or there's been an error.
     /// Use NetworkingPeer.GetState() to get the result; as above,
     /// NetworkingPeer.GetID() returns the ID of the peer this message is for.
@@ -2344,8 +2210,6 @@ namespace Oculus.Platform
       );
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Indicates that another user is attempting to establish a P2P connection
     /// with us. Use NetworkingPeer.GetID() to extract the ID of the peer.
     ///
@@ -2357,8 +2221,6 @@ namespace Oculus.Platform
       );
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Generated in response to Net.Ping(). Either contains ping time in
     /// microseconds or indicates that there was a timeout.
     ///
@@ -2374,8 +2236,6 @@ namespace Oculus.Platform
 
   public static partial class Notifications
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Retrieve a list of all pending room invites for your application (for
     /// example, notifications that may have been sent before the user launched
     /// your game). You can also get push notifications with
@@ -2480,7 +2340,7 @@ namespace Oculus.Platform
 
   public static partial class Rooms
   {
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use CreateAndJoinPrivate2.
     /// \param joinPolicy Specifies who can join the room without an invite.
     /// \param maxUsers The maximum number of users allowed in the room, including the creator.
     /// \param subscribeToUpdates If true, sends a message with type MessageType.Notification_Room_RoomUpdate when room data changes, such as when users join or leave.
@@ -2500,12 +2360,10 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Creates a new private (client controlled) room and adds the caller to it.
     /// This type of room is good for matches where the user wants to play with
     /// friends, as they're primarially discoverable by examining which rooms your
-    /// bidirectional followers are in.
+    /// friends are in.
     /// \param joinPolicy Specifies who can join the room without an invite.
     /// \param maxUsers The maximum number of users allowed in the room, including the creator.
     /// \param roomOptions Additional room configuration for this request. Optional.
@@ -2525,8 +2383,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Allows arbitrary rooms for the application to be loaded.
     /// \param roomID The room to load.
     ///
@@ -2541,8 +2397,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Easy loading of the room you're currently in. If you don't want live
     /// updates on your current room (by using subscribeToUpdates), you can use
     /// this to refresh the data.
@@ -2558,8 +2412,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Allows the current room for a given user to be loaded. Remember that the
     /// user's privacy settings may not allow their room to be loaded. Because of
     /// this, it's often possible to load the users in a room, but not to take
@@ -2577,7 +2429,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
+    /// DEPRECATED. Use GetInvitableUsers2.
     ///
     public static Request<Models.UserList> GetInvitableUsers()
     {
@@ -2590,13 +2442,10 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Loads a list of users you can invite to a room. These are pulled from your
-    /// bidirectional followers list and recently met lists and filtered for
-    /// relevance and interest. If the room cannot be joined, this list will be
-    /// empty. By default, the invitable users returned will be for the user's
-    /// current room.
+    /// friends list and recently met lists and filtered for relevance and
+    /// interest. If the room cannot be joined, this list will be empty. By
+    /// default, the invitable users returned will be for the user's current room.
     ///
     /// If your application grouping was created after September 9 2017, recently
     /// met users will be included by default. If your application grouping was
@@ -2642,8 +2491,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Fetches the list of moderated rooms created for the application.
     ///
     public static Request<Models.RoomList> GetModeratedRooms()
@@ -2657,8 +2504,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Invites a user to the specified room. They will receive a notification via
     /// MessageType.Notification_Room_InviteReceived if they are in your game,
     /// and/or they can poll for room invites using
@@ -2682,8 +2527,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Joins the target room (leaving the one you're currently in).
     /// \param roomID The room to join.
     /// \param subscribeToUpdates If true, sends a message with type MessageType.Notification_Room_RoomUpdate when room data changes, such as when users join or leave.
@@ -2706,8 +2549,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Joins the target room (leaving the one you're currently in).
     /// \param roomID The room to join.
     /// \param roomOptions Additional room configuration for this request. Optional.
@@ -2730,8 +2571,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Allows the room owner to kick a user out of the current room.
     /// \param roomID The room that you currently own (check Room.GetOwner()).
     /// \param userID The user to be kicked (cannot be yourself).
@@ -2753,8 +2592,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Launch the invitable user flow to invite to the logged in user's current
     /// room. This is intended to be a nice shortcut for developers not wanting to
     /// build out their own Invite UI although it has the same rules as if you
@@ -2771,8 +2608,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Removes you from your current room. Returns the solo room you are now in if
     /// it succeeds
     /// \param roomID The room you're currently in.
@@ -2791,8 +2626,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Allows the room owner to set the description of their room.
     /// \param roomID The room that you currently own (check Room.GetOwner()).
     /// \param description The new name of the room.
@@ -2813,8 +2646,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Disallow new members from being able to join the room. This will prevent
     /// joins from Rooms.Join(), invites, 'Join From Home', etc. Users that are in
     /// the room at the time of lockdown WILL be able to rejoin.
@@ -2838,8 +2669,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Allows the room owner to transfer ownership to someone else.
     /// \param roomID The room that the user owns (check Room.GetOwner()).
     /// \param userID The new user to make an owner; the user must be in the room.
@@ -2861,8 +2690,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Sets the join policy of the user's private room.
     /// \param roomID The room ID that the user owns (check Room.GetOwner()).
     /// \param newJoinPolicy The new join policy for the room.
@@ -2882,8 +2709,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Indicates that the user has accepted an invitation, for example in Oculus
     /// Home. Use Message.GetString() to extract the ID of the room that the user
     /// has been inivted to as a string. Then call ovrID_FromString() to parse it
@@ -2899,8 +2724,6 @@ namespace Oculus.Platform
       );
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Handle this to notify the user when they've received an invitation to join
     /// a room in your game. You can use this in lieu of, or in addition to,
     /// polling for room invitations via
@@ -2914,8 +2737,6 @@ namespace Oculus.Platform
       );
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Indicates that the current room has been updated. Use Message.GetRoom() to
     /// extract the updated room.
     ///
@@ -2927,6 +2748,10 @@ namespace Oculus.Platform
       );
     }
 
+  }
+
+  public static partial class Session
+  {
   }
 
   public static partial class Users
@@ -2997,7 +2822,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// Retrieve a list of the logged in user's bidirectional followers.
+    /// Retrieve a list of the logged in user's friends.
     ///
     public static Request<Models.UserList> GetLoggedInUserFriends()
     {
@@ -3010,11 +2835,8 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Use Users.GetLoggedInUserFriends() instead Will be removed from
-    /// headers at version v51.
-    ///
-    /// Retrieve a list of the logged in user's bidirectional followers and any
-    /// rooms they might be in.
+    /// Retrieve a list of the logged in user's friends and any rooms they might be
+    /// in.
     ///
     public static Request<Models.UserAndRoomList> GetLoggedInUserFriendsAndRooms()
     {
@@ -3027,8 +2849,6 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// DEPRECATED. Will be removed from headers at version v51.
-    ///
     /// Returns a list of users that the logged in user was in a room with
     /// recently, sorted by relevance, along with any rooms they might be in. All
     /// you need to do to use this method is to use our Rooms API, and we will
@@ -3105,7 +2925,7 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// Launch the flow for blocking the given user. You can't follow, be followed,
+    /// Launch the flow for blocking the given user. You can't be friended,
     /// invited, or searched by a blocked user, for example. You can remove the
     /// block via ovr_User_LaunchUnblockFlow.
     /// \param userID User ID of user being blocked
@@ -3121,8 +2941,8 @@ namespace Oculus.Platform
       return null;
     }
 
-    /// Launch the flow for sending a follow request to a user.
-    /// \param userID User ID of user to send a follow request to
+    /// Launch the flow for sending a friend request to a user.
+    /// \param userID User ID of user to send a friend request to
     ///
     public static Request<Models.LaunchFriendRequestFlowResult> LaunchFriendRequestFlow(UInt64 userID)
     {

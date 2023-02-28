@@ -1,26 +1,19 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System;
 using Oculus.Interaction.Input;
 using UnityEngine;
+using UnityEngine.Assertions;
 using System.Collections.Generic;
 
 namespace Oculus.Interaction.PoseDetection
@@ -87,15 +80,12 @@ namespace Oculus.Interaction.PoseDetection
         [Serializable]
         public class JointRotationFeatureConfig : FeatureConfigBase<HandJointId>
         {
-            [Tooltip("The detection axis will be in this coordinate space.")]
             [SerializeField]
             private RelativeTo _relativeTo = RelativeTo.Hand;
 
-            [Tooltip("The world axis used for detection.")]
             [SerializeField]
             private WorldAxis _worldAxis = WorldAxis.PositiveZ;
 
-            [Tooltip("The axis of the hand root pose used for detection.")]
             [SerializeField]
             private HandAxis _handAxis = HandAxis.RadialDeviation;
 
@@ -104,32 +94,19 @@ namespace Oculus.Interaction.PoseDetection
             public HandAxis HandAxis => _handAxis;
         }
 
-        [Tooltip("Provided joints will be sourced from this IHand.")]
         [SerializeField, Interface(typeof(IHand))]
         private MonoBehaviour _hand;
         public IHand Hand { get; private set; }
 
-        [Tooltip("JointDeltaProvider caches joint deltas to avoid " +
-            "unnecessary recomputing of deltas.")]
-        [SerializeField, Interface(typeof(IJointDeltaProvider))]
-        private MonoBehaviour _jointDeltaProvider;
-
         [SerializeField]
         private JointRotationFeatureConfigList _featureConfigs;
 
-        [Tooltip("The angular velocity used for the detection " +
-            "threshold, in degrees per second.")]
         [SerializeField, Min(0)]
         private float _degreesPerSecond = 120f;
 
-        [Tooltip("The degrees per second value will be modified by this width " +
-            "to create differing enter/exit thresholds. Used to prevent " +
-            "chattering at the threshold edge.")]
         [SerializeField, Min(0)]
         private float _thresholdWidth = 30f;
 
-        [Tooltip("A new state must be maintaned for at least this " +
-            "many seconds before the Active property changes.")]
         [SerializeField, Min(0)]
         private float _minTimeInState = 0.05f;
 
@@ -158,7 +135,7 @@ namespace Oculus.Interaction.PoseDetection
 
 
         private JointDeltaConfig _jointDeltaConfig;
-        private IJointDeltaProvider JointDeltaProvider;
+        private JointDeltaProvider JointDeltaProvider { get; set; }
 
         private Func<float> _timeProvider;
         private int _lastStateUpdateFrame;
@@ -172,7 +149,6 @@ namespace Oculus.Interaction.PoseDetection
         protected virtual void Awake()
         {
             Hand = _hand as IHand;
-            JointDeltaProvider = _jointDeltaProvider as IJointDeltaProvider;
             _timeProvider = () => Time.time;
         }
 
@@ -180,10 +156,9 @@ namespace Oculus.Interaction.PoseDetection
         {
             this.BeginStart(ref _started);
 
-            this.AssertField(Hand, nameof(Hand));
-            this.AssertField(JointDeltaProvider, nameof(JointDeltaProvider));
-            this.AssertCollectionField(FeatureConfigs, nameof(FeatureConfigs));
-            this.AssertField(_timeProvider, nameof(_timeProvider));
+            Assert.IsNotNull(Hand);
+            Assert.IsNotNull(FeatureConfigs);
+            Assert.IsNotNull(_timeProvider);
 
             IList<HandJointId> allTrackedJoints = new List<HandJointId>();
             foreach (var config in FeatureConfigs)
@@ -193,6 +168,9 @@ namespace Oculus.Interaction.PoseDetection
             }
             _jointDeltaConfig = new JointDeltaConfig(GetInstanceID(), allTrackedJoints);
 
+            bool foundAspect = Hand.GetHandAspect(out JointDeltaProvider aspect);
+            Assert.IsTrue(foundAspect);
+            JointDeltaProvider = aspect;
 
             _lastUpdateTime = _timeProvider();
             this.EndStart(ref _started);
@@ -353,11 +331,10 @@ namespace Oculus.Interaction.PoseDetection
         #region Inject
 
         public void InjectAllJointRotationActiveState(JointRotationFeatureConfigList featureConfigs,
-                                                      IHand hand, IJointDeltaProvider jointDeltaProvider)
+                                                      IHand hand)
         {
             InjectFeatureConfigList(featureConfigs);
             InjectHand(hand);
-            InjectJointDeltaProvider(jointDeltaProvider);
         }
 
         public void InjectFeatureConfigList(JointRotationFeatureConfigList featureConfigs)
@@ -369,12 +346,6 @@ namespace Oculus.Interaction.PoseDetection
         {
             _hand = hand as MonoBehaviour;
             Hand = hand;
-        }
-
-        public void InjectJointDeltaProvider(IJointDeltaProvider jointDeltaProvider)
-        {
-            JointDeltaProvider = jointDeltaProvider;
-            _jointDeltaProvider = jointDeltaProvider as MonoBehaviour;
         }
 
         public void InjectOptionalTimeProvider(Func<float> timeProvider)

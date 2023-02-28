@@ -1,31 +1,23 @@
-﻿/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+﻿/**************************************************************************************************
+ * Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
  *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
+ * Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
  * https://developer.oculus.com/licenses/oculussdk/
  *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+ * Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+ * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ **************************************************************************************************/
 
 using UnityEngine;
 using UnityEditor;
-using Meta.WitAi.Windows;
-using Meta.WitAi.Configuration;
-using Meta.WitAi.Data.Entities;
-using Meta.WitAi.TTS.Editor;
-using Meta.WitAi.TTS.Editor.Preload;
-using Meta.WitAi.Data.Info;
+using Facebook.WitAi.Windows;
+using Facebook.WitAi.Configuration;
+using Facebook.WitAi.Data.Configuration;
+using Facebook.WitAi.Data.Intents;
+using Facebook.WitAi.Data.Entities;
+using Facebook.WitAi.Data.Traits;
 using Oculus.Voice.Windows;
 
 namespace Oculus.Voice.Utility
@@ -56,74 +48,25 @@ namespace Oculus.Voice.Utility
         {
 
         }
-        [CustomPropertyDrawer(typeof(WitAppInfo))]
+        [CustomPropertyDrawer(typeof(WitApplication))]
         public class VoiceCustomApplicationPropertyDrawer : VoiceApplicationDetailProvider
         {
 
         }
-        [CustomPropertyDrawer(typeof(WitIntentInfo))]
+        [CustomPropertyDrawer(typeof(WitIntent))]
         public class VoiceCustomIntentPropertyDrawer : WitIntentPropertyDrawer
         {
 
         }
-        [CustomPropertyDrawer(typeof(WitEntityInfo))]
+        [CustomPropertyDrawer(typeof(WitEntity))]
         public class VoiceCustomEntityPropertyDrawer : WitEntityPropertyDrawer
         {
 
         }
-        [CustomPropertyDrawer(typeof(WitTraitInfo))]
+        [CustomPropertyDrawer(typeof(WitTrait))]
         public class VoiceCustomTraitPropertyDrawer : WitTraitPropertyDrawer
         {
 
-        }
-        #endregion
-
-        #region Scriptable Objects
-        [MenuItem("Assets/Create/Voice SDK/Dynamic Entities")]
-        public static void CreateDynamicEntities()
-        {
-            WitDynamicEntitiesData asset =
-                ScriptableObject.CreateInstance<WitDynamicEntitiesData>();
-
-            var path = EditorUtility.SaveFilePanel("Save Dynamic Entity", Application.dataPath,
-                "DynamicEntities", "asset");
-
-            if (!string.IsNullOrEmpty(path))
-            {
-                path = "Assets/" + path.Replace(Application.dataPath, "");
-                AssetDatabase.CreateAsset(asset, path);
-                AssetDatabase.SaveAssets();
-
-                EditorUtility.FocusProjectWindow();
-
-                Selection.activeObject = asset;
-            }
-        }
-        #endregion
-
-        #region TTS
-
-        [MenuItem("Assets/Create/Voice SDK/TTS/Add Default TTS Setup", false, 0)]
-        public static void CreateDefaultTTSSetup()
-        {
-            TTSEditorUtilities.CreateDefaultSetup();
-        }
-
-        [MenuItem("Assets/Create/Voice SDK/TTS/Add TTS Service to Scene", false, 100)]
-        public static void CreateTTSService()
-        {
-            TTSEditorUtilities.CreateService();
-        }
-
-        [MenuItem("Assets/Create/Voice SDK/TTS/Add TTS Speaker to Scene", false, 100)]
-        public static void CreateTTSSpeaker()
-        {
-            TTSEditorUtilities.CreateSpeaker();
-        }
-        [MenuItem("Assets/Create/Voice SDK/TTS/Preload Settings", false, 200)]
-        public static void CreateTTSPreloadSettings()
-        {
-            TTSPreloadUtility.CreatePreloadSettings();
         }
         #endregion
     }

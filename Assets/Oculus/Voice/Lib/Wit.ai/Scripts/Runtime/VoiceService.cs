@@ -1,41 +1,22 @@
 ﻿/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 using System;
-using System.Collections.Generic;
-using Meta.Conduit;
-using Meta.WitAi.Configuration;
-using Meta.WitAi.Data;
-using Meta.WitAi.Data.Configuration;
-using Meta.WitAi.Data.Intents;
-using Meta.WitAi.Events;
-using Meta.WitAi.Events.UnityEventListeners;
-using Meta.WitAi.Interfaces;
-using Meta.WitAi.Json;
+using Facebook.WitAi.Configuration;
+using Facebook.WitAi.Data.Intents;
+using Facebook.WitAi.Events;
+using Facebook.WitAi.Interfaces;
+using Facebook.WitAi.Lib;
 using UnityEngine;
-using Meta.WitAi;
 
-namespace Meta.WitAi
+namespace Facebook.WitAi
 {
-    public abstract class VoiceService : MonoBehaviour, IVoiceService, IInstanceResolver, IAudioEventProvider
+    public abstract class VoiceService : MonoBehaviour, IVoiceService
     {
-        /// <summary>
-        /// When set to true, Conduit will be used. Otherwise, the legacy dispatching will be used.
-        /// </summary>
-        private bool UseConduit => _witConfiguration && _witConfiguration.useConduit;
-
-        /// <summary>
-        /// The wit configuration.
-        /// </summary>
-        private WitConfiguration _witConfiguration;
-
-        private readonly IParameterProvider conduitParameterProvider = new WitConduitParameterProvider();
-
         [Tooltip("Events that will fire before, during and after an activation")] [SerializeField]
         public VoiceEvents events = new VoiceEvents();
 
@@ -43,11 +24,6 @@ namespace Meta.WitAi
         /// Returns true if this voice service is currently active and listening with the mic
         /// </summary>
         public abstract bool Active { get; }
-
-        /// <summary>
-        /// The Conduit-based dispatcher that dispatches incoming invocations based on a manifest.
-        /// </summary>
-        internal IConduitDispatcher ConduitDispatcher { get; set; }
 
         /// <summary>
         /// Returns true if the service is actively communicating with Wit.ai during an Activation. The mic may or may not still be active while this is true.
@@ -65,21 +41,11 @@ namespace Meta.WitAi
         /// </summary>
         public abstract bool MicActive { get; }
 
-        public virtual VoiceEvents VoiceEvents
+        public VoiceEvents VoiceEvents
         {
             get => events;
             set => events = value;
         }
-
-        /// <summary>
-        /// A subset of events around collection of audio data
-        /// </summary>
-        public IAudioInputEvents AudioEvents => VoiceEvents;
-
-        /// <summary>
-        /// A subset of events around receiving transcriptions
-        /// </summary>
-        public ITranscriptionEvent TranscriptionEvents => VoiceEvents;
 
         /// <summary>
         /// Returns true if the audio input should be read in an activation
@@ -87,31 +53,9 @@ namespace Meta.WitAi
         protected abstract bool ShouldSendMicData { get; }
 
         /// <summary>
-        /// Constructs a <see cref="VoiceService"/>
-        /// </summary>
-        protected VoiceService()
-        {
-            var conduitDispatcherFactory = new ConduitDispatcherFactory(this, this.conduitParameterProvider);
-            ConduitDispatcher = conduitDispatcherFactory.GetDispatcher();
-        }
-
-        /// <summary>
-        /// Send text data for NLU processing. Results will return the same way a voice based activation would.
-        /// </summary>
-        /// <param name="text"></param>
-        public void Activate(string text) => Activate(text, new WitRequestOptions());
-
-        /// <summary>
-        /// Send text data for NLU processing with custom request options.
-        /// </summary>
-        /// <param name="text"></param>
-        /// <param name="requestOptions"></param>
-        public abstract void Activate(string text, WitRequestOptions requestOptions);
-
-        /// <summary>
         /// Start listening for sound or speech from the user and start sending data to Wit.ai once sound or speech has been detected.
         /// </summary>
-        public void Activate() => Activate(new WitRequestOptions());
+        public abstract void Activate();
 
         /// <summary>
         /// Activate the microphone and send data for NLU processing. Includes optional additional request parameters like dynamic entities and maximum results.
@@ -122,7 +66,7 @@ namespace Meta.WitAi
         /// <summary>
         /// Activate the microphone and send data for NLU processing immediately without waiting for sound/speech from the user to begin.
         /// </summary>
-        public void ActivateImmediately() => ActivateImmediately(new WitRequestOptions());
+        public abstract void ActivateImmediately();
 
         /// <summary>
         /// Activate the microphone and send data for NLU processing immediately without waiting for sound/speech from the user to begin.  Includes optional additional request parameters like dynamic entities and maximum results.
@@ -140,110 +84,34 @@ namespace Meta.WitAi
         public abstract void DeactivateAndAbortRequest();
 
         /// <summary>
-        /// Returns objects of the specified type.
+        /// Send text data for NLU processing. Results will return the same way a voice based activation would.
         /// </summary>
-        /// <param name="type">The type.</param>
-        /// <returns>Objects of the specified type.</returns>
-        public IEnumerable<object> GetObjectsOfType(Type type)
-        {
-            return FindObjectsOfType(type);
-        }
+        /// <param name="text"></param>
+        public abstract void Activate(string text);
+
+        /// <summary>
+        /// Send text data for NLU processing with custom request options.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="requestOptions"></param>
+        public abstract void Activate(string text, WitRequestOptions requestOptions);
 
         protected virtual void Awake()
         {
-            var witConfigProvider = this.GetComponent<IWitRuntimeConfigProvider>();
-            _witConfiguration = witConfigProvider?.RuntimeConfiguration?.witConfiguration;
-
-            InitializeEventListeners();
-
-            if (!UseConduit)
-            {
-                MatchIntentRegistry.Initialize();
-            }
-        }
-
-        private void InitializeEventListeners()
-        {
-            var audioEventListener = GetComponent<AudioEventListener>();
-            if (!audioEventListener)
-            {
-                gameObject.AddComponent<AudioEventListener>();
-            }
-
-            var transcriptionEventListener = GetComponent<TranscriptionEventListener>();
-            if (!transcriptionEventListener)
-            {
-                gameObject.AddComponent<TranscriptionEventListener>();
-            }
+            MatchIntentRegistry.Initialize();
         }
 
         protected virtual void OnEnable()
         {
-            if (UseConduit)
-            {
-                ConduitDispatcher.Initialize(_witConfiguration.ManifestLocalPath);
-            }
-            VoiceEvents.OnPartialResponse.AddListener(ValidateShortResponse);
-            VoiceEvents.OnResponse.AddListener(HandleResponse);
+            events.OnResponse.AddListener(OnResponse);
         }
 
         protected virtual void OnDisable()
         {
-            VoiceEvents.OnPartialResponse.RemoveListener(ValidateShortResponse);
-            VoiceEvents.OnResponse.RemoveListener(HandleResponse);
+            events.OnResponse.RemoveListener(OnResponse);
         }
 
-        private VoiceSession GetVoiceSession(WitResponseNode response)
-        {
-            return new VoiceSession
-            {
-                service = this,
-                response = response,
-                validResponse = false
-            };
-        }
-
-        protected virtual void ValidateShortResponse(WitResponseNode response)
-        {
-            if (VoiceEvents.OnValidatePartialResponse != null)
-            {
-                // Create short response data
-                VoiceSession validationData = GetVoiceSession(response);
-
-                // Call short response
-                VoiceEvents.OnValidatePartialResponse.Invoke(validationData);
-
-                // Invoke
-                if (UseConduit)
-                {
-                    // Ignore without an intent
-                    WitIntentData intent = response.GetFirstIntentData();
-                    if (intent != null)
-                    {
-                        Dictionary<string, object> parameters = GetConduitResponseParameters(response);
-                        parameters[WitConduitParameterProvider.VoiceSessionReservedName] = validationData;
-                        ConduitDispatcher.InvokeAction(intent.name, parameters, intent.confidence, true);
-                    }
-                }
-
-                // Deactivate
-                if (validationData.validResponse)
-                {
-                    // Call response
-                    VoiceEvents.OnResponse?.Invoke(response);
-
-                    // Deactivate immediately
-                    DeactivateAndAbortRequest();
-                }
-            }
-        }
-
-        protected virtual void HandleResponse(WitResponseNode response)
-        {
-            HandleIntents(response);
-        }
-
-        private void HandleIntents(WitResponseNode response)
+        protected virtual void OnResponse(WitResponseNode response)
         {
             var intents = response.GetIntents();
             foreach (var intent in intents)
@@ -254,32 +122,11 @@ namespace Meta.WitAi
 
         private void HandleIntent(WitIntentData intent, WitResponseNode response)
         {
-            if (UseConduit)
+            var methods = MatchIntentRegistry.RegisteredMethods[intent.name];
+            foreach (var method in methods)
             {
-                ConduitDispatcher.InvokeAction(intent.name, GetConduitResponseParameters(response), intent.confidence, false);
+                ExecuteRegisteredMatch(method, intent, response);
             }
-            else
-            {
-                var methods = MatchIntentRegistry.RegisteredMethods[intent.name];
-                foreach (var method in methods)
-                {
-                    ExecuteRegisteredMatch(method, intent, response);
-                }
-            }
-        }
-
-        // Handle conduit response parameters
-        private Dictionary<string, object> GetConduitResponseParameters(WitResponseNode response)
-        {
-            var parameters = new Dictionary<string, object>();
-            foreach (var entity in response.AsObject["entities"].Childs)
-            {
-                var parameterName = entity[0]["role"].Value;
-                var parameterValue = entity[0]["value"].Value;
-                parameters.Add(parameterName, parameterValue);
-            }
-            parameters.Add(WitConduitParameterProvider.WitResponseNodeReservedName, response);
-            return parameters;
         }
 
         private void ExecuteRegisteredMatch(RegisteredMatchIntent registeredMethod,
@@ -288,29 +135,28 @@ namespace Meta.WitAi
             if (intent.confidence >= registeredMethod.matchIntent.MinConfidence &&
                 intent.confidence <= registeredMethod.matchIntent.MaxConfidence)
             {
-                foreach (var obj in GetObjectsOfType(registeredMethod.type))
+                foreach (var obj in FindObjectsOfType(registeredMethod.type))
                 {
                     var parameters = registeredMethod.method.GetParameters();
-                    if (parameters.Length == 0)
-                    {
-                        registeredMethod.method.Invoke(obj, Array.Empty<object>());
-                        continue;
-                    }
-                    if (parameters[0].ParameterType != typeof(WitResponseNode) || parameters.Length > 2)
-                    {
-                        VLog.E("Match intent only supports methods with no parameters or with a WitResponseNode parameter. Enable Conduit or adjust the parameters");
-                        continue;
-                    }
                     if (parameters.Length == 1)
                     {
                         registeredMethod.method.Invoke(obj, new object[] {response});
+                    }
+                    else if (parameters.Length == 0)
+                    {
+                        registeredMethod.method.Invoke(obj, Array.Empty<object>());
+                    }
+                    else
+                    {
+                        throw new ArgumentException(
+                            "Too many parameters on method tagged with MatchIntent. Match intent only supports methods with no parameters or with a WitResponseNode parameter.");
                     }
                 }
             }
         }
     }
 
-    public interface IVoiceService : IVoiceEventProvider
+    public interface IVoiceService
     {
         /// <summary>
         /// Returns true if this voice service is currently active and listening with the mic
@@ -321,27 +167,22 @@ namespace Meta.WitAi
 
         bool MicActive { get; }
 
-        new VoiceEvents VoiceEvents { get; set; }
+        VoiceEvents VoiceEvents { get; set; }
 
         ITranscriptionProvider TranscriptionProvider { get; set; }
 
         /// <summary>
-        /// Send text data for NLU processing with custom request options.
+        /// Activate the microphone and send data for NLU processing.
         /// </summary>
-        /// <param name="text"></param>
-        /// <param name="requestOptions">Custom request options</param>
-        void Activate(string text, WitRequestOptions requestOptions);
-
-        /// <summary>
-        /// Activate the microphone and wait for threshold and then send data
-        /// </summary>
-        /// <param name="requestOptions">Custom request options</param>
-        void Activate(WitRequestOptions requestOptions);
+        void Activate();
 
         /// <summary>
         /// Activate the microphone and send data for NLU processing with custom request options.
         /// </summary>
-        /// <param name="requestOptions">Custom request options</param>
+        /// <param name="requestOptions"></param>
+        void Activate(WitRequestOptions requestOptions);
+
+        void ActivateImmediately();
         void ActivateImmediately(WitRequestOptions requestOptions);
 
         /// <summary>
@@ -353,5 +194,19 @@ namespace Meta.WitAi
         /// Stop listening and abort any requests that may be active without waiting for a response.
         /// </summary>
         void DeactivateAndAbortRequest();
+
+        /// <summary>
+        /// Send text data for NLU processing
+        /// </summary>
+        /// <param name="text"></param>
+        void Activate(string transcription);
+
+        /// <summary>
+        /// Send text data for NLU processing with custom request options.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="requestOptions"></param>
+        void Activate(string text, WitRequestOptions requestOptions);
+
     }
 }

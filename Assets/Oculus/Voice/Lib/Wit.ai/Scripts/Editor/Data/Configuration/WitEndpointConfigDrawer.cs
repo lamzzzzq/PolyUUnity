@@ -1,21 +1,31 @@
 ﻿/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
 using UnityEditor;
+using UnityEngine;
+using Facebook.WitAi.Configuration;
 using System.Reflection;
-using Meta.WitAi;
 
-namespace Meta.WitAi.Windows
+namespace Facebook.WitAi.Windows
 {
     public class WitEndpointConfigDrawer : WitPropertyDrawer
     {
         // Allow edit with lock
         protected override WitPropertyEditType EditType => WitPropertyEditType.LockEdit;
+        // Determine if should layout field
+        protected override bool ShouldLayoutField(SerializedProperty property, FieldInfo subfield)
+        {
+            switch (subfield.Name)
+            {
+                case "message":
+                    return false;
+            }
+            return base.ShouldLayoutField(property, subfield);
+        }
         // Get default fields
         protected override string GetDefaultFieldValue(SerializedProperty property, FieldInfo subfield)
         {
@@ -23,19 +33,15 @@ namespace Meta.WitAi.Windows
             switch (subfield.Name)
             {
                 case "uriScheme":
-                    return WitConstants.URI_SCHEME;
+                    return WitRequest.URI_SCHEME;
                 case "authority":
-                    return WitConstants.URI_AUTHORITY;
+                    return WitRequest.URI_AUTHORITY;
                 case "port":
-                    return WitConstants.URI_DEFAULT_PORT.ToString();
+                    return WitRequest.URI_DEFAULT_PORT.ToString();
                 case "witApiVersion":
-                    return WitConstants.API_VERSION;
+                    return WitRequest.WIT_API_VERSION;
                 case "speech":
-                    return WitConstants.ENDPOINT_SPEECH;
-                case "message":
-                    return WitConstants.ENDPOINT_MESSAGE;
-                case "dictation":
-                    return WitConstants.ENDPOINT_DICTATION;
+                    return WitRequest.WIT_ENDPOINT_SPEECH;
             }
 
             // Return base
@@ -59,10 +65,6 @@ namespace Meta.WitAi.Windows
                     return WitTexts.Texts.ConfigurationEndpointApiLabel;
                 case "speech":
                     return WitTexts.Texts.ConfigurationEndpointSpeechLabel;
-                case "message":
-                    return WitTexts.Texts.ConfigurationEndpointMessageLabel;
-                case "dictation":
-                    return WitTexts.Texts.ConfigurationEndpointDictationLabel;
             }
             // Default to base
             return base.GetLocalizedText(property, key);

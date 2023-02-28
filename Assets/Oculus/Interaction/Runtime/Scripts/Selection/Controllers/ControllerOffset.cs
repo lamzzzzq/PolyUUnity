@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
 using UnityEngine;
@@ -37,6 +29,8 @@ namespace Oculus.Interaction
         [SerializeField]
         private Quaternion _rotation = Quaternion.identity;
 
+        private Pose _cachedPose = Pose.identity;
+
         protected bool _started = false;
 
         protected virtual void Awake()
@@ -47,7 +41,7 @@ namespace Oculus.Interaction
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Controller, nameof(Controller));
+            Assert.IsNotNull(Controller);
             this.EndStart(ref _started);
         }
 
@@ -55,7 +49,7 @@ namespace Oculus.Interaction
         {
             if (_started)
             {
-                Controller.WhenUpdated += HandleUpdated;
+                Controller.ControllerUpdated += HandleControllerUpdated;
             }
         }
 
@@ -63,23 +57,23 @@ namespace Oculus.Interaction
         {
             if (_started)
             {
-                Controller.WhenUpdated -= HandleUpdated;
+                Controller.ControllerUpdated -= HandleControllerUpdated;
             }
         }
 
-        private void HandleUpdated()
+        private void HandleControllerUpdated()
         {
             if (Controller.TryGetPose(out Pose rootPose))
             {
-                Pose pose = new Pose(Controller.Scale * _offset, _rotation);
-                pose.Postmultiply(rootPose);
-                transform.SetPose(pose);
+                GetOffset(ref _cachedPose);
+                _cachedPose.Postmultiply(rootPose);
+                transform.SetPose(_cachedPose);
             }
         }
 
         public void GetOffset(ref Pose pose)
         {
-            pose.position = Controller.Scale * _offset;
+            pose.position = _offset;
             pose.rotation = _rotation;
         }
 

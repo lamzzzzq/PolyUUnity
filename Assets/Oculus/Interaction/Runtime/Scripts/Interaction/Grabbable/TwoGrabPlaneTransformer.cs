@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using System.Collections.Generic;
 using System;
@@ -32,8 +24,7 @@ namespace Oculus.Interaction
     {
         [SerializeField, Optional]
         private Transform _planeTransform = null;
-
-        private Vector3 _capturePosition;
+        private Vector3 _capturePlanePoint;
 
         private Vector3 _initialLocalScale;
         private float _initialDistance;
@@ -81,7 +72,7 @@ namespace Oculus.Interaction
             var targetTransform = _grabbable.Transform;
 
             // Use the centroid of our grabs as the capture plane point
-            _capturePosition = targetTransform.position;
+            Vector3 _capturePlanePoint = Vector3.Lerp(grabA.position, grabB.position, 0.5f);
 
             Transform planeTransform = _planeTransform != null ? _planeTransform : targetTransform;
             Vector3 rotationAxis = planeTransform.up;
@@ -91,7 +82,8 @@ namespace Oculus.Interaction
             Vector3 initialVector = Vector3.ProjectOnPlane(initialOffset, rotationAxis);
             _initialDistance = initialVector.magnitude;
 
-            _initialScale = _activeScale = targetTransform.localScale.x;
+            _initialScale = _activeScale;
+            _initialLocalScale = _grabbable.Transform.localScale / _initialScale;
             _previousGrabA = grabA;
             _previousGrabB = grabB;
         }
@@ -143,38 +135,40 @@ namespace Oculus.Interaction
 
             // Apply the positional delta initialCenter -> targetCenter and the
             // rotational delta to the target transform
-            Vector3 positionDelta = _capturePosition - initialCenter;
-            Vector3 deltaProjectedOnPlaneNormal = Vector3.Dot((positionDelta - initialCenter), rotationAxis) * rotationAxis;
+            Vector3 positionDelta = targetTransform.position - initialCenter;
+            Vector3 deltaProjectedOnPlaneNormal = Vector3.Dot((positionDelta - _capturePlanePoint), rotationAxis) * rotationAxis;
+
             positionDelta -= deltaProjectedOnPlaneNormal;
 
-            Vector3 planarDelta = Quaternion.Inverse(initialRotation) * positionDelta;
-            Vector3 normalDelta = Quaternion.Inverse(initialRotation) * deltaProjectedOnPlaneNormal;
-            Vector3 totalDelta = planarDelta + normalDelta;
-
-            Vector3 centerDelta = targetCenter - _capturePosition;
-            Vector3 scaleCenterDelta = centerDelta * _activeScale / previousScale;
-            Vector3 targetDelta = scaleCenterDelta - centerDelta;
+            Vector3 planarDeltaInTargetSpace = (Quaternion.Inverse(initialRotation) * positionDelta) / previousScale;
+            Vector3 nonPlanarDeltaInTargetSpace = Quaternion.Inverse(initialRotation) * deltaProjectedOnPlaneNormal;
 
             Quaternion rotationInTargetSpace = Quaternion.Inverse(initialRotation) * targetTransform.rotation;
+            Vector3 scaledLocalPosition = _activeScale * planarDeltaInTargetSpace + nonPlanarDeltaInTargetSpace;
 
-            _capturePosition = targetRotation * totalDelta + targetCenter - targetDelta;
+            targetTransform.position = targetRotation * scaledLocalPosition + targetCenter;
             targetTransform.rotation = targetRotation * rotationInTargetSpace;
-            targetTransform.localScale = _activeScale * Vector3.one;
+            targetTransform.localScale = _activeScale * _initialLocalScale;
 
-            Vector3 targetPosition = _capturePosition;
             // Y axis constraints
+            Vector3 planePosition = planeTransform.position;
+            float positionDeltaProjectedOnPlaneNormal = Vector3.Dot((targetTransform.position - planePosition), rotationAxis);
+            float targetDeltaOnPlaneNormal = positionDeltaProjectedOnPlaneNormal;
             if(_constraints.MinY.Constrain)
             {
-                targetPosition.y = Mathf.Max(_constraints.MinY.Value, targetPosition.y);
+                targetDeltaOnPlaneNormal = Mathf.Max(_constraints.MinY.Value, targetDeltaOnPlaneNormal);
             }
             if(_constraints.MaxY.Constrain)
             {
-                targetPosition.y = Mathf.Min(_constraints.MaxY.Value, targetPosition.y);
+                targetDeltaOnPlaneNormal = Mathf.Min(_constraints.MaxY.Value, targetDeltaOnPlaneNormal);
             }
-            targetTransform.position = targetPosition;
+            float difference =  positionDeltaProjectedOnPlaneNormal - targetDeltaOnPlaneNormal;
+            targetTransform.position -= difference*rotationAxis;
+        }
 
-            _previousGrabA = grabA;
-            _previousGrabB = grabB;
+        public void MarkAsBaseScale()
+        {
+            _activeScale = 1.0f;
         }
 
         public void EndTransform() { }

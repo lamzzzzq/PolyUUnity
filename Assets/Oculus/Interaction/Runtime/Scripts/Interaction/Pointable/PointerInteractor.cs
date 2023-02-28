@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using UnityEngine;
 
@@ -26,7 +18,7 @@ namespace Oculus.Interaction
                                     where TInteractor : Interactor<TInteractor, TInteractable>
                                     where TInteractable : PointerInteractable<TInteractor, TInteractable>
     {
-        protected void GeneratePointerEvent(PointerEventType pointerEventType, TInteractable interactable)
+        protected void GeneratePointerEvent(PointerEvent pointerEvent, TInteractable interactable)
         {
             Pose pose = ComputePointerPose();
 
@@ -37,30 +29,29 @@ namespace Oculus.Interaction
 
             if (interactable.PointableElement != null)
             {
-                if (pointerEventType == PointerEventType.Hover)
+                if (pointerEvent == PointerEvent.Hover)
                 {
                     interactable.PointableElement.WhenPointerEventRaised +=
                         HandlePointerEventRaised;
                 }
-                else if (pointerEventType == PointerEventType.Unhover)
+                else if (pointerEvent == PointerEvent.Unhover)
                 {
                     interactable.PointableElement.WhenPointerEventRaised -=
                         HandlePointerEventRaised;
                 }
             }
 
-            interactable.PublishPointerEvent(
-                new PointerEvent(Identifier, pointerEventType, pose, Data));
+            interactable.PublishPointerEvent(new PointerArgs(Identifier, pointerEvent, pose));
         }
 
-        protected virtual void HandlePointerEventRaised(PointerEvent evt)
+        protected virtual void HandlePointerEventRaised(PointerArgs args)
         {
-            if (evt.Identifier == Identifier &&
-                evt.Type == PointerEventType.Cancel &&
+            if (args.Identifier == Identifier &&
+                args.PointerEvent == PointerEvent.Cancel &&
                 Interactable != null)
             {
                 TInteractable interactable = Interactable;
-                interactable.RemoveInteractorByIdentifier(Identifier);
+                interactable.RemoveInteractorById(Identifier);
                 interactable.PointableElement.WhenPointerEventRaised -=
                     HandlePointerEventRaised;
             }
@@ -69,24 +60,24 @@ namespace Oculus.Interaction
         protected override void InteractableSet(TInteractable interactable)
         {
             base.InteractableSet(interactable);
-            GeneratePointerEvent(PointerEventType.Hover, interactable);
+            GeneratePointerEvent(PointerEvent.Hover, interactable);
         }
 
         protected override void InteractableUnset(TInteractable interactable)
         {
-            GeneratePointerEvent(PointerEventType.Unhover, interactable);
+            GeneratePointerEvent(PointerEvent.Unhover, interactable);
             base.InteractableUnset(interactable);
         }
 
         protected override void InteractableSelected(TInteractable interactable)
         {
             base.InteractableSelected(interactable);
-            GeneratePointerEvent(PointerEventType.Select, interactable);
+            GeneratePointerEvent(PointerEvent.Select, interactable);
         }
 
         protected override void InteractableUnselected(TInteractable interactable)
         {
-            GeneratePointerEvent(PointerEventType.Unselect, interactable);
+            GeneratePointerEvent(PointerEvent.Unselect, interactable);
             base.InteractableUnselected(interactable);
         }
 
@@ -95,7 +86,7 @@ namespace Oculus.Interaction
             base.DoPostprocess();
             if (_interactable != null)
             {
-                GeneratePointerEvent(PointerEventType.Move, _interactable);
+                GeneratePointerEvent(PointerEvent.Move, _interactable);
             }
         }
 

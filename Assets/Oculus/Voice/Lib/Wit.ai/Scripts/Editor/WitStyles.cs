@@ -1,15 +1,16 @@
 /*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the license found in the
  * LICENSE file in the root directory of this source tree.
  */
 
+using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Meta.WitAi
+namespace Facebook.WitAi
 {
     public static class WitStyles
     {
@@ -56,10 +57,8 @@ namespace Meta.WitAi
         private const float TabButtonHeight = 40f;
         public static GUIStyle HeaderButton;
         public static Color HeaderTextColor = new Color(0.09f, 0.47f, 0.95f); // FB
-        // Wit error color (Red if in light non-pro editor mode)
-        public static string ErrorColor = "#cc7777";
-        // Wit link color (Blue if in light non-pro editor mode)
-        public static string WitLinkColor = "#ccccff";
+        // Wit link color
+        public static string WitLinkColor = "#ccccff"; // "blue" if not pro
         public const string WitLinkKey = "[COLOR]";
 
         // Text Field Styles
@@ -86,13 +85,6 @@ namespace Meta.WitAi
             ObjectPickerIcon = EditorGUIUtility.IconContent("d_Record Off");
             HelpIcon = EditorGUIUtility.IconContent("_Help");
 
-            // Adjust colors to be more visible on light background
-            if (!EditorGUIUtility.isProSkin)
-            {
-                ErrorColor = "red";
-                WitLinkColor = "blue";
-            }
-
             // Label Styles
             Label = new GUIStyle();
             Label.fontSize = 11;
@@ -104,7 +96,6 @@ namespace Meta.WitAi
             Label.active.textColor = Color.white;
             Label.richText = true;
             Label.wordWrap = false;
-            Label.clipping = TextClipping.Clip;
             LabelWrap = new GUIStyle(Label);
             LabelWrap.wordWrap = true;
             LabelSubheader = new GUIStyle(Label);
@@ -116,9 +107,7 @@ namespace Meta.WitAi
             LabelHeader.wordWrap = true;
             LabelError = new GUIStyle(Label);
             LabelError.wordWrap = true;
-            Color errorColor = Color.red;
-            ColorUtility.TryParseHtmlString(ErrorColor, out errorColor);
-            LabelError.normal.textColor = errorColor;
+            LabelError.normal.textColor = Color.red;
             LabelStatus = new GUIStyle(Label);
             TextureBlack25P = new Texture2D(1, 1);
             TextureBlack25P.SetPixel(0, 0, new Color(0, 0, 0, .25f));
@@ -132,6 +121,11 @@ namespace Meta.WitAi
             LabelStatus.margin = new RectOffset(0, 0, 0, 0);
             LabelStatus.wordWrap = false;
             LabelStatus.fontSize = 10;
+            // Set to blue if not pro
+            if (!EditorGUIUtility.isProSkin)
+            {
+                WitLinkColor = "blue";
+            }
 
             // Button Styles
             TextButton = new GUIStyle(EditorStyles.miniButton);
@@ -152,7 +146,6 @@ namespace Meta.WitAi
             TextField.padding = Label.padding;
             TextField.margin = Label.margin;
             TextField.alignment = Label.alignment;
-            TextField.clipping = TextClipping.Clip;
             PasswordField = new GUIStyle(TextField);
             IntField = new GUIStyle(TextField);
             // Miscellaneous

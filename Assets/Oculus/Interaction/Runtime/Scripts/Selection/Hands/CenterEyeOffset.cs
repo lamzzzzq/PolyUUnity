@@ -1,33 +1,26 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace Oculus.Interaction
 {
     public class CenterEyeOffset : MonoBehaviour
     {
-        [SerializeField, Interface(typeof(IHmd))]
-        private MonoBehaviour _hmd;
-        public IHmd Hmd { get; private set; }
+        [SerializeField, Interface(typeof(IHand))]
+        private MonoBehaviour _hand;
+        public IHand Hand { get; private set; }
 
         [SerializeField]
         private Vector3 _offset;
@@ -41,13 +34,13 @@ namespace Oculus.Interaction
 
         protected virtual void Awake()
         {
-            Hmd = _hmd as IHmd;
+            Hand = _hand as IHand;
         }
 
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Hmd, nameof(Hmd));
+            Assert.IsNotNull(Hand);
             this.EndStart(ref _started);
         }
 
@@ -55,7 +48,7 @@ namespace Oculus.Interaction
         {
             if (_started)
             {
-                Hmd.WhenUpdated += HandleUpdated;
+                Hand.WhenHandUpdated += HandleHandUpdated;
             }
         }
 
@@ -63,13 +56,13 @@ namespace Oculus.Interaction
         {
             if (_started)
             {
-                Hmd.WhenUpdated -= HandleUpdated;
+                Hand.WhenHandUpdated -= HandleHandUpdated;
             }
         }
 
-        private void HandleUpdated()
+        private void HandleHandUpdated()
         {
-            if (Hmd.TryGetRootPose(out Pose rootPose))
+            if (Hand.GetCenterEyePose(out Pose rootPose))
             {
                 GetOffset(ref _cachedPose);
                 _cachedPose.Postmultiply(rootPose);
@@ -90,6 +83,11 @@ namespace Oculus.Interaction
         }
 
         #region Inject
+        public void InjectHand(IHand hand)
+        {
+            _hand = hand as MonoBehaviour;
+            Hand = hand;
+        }
 
         public void InjectOffset(Vector3 offset)
         {
@@ -101,20 +99,13 @@ namespace Oculus.Interaction
             _rotation = rotation;
         }
 
-        public void InjectAllCenterEyeOffset(IHmd hmd,
+        public void InjectAllCenterEyeOffset(IHand hand,
             Vector3 offset, Quaternion rotation)
         {
-            InjectHmd(hmd);
+            InjectHand(hand);
             InjectOffset(offset);
             InjectRotation(rotation);
         }
-
-        public void InjectHmd(IHmd hmd)
-        {
-            Hmd = hmd;
-            _hmd = Hmd as MonoBehaviour;
-        }
-
         #endregion
     }
 }

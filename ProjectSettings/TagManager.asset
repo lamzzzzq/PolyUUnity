@@ -19,10 +19,6 @@ TagManager:
   - Cheese
   - Tomato
   - Money
-  - Painting 1
-  - Painting 2
-  - Painting 3
-  - PuzzlePiece
   layers:
   - Default
   - TransparentFX

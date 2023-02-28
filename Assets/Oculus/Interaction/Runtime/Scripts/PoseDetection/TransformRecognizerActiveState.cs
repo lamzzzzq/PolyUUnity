@@ -1,22 +1,14 @@
-/*
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- * All rights reserved.
- *
- * Licensed under the Oculus SDK License Agreement (the "License");
- * you may not use the Oculus SDK except in compliance with the License,
- * which is provided at the time of installation or download, or which
- * otherwise accompanies this software in either electronic or hard copy form.
- *
- * You may obtain a copy of the License at
- *
- * https://developer.oculus.com/licenses/oculussdk/
- *
- * Unless required by applicable law or agreed to in writing, the Oculus SDK
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+/************************************************************************************
+Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
+
+Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
+https://developer.oculus.com/licenses/oculussdk/
+
+Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ANY KIND, either express or implied. See the License for the specific language governing
+permissions and limitations under the License.
+************************************************************************************/
 
 using Oculus.Interaction.Input;
 using System;
@@ -47,11 +39,6 @@ namespace Oculus.Interaction.PoseDetection
         private MonoBehaviour _hand;
         public IHand Hand { get; private set; }
 
-        [SerializeField, Interface(typeof(ITransformFeatureStateProvider))]
-        private MonoBehaviour _transformFeatureStateProvider;
-
-        protected ITransformFeatureStateProvider TransformFeatureStateProvider;
-
         [SerializeField]
         private TransformFeatureConfigList _transformFeatureConfigs;
 
@@ -64,23 +51,26 @@ namespace Oculus.Interaction.PoseDetection
 
         public TransformConfig TransformConfig => _transformConfig;
 
+        private TransformFeatureStateProvider FeatureStateProvider { get; set; }
+
         protected bool _started = false;
 
         protected virtual void Awake()
         {
             Hand = _hand as IHand;
-            TransformFeatureStateProvider =
-                _transformFeatureStateProvider as ITransformFeatureStateProvider;
         }
 
         protected virtual void Start()
         {
             this.BeginStart(ref _started);
-            this.AssertField(Hand, nameof(Hand));
-            this.AssertField(TransformFeatureStateProvider, nameof(TransformFeatureStateProvider));
+            Assert.IsNotNull(Hand);
 
-            this.AssertField(_transformFeatureConfigs, nameof(_transformFeatureConfigs));
-            this.AssertField(_transformConfig, nameof(_transformConfig));
+            bool foundAspect = Hand.GetHandAspect(out TransformFeatureStateProvider aspect);
+            Assert.IsTrue(foundAspect);
+            FeatureStateProvider = aspect;
+
+            Assert.IsNotNull(_transformFeatureConfigs);
+            Assert.IsNotNull(_transformConfig);
 
             _transformConfig.InstanceId = GetInstanceID();
             this.EndStart(ref _started);
@@ -90,7 +80,7 @@ namespace Oculus.Interaction.PoseDetection
         {
             if (_started)
             {
-                TransformFeatureStateProvider.RegisterConfig(_transformConfig);
+                FeatureStateProvider.RegisterNewConfig(_transformConfig);
 
                 // Warm up the proactive evaluation
                 InitStateProvider();
@@ -101,7 +91,7 @@ namespace Oculus.Interaction.PoseDetection
         {
             if (_started)
             {
-                TransformFeatureStateProvider.UnRegisterConfig(_transformConfig);
+                FeatureStateProvider.UnRegisterConfig(_transformConfig);
             }
         }
 
@@ -109,14 +99,14 @@ namespace Oculus.Interaction.PoseDetection
         {
             foreach(var featureConfig in FeatureConfigs)
             {
-                TransformFeatureStateProvider.GetCurrentState(_transformConfig, featureConfig.Feature, out _);
+                FeatureStateProvider.GetCurrentState(_transformConfig, featureConfig.Feature, out _);
             }
         }
 
         public void GetFeatureVectorAndWristPos(TransformFeature feature, bool isHandVector,
             ref Vector3? featureVec, ref Vector3? wristPos)
         {
-            TransformFeatureStateProvider.GetFeatureVectorAndWristPos(
+            FeatureStateProvider.GetFeatureVectorAndWristPos(
                 TransformConfig, feature, isHandVector, ref featureVec, ref wristPos);
         }
 
@@ -130,7 +120,7 @@ namespace Oculus.Interaction.PoseDetection
                 }
                 foreach(var featureConfig in FeatureConfigs)
                 {
-                    if (! TransformFeatureStateProvider.IsStateActive(
+                    if (!FeatureStateProvider.IsStateActive(
                         _transformConfig,
                         featureConfig.Feature,
                         featureConfig.Mode,
@@ -146,13 +136,10 @@ namespace Oculus.Interaction.PoseDetection
 
         #region Inject
 
-        public void InjectAllTransformRecognizerActiveState(IHand hand,
-            ITransformFeatureStateProvider transformFeatureStateProvider,
-            TransformFeatureConfigList transformFeatureList,
+        public void InjectAllTransformRecognizerActiveState(IHand hand, TransformFeatureConfigList transformFeatureList,
             TransformConfig transformConfig)
         {
             InjectHand(hand);
-            InjectTransformFeatureStateProvider(transformFeatureStateProvider);
             InjectTransformFeatureList(transformFeatureList);
             InjectTransformConfig(transformConfig);
         }
@@ -161,12 +148,6 @@ namespace Oculus.Interaction.PoseDetection
         {
             _hand = hand as MonoBehaviour;
             Hand = hand;
-        }
-
-        public void InjectTransformFeatureStateProvider(ITransformFeatureStateProvider transformFeatureStateProvider)
-        {
-            TransformFeatureStateProvider = transformFeatureStateProvider;
-            _transformFeatureStateProvider = transformFeatureStateProvider as MonoBehaviour;
         }
 
         public void InjectTransformFeatureList(TransformFeatureConfigList transformFeatureList)
