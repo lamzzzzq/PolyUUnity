@@ -19,11 +19,9 @@ public class AddScore : MonoBehaviour
 
     void Update()
     {
-/*        int value = DialogueLua.GetVariable("Point").asInt;
+        /*        int value = DialogueLua.GetVariable("Point").asInt;
 
-        Point.text = value.ToString();*/
-
-
+                Point.text = value.ToString();*/
         switch(scene.buildIndex)
         {
             case 1:
@@ -50,8 +48,26 @@ public class AddScore : MonoBehaviour
                 }
                 break;
 
+            case 4:
+                {
+                    //Debug.Log("在scene 4");
+                    int value = DialogueLua.GetVariable("Point_Level4").asInt;
+
+                    Point.text = value.ToString();
+                }
+                break;
+
+            case 5:
+                {
+                    //Debug.Log("在scene 4");
+                    int value = DialogueLua.GetVariable("Point_Level5").asInt;
+
+                    Point.text = value.ToString();
+                }
+                break;
+
             default:
-                Debug.Log("在welcome scene");
+                //Debug.Log("在welcome scene");
                 break;
 
         }

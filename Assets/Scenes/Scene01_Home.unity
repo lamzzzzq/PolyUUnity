@@ -47349,6 +47349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2169903308258421321, guid: bd564aaba3904e1478feb341b956dd32,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169903308258421321, guid: bd564aaba3904e1478feb341b956dd32,
+        type: 3}
       propertyPath: CollidersToIgnore.Array.data[1]
       value: 
       objectReference: {fileID: 3525826518717337246}
@@ -47534,6 +47539,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5842276804880519154, guid: bd564aaba3904e1478feb341b956dd32, type: 3}
+    - {fileID: 2169903308258421321, guid: bd564aaba3904e1478feb341b956dd32, type: 3}
+    - {fileID: 2569232995097966497, guid: bd564aaba3904e1478feb341b956dd32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd564aaba3904e1478feb341b956dd32, type: 3}
 --- !u!4 &763650812 stripped
 Transform:
@@ -70022,7 +70029,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate2.001
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1865834784608875691, guid: 1abe74145a7950741bfd1b16e792ca1e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1abe74145a7950741bfd1b16e792ca1e, type: 3}
 --- !u!4 &1266455329 stripped
 Transform:

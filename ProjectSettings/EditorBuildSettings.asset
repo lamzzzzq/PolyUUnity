@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: ff73393ed89b5794f8e81e900f530319
   - enabled: 1
     path: Assets/Scenes/Scene04.Park.unity
-    guid: 5bf13bf6c66d3d94d938a1603d8f07d9
+    guid: 7360cb1313f31d24a900a14d1141faaa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 29c4ab0742b3b3e49bcf0258c785b60e,
       type: 2}
