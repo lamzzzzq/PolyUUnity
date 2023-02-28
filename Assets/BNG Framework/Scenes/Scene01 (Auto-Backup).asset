@@ -1138,24 +1138,6 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-  - id: 8
-    fields:
-    - title: Name
-      value: Dust
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Is Item
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
   locations: []
   variables:
   - id: 6
@@ -1700,6 +1682,20 @@ MonoBehaviour:
       value: 3_False
       type: 0
       typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 42
+    fields:
+    - title: Name
+      value: Dust_Level_4
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
     - title: Description
       value: 
       type: 0
@@ -14020,6 +14016,12 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
+      - originConversationID: 26
+        originDialogueID: 0
+        destinationConversationID: 26
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -14177,8 +14179,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 29.97171
-        y: 183.23975
+        x: 32.503357
+        y: 181.97394
         width: 160
         height: 30
     - id: 3
@@ -14204,7 +14206,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Thank you.10Points
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14239,15 +14241,19 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("CollectDust") == "active" and (0 <= Variable["Dust_Level_4"]
+        and Variable["Dust_Level_4"] <= 4)
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 10;
+
+        SetQuestState("CollectDust",
+        "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 250.25311
-        y: 187.72148
+        x: 260.3797
+        y: 245.9493
         width: 160
         height: 30
     - id: 4
@@ -14273,7 +14279,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Thank you. 15 Points.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14308,15 +14314,19 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: CurrentQuestState("CollectDust") == "active" and (5 <= Variable["Dust_Level_4"]
+        and Variable["Dust_Level_4"] <= 9)
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 15;
+
+        SetQuestState("CollectDust",
+        "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 502.15173
-        y: 188.98734
+        x: 514.81
+        y: 243.41766
         width: 160
         height: 30
     - id: 5
@@ -14342,7 +14352,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Than you. 20 Points.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14377,15 +14387,19 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["Dust_Level_4"] == 10 and (CurrentQuestState("CollectDust")
+        == "active")
+      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 20;
+
+        SetQuestState("CollectDust",
+        "success")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 727.46814
-        y: 177.5949
+        x: 761.64526
+        y: 247.21512
         width: 160
         height: 30
     - id: 6
@@ -14455,12 +14469,81 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 29.971718
-        y: 261.08783
+        y: 258.5562
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 13
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you for your help. You are a kind kid.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 26
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: CurrentQuestState("CollectDust") == "success"
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1018.6073
+        y: 207.97462
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7900002
+    canvasZoom: 0.8200002
   - id: 27
     fields:
     - title: Title

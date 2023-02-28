@@ -6258,7 +6258,7 @@ PrefabInstance:
     - target: {fileID: 2370916946867211450, guid: 980d48c334afd0547ac13416d071a0e2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -132.62
+      value: -126.59
       objectReference: {fileID: 0}
     - target: {fileID: 2370916946867211450, guid: 980d48c334afd0547ac13416d071a0e2,
         type: 3}
@@ -11228,6 +11228,12 @@ Transform:
   m_Father: {fileID: 2077461478}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &198341719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 701851826694693498, guid: 50a511eceb3324241bc3c21de739fd76,
+    type: 3}
+  m_PrefabInstance: {fileID: 2038221223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &198425890
 GameObject:
   m_ObjectHideFlags: 0
@@ -41795,7 +41801,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672066089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -58628,7 +58634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888350c4354744a47b4ff8de0d6d6433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 0}
+  npc: {fileID: 1256120499}
   button: {fileID: 926355994}
 --- !u!114 &926355997
 MonoBehaviour:
@@ -61417,7 +61423,7 @@ PrefabInstance:
     - target: {fileID: 701851826744229880, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -131.13
+      value: -131.169
       objectReference: {fileID: 0}
     - target: {fileID: 701851826744229880, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
@@ -61442,12 +61448,12 @@ PrefabInstance:
     - target: {fileID: 701851826744229880, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.75
+      value: 16.776
       objectReference: {fileID: 0}
     - target: {fileID: 701851826744229880, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.86
+      value: 1.117
       objectReference: {fileID: 0}
     - target: {fileID: 701851826744229880, guid: 50a511eceb3324241bc3c21de739fd76,
         type: 3}
@@ -76303,7 +76309,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Task5.2_1
+  conversation: Level5.1_1
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -76341,7 +76347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueCanvas: {fileID: 1756968247}
-  Button: {fileID: 0}
+  Button: {fileID: 926355994}
 --- !u!82 &1256120504
 AudioSource:
   m_ObjectHideFlags: 0
@@ -76451,7 +76457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 0
-  ui: {fileID: 2028999108}
+  ui: {fileID: 198341719}
 --- !u!195 &1256120506
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -105510,7 +105516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712733765}
   m_LocalRotation: {x: -0, y: 0.7357645, z: -0, w: 0.6772376}
-  m_LocalPosition: {x: -9.11, y: 0.069, z: -137.46}
+  m_LocalPosition: {x: -8.874, y: 0.069, z: -136.288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

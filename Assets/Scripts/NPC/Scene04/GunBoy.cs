@@ -79,9 +79,9 @@ public class GunBoy : MonoBehaviour
 
     public void WalkToPlayerSecond()
     {
-        _agent.isStopped = false;
         target = towardPlayerTarget;
-        _agent.SetDestination(target.transform.position);
+        _agent.isStopped = false;
+        
     }
 
 }
