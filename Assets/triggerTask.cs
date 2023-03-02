@@ -30,9 +30,6 @@ public class triggerTask : MonoBehaviour
             {
                 anim[i].enabled = true;
             }
-
-            
-
         }
 
 
