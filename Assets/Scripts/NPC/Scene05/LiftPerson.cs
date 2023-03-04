@@ -23,18 +23,22 @@ public class LiftPerson : MonoBehaviour
 
     private void Update()
     {
-        if(Vector3.Distance(transform.position,target.position)> WalkValue)
+        if (target != null)
         {
-            _agent.isStopped = false;
-            _anim.SetBool("Walk", true);
+            if (Vector3.Distance(transform.position, target.position) > WalkValue)
+            {
+                _agent.isStopped = false;
+                _anim.SetBool("Walk", true);
+            }
+
+            if (Vector3.Distance(transform.position, target.position) < StopValue)
+            {
+                _agent.isStopped = true;
+                _anim.SetBool("Walk", false);
+                _anim.SetBool("Fall", false);
+            }
         }
 
-        if(Vector3.Distance(transform.position, target.position)< StopValue)
-        {
-            _agent.isStopped = true;
-            _anim.SetBool("Walk", false);
-            _anim.SetBool("Fall", false);
-        }
     }
 
 
