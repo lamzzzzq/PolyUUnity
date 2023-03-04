@@ -8,7 +8,6 @@ public class LiftPerson : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
 
-    public LiftButton liftButton;
     private Transform target;
     public Transform targetPosition;
     public float WalkValue;

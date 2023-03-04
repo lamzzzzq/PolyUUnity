@@ -6,6 +6,7 @@ using PixelCrushers.DialogueSystem;
 public class LiftBehaviour : MonoBehaviour
 {
     public bool isDoorOpened = false;
+    public bool isDoorClosed = false;
     public bool isAudioPlayed = false;
     public Animator doorAnimator;
     public AudioSource LiftPersonAudio;
@@ -97,6 +98,28 @@ public class LiftBehaviour : MonoBehaviour
         fadeAnim.SetBool("FadeIn", false);
         float fadeOutDuration = fadeAnim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSecondsRealtime(fadeOutDuration);
+    }
+
+    public void CloseLiftDoor()
+    {
+        if (!isDoorClosed)
+        {
+            Debug.Log("yes closeliftdoor event executed.");
+            StartCoroutine(CloseLift());
+        }
+    }
+
+    IEnumerator CloseLift()
+    {
+        yield return new WaitForSeconds(5f);
+        doorAnimator.Play("Close");
+        Debug.Log("Animation Close Played");
+        isDoorClosed = true;
+    }
+
+    public void StopDoorCloseCoroutine()
+    {
+        StopAllCoroutines();
     }
 
 }
