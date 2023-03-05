@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class RandomWordGenerator : MonoBehaviour
 {
     public Text guidelineText;
-    public static string randomWord;
+    public string randomWord;
 
     private void Start()
     {
         string originalGuideline = guidelineText.text;
 
         //generate a random word from the word pool
-        string[] wordPool = { "glasses", "radio", "medicine" };
+        string[] wordPool = { "glasses", "radio", "slipper" };
         int randomIndex = Random.Range(0, wordPool.Length);
         randomWord = wordPool[randomIndex];
 

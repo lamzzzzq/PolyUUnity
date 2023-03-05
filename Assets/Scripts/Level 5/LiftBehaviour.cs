@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using BNG;
 
 public class LiftBehaviour : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LiftBehaviour : MonoBehaviour
     public GameObject targetPosition;
     public FadeManager fadeManager;
     public Animator fadeAnim;
+    public PlayerTeleport Teleport;
 
     private bool _hasCompletedLiftFlow = false;
 
@@ -65,7 +67,11 @@ public class LiftBehaviour : MonoBehaviour
     public void TeleportPlayerWithFade()
     {
         //StartCoroutine(TeleportPlayerWithFadeCoroutine());
-        StartCoroutine(teleportaion());
+        Debug.Log(targetPosition.transform.position);
+        //player.GetComponent<CharacterController>().enabled = false;
+        //Teleport.TeleportPlayerToTransform(targetPosition.transform);
+        player.transform.position = targetPosition.transform.position;
+        //player.GetComponent<CharacterController>().enabled = true;
     }
 
     IEnumerator TeleportPlayerWithFadeCoroutine()
@@ -79,7 +85,7 @@ public class LiftBehaviour : MonoBehaviour
 
     IEnumerator teleportaion()
     {
-        
+        Debug.Log("KK");
         player.transform.position = targetPosition.transform.position;
         yield return new WaitForSeconds(2f);
     }
