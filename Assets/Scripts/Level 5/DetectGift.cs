@@ -18,7 +18,6 @@ public class DetectGift : MonoBehaviour
         if(!isPlaced)
         {
             QuestLog.SetQuestState("WatsonCheckOut",QuestState.Active);
-            Debug.Log("1111");
             isPlaced = true;
             cashier.GetComponent<DialogueSystemTrigger>().OnUse();
             if (other.gameObject.CompareTag(gift.randomWord))
