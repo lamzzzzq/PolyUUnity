@@ -10,42 +10,17 @@ namespace BNG
     {
         public RandomWordGenerator gift;
         public SnapZone snapZone;
+        public GameObject snapZoneGameObj;
+        public GameObject guideCanvas;
 
         public bool isDecided;
         public GameObject cashier;
 
-        // Start is called before the first frame update
-/*        private void OnTriggerStay(Collider other)
-        {
-            if (!isPlaced)
-            {
-                QuestLog.SetQuestState("WatsonCheckOut", QuestState.Active);
-                isPlaced = true;
-                cashier.GetComponent<DialogueSystemTrigger>().OnUse();
-                if (other.gameObject.CompareTag(gift.randomWord))
-                {
-                    int oldValue = DialogueLua.GetVariable("Point_Level5").asInt;
-                    if (!isDecided)
-                    {
-                        int newValue = oldValue + 20;
-                        DialogueLua.SetVariable("Point_Level5", newValue);
-                        isDecided = true;
-                    }
-                    //QuestLog.SetQuestState
-                }
-            }
-        }*/
-
-/*        private void OnTriggerExit(Collider other)
-        {
-            isPlaced = false;
-        }*/
-
         public void TriggerCashierConversation()
         {
             //QuestLog.SetQuestState("WatsonCheckOut", QuestState.Active);
+            guideCanvas.SetActive(true);
             cashier.GetComponent<DialogueSystemTrigger>().OnUse();
-            Debug.Log("kk");
         }
 
 
@@ -53,14 +28,11 @@ namespace BNG
         {
             if (snapZone.HeldItem.CompareTag(gift.randomWord))
             {
-                Debug.Log("match");
                 int oldValue = DialogueLua.GetVariable("Point_Level5").asInt;
                 int newValue = oldValue + 20;
                 DialogueLua.SetVariable("Point_Level5", newValue);
-            }
-            else
-            {
-                Debug.Log("not match");
+                snapZoneGameObj.SetActive(false);
+                guideCanvas.SetActive(false);
             }
         }
     }

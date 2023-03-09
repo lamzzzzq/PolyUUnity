@@ -15802,7 +15802,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 37.978622
+        x: 39.407196
         y: 111.21388
         width: 160
         height: 30
@@ -15948,7 +15948,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 279.2439
+        x: 277.8153
         y: 240.38528
         width: 160
         height: 30
@@ -16027,8 +16027,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 576.3898
-        y: 107.89575
+        x: 582.10406
+        y: 122.18144
         width: 160
         height: 30
     - id: 6
@@ -16094,14 +16094,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level5"] = Variable["Point_Level5"] + 20
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 579.09247
-        y: 227.49033
+        x: 581.94965
+        y: 254.63318
         width: 160
         height: 30
     entryGroups: []
@@ -17249,8 +17249,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 40.593414
-        y: 142
+        x: 38.395615
+        y: 138.7033
         width: 160
         height: 30
     - id: 5
@@ -17386,7 +17386,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -17516,7 +17516,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("WatsonCheckOut") == "active"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17550,7 +17550,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yes, please help me check out. Thank you.
+        value: Yes, I decided. Please help me check out. Thank you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17577,6 +17577,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1b45272e-4a53-45cf-8d8f-d3755238ff19
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -17592,8 +17596,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38
-        y: 211
+        x: 34
+        y: 222
         width: 160
         height: 30
     - id: 3
@@ -17619,7 +17623,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: No, not yet.
+        value: No, not yet. Let me bring a new one.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17661,8 +17665,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 280
-        y: 211
+        x: 339
+        y: 227
         width: 160
         height: 30
     entryGroups: []
