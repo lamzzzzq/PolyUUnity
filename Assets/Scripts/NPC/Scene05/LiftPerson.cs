@@ -14,6 +14,9 @@ public class LiftPerson : MonoBehaviour
     public float WalkValue;
     public float StopValue;
 
+    public string childUIName = "LiftPersonDialogueUI";
+
+
     public Transform LiftTargetPosition;
 
     void Start()
@@ -39,6 +42,11 @@ public class LiftPerson : MonoBehaviour
                 _anim.SetBool("Walk", false);
                 _anim.SetBool("Fall", false);
                 facePlayer.enabled = true;
+
+                //切换canvas
+                this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
+                //和玩家对话
+                this.GetComponent<DialogueSystemTrigger>().OnUse();
             }
         }
 

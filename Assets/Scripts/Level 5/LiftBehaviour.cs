@@ -12,8 +12,12 @@ public class LiftBehaviour : MonoBehaviour
     public Animator doorAnimator;
     public AudioSource LiftPersonAudio;
     public GameObject liftPerson;
+
+
     public GameObject player;
     public GameObject targetPosition;
+
+
     public FadeManager fadeManager;
     public Animator fadeAnim;
     public PlayerTeleport Teleport;
@@ -68,8 +72,6 @@ public class LiftBehaviour : MonoBehaviour
     {
         //StartCoroutine(TeleportPlayerWithFadeCoroutine());
         Debug.Log(targetPosition.transform.position);
-        //player.GetComponent<CharacterController>().enabled = false;
-        //Teleport.TeleportPlayerToTransform(targetPosition.transform);
         player.transform.position = targetPosition.transform.position;
         //player.GetComponent<CharacterController>().enabled = true;
     }

@@ -10,8 +10,6 @@ public class TeleportationPosition : MonoBehaviour
     public GameObject exitPosition;
     public GameObject player;
     public GameObject confirmUI;
-
-    public GameObject playerController; // the player controller
     // Start is called before the first frame update
     
     public void teleportationPosition()
@@ -21,13 +19,13 @@ public class TeleportationPosition : MonoBehaviour
 
     public void DisableMovement()
     {
-        playerController.GetComponent<CharacterController>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
     }
 
     public void ExitJet()
     {
         player.transform.position = exitPosition.transform.position;
-        playerController.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = true;
     }
 
     public void DisableConfirmUI()

@@ -15802,7 +15802,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 37.978622
+        x: 39.407196
         y: 111.21388
         width: 160
         height: 30
@@ -15948,7 +15948,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 279.2439
+        x: 277.8153
         y: 240.38528
         width: 160
         height: 30
@@ -16013,7 +16013,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 32
+        originDialogueID: 5
+        destinationConversationID: 32
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
       conditionsString: CurrentQuestState("HoldLift") == "success"
       userScript: 
       onExecute:
@@ -16021,13 +16027,86 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 575.71405
-        y: 108.57141
+        x: 582.10406
+        y: 122.18144
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 13
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: No problem!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: f68d0c4c-43f5-478b-b1b6-e603ee4daac1
+        type: 0
+        typeString: 
+      conversationID: 32
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["Point_Level5"] = Variable["Point_Level5"] + 20
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 581.94965
+        y: 254.63318
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7000003
+    canvasZoom: 0.7000004
   - id: 33
     fields:
     - title: Title
@@ -17121,7 +17200,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Welcome! Just put what you want to buy on the counter. Thank you!
+        value: Welcome! Feel free to put what you want to buy on the counter. Thank
+          you!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17169,7 +17249,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 34
+        x: 40.593414
         y: 142
         width: 160
         height: 30
@@ -17306,7 +17386,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -17436,15 +17516,15 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("WatsonCheckOut") == "active"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33
-        y: 99
+        x: 35
+        y: 111
         width: 160
         height: 30
     - id: 2
@@ -17470,7 +17550,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yes, please help me check out. Thank you.
+        value: Yes, I decided. Please help me check out. Thank you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17497,6 +17577,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 1b45272e-4a53-45cf-8d8f-d3755238ff19
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 35
       isRoot: 0
       isGroup: 0
@@ -17512,8 +17596,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38
-        y: 211
+        x: 34
+        y: 222
         width: 160
         height: 30
     - id: 3
@@ -17539,7 +17623,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: No, not yet.
+        value: No, not yet. Let me bring a new one.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17581,8 +17665,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 264
-        y: 200
+        x: 339
+        y: 227
         width: 160
         height: 30
     entryGroups: []
