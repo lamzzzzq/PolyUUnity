@@ -47,7 +47,7 @@ namespace BNG {
                 }
                 fadeObject = new GameObject();
                 fadeObject.transform.parent = Camera.main.transform;
-                fadeObject.transform.localPosition = new Vector3(0, 0, 0.03f);
+                fadeObject.transform.localPosition = new Vector3(0, 0, 0.11f);
                 fadeObject.transform.localEulerAngles = Vector3.zero;
                 fadeObject.transform.name = faderName;
 

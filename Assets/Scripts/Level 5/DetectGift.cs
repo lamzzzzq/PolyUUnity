@@ -13,14 +13,23 @@ namespace BNG
         public GameObject snapZoneGameObj;
         public GameObject guideCanvas;
 
+
         public bool isDecided;
         public GameObject cashier;
+
+        TeleportPlayerFade fade;
 
         public void TriggerCashierConversation()
         {
             //QuestLog.SetQuestState("WatsonCheckOut", QuestState.Active);
+
+            //need to end a current conversation here
+
             guideCanvas.SetActive(true);
-            cashier.GetComponent<DialogueSystemTrigger>().OnUse();
+            foreach (var trigger in cashier.GetComponents<DialogueSystemTrigger>())
+            {
+                trigger.OnUse();
+            }
         }
 
 
@@ -28,11 +37,22 @@ namespace BNG
         {
             if (snapZone.HeldItem.CompareTag(gift.randomWord))
             {
+                //fade.FadeCutscene();
                 int oldValue = DialogueLua.GetVariable("Point_Level5").asInt;
                 int newValue = oldValue + 20;
                 DialogueLua.SetVariable("Point_Level5", newValue);
-                snapZoneGameObj.SetActive(false);
                 guideCanvas.SetActive(false);
+                snapZoneGameObj.SetActive(false);
+
+
+            }
+            else
+            {
+                //fade.FadeCutscene();
+                guideCanvas.SetActive(false);
+                snapZoneGameObj.SetActive(false);
+
+
             }
         }
     }

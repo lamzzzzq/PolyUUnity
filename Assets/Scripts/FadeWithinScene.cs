@@ -6,6 +6,8 @@ public class FadeWithinScene : MonoBehaviour
 {
     // Start is called before the first frame update
     public Animator animator;
+    public GameObject player;
+    public GameObject target;
 
     public void Fade()
     {
