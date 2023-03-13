@@ -1270,10 +1270,10 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-  - id: 10
+  - id: 11
     fields:
     - title: Name
-      value: WatsonCheckOut
+      value: WatsonGreeting
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -1300,10 +1300,10 @@ MonoBehaviour:
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-  - id: 11
+  - id: 10
     fields:
     - title: Name
-      value: WatsonGreeting
+      value: WatsonCheckOut
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
@@ -16057,8 +16057,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 582.10406
-        y: 122.18144
+        x: 574.96124
+        y: 123.61
         width: 160
         height: 30
     - id: 6
@@ -16124,14 +16124,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["Point_Level5"] = Variable["Point_Level5"] + 20
+      userScript: 'Variable["Point_Level5"] = Variable["Point_Level5"] + 20;
+
+        SetQuestState("HoldLift",
+        "abandoned")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 583.37823
-        y: 254.63318
+        x: 574.80676
+        y: 247.49033
         width: 160
         height: 30
     entryGroups: []
@@ -17101,7 +17104,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 13
+      value: 22
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -17147,7 +17150,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -17218,7 +17221,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -17272,7 +17275,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: CurrentQuestState("WatsonGreeting") == "unassigned"
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -17280,7 +17283,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 36.1978
-        y: 125.51648
+        y: 118.06967
         width: 160
         height: 30
     - id: 5
@@ -17298,7 +17301,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 22
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -17353,12 +17356,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 33.098892
-        y: 223.92429
+        y: 224.98813
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.06
+    canvasZoom: 0.8800001
   - id: 35
     fields:
     - title: Title
@@ -17374,7 +17377,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 13
+      value: 22
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -17704,8 +17707,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 17.647064}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 0, y: 13.698608}
+    canvasZoom: 0.73000026
   - id: 36
     fields:
     - title: Title
@@ -17721,7 +17724,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 13
+      value: 22
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -18123,7 +18126,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.2099998
+    canvasZoom: 1.06
   syncInfo:
     syncActors: 0
     syncItems: 0
