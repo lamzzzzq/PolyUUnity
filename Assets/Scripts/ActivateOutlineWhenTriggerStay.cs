@@ -6,7 +6,7 @@ public class ActivateOutlineWhenTriggerStay : MonoBehaviour
 {
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "SubPlayer")
         {
             this.GetComponent<Outline>().enabled = true;
         }
@@ -14,7 +14,7 @@ public class ActivateOutlineWhenTriggerStay : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "SubPlayer")
         {
             this.GetComponent<Outline>().enabled = false;
         }
