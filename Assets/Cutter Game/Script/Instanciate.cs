@@ -67,7 +67,7 @@ public class Instanciate : MonoBehaviour
 
 
     }*/
-    public void instantiateTopBred()
+   /* public void instantiateTopBred()
     {
 
         Instantiate(cloneObj, new Vector3(10.974f, 0.3f, GameFlow.plateZpos), Quaternion.identity);
@@ -106,7 +106,7 @@ public class Instanciate : MonoBehaviour
         GameFlow.plateValue[GameFlow.plateNum] += foodValue;
         popUpUI.isOtherOperation = true;
 
-    }
+    }*/
 
 
 }

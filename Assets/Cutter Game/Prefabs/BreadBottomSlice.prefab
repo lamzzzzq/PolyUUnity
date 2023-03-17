@@ -433,7 +433,6 @@ GameObject:
   - component: {fileID: 3996730840921890401}
   - component: {fileID: 4358490343538099410}
   - component: {fileID: 4613844940750190760}
-  - component: {fileID: -6516075291432316200}
   m_Layer: 0
   m_Name: BreadBottomSlice
   m_TagString: Bread
@@ -604,19 +603,6 @@ MonoBehaviour:
   UseCustomInspector: 1
   lastFlickTime: 0
   FlickForce: 1
---- !u!114 &-6516075291432316200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5811185681430499090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539ae839f9d203d4586c6fee2d925df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObjectToCreate: {fileID: 0}
 --- !u!1001 &4237996992041339964
 PrefabInstance:
   m_ObjectHideFlags: 0

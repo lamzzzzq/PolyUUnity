@@ -16,7 +16,7 @@ public class InstantiateAndGrab : MonoBehaviour
     {
         grabber = other.GetComponent<Grabber>();
 
-        if(grabber != null && !grabber.HoldingItem)
+        if (grabber != null && !grabber.HoldingItem)
         {
             go = GameObject.Instantiate(ObjectToCreate, grabber.transform.position, grabber.transform.rotation);
 
@@ -29,10 +29,12 @@ public class InstantiateAndGrab : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.J) || InputBridge.Instance.RightGripDown)
+        if (InputBridge.Instance.RightGripDown || InputBridge.Instance.LeftGripDown)
         {
             grabbable.CanBeDropped = true;
             grabber.TryRelease();
         }
     }
+
+    //之后可以利用Enum进行左右手的区分，chatGPT教的
 }

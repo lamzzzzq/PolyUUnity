@@ -29,8 +29,8 @@ public class InstantiateMeat : MonoBehaviour
     public void MoveMeat()
     {
 
-        Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
-        GameFlow.plateValue[GameFlow.plateNum] += movecookedmeat.foodValue;
+/*        Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
+        GameFlow.plateValue[GameFlow.plateNum] += movecookedmeat.foodValue;*/
         //movecookedmeat.cooking = false;
         //meatMat.material.color = defaultColor;
         //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs

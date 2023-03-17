@@ -24,12 +24,12 @@ public class InstantiateButton : MonoBehaviour
     public void instantiateCookedMeat()
     {
 
-        Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
+/*        Instantiate(cookedMeat, new Vector3(10.974f, 0.26f, GameFlow.plateZpos), Quaternion.identity);
         GameFlow.plateValue[GameFlow.plateNum] += movecookedmeat.foodValue;
         movecookedmeat.cooking = false;
         //meatMat.material.color = defaultColor;
         //GameObject.Find("LunchMeatSlice").SetActive(false); //meatBaking in MeatSlice.cs
-        //Destroy(gameObject);
+        //Destroy(gameObject);*/
 
     }
 }

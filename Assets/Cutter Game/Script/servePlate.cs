@@ -6,7 +6,7 @@ using BNG;
 
 public class servePlate : MonoBehaviour
 {
-    [SerializeField] private bool rightMeal = false;
+/*    [SerializeField] private bool rightMeal = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -27,5 +27,5 @@ public class servePlate : MonoBehaviour
 
         }
         
-    }
+    }*/
 }
