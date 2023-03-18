@@ -23,6 +23,8 @@ TagManager:
   - slipper
   - glasses
   - radio
+  - Glasses_Real
+  - Glasses_Fake
   layers:
   - Default
   - TransparentFX
