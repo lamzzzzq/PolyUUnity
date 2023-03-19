@@ -8367,9 +8367,7 @@ MonoBehaviour:
   anotherQuestEntryNumber: 1
   anotherQuestEntryState: 0
   luaCode: Variable["FatherTalked"] = false
-  sequence: 'AnimatorPlayWait(Walking,FatherObject)@1.4;
-
-'
+  sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
   waitOneFrameOnStartOrEnable: 1
@@ -55670,6 +55668,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9935403, y: 0.7344537, z: 3.5289962}
   m_Center: {x: 0.05117022, y: 0.462727, z: -0.017134845}
+--- !u!114 &1035485421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7277927619755327665, guid: 382bf98d08d9b004c844f99020bc7a67,
+    type: 3}
+  m_PrefabInstance: {fileID: 205313058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac09bf699d4234448aa42c086c9f964c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1036707191
 GameObject:
   m_ObjectHideFlags: 0
@@ -75798,7 +75808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1508447886}
   m_Layer: 0
-  m_Name: Block
+  m_Name: Block_Father
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96329,7 +96339,19 @@ MonoBehaviour:
   - guid: ad846ec4-7727-4a5a-9b3c-b950b5d7e03e
     onExecute:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2032750900}
+          m_TargetAssemblyTypeName: ScreenFadeFatherDisappear, Assembly-CSharp
+          m_MethodName: FadeAndFatherDisappear
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &2018761327
 Transform:
   m_ObjectHideFlags: 0
@@ -96836,6 +96858,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: -90, y: 83.25, z: 7.196}
+--- !u!1 &2032750899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4851885131329286218, guid: 382bf98d08d9b004c844f99020bc7a67,
+    type: 3}
+  m_PrefabInstance: {fileID: 205313058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2032750900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032750899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39918e11e81d7ce4c934cfbf2525f05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  father: {fileID: 2144845693}
+  block: {fileID: 1508447885}
+  fader: {fileID: 1035485421}
 --- !u!1 &2036164978
 GameObject:
   m_ObjectHideFlags: 0
