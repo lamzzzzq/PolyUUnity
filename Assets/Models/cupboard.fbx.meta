@@ -3,7 +3,117 @@ guid: cae9a41d37cace742a036c5a533457e5
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballpen_Cyan.002
+    second: {fileID: 2100000, guid: d55c0fa1894d488489b13d34ef667aed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ballpen_Pink
+    second: {fileID: 2100000, guid: fc58dffd103f21547956deb9a8786aaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basketball_Black
+    second: {fileID: 2100000, guid: 82162bd4a50a6a54399bf63b6f289d57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blackboard_Cyan
+    second: {fileID: 2100000, guid: 4807097fb870a8846a1a5a5a2edf3964, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book_Blue
+    second: {fileID: 2100000, guid: 7a6e2e279fe84a6488470d0b5b8ffcae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book_Brown
+    second: {fileID: 2100000, guid: 0ebe0b806f5544c43af4ddf6b64150d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book_Violet
+    second: {fileID: 2100000, guid: 5053e89a66afd8841ad2048d8217a019, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Book_White
+    second: {fileID: 2100000, guid: da8be09fd367cd8489ae5e5fc15d6c28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Exercise_Paper_White
+    second: {fileID: 2100000, guid: 69436c1089165cc4698a02789254128b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Green
+    second: {fileID: 2100000, guid: 60392936e26497f4d90c35fed0dae881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Green.001
+    second: {fileID: 2100000, guid: b54ca0c2a0fef6e4fa8dbb8787f3c60f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Red
+    second: {fileID: 2100000, guid: cbe48332ea1df2946be0308b3a44beed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Red.001
+    second: {fileID: 2100000, guid: e82137b609095a44da124d22243cbed5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_White.001
+    second: {fileID: 2100000, guid: b6698808a51133d41b4431b4a1b0a970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Yellow
+    second: {fileID: 2100000, guid: 01ea44f6f1846474994a0e1cefa0e90f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Yellow.001
+    second: {fileID: 2100000, guid: 3701104552b077d4fb208072d8d31dc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower_Yellow.002
+    second: {fileID: 2100000, guid: 3eccdbe6637d4fa4a9b79a1869f091bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Football_White
+    second: {fileID: 2100000, guid: 9397dc9e7a1ee2546a9c0c09c70fb689, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toychest_Blue
+    second: {fileID: 2100000, guid: fe9817251f710c9499bce974245904cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Trash_Red
+    second: {fileID: 2100000, guid: 7c8ab001f83abd0469e2eacd10779374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 26d0aa8d17e63d8488f09921543009b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: World_Map_Blue
+    second: {fileID: 2100000, guid: d7c37acd90d120049ac1c12769208c8b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
