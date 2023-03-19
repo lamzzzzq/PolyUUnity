@@ -14,9 +14,6 @@ public class triggerTask : MonoBehaviour
 
     public GameObject obj1;
     public GameObject obj2;
-    public GameObject books;
-    public GameObject file;
-    public GameObject pen;
 
     public List<Animator> anim = new List<Animator>();
     
@@ -31,8 +28,6 @@ public class triggerTask : MonoBehaviour
                 anim[i].enabled = true;
             }
         }
-
-
 
         if(other.gameObject.name == "DropPoint")
         {
