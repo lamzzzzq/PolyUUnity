@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Archieve£¡
+
 public class FacePlayerWhenTrigger : MonoBehaviour
 {
     public float sightRadius;
