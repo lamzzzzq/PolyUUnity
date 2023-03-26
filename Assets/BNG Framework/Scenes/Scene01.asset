@@ -3155,8 +3155,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.72137
-        y: 85.57741
+        x: 210.3515
+        y: 86.947266
         width: 160
         height: 30
     - id: 2
@@ -3227,7 +3227,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 78.016525
+        x: 76.64667
         y: 183.93988
         width: 160
         height: 30
@@ -3296,8 +3296,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 349.09375
-        y: 181.42433
+        x: 366.90198
+        y: 186.9038
         width: 160
         height: 30
     entryGroups: []
@@ -3639,8 +3639,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["TASK_3_1_CASH"] == 10 or (Variable["TASK_3_1_CASH"]
-        == 20)
+      conditionsString: 
       userScript: 'Variable["Point_Level3"] = Variable["Point_Level3"] + 10;
 
         Variable["DonatedToSocialWorker"]
@@ -3652,8 +3651,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 441.0075
-        y: 196.16403
+        x: 443.20526
+        y: 198.36185
         width: 160
         height: 30
     entryGroups: []
@@ -15079,7 +15078,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 34.823532
+        x: 36.19339
         y: 88.41177
         width: 160
         height: 30
@@ -15306,7 +15305,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 571.1764
+        x: 572.54626
         y: 94.51247
         width: 160
         height: 30
@@ -15450,7 +15449,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 680.58813
+        x: 681.95795
         y: 199.99997
         width: 160
         height: 30
@@ -15745,7 +15744,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1799998
+    canvasZoom: 0.73000014
   - id: 38
     fields:
     - title: Title
@@ -15950,7 +15949,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 19.063828
+        x: 17.748032
         y: 90.42552
         width: 160
         height: 30
@@ -16101,7 +16100,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 450
-        y: 95
+        y: 93.68422
         width: 160
         height: 30
     - id: 4
@@ -16174,8 +16173,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 18.967094
-        y: 154.32112
+        x: 17.651314
+        y: 155.63692
         width: 160
         height: 30
     - id: 5
@@ -16249,8 +16248,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 226
-        y: 157.4826
+        x: 224.6842
+        y: 158.7984
         width: 160
         height: 30
     - id: 6
@@ -16324,12 +16323,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 451
-        y: 155.38298
+        y: 154.06721
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.7600002
   - id: 39
     fields:
     - title: Title
@@ -17522,8 +17521,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 555
-        y: 103
+        x: 547
+        y: 102
         width: 160
         height: 30
     - id: 4
@@ -17670,8 +17669,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 267
-        y: 155
+        x: 266
+        y: 156
         width: 160
         height: 30
     - id: 6
@@ -17732,20 +17731,20 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 'SetQuestState("1_2_Sandwich", "abandoned");
+      conditionsString: 
+      userScript: 'SetQuestState("1_2_Sandwich", "abandoned");
 
         Variable["Point_Level"]
         = Variable["Point_Level"] + 0;
 
         SetQuestState("1_3_WashPlate", "active")'
-      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 555
-        y: 153
+        x: 561
+        y: 171
         width: 160
         height: 30
     entryGroups: []

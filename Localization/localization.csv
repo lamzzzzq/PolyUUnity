@@ -1,0 +1,623 @@
+﻿Database
+Name,Version,Author,Description,Emphasis1,Emphasis2,Emphasis3,Emphasis4
+Scene01,,,,#ffffffff ---,#ff0000ff ---,#00ff00ff ---,#0000ffff ---
+Global User Script
+
+Items
+ID,Name,Pictures,Description,Success Description,Failure Description,State,Is Item,Entry Count,Entry 1 State,Entry 1,Entry 2 State,Entry 2,Display Name,Trackable
+Number,Text,Files,Text,Text,Text,Text,Boolean,Number,Text,Text,Text,Text,Text,Boolean
+3,Get the Balloon,[],,,,unassigned,False,2,unassigned,Agree to help to get the balloon,active,Disagree to help get the balloon.,{{omit}},{{omit}}
+4,ToyBubble,[],,,,unassigned,False,2,unassigned,Agree to exit,unassigned,Disagree to exit,{{omit}},{{omit}}
+5,BringAED,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+6,CollectDust,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+7,HoldLift,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+8,Dust,[],,{{omit}},{{omit}},{{omit}},True,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+9,Collect Mask,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+11,WatsonGreeting,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+10,WatsonCheckOut,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+12,1_1_CleanTheDirt,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+13,1_2_Sandwich,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+14,1_3_WashPlate,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+16,1.4_GrandmaGlasses,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+15,1.5_Sister,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+17,2.1_TeacherDropItem,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+18,2.2_WaterPour,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+2,2.3_FindPen,[],,,,unassigned,False,0,{{omit}},{{omit}},{{omit}},{{omit}},Find a pen,True
+19,2.4_ComfortClassmate,[],,,,unassigned,False,{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}},{{omit}}
+Conversations
+ID,Title,Description,Actor,Conversant,Overrides
+Number,Text,Text,Actor,Actor,JSON
+4,Father Greeting,,1,4,"{""useOverrides"":true,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+5,TeacherGreeting,,1,2,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+9,Task3.1_1,,1,8,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+11,Task3.1_2,,1,8,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+12,Task3.1_3,,1,8,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+17,Task3.2_1,,1,12,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+18,Task3.2_2,,1,12,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+21,Task3.2_3,,1,12,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+10,Task3.3_1,,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+13,Task3.3_2,,1,9,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+15,Task3.3_3,,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+14,Task3.4_DogConversation,,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+16,Task3.4_1,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+19,Task3.4_2,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+20,Task3.4_3,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+22,Task4.1_1,,13,1,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+23,Task4.2_1,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+24,Task4.3_1,,1,18,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+25,Task4.4_1,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+26,Task4.5_1,,1,13,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+27,Task4.1_2,,1,11,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+28,Task4.1_3,,1,13,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+29,Task4.4_2,,1,15,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+30,Task4.4_3,,1,15,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+31,Task4.4_4,,1,15,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+32,Task5.2_1,,1,13,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+33,CustomerCrushMasks,,1,13,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+34,WatsonCashier,,1,22,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+35,WatsonCashier_2,,1,22,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+36,WatsonCashier_3,,1,22,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+37,Task1.1_1,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+38,Task1.1_2,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+39,Task1.2_1,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+40,Task1.2_2,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+41,Task1.2_3,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+42,Task1.3_1,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+43,Task1.3_2,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+44,Task1.3_3,,1,3,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+45,Task1.4_1,,1,23,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+46,Task1.4_2,,1,23,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+1,Task1.5,,1,2,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+47,Task2.1_1,,1,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+48,Task2.1_2,,1,5,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+49,Task2.2_1,,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+50,Task2.2_2,,1,6,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+6,Task2.3_1,,1,24,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+51,Task2.3_2,,1,24,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+7,Task2.4,,1,7,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+52,Task2.5,,1,25,"{""useOverrides"":false,""overrideSubtitleSettings"":false,""showNPCSubtitlesDuringLine"":true,""showNPCSubtitlesWithResponses"":true,""showPCSubtitlesDuringLine"":false,""skipPCSubtitleAfterResponseMenu"":false,""subtitleCharsPerSecond"":30.0,""minSubtitleSeconds"":2.0,""continueButton"":0,""overrideSequenceSettings"":false,""defaultSequence"":"""",""defaultPlayerSequence"":"""",""defaultResponseMenuSequence"":"""",""overrideInputSettings"":false,""alwaysForceResponseMenu"":true,""includeInvalidEntries"":false,""responseTimeout"":0.0,""emTagForOldResponses"":0,""emTagForInvalidResponses"":0,""cancelSubtitle"":{""key"":27,""buttonName"":""""},""cancelConversation"":{""key"":27,""buttonName"":""""}}"
+DialogueEntries
+entrytag,ConvID,ID,Actor,Conversant,Title,MenuText,DialogueText,IsGroup,FalseConditionAction,ConditionPriority,Conditions,Script,Sequence,Description,en,zh-Hans,zh-HK,Guid,Response Menu Sequence,EventGuid,canvasRect
+Text,Number,Number,Number,Number,Text,Text,Text,Boolean,Special,Special,Text,Text,Text,Text,Localization,Localization,Localization,Text,Text,Text,Text
+invalid_entrytag,4,0,1,4,START,,,False,Block,Normal,,,None(),,,,,a7045b76-ee54-42a7-b846-20bd97aac9c0,,{{omit}},30;20
+invalid_entrytag,4,1,4,1,,,I have to go to company and handle some urgent work now.  But your mum said she feels a bit sick. Can you help take care of her?\r,False,Block,Normal,,,,,I have to go to company and handle some urgent work now.  But your mum said she feels a bit sick. Can you help take care of her?\r,我現在要去公司處理一些急事，沒想到你媽媽說她有點不舒服，你可不可以幫忙照顧一下她呀?\r,我而家要去公司處理啲緊急嘢，點知咁啱你媽咪話佢有啲唔舒服，你可唔可以幫手照顧下佢呀?\r,a86884a0-1534-4e10-ae88-f9da3dfb7325,,{{omit}},24.82758;97.38036
+invalid_entrytag,4,2,1,4,,,No problem! I will stay at home and take care of mum.\r,False,Block,Normal,,,,,No problem! I will stay at home and take care of mum.\r,沒問題呀！我會留在家裡好好照顧她的。\r,冇問題呀！我會留喺屋企好好地照顧佢。\r,714d4c56-964a-4802-82e5-aadcc6d70ce2,,{{omit}},33.27869;171.7241
+invalid_entrytag,4,4,4,1,,,Thank you for your help,False,Block,Normal,,"Variable[""FatherTalked""] = true;",,,Thank you for your help.,\r謝謝你幫忙,多謝你幫手,b825d493-5fad-4463-8fe2-44170a6fafde,,ad846ec4-7727-4a5a-9b3c-b950b5d7e03e,38.36632;261.0118
+invalid_entrytag,5,0,1,2,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,5,1,5,1,,,"Ok, everyone, let us stop here. You can take a break now!",False,Block,Normal,,,,,"Ok, everyone, let us stop here. You can take a break now!",好啦，各位同學，這堂課就上到這裡。大家可以去休息啦。,好啦，各位同學，呢堂就上到呢度。大家可以去小休啦。,,,{{omit}},31;67.96907
+invalid_entrytag,5,2,1,5,,,Thank you Miss!,False,Block,Normal,,"Variable[""ClassEnd""] = true",,,Thank you Miss!,多謝老師！,多謝老師！,,,{{omit}},31.03092;121.0309
+invalid_entrytag,9,0,1,8,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},210;20
+invalid_entrytag,9,1,8,1,,,"""Hello, we would like to raise money for poor children, could you help us donate some money?""\r",False,Block,Normal,,,,,,,,,,{{omit}},210.3515;86.94727
+invalid_entrytag,9,2,1,8,,,"I would love to help! I have 50 dollars, let me check how much can I give you.",False,Block,Normal,,"Variable[""TalkedToSocialWorker""] = true","SetActive(SlotForCash,true);\nSetActive(GuideText,true);",,,,,,,{{omit}},76.64667;183.9399
+invalid_entrytag,9,3,1,8,,,"I have only 50 dollars, sorry I can't donate this time.",False,Block,Normal,,,,,,,,,,{{omit}},366.902;186.9038
+invalid_entrytag,11,0,1,8,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},208.8235;29.41177
+invalid_entrytag,11,7,8,1,,,Excellent! Thanks so much for your helping.,False,Block,Normal,"Variable[""TASK_3_1_CASH""] == 50","Variable[""Point_Level3""] = Variable[""Point_Level3""] + 30;\nVariable[""DonatedToSocialWorker""] = true",,,,,,,,{{omit}},22;196.3879
+invalid_entrytag,11,8,8,1,,,Thanks so much for your helping.,False,Block,Normal,"Variable[""TASK_3_1_CASH""] == 30 or (Variable[""TASK_3_1_CASH""] == 40)","Variable[""Point_Level3""] = Variable[""Point_Level3""] + 15;\nVariable[""DonatedToSocialWorker""] = true",,,,,,,,{{omit}},222.7059;199.0588
+invalid_entrytag,11,9,8,1,,,Thanks for your helping.,False,Block,Normal,,"Variable[""Point_Level3""] = Variable[""Point_Level3""] + 10;\nVariable[""DonatedToSocialWorker""] = true;\n",,,,,,,,{{omit}},443.2053;198.3618
+invalid_entrytag,12,0,1,8,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,12,1,8,1,,,It's very kind of you! Appreciate it!,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,12,2,1,8,,,My pleasure.,False,Block,Normal,,,,,,,,,,{{omit}},30;120
+invalid_entrytag,17,0,12,12,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,17,1,12,1,,,"Aiya..Who put the debris in the middle of the road, can you help me move these debris to the right place, I want to cross the road",False,Block,Normal,,,,,,,,,,{{omit}},31;70
+invalid_entrytag,17,2,1,12,,,Let me help you!,False,Block,Normal,,,,,,,,,,{{omit}},33;135
+invalid_entrytag,17,3,1,12,,,I am sorry I am still in a hurry. I can't help.,False,Block,Normal,,,,,,,,,,{{omit}},304;145
+invalid_entrytag,17,4,12,1,,,That would be great!,False,Block,Normal,,,,,,,,,,{{omit}},33;212
+invalid_entrytag,18,0,1,12,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,18,1,12,1,,,Thank you...I need to go across the street? Would you like to help me?,False,Block,Normal,,,,,,,,,,{{omit}},29;69
+invalid_entrytag,18,2,1,12,,,With Pleasure! Let me help you.,False,Block,Normal,,"Variable[""TASK_3_2_HELP""] = true;\nVariable[""Point_Level3""] = Variable[""Point_Level3""] + 30",,,,,,,,{{omit}},28;191
+invalid_entrytag,18,3,1,12,,,I am afraid I can't. Sorry!,False,Block,Normal,,,,,,,,,,{{omit}},280.6316;194.2632
+invalid_entrytag,21,0,1,12,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,21,1,12,1,,,Thank you...You are so kind.,False,Block,Normal,,,,,,,,,,{{omit}},30;72
+invalid_entrytag,10,0,1,6,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},210;20
+invalid_entrytag,10,1,9,1,,,"I am hungry, can you give me some money for food? Any coins will be appreciate.",False,Block,Normal,,,,,,,,,,{{omit}},210.8696;68.26088
+invalid_entrytag,10,8,1,9,,,"I don't have enough money,sorry I can't donate this time.",False,Block,Normal,,,,,,,,,,{{omit}},364.7826;139.1305
+invalid_entrytag,10,9,1,9,,,I would love to help! Let me check how much can I give you.,False,Block,Normal,,"Variable[""TalkedToBeggar""] = true","SetActive(SlotForCoin,true)",,,,,,,{{omit}},94.34782;140.8696
+invalid_entrytag,13,0,1,9,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},210;20
+invalid_entrytag,13,1,9,1,,,I am so hungry...,False,Block,Normal,,,,,,,,,,{{omit}},210;70
+invalid_entrytag,13,2,1,9,,,I think that's all I can provide.,False,Block,Normal,,,"SetActive(SlotForCoin,false)",,,,,,,{{omit}},75;120
+invalid_entrytag,13,3,1,9,,,"Hold on, let me give you more.",False,Block,Normal,,,,,,,,,,{{omit}},345;120
+invalid_entrytag,13,4,9,1,,Excellent! Thanks so much for your helping.,,False,Block,Normal,"Variable[""TASK_3_3_COIN""] == 8","Variable[""DonatedToBeggar""] = true;\nVariable[""Point_Level3""] = Variable[""Point_Level3""] + 30",,,,,,,,{{omit}},30;170
+invalid_entrytag,13,5,9,1,,,Thanks so much for your helping.,False,Block,Normal,"Variable[""TASK_3_3_COIN""] <= 7 and (Variable[""TASK_3_3_COIN""] >= 2)","Variable[""DonatedToBeggar""] = true;\nVariable[""Point_Level3""] = Variable[""Point_Level3""] + 15",,,,,,,,{{omit}},210;170
+invalid_entrytag,13,6,9,1,,,Thanks for your helping.,False,Block,Normal,"Variable[""TASK_3_3_COIN""] == 1","Variable[""DonatedToBeggar""] = true;\nVariable[""Point_Level3""] = Variable[""Point_Level3""] + 10",,,,,,,,{{omit}},390;170
+invalid_entrytag,15,0,1,6,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,15,1,9,1,,,Thank you...I don't need to worry about being hungry today.,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,15,2,1,9,,,I am glad to help!,False,Block,Normal,,,,,,,,,,{{omit}},30;120
+invalid_entrytag,14,0,1,6,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,14,1,10,1,,,[Woof..Woof],False,Block,Normal,,,,,,,,,,{{omit}},30;83
+invalid_entrytag,14,2,1,10,,,"Oh, what a lovely dog. Where is your owner?",False,Block,Normal,,"Variable[""FoundDog""] = true","SetActive(DogGuideText,true)",,,,,,,{{omit}},33;154
+invalid_entrytag,16,0,1,11,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},119;21
+invalid_entrytag,16,1,11,1,,,"I cannot find my dog, it’s a white little dog. Have you seen it?",False,Block,Normal,,,,,,,,,,{{omit}},121;85
+invalid_entrytag,16,2,1,11,,,"Yes, I have.",False,Block,Normal,,,,,,,,,,{{omit}},121;139.1786
+invalid_entrytag,16,3,11,1,,,That's great! Would you mind taking me to find him? Thanks!,False,Block,Normal,,,,,,,,,,{{omit}},121;199
+invalid_entrytag,16,4,1,11,,,No problem! Please follow me.,False,Block,Normal,,"Variable[""TASK_3_4_HELP""] = true","SetEnabled(DogOwner,true,DogOwner)",,,,,,,{{omit}},70.32141;289.5357
+invalid_entrytag,16,5,1,11,,,I am afraid I can't. I am in a hurry.,False,Block,Normal,,,,,,,,,,{{omit}},350.4643;295.4286
+invalid_entrytag,19,0,1,11,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,19,1,11,1,,,Please show me the way. Thanks!,False,Block,Normal,,,,,,,,,,{{omit}},27;104
+invalid_entrytag,20,0,1,11,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,20,1,11,1,,,Thank you so much! This is my dog!,False,Block,Normal,,"Variable[""Point_Level3""] = Variable[""Point_Level3""] + 30",,,,,,,,{{omit}},30;70
+invalid_entrytag,22,0,1,1,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,22,1,13,1,,,Excuse me. May I ask where the toilet is,False,Block,Normal,,,,,,,,,,{{omit}},31;70
+invalid_entrytag,22,2,1,1,,,"No problem! The toilet is not far from here, I can take you there.",False,Block,Normal,,,,,,,,,,{{omit}},26;197
+invalid_entrytag,22,3,1,1,,,Sorry. I'm in a hurry.,False,Block,Normal,,,,,,,,,,{{omit}},554.0244;198.7805
+invalid_entrytag,22,4,1,1,,,"Sorry, I don't know where it is.",False,Block,Normal,,,,,,,,,,{{omit}},269;195
+invalid_entrytag,22,5,13,1,,,That's great! Thank you so much for your help.,False,Block,Normal,,"Variable[""TASK_4_1_HELP""] = true","SetEnabled(ToiletKid,true,ToiletKid)",,,,,,,{{omit}},24;284
+invalid_entrytag,22,6,13,1,,,It's okay. Thank you.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 15;\nVariable[""4_1_OPTION_2""] = ""2_True""",,,,,,,,{{omit}},267;283
+invalid_entrytag,22,7,13,1,,,It's okay.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 10;\nVariable[""4_1_OPTION_3""] = ""3_True""",,,,,,,,{{omit}},554.0244;283.7805
+invalid_entrytag,23,0,1,14,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,23,1,14,1,,,"I really want to play it but my mom didn't buy for me, can you lend me to play for a while.",False,Block,Normal,"CurrentQuestEntryState(""ToyBubble"", 1) == ""unassigned"" and (CurrentQuestEntryState(""ToyBubble"", 2) == ""unassigned"")",,,,,,,,,{{omit}},66.57895;99.36842
+invalid_entrytag,23,2,1,14,,,"No problem! There is not much water left, I can give it to you.",False,Block,Normal,,,,,,,,,,{{omit}},31.17647;194.7059
+invalid_entrytag,23,4,1,14,,,Sorry. I still want to play.,False,Block,Normal,,,,,,,,,,{{omit}},271.4776;200.1412
+invalid_entrytag,23,5,14,1,,,It's okay.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 10;\n\nSetQuestEntryState(""ToyBubble"", 2, ""active"")",,,,,,,,a508043e-8844-41fb-bb09-0d804faf66ce,271.2509;285.1419
+invalid_entrytag,23,7,14,1,,,Great! Thank you so much. You are so nice.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 20;\nVariable[""TASK_4_2_AGREE""] = true;\nSetQuestEntryState(""ToyBubble"", 1, ""active"")",,,,,,,,be552a0a-a15f-4499-824e-84cc14d8f942,30.5294;283.5294
+invalid_entrytag,23,8,14,14,,,That's a wonderful experience!,False,Block,Normal,"CurrentQuestEntryState(""ToyBubble"", 1) == ""active""",,,,,,,,,{{omit}},1414.978;194.7451
+invalid_entrytag,23,9,1,14,,,I am happy you like it.,False,Block,Normal,,,,,,,,,,{{omit}},1397.566;285.0392
+invalid_entrytag,23,10,14,1,,,"What a nice day, isn't it?",False,Block,Normal,"CurrentQuestEntryState(""ToyBubble"", 2) == ""active""",,,,,,,,,{{omit}},1617.422;132.8193
+invalid_entrytag,23,11,1,14,,,Enjoy your day!,False,Block,Normal,,,,,,,,,,{{omit}},1617.06;291.9229
+invalid_entrytag,24,0,1,18,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;22
+invalid_entrytag,24,1,18,1,,,Can someone help to bring an AED? It's near the toilet.,False,Block,Normal,"CurrentQuestState(""BringAED"") == ""unassigned""",,,,,,,,,{{omit}},36.26028;114.3699
+invalid_entrytag,24,2,1,18,,,Let me help to bring it!,False,Block,Normal,,"SetQuestState(""BringAED"", ""active"")",,,,,,,,{{omit}},36;231.7397
+invalid_entrytag,24,3,1,18,,,"Sorry, I may not able to find it.",False,Block,Normal,,"SetQuestState(""BringAED"", ""abandoned"")",,,,,,,,{{omit}},261;231
+invalid_entrytag,24,4,1,18,,,Let me wait for others to help.,False,Block,Normal,,"SetQuestState(""BringAED"", ""abandoned"")",,,,,,,,{{omit}},481.406;229.6316
+invalid_entrytag,24,5,18,1,,,It's okay. Thank you.,False,Block,Normal,,,,,,,,,,{{omit}},261;281
+invalid_entrytag,24,6,18,1,,,It's okay.,False,Block,Normal,,,,,,,,,,{{omit}},481.6315;284.8947
+invalid_entrytag,24,7,18,1,,,Any troubles?  You should be able to find the AED near the toilet.,False,Block,Normal,"CurrentQuestState(""BringAED"") == ""active""",,,,,,,,,{{omit}},664.4296;176.1506
+invalid_entrytag,24,8,18,1,,,"Thank you anyway, I will try to ask someone else for help.",False,Block,Normal,"CurrentQuestState(""BringAED"") == ""abandoned""",,,,,,,,,{{omit}},1082.325;166.7674
+invalid_entrytag,24,9,1,18,,,No problem! ,False,Block,Normal,,,,,,,,,,{{omit}},664.1052;233.421
+invalid_entrytag,24,10,18,1,,,Thank you so much for your help!,False,Block,Normal,"CurrentQuestState(""BringAED"") == ""success""","Variable[""Point_Level4""] = Variable[""Point_Level4""] + 20",Delay(2),,,,,,,69371c53-af88-4de4-9c3c-c73cb71cab91,861.6287;175.9473
+invalid_entrytag,24,11,18,1,,,Excellent! Thanks for your helping.,False,Block,Normal,,,,,,,,,,{{omit}},36;292.6986
+invalid_entrytag,24,12,1,18,,,Glad to help!,False,Block,Normal,,,,,,,,,,0588a366-b1a8-46c8-92ff-35ad86828bef,864.1606;228.4789
+invalid_entrytag,25,0,1,15,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},300;20
+invalid_entrytag,25,1,15,1,,,"My ballon flies up to the tree, I can't reach it. Can you help me to take it down?",False,Block,Normal,"CurrentQuestState(""Get the Balloon"") == ""unassigned""","SetQuestState(""Get the Balloon"", ""active"")",,,"My ballon flies up to the tree, I can't reach it. Can you help me to take it down?",,,,,{{omit}},61.64557;94.05063
+invalid_entrytag,25,2,1,15,,,No problem! Let me get a ladder first.,False,Block,Normal,,"Variable[""4_4_OPTION_1""] = ""1_True""",,,No problem! Let me get a ladder first.,,,,,{{omit}},36.57895;235.7895
+invalid_entrytag,25,3,1,15,,,"Sorry, I may not able to reach it.",False,Block,Normal,,"Variable[""4_4_OPTION_2""] = ""2_True""",,,"Sorry, I may not able to reach it.",,,,,{{omit}},269.2105;235.7894
+invalid_entrytag,25,4,1,15,,,Sorry. I'm in a hurry.,False,Block,Normal,,"Variable[""4_4_OPTION_3""] = ""3_True""",,,Sorry. I'm in a hurry.,,,,,{{omit}},542.6316;239.7368
+invalid_entrytag,25,5,15,1,,,It's okay. Thank you.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 15;\nSetQuestEntryState(""Get the Balloon"", 2, ""failure"")",,,It's okay. Thank you.,,,,,ea5073a5-7149-472f-8071-21edc0034f00,269.7369;295
+invalid_entrytag,25,6,15,1,,,It's okay.,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 10;\nSetQuestEntryState(""Get the Balloon"", 2, ""success"")",,,It's okay.,,,,,1da62306-6336-4edc-bf53-3cbedc126a1a,540;291.0526
+invalid_entrytag,25,7,15,1,,,Thank you!,False,Block,Normal,,"SetQuestEntryState(""Get the Balloon"", 1, ""active"");\n",,,,,,,,6593eca7-6e63-46ab-b87d-3f856edc03ee,37.63159;293.7341
+invalid_entrytag,25,8,15,1,,,Thank you so much for help me get the balloon!,False,Block,Normal,"CurrentQuestEntryState(""Get the Balloon"", 1) == ""success""","Variable[""Point_Level4""] = Variable[""Point_Level4""] + 20","SetEnabled(ToiletKid,true,ToiletKid)",,,,,,,{{omit}},812.6314;240.9985
+invalid_entrytag,25,9,15,1,,,"Thank you anyway, I will try to get the balloon by myself.",False,Block,Normal,"CurrentQuestEntryState(""Get the Balloon"", 2) == ""success"" or (CurrentQuestEntryState(""Get the Balloon"", 2) == ""failure"")",,"SetEnabled(ToiletKid,true,ToiletKid)",,,,,,,{{omit}},1055.789;242.3683
+invalid_entrytag,25,10,15,1,,,Look! There are some Legos under the tree. Maybe you can grab one Lego to help you get the balloon!,False,Block,Normal,"CurrentQuestEntryState(""Get the Balloon"", 1) == ""active""",,,,,,,,,{{omit}},1104.21;68.6842
+invalid_entrytag,25,11,1,15,,,You are clever. Let me have a try!,False,Block,Normal,,,,,,,,,,{{omit}},1104.21;118.6842
+invalid_entrytag,25,12,1,15,,,You are welcome!,False,Block,Normal,,,,,,,,,,{{omit}},811.2615;301.5248
+invalid_entrytag,25,13,1,15,,,That's ok!,False,Block,Normal,,,,,,,,,,{{omit}},1055.789;292.3683
+invalid_entrytag,26,0,1,13,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,26,1,19,1,,,"Hi, do you want to help collect dust with us?",False,Block,Normal,"CurrentQuestState(""CollectDust"") == ""unassigned""",,,,,,,,,{{omit}},31;96
+invalid_entrytag,26,2,1,19,,,"Sure, no problem!",False,Block,Normal,,"SetQuestState(""CollectDust"", ""active"")",,,,,,,,{{omit}},29.97171;184.5056
+invalid_entrytag,26,3,13,1,,,,False,Block,Normal,,,,,,,,,,{{omit}},284.4303;177.5949
+invalid_entrytag,26,4,13,1,,,,False,Block,Normal,,,,,,,,,,{{omit}},507.215;177.5949
+invalid_entrytag,26,5,13,1,,,,False,Block,Normal,,,,,,,,,,{{omit}},727.4681;177.5949
+invalid_entrytag,26,6,19,1,,,Try to pick up the dust as more as you can. Then find me when you finish.,False,Block,Normal,,,,,,,,,,{{omit}},29.97172;262.3537
+invalid_entrytag,27,0,1,11,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;19
+invalid_entrytag,27,1,13,1,,,Please show me the way. Thanks!,False,Block,Normal,,,,,,,,,,{{omit}},30;68
+invalid_entrytag,28,0,1,13,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,28,1,13,1,,,Thank you so much! ,False,Block,Normal,,"Variable[""Point_Level4""] = Variable[""Point_Level4""] + 20;\nVariable[""4_1_OPTION_1""] = ""1_True""",,,,,,,,{{omit}},31;70
+invalid_entrytag,29,0,1,15,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,29,1,15,1,,,Thank you for your help first! You can find a ladder first then help me get the ballon.,False,Block,Normal,,,,,,,,,,{{omit}},30;92
+invalid_entrytag,30,0,1,15,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,30,1,15,1,,,That's great! Thank you so much for your help.,False,Block,Normal,,"Variable[""4_4_OPTION_1""] = ""1_True"";\nVariable[""Point_Level4""] = Variable[""Point_Level4""] + 20;\nSetQuestState(""GetBallon"", ""success"")",,,That's great! Thank you so much for your help.,,,,,d4047700-2735-44ab-a01e-db59262ac28a,29.31914;80.17021
+invalid_entrytag,31,0,1,15,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,31,1,15,1,,,Thank you for helping me getting the balloon!,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,32,0,1,13,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,32,1,20,1,,,Can you please help me keep me hold the door of the lift? I am walking too slow.,False,Block,Normal,"CurrentQuestState(""HoldLift"") == ""unassigned""",,,,,,,,,{{omit}},39.4072;111.2139
+invalid_entrytag,32,2,1,20,,,"Sure! No hurry, I will hold the door for you. ",False,Block,Normal,,"SetQuestState(""HoldLift"", ""active"");","SetActive(LiftQTE,active)",,,,,,,5c1e138a-9ab1-4e9d-a426-02049d1f0be7,41.06569;240.6389
+invalid_entrytag,32,4,1,20,,,I don't want to help you.,False,Block,Normal,,"SetQuestState(""HoldLift"", ""failure"");",,,,,,,,d2f118bd-ecc8-4603-8520-d0815e822949,277.8153;240.3853
+invalid_entrytag,32,5,13,1,,,Thank you... You are so kind!,False,Block,Normal,"CurrentQuestState(""HoldLift"") == ""success""",,,,,,,,,ec59a36f-8c3b-4cdd-8c60-6c3b2b7e28e1,574.9612;123.61
+invalid_entrytag,32,6,1,13,,,No problem!,False,Block,Normal,,"Variable[""Point_Level5""] = Variable[""Point_Level5""] + 20;\nSetQuestState(""HoldLift"", ""abandoned"")",,,,,,,,f68d0c4c-43f5-478b-b1b6-e603ee4daac1,574.8068;247.4903
+invalid_entrytag,33,0,1,13,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},300;20
+invalid_entrytag,33,1,21,1,,,"Hi, would you please help me put these masks back?",False,Block,Normal,"CurrentQuestState(""Collect Mask"") == ""unassigned""",,,,,,,,,{{omit}},83.73132;168.5074
+invalid_entrytag,33,2,1,21,,,"Sure, I would love to.",False,Block,Normal,,"SetQuestState(""Collect Mask"", ""active"")","SetActive(TriggerToActive,active)",,,,,,,{{omit}},1;302.0894
+invalid_entrytag,33,3,1,21,,,"Sorry, I am in a hurry. I can't help you.",False,Block,Normal,,"SetQuestState(""Collect Mask"", ""failure"")",,,,,,,,{{omit}},186.1194;296.1193
+invalid_entrytag,33,4,13,1,,,Have you helped me put all the masks back?,False,Block,Normal,"CurrentQuestState(""Collect Mask"") == ""active""",,,,,,,,,{{omit}},444.3283;183.4328
+invalid_entrytag,33,5,1,13,,,"Yes, I think there is no mask left.",False,Block,Normal,,,,,,,,,,{{omit}},419.8507;363.2835
+invalid_entrytag,33,6,1,13,,,"Oh, not yet! I will hit you back when I am done.",False,Block,Normal,,,,,,,,,,{{omit}},632.6865;364.776
+invalid_entrytag,33,7,13,1,,,Brilliant! Thank you.,False,Block,Normal,"Variable[""5_1_MASK""] == 6","SetQuestState(""Collect Mask"", ""success"");\nVariable[""Point_Level5""] = Variable[""Point_Level5""] + 20",,,,,,,,{{omit}},225.6716;546.1192
+invalid_entrytag,33,8,13,1,,,"Sure, thank you!",False,Block,Normal,"1 <= Variable[""5_1_MASK""] and Variable[""5_1_MASK""] <= 5","Variable[""Point_Level5""] = Variable[""Point_Level5""] + 10;\nSetQuestState(""Collect Mask"", ""success"")",,,,,,,,{{omit}},423.8805;544.6266
+invalid_entrytag,33,9,13,1,,,You are a kind kid! Appreciate it!,False,Block,Normal,"CurrentQuestState(""Collect Mask"") == ""success""",,,,,,,,,{{omit}},855.6715;177.4626
+invalid_entrytag,33,10,13,1,,,"Well, ok. Thank you kid!",False,Block,Normal,"Variable[""5_1_MASK""] == 0","SetQuestState(""Collect Mask"", ""failure"")",,,,,,,,{{omit}},635.5223;544.6268
+invalid_entrytag,33,11,13,1,,,Thank you all the same.,False,Block,Normal,"CurrentQuestState(""Collect Mask"") == ""failure""",,,,,,,,,{{omit}},1132.686;178.9551
+invalid_entrytag,34,0,1,22,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},32;20.05661
+invalid_entrytag,34,1,22,1,,,Welcome! Feel free to put what you want to buy on the counter. Thank you!,False,Block,Normal,,,,,,,,,,{{omit}},36.1978;118.0697
+invalid_entrytag,34,5,1,22,,,Sure.,False,Block,Normal,,"SetQuestState(""WatsonGreeting"", ""success"")",,,,,,,,0613c705-9d89-4e1f-a90c-eebbd5524e91,33.09889;224.9881
+invalid_entrytag,35,0,1,22,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;17
+invalid_entrytag,35,1,22,1,,,Have you decided?,False,Block,Normal,,,,,,,,,,{{omit}},34;111
+invalid_entrytag,35,2,1,22,,,"Yes, I decided. Please help me check out. Thank you.",False,Block,Normal,,"SetQuestState(""WatsonCheckOut"", ""success"")",,,,,,,,1b45272e-4a53-45cf-8d8f-d3755238ff19,35.36987;230
+invalid_entrytag,35,3,1,22,,,"No, not yet. Let me bring a new one.",False,Block,Normal,,,,,,,,,,{{omit}},304;229
+invalid_entrytag,36,0,1,22,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,36,1,22,1,,,Thank you. Here is your 30HKD changes.,False,Block,Normal,,,,,,,,,,{{omit}},28;75
+invalid_entrytag,36,2,1,22,,,Thank you.,False,Block,Normal,,,,,,,,,,{{omit}},28;125
+invalid_entrytag,36,3,22,1,,,"This is a charity project, you can use the change to play if you interested.",False,Block,Normal,,,,,,,,,,{{omit}},28;175
+invalid_entrytag,36,4,1,22,,,That's great.,False,Block,Normal,,"SetQuestState(""WatsonCheckOut"", ""abandoned"")",,,,,,,,{{omit}},28;225
+invalid_entrytag,37,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,37,1,3,1,,,Could you also help clean the table and floor?,False,Block,Normal,"CurrentQuestState(""1_1_CleanTheDirt"") == ""unassigned""",,,,,,,,,{{omit}},36.19339;88.41177
+invalid_entrytag,37,2,1,3,,,Got it!,False,Block,Normal,,,,,,,,,,{{omit}},36.00001;269
+invalid_entrytag,37,3,3,1,,,That's great! You can come back to meet me after you finish..,False,Block,Normal,,"SetQuestState(""1_1_CleanTheDirt"", ""active"")","SetActive(DirtOnTheFloor,true);\nSetActive(DirtOnTheTable,true)",,,,,,,{{omit}},36.51845;335.989
+invalid_entrytag,37,4,3,1,,,Have you cleaned all the dirts?,False,Block,Normal,"CurrentQuestState(""1_1_CleanTheDirt"") == ""active""",,,,,,,,,{{omit}},572.5463;94.51247
+invalid_entrytag,37,5,1,3,,,"Yes, I think so.",False,Block,Normal,,"SetQuestState(""1_1_CleanTheDirt"", ""success"")",,,,,,,,{{omit}},462.9411;200
+invalid_entrytag,37,6,1,3,,,Not yet. Let me check.,False,Block,Normal,,,,,,,,,,{{omit}},681.9579;200
+invalid_entrytag,37,7,3,1,,,Thank you. Just keep your eyes on the table and the floor.,False,Block,Normal,,,,,,,,,,{{omit}},680.5881;268.8235
+invalid_entrytag,37,8,1,3,,,No problem! What should I do?,False,Block,Normal,,,,,,,,,,{{omit}},34.82353;152.5294
+invalid_entrytag,37,9,3,1,,,You can use the [yellow dishcloth] to clean all the dirts on the table; use the [vacuum cleaner] besides the door to clean dirts on the floor.,False,Block,Normal,,,,,,,,,,{{omit}},34.82353;210.4242
+invalid_entrytag,37,10,1,3,,,"Sorry, I don't want to.",False,Block,Normal,,,,,,,,,,{{omit}},247.7647;152.5294
+invalid_entrytag,38,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},116;15.93617
+invalid_entrytag,38,1,3,1,,,Excellent! Thanks for your helping.,False,Block,Normal,"Variable[""1_1_Dirt""] == 15",,,,,,,,,{{omit}},17.74803;90.42552
+invalid_entrytag,38,2,3,1,,,Great! Thank you.,False,Block,Normal,"Variable[""1_1_Dirt""] > 0 and (Variable[""1_1_Dirt""] < 15)",,,,,,,,,{{omit}},226.0309;91.93814
+invalid_entrytag,38,3,3,1,,,Nice.,False,Block,Normal,"Variable[""1_1_Dirt""] == 0",,,,,,,,,{{omit}},450;93.68422
+invalid_entrytag,38,4,1,3,,,My pleasure.,False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 20;\nSetQuestState(""1_2_Sandwich"", ""active"");\nSetQuestState(""1_1_CleanTheDirt"", ""abandoned"")",,,,,,,,{{omit}},17.65131;155.6369
+invalid_entrytag,38,5,1,3,,,Glad to help.,False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 15;\n\nSetQuestState(""1_2_Sandwich"", ""active"");\nSetQuestState(""1_1_CleanTheDirt"", ""abandoned"")",,,,,,,,{{omit}},224.6842;158.7984
+invalid_entrytag,38,6,1,3,,,You are welcome.,False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 0;\nSetQuestState(""1_2_Sandwich"", ""active"");\nSetQuestState(""1_1_CleanTheDirt"", ""abandoned"")",,,,,,,,{{omit}},451;154.0672
+invalid_entrytag,39,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,39,1,3,1,,,I'm feeling a bit uncomfortable under the weather. Could you help me make four sandwiches as breakfast?\r,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,39,2,1,3,,,No problem! What should I do?,False,Block,Normal,,,,,,,,,,{{omit}},30;119
+invalid_entrytag,39,3,1,3,,,"Sorry, I don't want to.",False,Block,Normal,,,,,,,,,,{{omit}},241;76
+invalid_entrytag,39,4,3,1,,,You may add some ingredients between slices of bread according to the menu over there.,False,Block,Normal,,,,,,,,,,{{omit}},30;168
+invalid_entrytag,39,5,1,3,,,I will handle this!,False,Block,Normal,,"SetQuestState(""1_2_Sandwich"", ""grantable"")","SetActive(GuidelineTrigger,true)",,,,,,,{{omit}},30;218
+invalid_entrytag,40,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,40,1,3,1,,,Have you made all the sandwiches according to the menu?,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,40,2,1,3,,,"Yes, all the sandwiches have been made.",False,Block,Normal,,"SetQuestState(""1_2_Sandwich"", ""success"")",,,,,,,,{{omit}},29.7883;129.6833
+invalid_entrytag,40,3,1,3,,,Not yet. I will keep working on this.,False,Block,Normal,,,,,,,,,,{{omit}},242.9142;124.6024
+invalid_entrytag,41,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},203;35
+invalid_entrytag,41,1,3,1,,,Excellent! Thanks for your helping.,False,Block,Normal,"Variable[""1_2_SandWich""] == 2",,,,,,,,,{{omit}},28;108
+invalid_entrytag,41,2,3,1,,,Great! Thank you.,False,Block,Normal,"Variable[""1_2_SandWich""] == 1",,,,,,,,,{{omit}},267;105
+invalid_entrytag,41,3,3,1,,,Nice.,False,Block,Normal,"Variable[""1_2_SandWich""] == 0",,,,,,,,,{{omit}},547;102
+invalid_entrytag,41,4,1,3,,,My pleasure.,False,Block,Normal,,"SetQuestState(""1_2_Sandwich"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 20;\nSetQuestState(""1_3_WashPlate"", ""active"")",,,,,,,,{{omit}},28;155
+invalid_entrytag,41,5,1,3,,,Glad to help.,False,Block,Normal,,"SetQuestState(""1_2_Sandwich"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 15;\nSetQuestState(""1_3_WashPlate"", ""active"")",,,,,,,,{{omit}},266;156
+invalid_entrytag,41,6,1,3,,,You are welcome.,False,Block,Normal,,"SetQuestState(""1_2_Sandwich"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 0;\nSetQuestState(""1_3_WashPlate"", ""active"")",,,,,,,,{{omit}},561;171
+invalid_entrytag,42,0,1,3,START,,,False,,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,42,1,3,1,,,Could you help wash the dishes?\r,False,Block,Normal,,,,,,,,,,{{omit}},31;70
+invalid_entrytag,42,2,1,3,,,Of course. What should I do?,False,Block,Normal,,,,,,,,,,{{omit}},31;120
+invalid_entrytag,42,3,3,1,,,Just the sponge there to clean dirts on the blue bowls. You can come back to meet me after you finish.,False,Block,Normal,,,,,,,,,,{{omit}},31;170
+invalid_entrytag,42,4,1,3,,,OK.,False,Block,Normal,,"SetQuestState(""1_3_WashPlate"", ""grantable"")","SetActive(Dirt_1,true);\nSetActive(Dirt_2,true);\nSetActive(Dirt_3,true);",,,,,,,{{omit}},31;220
+invalid_entrytag,43,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,43,1,3,1,,,Have you cleaned all the dirts on the bowls using sponge?,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+invalid_entrytag,43,2,1,3,,,Yes! I think the bowls are clean now.,False,Block,Normal,,"SetQuestState(""1_3_WashPlate"", ""success"")",,,,,,,,{{omit}},29;144
+invalid_entrytag,43,3,1,3,,,Not yet. I will keep working on it.,False,Block,Normal,,,,,,,,,,{{omit}},250;144
+invalid_entrytag,44,0,1,3,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},203;15
+invalid_entrytag,44,1,3,1,,,Excellent! Thanks for your helping.,False,Block,Normal,"Variable[""1_3_Dirt""] == 15",,,,,,,,,{{omit}},30;69.375
+invalid_entrytag,44,2,1,3,,,My pleasure.,False,Block,Normal,,"SetQuestState(""1_3_WashPlate"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 20",,,,,,,,{{omit}},30;119.375
+invalid_entrytag,44,3,3,1,,,Great! Thank you.,False,Block,Normal,"Variable[""1_3_Dirt""] > 0 and (Variable[""1_3_Dirt""] < 15)","SetQuestState(""1_3_WashPlate"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 15",,,,,,,,{{omit}},218;72
+invalid_entrytag,44,4,3,1,,,Nice. ,False,Block,Normal,"Variable[""1_3_Dirt""] == 0 and (Variable[""1_3_Dirt""] == 0)","SetQuestState(""1_3_WashPlate"", ""abandoned"");\nVariable[""Point_Level""] = Variable[""Point_Level""] + 0",,,,,,,,{{omit}},410;72
+invalid_entrytag,44,5,1,3,,,Glad to help.,False,Block,Normal,,,,,,,,,,{{omit}},216;123
+invalid_entrytag,44,6,1,3,,,You are welcome.,False,Block,Normal,,,,,,,,,,{{omit}},410;121
+invalid_entrytag,45,0,1,23,START,,,False,,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,45,1,23,1,,,I want to read the newspaper but I can't find my glasses. Can you help me find it?,False,Block,Normal,"CurrentQuestState(""1.4_GrandmaGlasses"") == ""unassigned""",,,,,,,,,{{omit}},31;102
+invalid_entrytag,45,2,1,23,,,Of course! What does the glasses look like?,False,Block,Normal,,,,,,,,,,{{omit}},28;162
+invalid_entrytag,45,3,1,23,,,"No, I don't want to help.",False,Block,Normal,,,,,,,,,,{{omit}},267.2105;163.421
+invalid_entrytag,45,4,23,1,,,It is a pair of transparent glasses. I am not sure if it is on the table of dining room or the living room. ,False,Block,Normal,,,,,,,,,,{{omit}},28;233
+invalid_entrytag,45,5,1,23,,,No problem. Let me help you check it.,False,Block,Normal,,"SetQuestState(""1.4_GrandmaGlasses"", ""active"")",,,,,,,,{{omit}},26;322
+invalid_entrytag,45,6,23,1,,,Have you got my glasses? ,False,Block,Normal,"CurrentQuestState(""1.4_GrandmaGlasses"") == ""active""",,,,,,,,,{{omit}},732.3404;113.7872
+invalid_entrytag,45,7,1,23,,,Yes! Here you are.,False,Block,Normal,,,,,,,,,,{{omit}},590.6393;190.8479
+invalid_entrytag,45,8,1,23,,,Not yet. Where is the last place you used it?,False,Block,Normal,,,,,,,,,,{{omit}},919;200.6721
+invalid_entrytag,45,9,23,1,,,You may check the table of dining room and living room. It is a pair of transparent glasses.,False,Block,Normal,,,,,,,,,,{{omit}},921;284.6721
+invalid_entrytag,46,0,1,23,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},114.9011;27
+invalid_entrytag,46,1,23,1,,,"Excellent! Thanks for your helping. I can read newspaper now, you are really helpful!",False,Block,Normal,"Variable[""1_4_Glasses""] == true",,,,,,,,,{{omit}},28;109
+invalid_entrytag,46,2,23,1,,,"It is not my glasses, but thank you.",False,Block,Normal,"Variable[""1_4_Glasses""] == false",,,,,,,,,{{omit}},327;104.9011
+invalid_entrytag,46,3,1,23,,,That's great.,False,Block,Normal,,,,,,,,,,{{omit}},28;166
+invalid_entrytag,46,4,1,23,,,"Oh, OK.",False,Block,Normal,,,,,,,,,,{{omit}},327;162
+invalid_entrytag,46,5,23,1,,,Test,False,Block,Normal,,,,,,,,,,{{omit}},646.7692;100.0769
+invalid_entrytag,1,0,1,2,START,,,False,Block,Normal,,,None(),,,,,326fda54-f581-4a54-824f-48a2426da563,,{{omit}},524.2903;43.77419
+invalid_entrytag,1,3,1,2,,,"It seems that you feel really sorry for broking your frend’s robot. But it was not intentional, right? Let me help you fix it.",False,Block,Normal,,,,,"It seems that you feel really sorry for broking your frend’s robot. But it was not intentional, right? Let me help you fix it.",太慘了，你朋友一定很生氣，我幫你一齊修好它吧。\r,好惨呀，你朋友一定好嬲啦。我幫你一齊整返好佢啦。\r,4c118e92-0f6c-4583-bdc9-58e7daad2633,,{{omit}},358;147
+invalid_entrytag,1,4,2,1,,,I've just told my friend that I broke her favoirte robot. She said she would longer talk to me. It's all my fault.\r,False,Block,Normal,,"Variable[""TalkedToNPC""] = true",,,I've just told my friend that I broke her favoirte robot. She said she would longer talk to me. It's all my fault.\r,我剛剛跟我朋友說，我把她最喜歡的機械人弄壞了，她說以後都不跟我說話了，都是我的錯。\r,​我啱啱同我個朋友講，我整爛咗佢最鍾意嘅機械人，佢話以後都唔同我講嘢，都係我嘅錯啦。\r,509828d8-b915-4bb6-b7d7-c26fe5c88cb1,,{{omit}},531.112;93.16129
+invalid_entrytag,1,5,1,2,,,That's really sad. Your friend must be really angry. Let me help you fix it.,False,Block,Normal,,,,,That's really sad. Your friend must be really angry. Let me help you fix it.,聽起來你似乎因為弄壞了你朋友的機械人而覺得很內疚呢。但你不是故意的嘛，對不對？不如我幫你一齊修好它吧。\r,聽落你似乎因為整壞咗你朋友嘅機械人而覺得好內疚噃。但你唔係故意㗎嘛，係咪？不如我幫你一齊整返好佢啦。\r,d5bcd738-a5a9-4bb0-8dcc-8077767ab376,,{{omit}},538;149.1765
+invalid_entrytag,1,6,1,2,,,You were so careless. Your friend must be really angry about that. ,False,Block,Normal,,,,,You were so careless. Your friend must be really angry about that. ,你這麼不小心呀？你朋友一定很生氣呀。\r,你咁唔小心㗎？你朋友一定好嬲啦。\r,d32e1971-d199-4622-9b4e-66b4424367da,,{{omit}},717;148
+invalid_entrytag,1,7,2,1,,,I just broke it by accident. It will be good if you can help me.,False,Block,Normal,,,,,I just broke it by accident. It will be good if you can help me.,我不是故意的。如果你肯幫我一齊修好它就太好啦。\r,我唔係特登㗎。如果你肯幫我一齊整番好佢就太好啦。\r,22078c62-e8d9-4248-8364-4de438597c01,,{{omit}},538;206
+invalid_entrytag,1,8,2,1,,,"Thank you for saying that. Yes, I just broke it by accident. It will be great if you can help me!",False,Block,Normal,,,,,"Thank you for saying that. Yes, I just broke it by accident. It will be great if you can help me!",謝謝你能這麼說，對呀，我只是不小心弄壞，不是故意的。如果你肯幫我一齊修好它就真的太好啦！\r,多謝你咁講。係呀，我只係唔小心整壞，唔係特登㗎。如果你肯幫我一齊整番好佢就真係太好啦！\r,39c5880c-4e7e-4f0d-bfc1-6f531a658172,,{{omit}},340;203
+invalid_entrytag,1,9,2,1,,,I really don't know what to do now.,False,Block,Normal,,,,,I really don't know what to do now.,我現在真的不知道怎麼辦呀。\r,我而家真係唔知點算呀。\r,66fce9b4-fcb4-4cb6-b6ce-2e3d037fe664,,{{omit}},717.3529;201
+invalid_entrytag,1,10,1,2,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 20;\nSetQuestState(""1.5_Sister"", ""success"")",,,"You're welcome, I’m glad I could help!",不客氣，我也很開心可以幫到你！\r,唔晒客氣，我都好開心可以幫到你！\r,e3503895-7cb0-4d04-b07e-e1c72971d85b,,{{omit}},343.129;260.8064
+invalid_entrytag,1,11,1,2,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 15;\nSetQuestState(""1.5_Sister"", ""success"")",,,"You're welcome, I’m glad I could help!",不客氣，我也很開心可以幫到你！\r,唔晒客氣，我都好開心可以幫到你！\r,0f2f8d2a-605d-4756-a6a0-6ce40fd197f3,,{{omit}},537;258
+invalid_entrytag,1,12,1,2,,,Let me help you fix it.,False,Block,Normal,,"Variable[""Point_Level""] = Variable[""Point_Level""] + 10;\nSetQuestState(""1.5_Sister"", ""success"")",,,Let me help you fix it.,我幫你一齊修好它吧。\r,我幫你一齊整返好佢啦。\r,0a0e9489-4d20-403d-a72f-caf846b865f6,,{{omit}},723;257
+invalid_entrytag,1,13,2,1,,,Thank you for your companion. I am feeling better now.,False,Block,Normal,"CurrentQuestState(""1.5_Sister"") == ""success""",,,,,,,,,{{omit}},1071.065;93.77419
+invalid_entrytag,1,14,1,2,,,That's great!,False,Block,Normal,,,,,,,,,,{{omit}},1073.192;152.2848
+invalid_entrytag,47,0,1,5,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,47,1,5,1,,,"Oh, sorry, I was so careless! Can you help me pick them up ?",False,Block,Normal,"CurrentQuestState(""2.1_TeacherDropItem"") == ""unassigned""",,,,,,,,,{{omit}},30;86
+invalid_entrytag,47,2,1,5,,,Sure thing! Let me help you.,False,Block,Normal,,,,,,,,,,{{omit}},19;143
+invalid_entrytag,47,3,1,5,,,"Sorry Miss, I am busy right now.",False,Block,Normal,,,,,,,,,,{{omit}},248;146
+invalid_entrytag,47,4,5,1,,,It's ok.,False,Block,Normal,,,,,,,,,,{{omit}},248;196
+invalid_entrytag,47,5,5,1,,,You are helpful! Please put them on where they should be.,False,Block,Normal,,,,,,,,,,{{omit}},19;193
+invalid_entrytag,47,6,1,5,,,"OK, I will.",False,Block,Normal,,"SetQuestState(""2.1_TeacherDropItem"", ""active"")",,,,,,,,{{omit}},19;244.2195
+invalid_entrytag,47,7,5,1,,,Have you put all the things back?,False,Block,Normal,"CurrentQuestState(""2.1_TeacherDropItem"") == ""active""",,,,,,,,,{{omit}},582;82
+invalid_entrytag,47,8,1,5,,,"Yes, I think so.",False,Block,Normal,,"SetQuestState(""2.1_TeacherDropItem"", ""success"")",,,,,,,,{{omit}},477;158
+invalid_entrytag,47,9,1,5,,,Not yet. May I know the details?,False,Block,Normal,,,,,,,,,,{{omit}},706;156
+invalid_entrytag,47,10,5,1,,,"For example, put the books back to the shelf, put the dustbin besides the shelf. Remember to categorize them.",False,Block,Normal,,,,,,,,,,{{omit}},707.0976;209.0244
+invalid_entrytag,47,11,1,5,,,"OK, I will.",False,Block,Normal,,,,,,,,,,{{omit}},707.0976;259.0244
+invalid_entrytag,48,0,1,5,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},114;18
+invalid_entrytag,48,1,5,1,,,Excellent! Thanks for your helping.,False,Block,Normal,"Variable[""2_1_Dustbin""] == true and (Variable[""2_1_TeacherItem""] == 6)",,,,,,,,,{{omit}},44;112
+invalid_entrytag,48,2,5,1,,,Great! Thank you.,False,Block,Normal,"Variable[""2_1_Dustbin""] == true",,,,,,,,,{{omit}},247;132
+invalid_entrytag,48,3,5,1,,,Thank you.,False,Block,Normal,"Variable[""2_1_Dustbin""] == false and (Variable[""2_1_TeacherItem""] == 0)",,,,,,,,,{{omit}},607;76
+invalid_entrytag,48,4,1,5,,,"\rYou're welcome, I’m glad I could help!\r",False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 20;\nSetQuestState(""2.1_TeacherDropItem"", ""abandoned"")",,,,,,,,517c9230-7b9a-4c1e-9c9a-659b8fcee4c3,36;221
+invalid_entrytag,48,5,1,5,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 15;\nSetQuestState(""2.1_TeacherDropItem"", ""abandoned"")",,,,,,,,f7a634a1-3f70-495e-af4d-51af8331390d,265;224
+invalid_entrytag,48,6,1,5,,,You're welcome.,False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 0;\nSetQuestState(""2.1_TeacherDropItem"", ""abandoned"")",,,,,,,,8b060c68-e0c0-414b-9852-8a3bf53fb0c3,600;221
+invalid_entrytag,49,0,1,6,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},43.59222;20
+invalid_entrytag,49,1,6,1,,,"Sorry, I accidentally spilled my bottle of water. Could you help clean the table and floor?",False,Block,Normal,"CurrentQuestState(""2.2_WaterPour"") == ""unassigned""",,,,,,,,,{{omit}},58.15535;85.53398
+invalid_entrytag,49,2,1,6,,,No problem! Let me help you.,False,Block,Normal,,,,,,,,,,{{omit}},16.40776;161.7476
+invalid_entrytag,49,3,1,6,,,"Sorry, I am in a hurry. I can't help you.",False,Block,Normal,,,,,,,,,,{{omit}},225.1456;162.7185
+invalid_entrytag,49,4,6,1,,,You are so helpful. You may find the towel and the mop on the corner of the classroom.,False,Block,Normal,,,,,,,,,,{{omit}},13.49513;212.7185
+invalid_entrytag,49,5,1,6,,,Got it. Let me get them first.,False,Block,Normal,,"SetQuestState(""2.2_WaterPour"", ""active"")",,,,,,,,{{omit}},16.40776;261.7476
+invalid_entrytag,49,6,6,1,,,Have you cleaned all the water? You can find the towel and the mop is on the corner of the classroom. ,False,Block,Normal,"CurrentQuestState(""2.2_WaterPour"") == ""active""",,,,,,,,,{{omit}},518.3495;81.65048
+invalid_entrytag,49,7,1,6,,,Yes. The water on the table and ground has been wiped dry.,False,Block,Normal,,"SetQuestState(""2.2_WaterPour"", ""success"")",,,,,,,,{{omit}},433.8835;166.6019
+invalid_entrytag,49,8,1,6,,,Not yet. Let me do it right now.,False,Block,Normal,,,,,,,,,,{{omit}},686.3108;166.6019
+invalid_entrytag,50,0,1,6,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},148;2
+invalid_entrytag,50,1,6,1,,,Excellent! Thanks for your helping.,False,Block,Normal,"Variable[""2_2_Water""] == 7",,,,,,,,,{{omit}},29;94
+invalid_entrytag,50,2,6,1,,,Great! Thank you.,False,Block,Normal,"0 <= Variable[""2_2_Water""] and Variable[""2_2_Water""] <= 7",,,,,,,,,{{omit}},220;96
+invalid_entrytag,50,3,6,1,,,Nice.,False,Block,Normal,"Variable[""2_2_Water""] == 0",,,,,,,,,{{omit}},481;99
+invalid_entrytag,50,4,1,6,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,"SetQuestState(""2.2_WaterPour"", ""abandoned"");\nVariable[""Point_Level2""] = Variable[""Point_Level2""] + 20",,,,,,,,{{omit}},21;179
+invalid_entrytag,50,5,1,6,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,"SetQuestState(""2.2_WaterPour"", ""abandoned"");\nVariable[""Point_Level2""] = Variable[""Point_Level2""] + 15",,,,,,,,{{omit}},225;174
+invalid_entrytag,50,6,1,6,,,You're welcome.,False,Block,Normal,,"SetQuestState(""2.2_WaterPour"", ""abandoned"");\nVariable[""Point_Level2""] = Variable[""Point_Level2""] + 0",,,,,,,,{{omit}},475;179
+invalid_entrytag,6,0,1,24,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},480;20
+invalid_entrytag,6,1,24,1,,,"Oh, I just found that there is little ink in my highlighter, but I forgot to bring one more!\r",False,Block,Normal,"CurrentQuestState(""2.3_FindPen"") == ""unassigned""",,,,"Oh, I just found that there is little ink in my highlighter, but I forgot to bring one more!\r",啊，我剛剛發現我的筆快沒墨水了，但我不記得多帶一支了！\r,呀，我啱啱發現我支筆就黎沒墨啦，但係我唔記得咗帶多一支！\r,,,{{omit}},300;70
+invalid_entrytag,6,2,1,24,,,"It's ok, don't worry! I can lend you my highlighter,it is in my drawer. Just give my back tomorrow.",False,Block,Normal,,"SetQuestState(""2.3_FindPen"", ""active"")",,,"It's ok, don't worry! I can lend you my pen,it is in my drawer. Just give my back tomorrow.",「沒關係，不用擔心！我可以把我抽屜裏的筆借給你，明天還給我就好啦。」,「唔緊要，唔使擔心！我可以借我抽屜裏支筆比你，聽日俾番我就得啦。」,,,{{omit}},210;129.4117
+invalid_entrytag,6,5,24,1,,,I didn't want to. But thank you.,False,Block,Normal,,,,,I didn't want to. But thank you.,我也不想的，不過謝謝你呀。,「我都唔想㗎，不過多謝你呀。」,,,{{omit}},210.5882;194.7059
+invalid_entrytag,6,7,1,24,,,You're welcome.,False,Block,Normal,,,,,You're welcome.,不客氣。,唔駛客氣。,,,{{omit}},210.5882;260
+invalid_entrytag,6,8,24,1,,,Have you got the highlighter for me?,False,Block,Normal,"CurrentQuestState(""2.3_FindPen"") == ""active""",,,,,,,,,{{omit}},760.9083;69.00223
+invalid_entrytag,6,9,1,24,,Yes! Here you are!,,False,Block,Normal,,,,,,,,,,{{omit}},631.6978;130.2308
+invalid_entrytag,6,10,1,24,,Not yet...Let me get it for you now!,,False,Block,Normal,,,,,,,,,,{{omit}},882.5689;132.3157
+invalid_entrytag,6,11,24,1,,Thank you!,,False,Block,Normal,,,,,,,,,,{{omit}},886.5972;196.4333
+invalid_entrytag,6,16,1,24,,It's your bad!,,False,Block,Normal,,,,,,,,,,{{omit}},400.5882;129.4117
+invalid_entrytag,51,0,1,24,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},132;15
+invalid_entrytag,51,1,24,1,,,What a nice highlighter! I will use it carefully! Thank you!,False,Block,Normal,,,,,,,,,,{{omit}},131;89
+invalid_entrytag,51,2,1,24,,,Glad to help!,False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 20;\nSetQuestState(""2.3_FindPen"", ""success"")",,,,,,,,{{omit}},129;163
+invalid_entrytag,7,0,1,7,START,,,False,Block,Normal,,,None(),,,,,,,{{omit}},211.0638;20
+invalid_entrytag,7,2,7,1,,,"I had a quarrel with my parents yesterday. They never care about what I am thinking, and never support my dreams.\r",False,Block,Normal,,,,,"I had a quarrel with my parents yesterday. They never care about what I am thinking, and never support my dreams.\r",我昨晚和我爸媽吵架了。他們從來都不關心我在想什麼，也從來不會支持我的夢想。\r,「我尋晚同我爸媽嗌咗交。佢地從來都唔關心我諗緊乜，亦都從來唔會支持我嘅夢想。」\r,,,{{omit}},212.1277;87.02129
+invalid_entrytag,7,3,1,7,,,"""That's really sad. Most parents are same as yours. Let me help you think about how to communicate with them. """,False,Block,Normal,,,,,"""That's really sad. Most parents are same as yours. Let me help you think about how to communicate with them. """,太慘了，大部分父母都是你爸爸媽媽這樣的呀。我幫你一起想想怎麼跟他們更好地溝通吧。,「好慘呀，大部分父母都係好似你爸爸媽媽咁㗎啦。我幫你一齊諗下點樣可以同佢地溝通得好啲啦。」,,,{{omit}},30;171.0638
+invalid_entrytag,7,4,1,7,,,"""Don't be sad. Most parents are like this. Let's play games now.""",False,Block,Normal,,,,,"""Don't be sad. Most parents are like this. Let's play games now.""",別不開心啦。大部分父母都是這樣的啦。我們先去玩遊戲吧。,「唔好唔開心啦。大部分父母都係咁㗎啦。我哋去玩遊戲先啦。」,,,{{omit}},210;170
+invalid_entrytag,7,5,1,7,,,"""It seems that you feel really sad and disappointed about your parents‘ behaviors. Let me help you think about how to communicate with them better. ",False,Block,Normal,,,,,"""It seems that you feel really sad and disappointed about your parents‘ behaviors. Let me help you think about how to communicate with them better. ",聽起來你似乎因為你爸爸媽媽的行為而覺得很傷心、很失望呢。不如我幫你一起想想怎麼跟他們更好地溝通吧。,「聽落你似乎因為你爸爸媽媽嘅行為而覺得好傷心、好失望噃。不如我幫你一齊諗下點樣可以同佢地溝通得好啲啦。」,,,{{omit}},388.9362;172.1277
+invalid_entrytag,7,6,7,1,,,"""Thank you for saying that. Yes, I am really disappointed now. It will be great if you can help me!""",False,Block,Normal,,,,,"""Thank you for saying that. Yes, I am really disappointed now. It will be great if you can help me!""",謝謝你能這麼說。對呀，我真的對他們好失望。如果你肯幫我就真的太好啦！,「多謝你咁講。係呀，我真係對佢哋好失望。如果你肯幫我就真係太好啦！」,,,{{omit}},390;220
+invalid_entrytag,7,7,7,1,,,"""Yes, I don't know what I should do. It will be great if you can help me.""",False,Block,Normal,,,,,"""Yes, I don't know what I should do. It will be great if you can help me.""",對呀，我都不知道應該怎麼辦。如果你肯幫我就真的太好啦！,「係呀，我都唔知應該點算。如果你肯幫我就真係太好啦。」,,,{{omit}},31.06384;220
+invalid_entrytag,7,8,7,1,,,"""I really don't know what to do now. I am even not in the mood to play games.""",False,Block,Normal,,,,,"""I really don't know what to do now. I am even not in the mood to play games.""",我現在真的不知道怎麼辦呀，也沒有心情玩遊戲。,「我而家真係唔知點算呀。都冇乜心情玩遊戲。」,,,{{omit}},210;220
+invalid_entrytag,7,9,1,7,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,,,,"You're welcome, I’m glad I could help!",不客氣，我也很開心可以幫到你！,唔駛客氣，我都好開心可以幫到你！,,,{{omit}},390;266.8085
+invalid_entrytag,7,10,1,7,,,"You're welcome, I’m glad I could help!",False,Block,Normal,,,,,"You're welcome, I’m glad I could help!",不客氣，我也很開心可以幫到你！,唔駛客氣，我都好開心可以幫到你！,,,{{omit}},30;270
+invalid_entrytag,7,11,1,7,,,Let me help you think about how to communicate with them. ,False,Block,Normal,,,,,Let me help you think about how to communicate with them. ,我幫你一起想想怎麼和他們溝通吧。,我幫你一齊諗下點樣同佢地溝通啦。,,,{{omit}},210;270
+invalid_entrytag,7,12,7,1,,,Thank you! I feel much better now!,False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 20;\n",,,Thank you! I feel much better now!,謝謝你，我現在心情好多了！,唔該晒你，我而家心情好咗好多！,,,{{omit}},390;317.8723
+invalid_entrytag,7,13,7,1,,,Thank you. I feel better now!,False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 15;\nSetQuestState(""2.4_ComfortClassmate"", ""success"")",,,Thank you. I feel better now!,謝謝你，我現在心情好一點了！,唔該你，我而家心情好咗少少！,,,{{omit}},35.31914;321.0638
+invalid_entrytag,7,14,7,1,,,Thank you.,False,Block,Normal,,"Variable[""Point_Level2""] = Variable[""Point_Level2""] + 10;\nSetQuestState(""2.4_ComfortClassmate"", ""success"")",,,Thank you.,謝謝你。,唔該你。,,,{{omit}},210;318.9362
+invalid_entrytag,7,15,7,1,,,Thank you. I feel better now!,False,Block,Normal,"CurrentQuestState(""2.4_ComfortClassmate"") == ""success""",,,,,,,,,{{omit}},748.2979;124.2553
+invalid_entrytag,7,16,1,7,,,You are welcome.,False,Block,Normal,,,,,,,,,,{{omit}},746.1702;193.4042
+invalid_entrytag,52,0,1,25,START,,,False,,Normal,,,None(),,,,,,,{{omit}},30;20
+invalid_entrytag,52,1,25,1,,,,False,Block,Normal,,,,,,,,,,{{omit}},30;70
+OutgoingLinks
+OriginConvID,OriginID,DestConvID,DestID,ConditionPriority
+Number,Number,Number,Number,Special
+4,0,4,1,Normal
+4,1,4,2,Normal
+4,2,4,4,Normal
+5,0,5,1,Normal
+5,1,5,2,Normal
+9,0,9,1,Normal
+9,1,9,2,Normal
+9,1,9,3,Normal
+11,0,11,7,Normal
+11,0,11,8,Normal
+11,0,11,9,Normal
+12,0,12,1,Normal
+12,1,12,2,Normal
+17,0,17,1,Normal
+17,1,17,2,Normal
+17,1,17,3,Normal
+17,2,17,4,Normal
+18,0,18,1,Normal
+18,1,18,2,Normal
+18,1,18,3,Normal
+21,0,21,1,Normal
+10,0,10,1,Normal
+10,1,10,8,Normal
+10,1,10,9,Normal
+13,0,13,1,Normal
+13,1,13,2,Normal
+13,1,13,3,Normal
+13,2,13,4,Normal
+13,2,13,5,Normal
+13,2,13,6,Normal
+15,0,15,1,Normal
+15,1,15,2,Normal
+14,0,14,1,Normal
+14,1,14,2,Normal
+16,0,16,1,Normal
+16,1,16,2,Normal
+16,2,16,3,Normal
+16,3,16,4,Normal
+16,3,16,5,Normal
+19,0,19,1,Normal
+20,0,20,1,Normal
+22,0,22,1,Normal
+22,1,22,2,Normal
+22,1,22,4,Normal
+22,1,22,3,Normal
+22,2,22,5,Normal
+22,3,22,7,Normal
+22,4,22,6,Normal
+23,0,23,1,Normal
+23,0,23,8,Normal
+23,0,23,10,Normal
+23,1,23,2,Normal
+23,1,23,4,Normal
+23,2,23,7,Normal
+23,4,23,5,Normal
+23,8,23,9,Normal
+23,10,23,11,Normal
+24,0,24,1,Normal
+24,0,24,7,Normal
+24,0,24,8,Normal
+24,0,24,10,Normal
+24,1,24,2,Normal
+24,1,24,3,Normal
+24,1,24,4,Normal
+24,2,24,11,Normal
+24,3,24,5,Normal
+24,4,24,6,Normal
+24,7,24,9,Normal
+24,10,24,12,Normal
+25,0,25,1,Normal
+25,0,25,8,Normal
+25,0,25,9,Normal
+25,0,25,10,Normal
+25,1,25,2,Normal
+25,1,25,3,Normal
+25,1,25,4,Normal
+25,2,25,7,Normal
+25,3,25,5,Normal
+25,4,25,6,Normal
+25,8,25,12,Normal
+25,9,25,13,Normal
+25,10,25,11,Normal
+26,0,26,1,Normal
+26,0,26,3,Normal
+26,0,26,4,Normal
+26,0,26,5,Normal
+26,1,26,2,Normal
+26,2,26,6,Normal
+27,0,27,1,Normal
+28,0,28,1,Normal
+29,0,29,1,Normal
+30,0,30,1,Normal
+31,0,31,1,Normal
+32,0,32,1,Normal
+32,0,32,5,Normal
+32,1,32,2,Normal
+32,1,32,4,Normal
+32,5,32,6,Normal
+33,0,33,1,Normal
+33,0,33,4,Normal
+33,0,33,9,Normal
+33,0,33,11,Normal
+33,1,33,2,Normal
+33,1,33,3,Normal
+33,4,33,5,Normal
+33,4,33,6,Normal
+33,5,33,7,Normal
+33,5,33,8,Normal
+33,5,33,10,Normal
+34,0,34,1,Normal
+34,1,34,5,Normal
+35,0,35,1,Normal
+35,1,35,2,Normal
+35,1,35,3,Normal
+36,0,36,1,Normal
+36,1,36,2,Normal
+36,2,36,3,Normal
+36,3,36,4,Normal
+37,0,37,1,Normal
+37,0,37,4,Normal
+37,1,37,8,Normal
+37,1,37,10,Normal
+37,2,37,3,Normal
+37,4,37,5,Normal
+37,4,37,6,Normal
+37,6,37,7,Normal
+37,8,37,9,Normal
+37,9,37,2,Normal
+38,0,38,1,Normal
+38,0,38,2,Normal
+38,0,38,3,Normal
+38,1,38,4,Normal
+38,2,38,5,Normal
+38,3,38,6,Normal
+39,0,39,1,Normal
+39,1,39,2,Normal
+39,1,39,3,Normal
+39,2,39,4,Normal
+39,4,39,5,Normal
+40,0,40,1,Normal
+40,1,40,2,Normal
+40,1,40,3,Normal
+41,0,41,1,Normal
+41,0,41,2,Normal
+41,0,41,3,Normal
+41,1,41,4,Normal
+41,2,41,5,Normal
+41,3,41,6,Normal
+42,0,42,1,Normal
+42,1,42,2,Normal
+42,2,42,3,Normal
+42,3,42,4,Normal
+43,0,43,1,Normal
+43,1,43,2,Normal
+43,1,43,3,Normal
+44,0,44,1,Normal
+44,0,44,3,Normal
+44,0,44,4,Normal
+44,1,44,2,Normal
+44,3,44,5,Normal
+44,4,44,6,Normal
+45,0,45,1,Normal
+45,0,45,6,Normal
+45,1,45,2,Normal
+45,1,45,3,Normal
+45,2,45,4,Normal
+45,4,45,5,Normal
+45,6,45,7,Normal
+45,6,45,8,Normal
+45,8,45,9,Normal
+46,0,46,1,Normal
+46,0,46,2,Normal
+46,0,46,5,Normal
+46,1,46,3,Normal
+46,2,46,4,Normal
+1,0,1,4,Normal
+1,0,1,13,Normal
+1,3,1,8,Normal
+1,4,1,3,Normal
+1,4,1,5,Normal
+1,4,1,6,Normal
+1,5,1,7,Normal
+1,6,1,9,Normal
+1,7,1,11,Normal
+1,8,1,10,Normal
+1,9,1,12,Normal
+1,13,1,14,Normal
+47,0,47,1,Normal
+47,0,47,7,Normal
+47,1,47,2,Normal
+47,1,47,3,Normal
+47,2,47,5,Normal
+47,3,47,4,Normal
+47,5,47,6,Normal
+47,7,47,8,Normal
+47,7,47,9,Normal
+47,9,47,10,Normal
+47,10,47,11,Normal
+48,0,48,1,Normal
+48,0,48,2,Normal
+48,0,48,3,Normal
+48,1,48,4,Normal
+48,2,48,5,Normal
+48,3,48,6,Normal
+49,0,49,1,Normal
+49,0,49,6,Normal
+49,1,49,2,Normal
+49,1,49,3,Normal
+49,2,49,4,Normal
+49,4,49,5,Normal
+49,6,49,7,Normal
+49,6,49,8,Normal
+50,0,50,1,Normal
+50,0,50,2,Normal
+50,0,50,3,Normal
+50,1,50,4,Normal
+50,2,50,5,Normal
+50,3,50,6,Normal
+6,0,6,1,Normal
+6,0,6,8,Normal
+6,1,6,2,Normal
+6,1,6,16,Normal
+6,2,6,5,Normal
+6,5,6,7,Normal
+6,8,6,9,Normal
+6,8,6,10,Normal
+6,10,6,11,Normal
+51,0,51,1,Normal
+51,1,51,2,Normal
+7,0,7,2,Normal
+7,0,7,15,Normal
+7,2,7,3,Normal
+7,2,7,4,Normal
+7,2,7,5,Normal
+7,3,7,7,Normal
+7,4,7,8,Normal
+7,5,7,6,Normal
+7,6,7,9,Normal
+7,7,7,10,Normal
+7,8,7,11,Normal
+7,9,7,12,Normal
+7,10,7,13,Normal
+7,11,7,14,Normal
+7,15,7,16,Normal
+52,0,52,1,Normal
