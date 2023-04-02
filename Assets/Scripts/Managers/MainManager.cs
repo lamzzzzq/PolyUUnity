@@ -14,6 +14,14 @@ public class MainManager : MonoBehaviour
     public GameObject InputField;
     private VRTextInput vrTextInput;
 
+    public string task_1_1;
+    public string task_1_2;
+    public string task_1_3;
+    public string task_1_4;
+    public string task_1_5;
+
+
+
     public string task_4_1;
     public string task_4_4;
     
@@ -131,8 +139,12 @@ public class MainManager : MonoBehaviour
         switch (scene.buildIndex)
         {
             case 1:
-                task_4_1 = "scene1";
-                SaveString(task_4_1);
+                task_1_1 = string.Concat(userID, ",", "1_1_OPTION IS:", ",", DialogueLua.GetVariable("1_1_OPTION_1").asString, ",", DialogueLua.GetVariable("1_1_OPTION_2").asString);
+                task_1_2 = string.Concat(userID, ",", "1_2_OPTION IS:", ",", DialogueLua.GetVariable("1_2_OPTION_1").asString, ",", DialogueLua.GetVariable("1_2_OPTION_2").asString);
+                task_1_3 = string.Concat(userID, ",", "1_3_OPTION IS:", ",", DialogueLua.GetVariable("1_3_OPTION_1").asString, ",", DialogueLua.GetVariable("1_3_OPTION_2").asString);
+                task_1_4 = string.Concat(userID, ",", "1_4_OPTION IS:", ",", DialogueLua.GetVariable("1_4_OPTION_1").asString, ",", DialogueLua.GetVariable("1_4_OPTION_2").asString);
+                task_1_5 = string.Concat(userID, ",", "1_5_OPTION IS:", ",", DialogueLua.GetVariable("1_5_OPTION_1").asString, ",", DialogueLua.GetVariable("1_5_OPTION_2").asString, ",", DialogueLua.GetVariable("1_5_OPTION_3").asString);
+                SaveString(task_1_1 + "," + task_1_2 + "," + task_1_3 + "," + task_1_4 + "," + task_1_5);
                 break;
             case 2:
                 task_4_4 = "scene2";

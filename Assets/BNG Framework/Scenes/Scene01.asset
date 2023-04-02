@@ -2384,6 +2384,132 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 53
+    fields:
+    - title: Name
+      value: 1_2_OPTION_1
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 1_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 54
+    fields:
+    - title: Name
+      value: 1_2_OPTION_2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 2_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 55
+    fields:
+    - title: Name
+      value: 1_3_OPTION_1
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 1_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 56
+    fields:
+    - title: Name
+      value: 1_3_OPTION_2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 2_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 57
+    fields:
+    - title: Name
+      value: 1_4_OPTION_1
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 1_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 58
+    fields:
+    - title: Name
+      value: 1_4_OPTION_2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 2_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 59
+    fields:
+    - title: Name
+      value: 1_5_OPTION_1
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 1_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 60
+    fields:
+    - title: Name
+      value: 1_5_OPTION_2
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 2_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 61
+    fields:
+    - title: Name
+      value: 1_5_OPTION_3
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 3_False
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   - id: 52
     fields:
     - title: Name
@@ -2394,62 +2520,6 @@ MonoBehaviour:
       value: 0
       type: 1
       typeString: CustomFieldType_Number
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 53
-    fields:
-    - title: Name
-      value: New Variable 53
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 54
-    fields:
-    - title: Name
-      value: New Variable 54
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 55
-    fields:
-    - title: Name
-      value: New Variable 55
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 56
-    fields:
-    - title: Name
-      value: New Variable 56
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
@@ -15715,7 +15785,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_1_OPTION_1"] = "1_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15860,7 +15930,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_1_OPTION_2"] = "2_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16656,7 +16726,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 30.806458
         y: 70
         width: 160
         height: 30
@@ -16725,7 +16795,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_2_OPTION_1"] = "1_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -16794,14 +16864,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_2_OPTION_2"] = "2_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 241
-        y: 76
+        x: 326.10635
+        y: 116.42552
         width: 160
         height: 30
     - id: 4
@@ -16946,12 +17016,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 218
+        y: 216.93619
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.3599997
+    canvasZoom: 0.94000006
   - id: 40
     fields:
     - title: Title
@@ -18063,6 +18133,12 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
+      - originConversationID: 42
+        originDialogueID: 1
+        destinationConversationID: 42
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -18139,7 +18215,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_3_OPTION_1"] = "1_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -18296,6 +18372,75 @@ MonoBehaviour:
         serializedVersion: 2
         x: 31
         y: 220
+        width: 160
+        height: 30
+    - id: 5
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Sorry, I don't want to.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Hans
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-HK
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 42
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["1_3_OPTION_2"] = "2_True"
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 284
+        y: 117
         width: 160
         height: 30
     entryGroups: []
@@ -19495,13 +19640,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_4_OPTION_1"] = "1_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
+        x: 29.31578
         y: 162
         width: 160
         height: 30
@@ -19564,7 +19709,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_4_OPTION_2"] = "2_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20705,7 +20850,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_5_OPTION_1"] = "1_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -20871,14 +21016,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_5_OPTION_2"] = "2_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 528
-        y: 222.0336
+        y: 220.60504
         width: 160
         height: 30
     - id: 6
@@ -20946,7 +21091,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["1_5_OPTION_3"] = "3_True"
       onExecute:
         m_PersistentCalls:
           m_Calls: []
