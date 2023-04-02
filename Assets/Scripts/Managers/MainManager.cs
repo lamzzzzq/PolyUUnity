@@ -3,21 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
 using BNG;
 
 public class MainManager : MonoBehaviour
 {
+    // Singleton Instance
     public static MainManager Instance;
     public GameObject InputField;
     private VRTextInput vrTextInput;
 
     public string task_4_1;
     public string task_4_4;
-    Scene scene;
-
+    
+    private Scene scene;
     private string userID;
 
+    // InGameMenu variables
+    public GameObject menuContainer;
+    //public GameObject optionsSubMenu;
+    public UnityEngine.UI.Button[] levelButtons;
+
+    // Level Loading variables
+    public UnityEngine.UI.Slider slider;
+    public Text progressText;
+
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void OnEnable()
     {
@@ -33,46 +55,53 @@ public class MainManager : MonoBehaviour
     {
         // Update the scene field with the new scene.
         this.scene = scene;
-    }
 
+        // Find the menuContainer GameObject (if it exists in the scene)
+        GameObject menuContainerObject = GameObject.FindGameObjectWithTag("WristMenu");
 
-    private void Awake()
-    {
-        if(Instance != null)
+        // Assign the menuContainer variable if the GameObject is found
+        if (menuContainerObject != null)
         {
-            Destroy(gameObject);
+            menuContainer = menuContainerObject;
         }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // Find the slider and progressText GameObjects (if they exist in the scene)
+        GameObject sliderObject = GameObject.FindGameObjectWithTag("LoadingSlider");
+        GameObject progressTextObject = GameObject.FindGameObjectWithTag("LoadingProgressText");
+
+        // Assign the Slider and Text components if the GameObjects are found
+        if (sliderObject != null)
+        {
+            slider = sliderObject.GetComponent<UnityEngine.UI.Slider>();
+        }
+        if (progressTextObject != null)
+        {
+            progressText = progressTextObject.GetComponent<UnityEngine.UI.Text>();
+        }
     }
 
     private void Start()
     {
         scene = SceneManager.GetActiveScene();
-
         vrTextInput = InputField.GetComponent<VRTextInput>();
-    }
-
-    void Update()
-    {
         userID = vrTextInput.userID;
-        //Debug.Log(userID + "Here");
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SaveString(task_4_1 + "," + task_4_4);
-            
-        }
-
-        task_4_1 = string.Concat(userID,",","4_1_OPTION IS:", ",", DialogueLua.GetVariable("4_1_OPTION_1").asString, ",", DialogueLua.GetVariable("4_1_OPTION_2").asString, ",", DialogueLua.GetVariable("4_1_OPTION_3").asString) ;
-        task_4_4 = string.Concat(userID, " ,", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
-
+        // Start the SaveCSVFileCoroutine
+        StartCoroutine(SaveCSVFileCoroutine());
     }
+
+    private void Update()
+    {
+        // Toggle menu when the player presses the key
+        if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.XButtonDown))
+        {
+            ToggleMenu();
+        }
+    }
+
 
     void SaveString(string str)
     {
-        string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".txt";
+        string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".csv";
         print("saving to" + filePath);
 
         Debug.Log("Scene build index: " + scene.buildIndex);
@@ -80,14 +109,128 @@ public class MainManager : MonoBehaviour
 
         //long time = new System.DateTimeOffset(System.DateTime.Now).ToUnixTimeSeconds();
         //string timeID = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "," + time.ToString() + ",";
-        string timeID = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + ",";
+        string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
         Debug.Log(timeID);
 
-        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + ".csv");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex +"_" + timeID + ".csv");
         sw.WriteLine(timeID);
         sw.WriteLine(str);
         sw.Close();
-
     }
 
+    public void SaveOnKeyPress()
+    {
+        SaveOption();
+    }
+
+    void SaveOption()
+    {
+        //Update the current scene
+        scene = SceneManager.GetActiveScene();
+
+        switch (scene.buildIndex)
+        {
+            case 1:
+                task_4_1 = "scene1";
+                SaveString(task_4_1);
+                break;
+            case 2:
+                task_4_4 = "scene2";
+                SaveString(task_4_4);
+                break;
+            case 3:
+                task_4_4 = "scene3";
+                SaveString(task_4_4);
+                break;
+            case 4:
+                task_4_1 = string.Concat(userID, ",", "4_1_OPTION IS:", ",", DialogueLua.GetVariable("4_1_OPTION_1").asString, ",", DialogueLua.GetVariable("4_1_OPTION_2").asString, ",", DialogueLua.GetVariable("4_1_OPTION_3").asString);
+                task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
+                SaveString(task_4_1 + "," + task_4_4);
+                break;
+            case 5:
+                task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
+                SaveString(task_4_4);
+                break;
+            // Add more cases for other scenes if needed
+            default:
+                break;
+        } 
+    }
+
+    IEnumerator SaveCSVFileCoroutine()
+    {
+        while (true)
+        {
+            // Wait for 60 seconds
+            yield return new WaitForSeconds(60);
+
+            // Save the CSV file
+            SaveOption();
+        }
+    }
+    public void ToggleMenu()
+    {
+        if (menuContainer != null)
+        {
+            menuContainer.SetActive(!menuContainer.activeSelf);
+
+            LevelButtonHandler levelButtonHandler = menuContainer.GetComponent<LevelButtonHandler>();
+            if (levelButtonHandler != null)
+            {
+                levelButtonHandler.UpdateButtons();
+            }
+        }
+    }
+
+
+
+    // Level loading methods
+
+    public void LoadLevel(string sceneName)
+    {
+        StartCoroutine(LoadLevelAsync(sceneName));
+    }
+
+    IEnumerator LoadLevelAsync(string sceneName)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
+        operation.allowSceneActivation = false;
+
+        float progress = 0;
+
+        while (!operation.isDone)
+        {
+            progress = Mathf.MoveTowards(progress, operation.progress, Time.deltaTime);
+
+            if (slider != null)
+            {
+                slider.value = progress;
+            }
+
+            if (progressText != null)
+            {
+                progressText.text = (progress * 100) + "%";
+            }
+
+            if (progress >= 0.9f)
+            {
+                if (slider != null)
+                {
+                    slider.value = 1;
+                }
+
+                operation.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
+    }
+
+    public void OnButtonClick(string scene)
+    {
+        Debug.Log("Button clicked!");
+        LoadLevel(scene);
+        // Add your button click logic here
+    }
 }
+            

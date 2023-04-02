@@ -18,7 +18,7 @@ public class InstantiateAndGrab : MonoBehaviour
 
         if (grabber != null && !grabber.HoldingItem)
         {
-            go = GameObject.Instantiate(ObjectToCreate, grabber.transform.position, grabber.transform.rotation);
+            go = GameObject.Instantiate(ObjectToCreate, grabber.transform.position, Quaternion.identity);
 
             grabbable = go.GetComponent<Grabbable>();
 

@@ -25,6 +25,9 @@ TagManager:
   - radio
   - Glasses_Real
   - Glasses_Fake
+  - LoadingSlider
+  - LoadingProgressText
+  - WristMenu
   layers:
   - Default
   - TransparentFX
