@@ -8313,6 +8313,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputField: {fileID: 213818440}
+  task_1_1: 
+  task_1_2: 
+  task_1_3: 
+  task_1_4: 
+  task_1_5: 
   task_4_1: 
   task_4_4: 
   menuContainer: {fileID: 1413410130}
@@ -17983,6 +17988,7 @@ GameObject:
   - component: {fileID: 740636882}
   - component: {fileID: 740636881}
   - component: {fileID: 740636880}
+  - component: {fileID: 740636879}
   m_Layer: 5
   m_Name: Btn_Scene01
   m_TagString: Untagged
@@ -18010,6 +18016,20 @@ RectTransform:
   m_AnchoredPosition: {x: -1453.0006, y: 530}
   m_SizeDelta: {x: 209.7, y: 111.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &740636879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740636877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8739f723e51354099e26d35ed58ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 785571512}
+  text: {fileID: 1368980496}
 --- !u!114 &740636880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18054,9 +18074,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 50549022}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 740636879}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27121,6 +27141,7 @@ GameObject:
   - component: {fileID: 1400798079}
   - component: {fileID: 1400798078}
   - component: {fileID: 1400798077}
+  - component: {fileID: 1400798076}
   m_Layer: 5
   m_Name: Btn_Scene02
   m_TagString: Untagged
@@ -27148,6 +27169,20 @@ RectTransform:
   m_AnchoredPosition: {x: -95.000916, y: 529}
   m_SizeDelta: {x: 209.7, y: 108.2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1400798076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400798074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8739f723e51354099e26d35ed58ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 785571512}
+  text: {fileID: 1368980496}
 --- !u!114 &1400798077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27192,9 +27227,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 50549022}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: LoadLevel
+      - m_Target: {fileID: 1400798076}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

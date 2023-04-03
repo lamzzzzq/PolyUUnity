@@ -2356,6 +2356,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 52
+    fields:
+    - title: Name
+      value: 2_5_Item
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   - id: 50
     fields:
     - title: Name
@@ -2506,20 +2520,6 @@ MonoBehaviour:
       value: 3_False
       type: 0
       typeString: CustomFieldType_Text
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-  - id: 52
-    fields:
-    - title: Name
-      value: 2_5_Item
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Initial Value
-      value: 0
-      type: 1
-      typeString: CustomFieldType_Number
     - title: Description
       value: 
       type: 0
@@ -4324,7 +4324,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31
-        y: 70
+        y: 69
         width: 160
         height: 30
     - id: 2
@@ -15942,7 +15942,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasZoom: 0.7600002
   - id: 38
     fields:
     - title: Title
@@ -16148,7 +16148,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 17.748032
-        y: 90.42552
+        y: 89.109726
         width: 160
         height: 30
     - id: 2
@@ -16223,7 +16223,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 226.03094
-        y: 91.93814
+        y: 90.622345
         width: 160
         height: 30
     - id: 3
@@ -16977,7 +16977,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(GuidelineTrigger,true)
+        value: SetActive(SandwichMenuCanvas,true)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -24518,7 +24518,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 475
-        y: 179
+        y: 180.06384
         width: 160
         height: 30
     entryGroups: []

@@ -4,7 +4,7 @@ using UnityEngine;
 using BNG;
 
 public class ScreenFadeFatherDisappear : MonoBehaviour
-{
+/*{
     public GameObject father;
     public GameObject block;
     public ScreenFader fader; //  the screen fader on the center eye camera, drag the camera here
@@ -30,8 +30,8 @@ public class ScreenFadeFatherDisappear : MonoBehaviour
 
     public void FadeAndFatherDisappear()
     {
-        /*        CallFadeIn();
-                Invoke(nameof(DisableFather), 1f);*/
+        *//*        CallFadeIn();
+                Invoke(nameof(DisableFather), 1f);*//*
         StartCoroutine(WaitFadeAndFatherDisappear());
     }
 
@@ -42,18 +42,62 @@ public class ScreenFadeFatherDisappear : MonoBehaviour
         CallFadeOut();
     }
 
-/*    public void FadeCutscene()
+*//*    public void FadeCutscene()
     {
         fader.DoFadeIn();
         Invoke(nameof(FadeSecond), 1f);
 
         Debug.Log("2");
-    }*/
+    }*//*
 
     public void FadeSecond()
     {
         CallFadeOut();
         Debug.Log("1");
 
+    }
+}
+*/
+{
+    public GameObject father;
+    public GameObject block;
+    public ScreenFader fader; // the screen fader on the center eye camera, drag the camera here
+
+    public void CallFadeIn()
+    {
+        fader.DoFadeIn();
+    }
+
+    public void CallFadeOut()
+    {
+        fader.DoFadeOut();
+    }
+
+    IEnumerator WaitFadeAndFatherDisappear()
+    {
+        yield return new WaitForSeconds(1);
+        CallFadeIn();
+        StartCoroutine(DisableFatherAfterDelay());
+    }
+
+    public void FadeAndFatherDisappear()
+    {
+        StartCoroutine(WaitFadeAndFatherDisappear());
+    }
+
+    IEnumerator DisableFatherAfterDelay()
+    {
+        // Wait for a few seconds before deactivating the father GameObject
+        yield return new WaitForSeconds(1);
+
+        father.SetActive(false);
+        block.SetActive(false);
+        CallFadeOut();
+    }
+
+    public void FadeSecond()
+    {
+        CallFadeOut();
+        Debug.Log("1");
     }
 }

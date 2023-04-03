@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using PixelCrushers.DialogueSystem;
 
 public class Teacher : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Teacher : MonoBehaviour
     public Transform Target1;
     public Transform Target2;
     Transform Target;
+
+    public GameObject npc;
 
     bool Fall;
 
@@ -73,5 +76,15 @@ public class Teacher : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         _anim.SetBool("Walk", false); // Ensure Walk is set to false after the delay
+    }
+
+    public void TeacherGreeting()
+    {
+        //PixelCrushers.QuestMachine.QuestGiver.Start
+
+        foreach (var trigger in npc.GetComponents<DialogueSystemTrigger>())
+        {
+            trigger.OnUse();
+        }
     }
 }
