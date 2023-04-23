@@ -19,17 +19,16 @@ public class TeleportationPosition : MonoBehaviour
 
     public float fadeDuration;
 
+    TeleportPlayerFade teleport;
 
-    PlayerTeleport teleport;
     ScreenFader sf;
 
 
     public void teleportationPosition()
     {
-
         //player.transform.position = target.transform.position;
         //StartCoroutine(Transition());
-        teleport.TeleportPlayerToTransform(target.transform);
+        //teleport.ResetPlayerPosRot
     }
 
     private IEnumerator Transition()

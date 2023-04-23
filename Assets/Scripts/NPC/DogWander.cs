@@ -11,10 +11,10 @@ public class DogWander : MonoBehaviour
     private EnemyStates enemystates;
     private NavMeshAgent agent;
     private Animator anim;
-    public FacePlayer faceplayer;
+    public FacePlayerNormal faceplayer;
     public Transform SleepPoint;
 
-    public DogSleepTriggerOnPlayer DogSleep;
+    //public DogSleepTriggerOnPlayer DogSleep;
 
     [Header("Basic Settings")]
     public float sightRadius;
@@ -55,16 +55,17 @@ public class DogWander : MonoBehaviour
 
     private void Update()
     {
-        if((DogSleep.PlayerLeave == true ) && (DialogueLua.GetVariable("TASK_3_4_ARRIVE").asBool == false))
+/*        //if((DogSleep.PlayerLeave == true ) && (DialogueLua.GetVariable("TASK_3_4_ARRIVE").asBool == false))
+        if (DialogueLua.GetVariable("TASK_3_4_ARRIVE").asBool == false)
         {
             agent.destination = SleepPoint.position;
             isSleep = true;
         }
         else
-        {
+        {*/
             SwitchStates();
             SwitchAnimation();
-        }
+        //}
     }
 
     void SwitchAnimation()
@@ -150,6 +151,7 @@ public class DogWander : MonoBehaviour
     }
 
 
+    //这段代码再看一遍吧
     void GetNewWayPoint()
     {
         remainLookAtTime = lookAtTime;
@@ -159,11 +161,17 @@ public class DogWander : MonoBehaviour
 
         Vector3 randomPoint = new Vector3(guardPos.x + randomX, transform.position.y, guardPos.z + randomZ);
 
-        //wayPoint = randomPoint;
-
         NavMeshHit hit;
-        wayPoint = NavMesh.SamplePosition(randomPoint, out hit, patrolRange, 1) ? hit.position : transform.position;
+        if (NavMesh.SamplePosition(randomPoint, out hit, patrolRange, 1))
+        {
+            wayPoint = hit.position;
+        }
+        else
+        {
+            wayPoint = transform.position;
+        }
     }
+
 
 
     void OnDrawGizmosSelected()

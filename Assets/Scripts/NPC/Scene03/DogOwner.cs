@@ -12,7 +12,7 @@ public class DogOwner : MonoBehaviour
     public Transform targetDog;
     private Transform target;
 
-    public FacePlayer facePlayer;
+    public FacePlayerNormal facePlayer;
 
     public float WalkValue;
     public float StopValue;
@@ -53,14 +53,12 @@ public class DogOwner : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "NPC")
+        if (other.tag == "NPC")
         {
             DialogueLua.SetVariable("TASK_3_4_ARRIVE", true);
             target = targetDog;
-
-            
+            Debug.Log("CHANGE TARGET TO DOG");
         }
-
     }
 
 

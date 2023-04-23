@@ -54,7 +54,7 @@ public class QuestInitialization : MonoBehaviour
         DialogueLua.SetVariable("2_1_TeacherItem", 0);
         DialogueLua.SetVariable("2_1_Dustbin", false);
         DialogueLua.SetVariable("2_2_Water", 0);
-        DialogueLua.SetVariable("2_5_Item", false);
+        DialogueLua.SetVariable("2_5_Item", 0);
     }
 
     private void Update()

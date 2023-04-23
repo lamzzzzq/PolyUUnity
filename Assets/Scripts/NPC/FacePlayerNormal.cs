@@ -15,4 +15,10 @@ public class FacePlayerNormal : MonoBehaviour
         dir = new Vector3(dir.x, 0, dir.z);
         transform.rotation = Quaternion.LookRotation(dir);
     }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, transform.forward * 2);
+    }
 }

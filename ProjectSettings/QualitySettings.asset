@@ -120,3 +120,4 @@ QualitySettings:
   m_PerPlatformDefaultQuality:
     Android: 2
     Standalone: 0
+    iPhone: 0
