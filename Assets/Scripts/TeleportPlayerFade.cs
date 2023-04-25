@@ -22,6 +22,11 @@ public class TeleportPlayerFade : MonoBehaviour
         fader.DoFadeOut();
     }
 
+    public void ResetPos()
+    {
+        transform.position = target.position;
+        transform.rotation = targetRotation;
+    }
 
     public void ResetPlayerPosRot()
     {

@@ -17,7 +17,7 @@ public class Teacher : MonoBehaviour
 
     bool Fall;
 
-    public FacePlayer faceplayer;
+    public FacePlayerNormal faceplayer;
 
     void Start()
     {

@@ -6,6 +6,13 @@ using PixelCrushers.DialogueSystem;
 public class FruitLady : MonoBehaviour
 {
     public GameObject[] gameObjects;
+
+    public GameObject Basket;
+    public GameObject Bag;
+    public GameObject FruitLadyObj;
+
+    public TeleportPlayerFade fade;
+
     public FacePlayerNormal facePlayer;
     private Animator _childAnim;
     private bool objectCounted = false;
@@ -20,6 +27,7 @@ public class FruitLady : MonoBehaviour
 
     public void DropFruit()
     {
+        //fade.FadeCutscene();
         foreach (var item in gameObjects)
         {
             item.SetActive(true);
@@ -30,6 +38,9 @@ public class FruitLady : MonoBehaviour
     {
         facePlayer.enabled = true;
         _childAnim.SetBool("Idle", true);
+        Basket.SetActive(false);
+        Bag.SetActive(true);
+        StartConversation();
     }
 
     public void PlaceItem()
@@ -49,5 +60,10 @@ public class FruitLady : MonoBehaviour
 
         DialogueLua.SetVariable("3_5_Fruit", fruit);
         Debug.Log(fruit);
+    }
+
+    public void StartConversation()
+    {
+        FruitLadyObj.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 }

@@ -105,7 +105,7 @@ public class DogWander : MonoBehaviour
                     else
                     {
                         isWalk = true;
-                        agent.destination = wayPoint;
+                        //agent.destination = wayPoint;
                     }
                 }
                 break;
@@ -165,10 +165,12 @@ public class DogWander : MonoBehaviour
         if (NavMesh.SamplePosition(randomPoint, out hit, patrolRange, 1))
         {
             wayPoint = hit.position;
+            agent.SetDestination(wayPoint); // Set the destination here.
         }
         else
         {
             wayPoint = transform.position;
+            agent.SetDestination(wayPoint); // Set the destination here.
         }
     }
 

@@ -41,6 +41,8 @@ public class triggerTask : MonoBehaviour
 
             cube.SetActive(true);
             addForce.enabled = true;
+
+            Debug.Log("Drop");
         }    
        
     }

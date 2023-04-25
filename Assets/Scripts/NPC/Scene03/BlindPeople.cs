@@ -14,6 +14,7 @@ public class BlindPeople : MonoBehaviour
     public Transform Target2;
     public GameObject Block;
     public GameObject BlockNewRoad;
+    public GameObject blindPerson;
 
     public FacePlayerNormal facePlayer;
 
@@ -74,6 +75,8 @@ public class BlindPeople : MonoBehaviour
         _agent.SetDestination(target.transform.position);
         _anim.SetBool("Walk", true);
         _anim.SetBool("Idle", false);
+        ShowBlindPersonConversation();
+
     }
 
     public void PlaceItem()
@@ -116,5 +119,10 @@ public class BlindPeople : MonoBehaviour
     public void NotFacePlayer()
     {
         facePlayer.enabled = false;
+    }
+
+    public void ShowBlindPersonConversation()
+    {
+        blindPerson.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 }

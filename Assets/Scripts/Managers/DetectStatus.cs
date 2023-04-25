@@ -15,11 +15,13 @@ public class DetectStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F10))
+        string cash = DialogueLua.GetVariable("TASK_3_1_CASH").asString;
+        Debug.Log(cash);
+/*        if (Input.GetKeyDown(KeyCode.F10))
         {
             Debug.Log("yesssssss");
             string cash = DialogueLua.GetVariable("TASK_3_1_CASH").asString;
             Debug.Log(cash);
-        }
+        }*/
     }
 }
