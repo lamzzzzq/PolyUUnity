@@ -28,6 +28,7 @@ TagManager:
   - LoadingSlider
   - LoadingProgressText
   - WristMenu
+  - Box
   layers:
   - Default
   - TransparentFX

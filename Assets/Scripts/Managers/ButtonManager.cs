@@ -17,14 +17,10 @@ public class ButtonManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "SubPlayer" && !DialogueCanvas.activeSelf)
+        if (other.tag == "SubPlayer")
         {
-            Button.SetActive(true);
-            playerController.enabled = true;
-        }
-        else if (other.tag == "SubPlayer" && DialogueCanvas.activeSelf)
-        {
-            playerController.enabled = false;
+            UpdateButtonState();
+            UpdatePlayerControllerState();
         }
     }
 
@@ -33,7 +29,18 @@ public class ButtonManager : MonoBehaviour
         if (other.tag == "SubPlayer")
         {
             Button.SetActive(false);
-            playerController.enabled = true;
+            UpdatePlayerControllerState();
         }
     }
+
+    private void UpdatePlayerControllerState()
+    {
+        playerController.enabled = !DialogueCanvas.activeSelf;
+    }
+
+    private void UpdateButtonState()
+    {
+        Button.SetActive(!DialogueCanvas.activeSelf);
+    }
+
 }

@@ -15,9 +15,9 @@ namespace BNG {
         public Color FadeColor = Color.black;
 
         [Tooltip("How fast to fade in / out")]
-        public float FadeInSpeed = 6f;
+        public float FadeInSpeed = 1f;
 
-        public float FadeOutSpeed = 6f;
+        public float FadeOutSpeed = 1f;
 
         [Tooltip("Wait X seconds before fading scene in")]
         public float SceneFadeInDelay = 1f;

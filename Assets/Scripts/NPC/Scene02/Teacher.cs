@@ -9,6 +9,8 @@ public class Teacher : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
 
+    public List<GameObject> TriggerPoints = new List<GameObject>();
+
     public Transform Target1;
     public Transform Target2;
     Transform Target;
@@ -40,6 +42,10 @@ public class Teacher : MonoBehaviour
         {
             StopMoving();
             StartCoroutine(Delay(10f));
+            for (int i = 0; i < TriggerPoints.Count; i++)
+            {
+                TriggerPoints[i].SetActive(false);
+            }
             faceplayer.enabled = true;
         }
     }
@@ -51,6 +57,9 @@ public class Teacher : MonoBehaviour
         _anim.SetBool("Walk", false);
     }
 
+
+
+    //First Step - Trigger By Timeline
     public void WalkTowardTheDoor()
     {
         _agent.isStopped = false;

@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BNG;
+using UnityEngine.Events;
 
 public class TeleportPlayerFade : MonoBehaviour
 {
     public Transform target;
     public ScreenFader fader;
     public Quaternion targetRotation;
-    //public TeleportPlayerFadeEvent onTeleport;
-    //  the screen fader on the center eye camera, drag the camera here
-    //[SerializeField] float fadeInWait = 0.5f;
 
     public void CallFadeIn()
     {
@@ -42,27 +40,13 @@ public class TeleportPlayerFade : MonoBehaviour
 
         // Call the existing method
         ResetPlayerPosRot();
+
     }
 
-    public void ResetPlayer()
+    private void ResetPlayer()
     {
         transform.position = target.position;
         transform.rotation = targetRotation;
         CallFadeOut();
-    }
-
-    public void FadeCutscene()
-    {
-        fader.DoFadeIn();
-        Invoke(nameof(FadeSecond), 1f);
-
-        Debug.Log("2");
-    }
-
-    public void FadeSecond()
-    {
-        CallFadeOut();
-        Debug.Log("1");
-
     }
 }

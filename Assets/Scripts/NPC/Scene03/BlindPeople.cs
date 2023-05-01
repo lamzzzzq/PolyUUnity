@@ -13,7 +13,7 @@ public class BlindPeople : MonoBehaviour
     public Transform Target1;
     public Transform Target2;
     public GameObject Block;
-    public GameObject BlockNewRoad;
+    //public GameObject BlockNewRoad;
     public GameObject blindPerson;
 
     public FacePlayerNormal facePlayer;
@@ -38,7 +38,7 @@ public class BlindPeople : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+
         Task_3_2_help = DialogueLua.GetVariable("TASK_3_2_HELP").asBool;
 
         if (Task_3_2_help && !hasStartedWalking)
@@ -65,7 +65,7 @@ public class BlindPeople : MonoBehaviour
 
 
 
-        
+
     }
     //从外部call这个function 只执行一次
     public void WalkTowardTheDestination()
@@ -82,21 +82,6 @@ public class BlindPeople : MonoBehaviour
     public void PlaceItem()
     {
         DialogueLua.SetVariable("CleanDebris", true);
-
-    }
-
-    IEnumerator WalkCrossTheRoad()
-    {
-        target = Target2;
-        yield return new WaitForSeconds(2);
-        Block.SetActive(false);
-        _agent.SetDestination(target.transform.position);
-        _agent.isStopped = false;
-        _anim.SetBool("Walk",true);
-        _anim.SetBool("Idle", false);
-        BlockNewRoad.SetActive(false);
-
-        //DialogueLua.SetVariable("TASK_3_2_HELP", false);
     }
 
     public void WalkCrossTheRoadFunction()
@@ -107,7 +92,7 @@ public class BlindPeople : MonoBehaviour
         _agent.isStopped = false;
         _anim.SetBool("Walk", true);
         _anim.SetBool("Idle", false);
-        BlockNewRoad.SetActive(false);
+        //BlockNewRoad.SetActive(false);
     }
 
     void TriggerNewConversation()

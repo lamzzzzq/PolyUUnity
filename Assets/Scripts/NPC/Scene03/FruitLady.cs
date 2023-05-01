@@ -8,7 +8,8 @@ public class FruitLady : MonoBehaviour
     public GameObject[] gameObjects;
 
     public GameObject Basket;
-    public GameObject Bag;
+    public GameObject BagFloor;
+    public GameObject BagHand;
     public GameObject FruitLadyObj;
 
     public TeleportPlayerFade fade;
@@ -16,6 +17,7 @@ public class FruitLady : MonoBehaviour
     public FacePlayerNormal facePlayer;
     private Animator _childAnim;
     private bool objectCounted = false;
+
     private void Start()
     {
         _childAnim = GetComponentInChildren<Animator>();
@@ -39,7 +41,8 @@ public class FruitLady : MonoBehaviour
         facePlayer.enabled = true;
         _childAnim.SetBool("Idle", true);
         Basket.SetActive(false);
-        Bag.SetActive(true);
+        BagFloor.SetActive(false);
+        BagHand.SetActive(true);
         StartConversation();
     }
 
