@@ -3610,8 +3610,11 @@ MonoBehaviour:
     m_uiInputField: {fileID: 5152371850291362917}
     m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
+  acceptButton: 
   cancelKey: 27
+  cancelButton: 
   showTouchScreenKeyboard: 0
+  allowBlankInput: 1
   onAccept:
     m_PersistentCalls:
       m_Calls: []

@@ -19,10 +19,10 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11230126080
-    m_Localized: "Welcome! \n\nThank you for playing the game! Today you are staying
-      at home, please try to help your families to solve some problems when they
-      needed. After you finish each tasks, you will get corresponding reward points. 
-      Please try your best to get higher points! "
+    m_Localized: "Welcome to \"Cradle\"! \n\nThank you for joining us today. \n\nYou're
+      about to embark on a journey of kindness right from your own home. Get ready
+      to make a positive impact on your family and earn reward points along the way.
+      Are you excited? Let's begin!"
     m_Metadata:
       m_Items: []
   - m_Id: 862367653888

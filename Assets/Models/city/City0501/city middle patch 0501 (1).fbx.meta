@@ -3,7 +3,187 @@ guid: 8600a3943c95e384da5f900136677765
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apple Red
+    second: {fileID: 2100000, guid: d5b66741398276440ae2d0433c7d69c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carrot
+    second: {fileID: 2100000, guid: 6fe3639e90929714c9d4bc56aaaa696f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceiling
+    second: {fileID: 2100000, guid: f94dbec7fce3f6445a3130126d601d1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green1
+    second: {fileID: 2100000, guid: 671ebe90c0871f640bcd7d4c13c05d47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green2
+    second: {fileID: 2100000, guid: 84af3f04d6418cf499a50884f5a4ffce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green4
+    second: {fileID: 2100000, guid: 0fd7971a92f0f45439b5443719c3b137, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey Blue
+    second: {fileID: 2100000, guid: 2b35ca4e0bb910a468b8b172716a0d96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf
+    second: {fileID: 2100000, guid: 69869428653be78479d9db7824e86c94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light Grey
+    second: {fileID: 2100000, guid: 1941b51d021e3aa45a581373ce791d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 0ba6a66df5174b743bf37275e1b00c63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Notice board frame
+    second: {fileID: 2100000, guid: a321c93656c4dd84aac012e8ba8ebc9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: 852d48fdc285de743b8335487fd57db9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PushPin_Red
+    second: {fileID: 2100000, guid: 21afa9e260faa0b4399535e4e0320592, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 75dab79db81317e4eb0698f8a48a3630, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stalk
+    second: {fileID: 2100000, guid: a02cb099b91ffaf44b1d2a7a1f764236, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: 5f4c469dfbd1e8947bd0517cb3caeb00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: b79cf8c500529a64c857b08bacbef364, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window Blue
+    second: {fileID: 2100000, guid: 5ba345d24cea5d24ba2d210ebaa128f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: 6420ca274a274334681752ab78b09a48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 03b3c00019abfa7448fc9b572152d9b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: city props
+    second: {fileID: 2100000, guid: 61e164fd29742a94cb2e42c99662e9cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: duck green
+    second: {fileID: 2100000, guid: ffabce26968ceaa448f7607310870fcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1.001
+    second: {fileID: 2100000, guid: 32f736c6fa5386e42a77529b0e6b7f87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: 4d0f3b99be7158b419ec081529625592, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1_0
+    second: {fileID: 2100000, guid: f53a67beed8343e479ba05afdd3d7321, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1_2
+    second: {fileID: 2100000, guid: 659740e4f942e7344bea62addef7a8b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: d0e77cbcce87a6146bd6721701848e30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2_1
+    second: {fileID: 2100000, guid: 8056a4a04dd7afd409bfa214f3a15582, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2_2
+    second: {fileID: 2100000, guid: 0c554f1a8e07e98489554d47829b35b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: 2e5f3df5a52849543abc2230815bd554, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3_1
+    second: {fileID: 2100000, guid: e034378431495c84bab25d7c88296eb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3_2
+    second: {fileID: 2100000, guid: a8c9a897b3c462a4292e68d7ae423287, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: fd0f307548dc6044bb2b435284110ebd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4_1
+    second: {fileID: 2100000, guid: dcbac373f0b1e6046a6f97d2a543a4c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_yellow
+    second: {fileID: 2100000, guid: 086a99d06f31f7d41a599bb90cca58a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall building
+    second: {fileID: 2100000, guid: cbf6501e457963c429970785c35e6ab1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -45,7 +225,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
