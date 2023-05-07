@@ -11497,10 +11497,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: VR Keyboard
       objectReference: {fileID: 0}
+    - target: {fileID: 3917244860501517789, guid: 8a70b6ef2260a1848b78f80fbf4e786d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5385305708475918449, guid: 8a70b6ef2260a1848b78f80fbf4e786d,
         type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385305708475918459, guid: 8a70b6ef2260a1848b78f80fbf4e786d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9112889653703661182, guid: 8a70b6ef2260a1848b78f80fbf4e786d,
         type: 3}
@@ -22912,7 +22922,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a04d9592e87dc4b478e70e269537c400, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -25739,6 +25749,10 @@ PrefabInstance:
       propertyPath: AttachedKeyboard
       value: 
       objectReference: {fileID: 1580398036}
+    - target: {fileID: 893474991, guid: e4819389334c4504290937beeb9cd43b, type: 3}
+      propertyPath: AttachToVRKeyboard
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 848579963122060134, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -25938,6 +25952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UIExample
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428048668914445318, guid: e4819389334c4504290937beeb9cd43b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7428048668914445327, guid: e4819389334c4504290937beeb9cd43b,
         type: 3}

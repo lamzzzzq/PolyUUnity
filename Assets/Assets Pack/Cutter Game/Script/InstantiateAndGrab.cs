@@ -36,5 +36,8 @@ public class InstantiateAndGrab : MonoBehaviour
         }
     }
 
+
+
+
     //之后可以利用Enum进行左右手的区分，chatGPT教的
 }

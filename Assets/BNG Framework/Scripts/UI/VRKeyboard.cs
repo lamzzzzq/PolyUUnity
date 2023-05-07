@@ -94,6 +94,7 @@ namespace BNG {
             }
         }
 
+
         public virtual void PlayClickSound() {
             if(KeyPressSound != null) {
                 VRUtils.Instance.PlaySpatialClipAt(KeyPressSound, transform.position, 1f, 0.5f);

@@ -10,6 +10,7 @@ public class Teacher : MonoBehaviour
     private Animator _anim;
 
     public List<GameObject> TriggerPoints = new List<GameObject>();
+    public GameObject canvas;
 
     public Transform Target1;
     public Transform Target2;
@@ -41,12 +42,13 @@ public class Teacher : MonoBehaviour
         if (Vector3.Distance(transform.position, Target.position) < 0.1f && Fall == false)
         {
             StopMoving();
-            StartCoroutine(Delay(10f));
+            StartCoroutine(Delay(8f));
             for (int i = 0; i < TriggerPoints.Count; i++)
             {
                 TriggerPoints[i].SetActive(false);
             }
             faceplayer.enabled = true;
+            canvas.SetActive(true);
         }
     }
 
