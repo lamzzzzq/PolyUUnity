@@ -26,7 +26,7 @@ public class AddScore : MonoBehaviour
         {
             case 1:
                 {
-                    int value = DialogueLua.GetVariable("Point_Level").asInt;
+                    int value = DialogueLua.GetVariable("Point/Level_1").asInt;
 
                     Point.text = value.ToString();
                 }
@@ -34,7 +34,7 @@ public class AddScore : MonoBehaviour
             case 2:
                 {
                     //Debug.Log("在scene 2");
-                    int value = DialogueLua.GetVariable("Point_Level2").asInt;
+                    int value = DialogueLua.GetVariable("Point/Level_2").asInt;
 
                     Point.text = value.ToString();
                 }
@@ -42,7 +42,7 @@ public class AddScore : MonoBehaviour
             case 3:
                 {
                     //Debug.Log("在scene 3");
-                    int value = DialogueLua.GetVariable("Point_Level3").asInt;
+                    int value = DialogueLua.GetVariable("Point/Level_3").asInt;
 
                     Point.text = value.ToString();
                 }
@@ -51,7 +51,7 @@ public class AddScore : MonoBehaviour
             case 4:
                 {
                     //Debug.Log("在scene 4");
-                    int value = DialogueLua.GetVariable("Point_Level4").asInt;
+                    int value = DialogueLua.GetVariable("Point/Level_4").asInt;
 
                     Point.text = value.ToString();
                 }
@@ -60,7 +60,7 @@ public class AddScore : MonoBehaviour
             case 5:
                 {
                     //Debug.Log("在scene 4");
-                    int value = DialogueLua.GetVariable("Point_Level5").asInt;
+                    int value = DialogueLua.GetVariable("Point/Level_5").asInt;
 
                     Point.text = value.ToString();
                 }

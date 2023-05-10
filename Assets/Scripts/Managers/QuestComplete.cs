@@ -5,18 +5,14 @@ using PixelCrushers.DialogueSystem;
 
 public class QuestComplete : MonoBehaviour
 {
-    //public GameObject menu;
+    public GameObject menu;
+
+    public AudioClip audioClip;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-/*        // Find the menuContainer GameObject (if it exists in the scene)
-        GameObject menuContainerObject = GameObject.FindGameObjectWithTag("WristMenu");
 
-        // Assign the menuContainer variable if the GameObject is found
-        if (menuContainerObject != null)
-        {
-            menu = menuContainerObject;
-        }*/
     }
 
     // Update is called once per frame
@@ -31,7 +27,10 @@ public class QuestComplete : MonoBehaviour
         if ((QuestLog.CurrentQuestState("1_1_CleanTheDirt") == "abandoned") && (QuestLog.CurrentQuestState("1_2_Sandwich") == "abandoned") && (QuestLog.CurrentQuestState("1_3_WashPlate") == "abandoned") && (QuestLog.CurrentQuestState("1_4_GrandmaGlasses") == "abandoned") && (QuestLog.CurrentQuestState("1_5_Sister") == "success"))
         {
             Debug.Log("Level Complete!");
-            //menu.SetActive(true);
+            menu.SetActive(true);
+
+            audioSource.clip = audioClip;
+            audioSource.Play();
         }
         else
         {

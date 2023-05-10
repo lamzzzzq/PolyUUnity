@@ -3633,8 +3633,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 67.29332
-        y: 112.580154
+        x: 78.95598
+        y: 122.62799
         width: 160
         height: 30
     - id: 2
@@ -3755,7 +3755,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Dad_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -3797,13 +3797,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33.53401
-        y: 363.21695
+        x: 34.07228
+        y: 306.27914
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 1.1364136}
-    canvasZoom: 0.8799998
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.75999993
   - id: 37
     fields:
     - title: Title
@@ -4501,7 +4501,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 575.5014
+        x: 577.14075
         y: 90.24156
         width: 160
         height: 30
@@ -4732,7 +4732,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6100004
+    canvasZoom: 1.0000001
   - id: 38
     fields:
     - title: Title
@@ -4976,7 +4976,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5012,7 +5014,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 20;
+      userScript: 'Variable["Point_Level_1"] = Variable["Point_Level_1"] + 20;
 
         SetQuestState("1_2_Sandwich",
         "active");
@@ -5102,7 +5104,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 226.03094
+        x: 229.15594
         y: 90.622345
         width: 160
         height: 30
@@ -5133,7 +5135,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5169,7 +5173,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 15;
+      userScript: 'Variable["Point_Level_1"] = Variable["Point_Level_1"] + 15;
 
 
         SetQuestState("1_2_Sandwich",
@@ -5260,8 +5264,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 450
-        y: 92.36844
+        x: 451.5625
+        y: 90.80594
         width: 160
         height: 30
     - id: 6
@@ -5291,7 +5295,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5327,7 +5333,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 0;
+      userScript: 'Variable["Point_Level_1"] = Variable["Point_Level_1"] + 0;
 
         SetQuestState("1_2_Sandwich",
         "active");
@@ -5338,13 +5344,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 454.94736
-        y: 151.43564
+        x: 456.50986
+        y: 152.99814
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3.287666, y: 6.9862967}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   - id: 39
     fields:
     - title: Title
@@ -6078,7 +6084,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 70
+        y: 68.50748
         width: 160
         height: 30
     - id: 2
@@ -6475,7 +6481,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -6513,17 +6521,18 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("1_2_Sandwich", "abandoned");
 
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 20;
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 20;
 
-        SetQuestState("1_3_WashPlate", "active")'
+        SetQuestState("1_3_WashPlate",
+        "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 155
+        x: 25.014923
+        y: 172.9104
         width: 160
         height: 30
     - id: 3
@@ -6632,7 +6641,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -6670,17 +6681,18 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("1_2_Sandwich", "abandoned");
 
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 15;
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 15;
 
-        SetQuestState("1_3_WashPlate", "active")'
+        SetQuestState("1_3_WashPlate",
+        "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 266
-        y: 156
+        x: 267.49252
+        y: 167.9403
         width: 160
         height: 30
     - id: 5
@@ -6791,7 +6803,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -6829,17 +6843,18 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("1_2_Sandwich", "abandoned");
 
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 0;
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 0;
 
-        SetQuestState("1_3_WashPlate", "active")'
+        SetQuestState("1_3_WashPlate",
+        "active")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 541
-        y: 159
+        y: 157.50748
         width: 160
         height: 30
     entryGroups: []
@@ -7973,7 +7988,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8011,15 +8028,15 @@ MonoBehaviour:
       conditionsString: 
       userScript: 'SetQuestState("1_3_WashPlate", "abandoned");
 
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 20'
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 20'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 119.375
+        x: 28.969078
+        y: 144.11728
         width: 160
         height: 30
     - id: 3
@@ -8091,17 +8108,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["1_3_Dirt"] > 0 and (Variable["1_3_Dirt"] < 15)
-      userScript: 'SetQuestState("1_3_WashPlate", "abandoned");
-
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 15'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 218
-        y: 72
+        y: 68.90723
         width: 160
         height: 30
     - id: 4
@@ -8131,7 +8145,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8167,14 +8183,17 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("1_3_WashPlate", "abandoned");
+
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 15'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 217.03094
-        y: 123
+        x: 224.24744
+        y: 158.05154
         width: 160
         height: 30
     - id: 5
@@ -8246,16 +8265,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["1_3_Dirt"] == 0
-      userScript: 'SetQuestState("1_3_WashPlate", "abandoned");
-
-        Variable["Point_Level"]
-        = Variable["Point_Level"] + 0'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 412.59344
+        x: 413.6244
         y: 70.96907
         width: 160
         height: 30
@@ -8286,7 +8302,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8322,19 +8340,22 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SetQuestState("1_3_WashPlate", "abandoned");
+
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 0'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 410
-        y: 119.96907
+        x: 426.59357
+        y: 150.9298
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.94000006
   - id: 53
     fields:
     - title: Title
@@ -8488,7 +8509,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Mom_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8618,7 +8639,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8200002
+    canvasZoom: 1
   - id: 45
     fields:
     - title: Title
@@ -9133,13 +9154,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["1_4_OPTION_2"] = "2_True"
+      userScript: 'Variable["1_4_OPTION_2"] = "2_True";
+
+        SetQuestState("1_4_GrandmaGlasses",
+        "abandoned")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 271.43756
+        x: 270.0677
         y: 162.05116
         width: 160
         height: 30
@@ -9170,7 +9194,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Grandma_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9408,7 +9432,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Grandma_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9621,7 +9645,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(GuideText_Glasses,false);
 
-          AudioWait(Grandma_3)'
+          AudioWait(Grandma_5)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9701,7 +9725,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9737,13 +9763,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("1_4_GrandmaGlasses", "abandoned")
+      userScript: 'SetQuestState("1_4_GrandmaGlasses", "abandoned");
+
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 20'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 31
         y: 163
         width: 160
         height: 30
@@ -9777,7 +9806,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(GuideText_Glasses,false);
 
-          AudioWait(Grandma_4)'
+          AudioWait(Grandma_6)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9827,7 +9856,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 323.70328
-        y: 103.802185
+        y: 102.802185
         width: 160
         height: 30
     - id: 4
@@ -9857,7 +9886,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9893,7 +9924,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("1_4_GrandmaGlasses", "abandoned")
+      userScript: 'SetQuestState("1_4_GrandmaGlasses", "abandoned");
+
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 10'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9904,8 +9938,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.2525654, y: 17.231272}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 6.93231}
+    canvasZoom: 0.97
   - id: 58
     fields:
     - title: Title
@@ -10149,7 +10183,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10301,7 +10335,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10453,7 +10487,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10501,7 +10535,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 413
+        x: 414
         y: 198
         width: 160
         height: 30
@@ -10802,7 +10836,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 457.40674
-        y: 129.45695
+        y: 125.34737
         width: 160
         height: 30
     - id: 2
@@ -10994,7 +11028,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11030,10 +11066,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 20;
+      userScript: 'SetQuestState("1_5_Sister", "success");
 
-        SetQuestState("1_5_Sister",
-        "success")'
+        Variable["Point_Level_1"]
+        = Variable["Point_Level_1"] + 20'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -11199,7 +11235,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 529.26587
+        x: 532.0056
         y: 280.12296
         width: 160
         height: 30
@@ -11230,7 +11266,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11266,7 +11304,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 15;
+      userScript: 'Variable["Point_Level_1"] = Variable["Point_Level_1"] + 15;
 
         SetQuestState("1_5_Sister",
         "success")'
@@ -11275,7 +11313,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 528.8182
+        x: 530.188
         y: 330.85712
         width: 160
         height: 30
@@ -11464,7 +11502,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11500,7 +11540,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["Point_Level"] = Variable["Point_Level"] + 10;
+      userScript: 'Variable["Point_Level_1"] = Variable["Point_Level_1"] + 10;
 
         SetQuestState("1_5_Sister",
         "success")'
@@ -11587,8 +11627,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 360.93732, y: 0}
-    canvasZoom: 0.6400003
+    canvasScrollPosition: {x: 152.14026, y: 0}
+    canvasZoom: 0.7300002
   - id: 5
     fields:
     - title: Title
@@ -12860,7 +12900,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.73000026
   - id: 48
     fields:
     - title: Title
@@ -14223,8 +14263,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 58.42484, y: 52.862736}
-    canvasZoom: 1.1499999
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.82000005
   - id: 50
     fields:
     - title: Title
@@ -15587,7 +15627,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 882.5689
+        x: 883.78845
         y: 132.31569
         width: 160
         height: 30
@@ -15944,11 +15984,11 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 127.82352
-        y: 165.35294
+        y: 164.17645
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 44.70587, y: 0}
     canvasZoom: 0.85
   - id: 7
     fields:
@@ -16171,7 +16211,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 213.30411
-        y: 87.021286
+        y: 85.84483
         width: 160
         height: 30
     - id: 2
@@ -16567,7 +16607,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210
-        y: 170
+        y: 168.82355
         width: 160
         height: 30
     - id: 7
@@ -16965,7 +17005,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 390
-        y: 220
+        y: 218.82352
         width: 160
         height: 30
     - id: 12
@@ -17651,7 +17691,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 38.860764
-        y: 242.15189
+        y: 240.88605
         width: 160
         height: 30
     - id: 4
@@ -17875,7 +17915,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 290.75946
+        x: 293.29108
         y: 238.35442
         width: 160
         height: 30
@@ -18033,7 +18073,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 546.4555
+        x: 548.9871
         y: 197.21515
         width: 160
         height: 30
@@ -18271,7 +18311,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.79000014
+    canvasZoom: 0.67000026
   - id: 54
     fields:
     - title: Title
@@ -18561,7 +18601,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 43
-        y: 201
+        y: 199.96906
         width: 160
         height: 30
     - id: 3
@@ -18715,7 +18755,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 250
+        x: 251.03091
         y: 203
         width: 160
         height: 30
@@ -18876,7 +18916,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1499999
+    canvasZoom: 0.97
   - id: 59
     fields:
     - title: Title
@@ -19526,7 +19566,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 177.25609
-        y: 210.31381
+        y: 208.58966
         width: 160
         height: 30
     - id: 3
@@ -19820,7 +19860,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 227.7641
+        x: 229.19269
         y: 252.86499
         width: 160
         height: 30
@@ -20048,7 +20088,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 474.20526
+        x: 479.91956
         y: 326.36185
         width: 160
         height: 30
@@ -20208,8 +20248,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 142.21088, y: 53.750668}
-    canvasZoom: 0.82000005
+    canvasScrollPosition: {x: 103.95283, y: 20.215696}
+    canvasZoom: 0.70000017
   - id: 12
     fields:
     - title: Title
@@ -21286,8 +21326,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 44.464275, y: 0}
-    canvasZoom: 1.1199999
+    canvasScrollPosition: {x: 4.456701, y: 0}
+    canvasZoom: 0.94000006
   - id: 19
     fields:
     - title: Title
@@ -21763,7 +21803,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28
-        y: 120
+        y: 119
         width: 160
         height: 30
     entryGroups: []
@@ -22129,7 +22169,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 33
-        y: 212
+        y: 212.97086
         width: 160
         height: 30
     - id: 4
@@ -22202,7 +22242,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 299.28302
-        y: 129.90565
+        y: 128.93478
         width: 160
         height: 30
     entryGroups: []
@@ -22492,7 +22532,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 27.93135
-        y: 196.45648
+        y: 194.81714
         width: 160
         height: 30
     - id: 3
@@ -22565,7 +22605,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 298.18304
-        y: 197.10388
+        y: 195.46454
         width: 160
         height: 30
     entryGroups: []
@@ -23205,12 +23245,12 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 76.95651
-        y: 148.69565
+        y: 147.69565
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1499999
+    canvasZoom: 1
   - id: 13
     fields:
     - title: Title
@@ -24691,7 +24731,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 236, y: 1}
     canvasZoom: 1
   - id: 56
     fields:

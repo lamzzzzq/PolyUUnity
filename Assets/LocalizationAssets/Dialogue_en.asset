@@ -40,5 +40,18 @@ MonoBehaviour:
       points.  Please try your best to get higher points! "
     m_Metadata:
       m_Items: []
+  - m_Id: 90224285873741824
+    m_Localized: '<size=64><b><color=yellow>Guide</color></b></size>
+
+      Put your
+      hand inside the food to instantiate the materials in your hand, then press
+      "<b><color=yellow>Trigger</color></b>" button on your right controller to release
+      exact numbers of material on the plate according to the menu.
+
+
+      You can
+      get the menu for families on next page.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

@@ -46,8 +46,8 @@ MonoBehaviour:
     m_Localized: Bread on the Top
     m_Metadata:
       m_Items: []
-  - m_Id: 10181864457117696
-    m_Localized: Make!
+  - m_Id: 109350697721274368
+    m_Localized: Mom
     m_Metadata:
       m_Items: []
   - m_Id: 19244958353334272
@@ -64,6 +64,28 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 53322171369267200
     m_Localized: Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109350784539172864
+    m_Localized: Grandma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109350812594872320
+    m_Localized: Me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109350838175932416
+    m_Localized: Sister
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109362679899889664
+    m_Localized: '<size=64><b><color=yellow>Menu</color></b></size>
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109362782211547136
+    m_Localized: WhatEverYouWant
     m_Metadata:
       m_Items: []
   references:

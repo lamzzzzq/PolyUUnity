@@ -31,8 +31,14 @@ public class InstantiateAndGrab : MonoBehaviour
     {
         if (InputBridge.Instance.RightGripDown || InputBridge.Instance.LeftGripDown)
         {
-            grabbable.CanBeDropped = true;
-            grabber.TryRelease();
+            if (grabbable != null)
+            {
+                grabbable.CanBeDropped = true;
+            }
+            if (grabber != null)
+            {
+                grabber.TryRelease();
+            }
         }
     }
 

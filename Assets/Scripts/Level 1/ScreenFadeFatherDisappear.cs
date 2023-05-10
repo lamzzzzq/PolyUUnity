@@ -75,7 +75,7 @@ public class ScreenFadeFatherDisappear : MonoBehaviour
 
     IEnumerator WaitFadeAndFatherDisappear()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(4);
         CallFadeIn();
         StartCoroutine(DisableFatherAfterDelay());
     }
