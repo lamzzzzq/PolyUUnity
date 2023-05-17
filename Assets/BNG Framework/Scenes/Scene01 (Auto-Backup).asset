@@ -284,7 +284,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Miss Lee
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -334,7 +334,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: Lucy
+      value: Lily
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -373,7 +373,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: HighlighterGirl
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -434,7 +434,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: Bill
+      value: Jack
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -581,7 +581,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Social Worker
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -600,7 +600,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Social Worker
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -639,7 +639,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: DogOwner
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -658,7 +658,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Pedestrian
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -697,7 +697,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: BlindPeople
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -716,7 +716,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Blind Grandma
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -755,7 +755,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: Beggar
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -774,7 +774,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Beggar
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -813,7 +813,7 @@ MonoBehaviour:
     fields:
     - title: Name
       value: FruitLady
-      type: 5
+      type: 0
       typeString: 
     - title: Pictures
       value: '[]'
@@ -832,7 +832,7 @@ MonoBehaviour:
       type: 4
       typeString: CustomFieldType_Localization
     - title: Display Name
-      value: 
+      value: Lady
       type: 0
       typeString: CustomFieldType_Text
     - title: Guid
@@ -3426,6 +3426,76 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 64
+    fields:
+    - title: Name
+      value: Grandma_Help
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 65
+    fields:
+    - title: Name
+      value: 3_1_FirstTime
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 66
+    fields:
+    - title: Name
+      value: Lily_Help
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 67
+    fields:
+    - title: Name
+      value: Amy_Help
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 68
+    fields:
+    - title: Name
+      value: Leo_Help
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 4
     fields:
@@ -3755,7 +3825,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mom_1_6)
+        value: AudioWait(Dad_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -4446,7 +4516,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Testing)
+        value: AudioWait(Mom_1_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -4731,8 +4801,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 45.47839}
-    canvasZoom: 0.8500002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.0000001
   - id: 38
     fields:
     - title: Title
@@ -4976,7 +5046,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5102,7 +5174,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 226.03094
+        x: 229.15594
         y: 90.622345
         width: 160
         height: 30
@@ -5133,7 +5205,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5260,8 +5334,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 450
-        y: 92.36844
+        x: 451.5625
+        y: 90.80594
         width: 160
         height: 30
     - id: 6
@@ -5291,7 +5365,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -5338,13 +5414,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 454.94736
-        y: 151.43564
+        x: 456.50986
+        y: 152.99814
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3.287666, y: 6.9862967}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.85000014
   - id: 39
     fields:
     - title: Title
@@ -6078,7 +6154,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 70
+        y: 68.50748
         width: 160
         height: 30
     - id: 2
@@ -6475,7 +6551,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -6523,8 +6601,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 153.50745
+        x: 29.492523
+        y: 172.9104
         width: 160
         height: 30
     - id: 3
@@ -6633,7 +6711,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -6681,8 +6761,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 266
-        y: 156
+        x: 267.49252
+        y: 167.9403
         width: 160
         height: 30
     - id: 5
@@ -6793,7 +6873,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -7976,7 +8058,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8022,7 +8106,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 28.969078
-        y: 144.11728
+        y: 145.1811
         width: 160
         height: 30
     - id: 3
@@ -8101,7 +8185,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 218
-        y: 69.938156
+        y: 68.90723
         width: 160
         height: 30
     - id: 4
@@ -8131,7 +8215,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8255,7 +8341,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 412.59344
+        x: 413.6244
         y: 70.96907
         width: 160
         height: 30
@@ -8286,7 +8372,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8331,13 +8419,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 423.40204
-        y: 149.86597
+        x: 426.59357
+        y: 150.9298
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasZoom: 0.94000006
   - id: 53
     fields:
     - title: Title
@@ -8491,7 +8579,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Mom_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -8500,13 +8588,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: I don't have any more tasks for you, you can ask if anyone needs help.
-          Thank you.
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: I don't have any more tasks for you, you can ask if anyone needs help.
-          Thank you.
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -8542,7 +8628,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 101
         width: 160
         height: 30
@@ -8621,7 +8707,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8200002
+    canvasZoom: 1
   - id: 45
     fields:
     - title: Title
@@ -8909,7 +8995,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["1_4_OPTION_1"] = "1_True"
+      userScript: 'Variable["1_4_OPTION_1"] = "1_True";
+
+        Variable["Grandma_Help"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9136,13 +9225,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["1_4_OPTION_2"] = "2_True"
+      userScript: 'Variable["1_4_OPTION_2"] = "2_True";
+
+        SetQuestState("1_4_GrandmaGlasses",
+        "abandoned")'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 271.43756
+        x: 270.0677
         y: 162.05116
         width: 160
         height: 30
@@ -9173,7 +9265,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Grandma_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9411,7 +9503,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Grandma_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9624,7 +9716,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(GuideText_Glasses,false);
 
-          AudioWait(Grandma_3)'
+          AudioWait(Grandma_5)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9704,7 +9796,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9783,7 +9877,7 @@ MonoBehaviour:
       - title: Sequence
         value: 'SetActive(GuideText_Glasses,false);
 
-          AudioWait(Grandma_4)'
+          AudioWait(Grandma_6)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9863,7 +9957,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -9913,8 +10009,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1.2525654, y: 17.231272}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8200002
   - id: 58
     fields:
     - title: Title
@@ -10029,6 +10125,18 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
+      - originConversationID: 58
+        originDialogueID: 0
+        destinationConversationID: 58
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
+      - originConversationID: 58
+        originDialogueID: 0
+        destinationConversationID: 58
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: randomValue=math.random(3)
       onExecute:
@@ -10120,14 +10228,14 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: CurrentQuestState("3_4_Beggar") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 206
+        x: 207.0989
         y: 99
         width: 160
         height: 30
@@ -10158,7 +10266,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10310,7 +10418,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10462,7 +10570,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(Mother_Random)
+        value: AudioWait(Grandma_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -10510,7 +10618,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 413
+        x: 414
         y: 198
         width: 160
         height: 30
@@ -10587,9 +10695,156 @@ MonoBehaviour:
         y: 264
         width: 160
         height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 23
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u554F\u5176\u4ED6\u4EBA\u662F\u5426\u9700\u8981\u5E6B\u5FD9\u3002"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Grandma_Random_No)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u554F\u5176\u4ED6\u4EBA\u662F\u5426\u9700\u8981\u5E6B\u5FD9\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u6211\u66AB\u6642\u7121\u54A9\u60F3\u4F60\u5E6B\u6211\u624B\u5440\uFF0C\u5514\u8A72\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u4E0B\u5176\u4ED6\u4EBA\u4FC2\u54AA\u9700\u8981\u5E6B\u624B\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 58
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1028.1062
+        y: 136.45131
+        width: 160
+        height: 30
+    - id: 10
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 23
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: You're such a kind child. Thank you for your help.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Grandma_Random)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: You're such a kind child. Thank you for your help.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u771F\u662F\u4E56\u5B69\u5B50\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u5FD9\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u4F60\u771F\u4FC2\u597D\u4E56\u5440\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 58
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["Grandma_Help"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 765.24384
+        y: 140.58463
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.91000026
   - id: 1
     fields:
     - title: Title
@@ -10811,7 +11066,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 457.40674
-        y: 129.45695
+        y: 125.34737
         width: 160
         height: 30
     - id: 2
@@ -10891,8 +11146,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 346.7805
-        y: 219.85712
+        x: 324.8627
+        y: 217.1174
         width: 160
         height: 30
     - id: 3
@@ -11003,7 +11258,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11027,7 +11284,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: c9ede1ea-1517-421e-aabd-c76bcfe58207
         type: 0
         typeString: 
       conversationID: 1
@@ -11048,8 +11305,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 333.12903
-        y: 332.235
+        x: 331.56653
+        y: 333.7975
         width: 160
         height: 30
     - id: 5
@@ -11208,7 +11465,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 529.26587
+        x: 532.0056
         y: 280.12296
         width: 160
         height: 30
@@ -11239,7 +11496,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11263,7 +11522,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: d5c06297-957a-4d91-8ed5-26a35a46446a
         type: 0
         typeString: 
       conversationID: 1
@@ -11442,8 +11701,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 705.4298
-        y: 273.85712
+        x: 745.22003
+        y: 277.17474
         width: 160
         height: 30
     - id: 10
@@ -11473,7 +11732,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -11497,7 +11758,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: 14221035-29fb-4bd4-a523-ea2a6e109144
         type: 0
         typeString: 
       conversationID: 1
@@ -11545,7 +11806,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thank you for your help.
+        value: Thank you! I feel much better now!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11553,15 +11814,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Thank you for your help.
+        value: Thank you! I feel much better now!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: Thank you for your help.
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u591A\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: Thank you for your help.
+        value: "\u5514\u8A72\u66EC\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u597D\u591A\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -11573,7 +11834,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: 9fd0809e-ea8d-4a43-8a1d-a864f546dbe9
         type: 0
         typeString: 
       conversationID: 1
@@ -11591,13 +11852,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1077.0468
-        y: 116.63133
+        x: 1011.29333
+        y: 124.850525
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 152.14026, y: 0}
-    canvasZoom: 0.7300002
+    canvasScrollPosition: {x: 210.28043, y: 0}
+    canvasZoom: 0.6400003
   - id: 5
     fields:
     - title: Title
@@ -11746,23 +12007,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Ok, everyone, let us stop here. You can take a break now!
+        value: Alright everyone, let us stop here. You can take a break now!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_1)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Ok, everyone, let us stop here. You can take a break now!
+        value: Alright everyone, let us stop here. You can take a break now!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u597D\u5566\uFF0C\u5404\u4F4D\u540C\u5B78\uFF0C\u9019\u5802\u8AB2\u5C31\u4E0A\u5230\u9019\u88E1\u3002\u5927\u5BB6\u53EF\u4EE5\u53BB\u4F11\u606F\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u597D\u5566\uFF0C\u5404\u4F4D\u540C\u5B78\uFF0C\u5462\u5802\u5C31\u4E0A\u5230\u5462\u5EA6\u3002\u5927\u5BB6\u53EF\u4EE5\u53BB\u5C0F\u4F11\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -11788,7 +12049,7 @@ MonoBehaviour:
       - originConversationID: 5
         originDialogueID: 1
         destinationConversationID: 5
-        destinationDialogueID: 2
+        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -11798,8 +12059,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 40.278366
-        y: 92.71132
+        x: 79.68016
+        y: 140.47104
         width: 160
         height: 30
     - id: 2
@@ -11825,7 +12086,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thank you Miss!
+        value: Thank you Miss Lee!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -11833,15 +12094,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: Thank you Miss!
+        value: Thank you Miss Lee!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1DMiss Lee\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u8B1D\u8B1DMiss Lee\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -11871,13 +12132,92 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 36.185555
-        y: 161.23712
+        x: 123.29784
+        y: 435.28796
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 961e37de-f533-457c-83e9-31b0e7e30963
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Passthrough
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 3
+        destinationConversationID: 5
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 114.45859
+        y: 286.2908
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.85000014
+    canvasScrollPosition: {x: 18.092018, y: 37.309483}
+    canvasZoom: 0.94000006
   - id: 47
     fields:
     - title: Title
@@ -12032,23 +12372,27 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Oh, sorry, I was so careless! Can you help me pick them up ?
+        value: Oh, it hurts! I was so careless to make such a mess on the floor.
+          Can you give me a hand?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(ConfirmEnterUI,false)
+        value: 'SetActive(ConfirmEnterUI,false);
+
+          AudioWait(Level2/Miss_2)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Oh, it hurts! I was so careless to make such a mess on the floor.
+          Can you give me a hand?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u54CE\u5440\uFF0C\u597D\u75DB\u554A\uFF01\u6211\u592A\u4E0D\u5C0F\u5FC3\u4E86\uFF0C\u5F04\u5F97\u5730\u4E0A\u9019\u9EBC\u4E82\uFF0C\u4F60\u53EF\u4EE5\u5E6B\u5E6B\u6211\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u54CE\u5440\uFF0C\u597D\u75DB\u554A\uFF01\u6211\u592A\u5514\u5C0F\u5FC3\u5566\uFF0C\u641E\u5230\u5730\u4E0B\u5481\u6DF7\u4E82\uFF0C\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u5E6B\u6211\u5440\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12077,12 +12421,6 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 47
-        originDialogueID: 1
-        destinationConversationID: 47
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
       conditionsString: CurrentQuestState("2.1_TeacherDropItem") == "unassigned"
       userScript: 
       onExecute:
@@ -12090,7 +12428,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
+        x: 32.857147
         y: 86
         width: 160
         height: 30
@@ -12117,7 +12455,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sure thing! Let me help you.
+        value: '[f]Sure! Let me help you.'
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12125,15 +12463,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: '[f]Sure! Let me help you.'
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "[f]\u7576\u7136\u53EF\u4EE5\uFF0C\u6211\u4F86\u5E6B\u4F60\u5427\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "[f]\u7576\u7136\u53EF\u4EE5\uFF0C\u6211\u4F86\u5E6B\u4F60\u5427\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12169,8 +12507,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 145
+        x: 39.999985
+        y: 150.88235
         width: 160
         height: 30
     - id: 3
@@ -12196,23 +12534,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You are helpful! Please put them on where they should be.
+        value: Great! Please help pick up all the books and stationary on the floor
+          and put them on the shelf, then put the trash bin back in its place.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Great! Please help pick up all the books and stationary on the floor
+          and put them on the shelf, then put the trash bin back in its place.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u592A\u597D\u4E86\uFF01\u9EBB\u7169\u4F60\u5E6B\u6211\u628A\u5730\u4E0B\u7684\u66F8\u672C\u548C\u6587\u5177\u90FD\u64BF\u8D77\u4F86\uFF0C\u653E\u56DE\u66F8\u67B6\u4E0A\uFF0C\u7136\u5F8C\u5C07\u5783\u573E\u6876\u653E\u56DE\u539F\u4F4D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u592A\u597D\u5566! \u9EBB\u7169\u4F60\u5E6B\u6211\u5C07\u5730\u4E0B\u5605\u66F8\u540C\u57CB\u6587\u5177\u57F7\u8FD4\u8D77\uFF0C\u64FA\u756A\u4E0A\u53BB\u66F8\u67B6\uFF0C\u540C\u57CB\u5C07\u500B\u5783\u573E\u6876\u653E\u8FD4\u539F\u4F4D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12224,7 +12564,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: afab4263-ab49-420b-9f8c-89d196ecd71a
         type: 0
         typeString: 
       conversationID: 47
@@ -12242,14 +12582,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("2.1_TeacherDropItem", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 19
-        y: 193
+        x: 43.705864
+        y: 197.70587
         width: 160
         height: 30
     - id: 4
@@ -12275,7 +12615,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: OK, I will.
+        value: No problem.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12283,15 +12623,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No problem.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6C92\u554F\u984C\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6C92\u554F\u984C\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12303,7 +12643,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: 60d69d01-bed8-4a1f-898b-b4bf6f9539e4
         type: 0
         typeString: 
       conversationID: 47
@@ -12321,8 +12661,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 19
-        y: 244.21951
+        x: 46.210762
+        y: 302.75757
         width: 160
         height: 30
     - id: 5
@@ -12400,8 +12740,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 247
-        y: 146
+        x: 1072.714
+        y: 337.4285
         width: 160
         height: 30
     - id: 6
@@ -12473,8 +12813,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 249
-        y: 196
+        x: 1073.2853
+        y: 395.99994
         width: 160
         height: 30
     - id: 7
@@ -12500,23 +12840,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Have you put all the things back?
+        value: Have you put everything back in its place?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Have you put everything back in its place?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4F60\u5DF2\u7D93\u628A\u6240\u6709\u6771\u897F\u90FD\u653E\u56DE\u6B63\u78BA\u7684\u4F4D\u7F6E\u4E86\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4F60\u4FC2\u54AA\u5DF2\u7D93\u5C07\u6240\u6709\u91CE\u64FA\u756A\u55BA\u5571\u5605\u4F4D\u5440\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12558,8 +12898,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 582
-        y: 82
+        x: 380.82355
+        y: 89.05884
         width: 160
         height: 30
     - id: 8
@@ -12593,15 +12933,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes, I think so.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u653E\u597D\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u653E\u597D\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12631,8 +12971,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 477.82648
-        y: 158
+        x: 280.9358
+        y: 160.7731
         width: 160
         height: 30
     - id: 9
@@ -12658,7 +12998,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Not yet. May I know the details?
+        value: Not yet, could you give me some more instructions?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12666,15 +13006,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Not yet, could you give me some more instructions?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u4F60\u80FD\u7D66\u6211\u591A\u9EDE\u63D0\u793A\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u4F60\u80FD\u7D66\u6211\u591A\u9EDE\u63D0\u793A\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12710,8 +13050,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 705.1736
-        y: 156
+        x: 508.03082
+        y: 157.59668
         width: 160
         height: 30
     - id: 10
@@ -12737,24 +13077,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: For example, put the books back to the shelf, put the dustbin besides
-          the shelf. Remember to categorize them.
+        value: Sure, You can place the trash bin next to the bookshelf, put the books
+          back on the shelf, and remember to organize them properly.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_5)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sure, You can place the trash bin next to the bookshelf, put the books
+          back on the shelf, and remember to organize them properly.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u7576\u7136\u53EF\u4EE5\uFF0C\u4F60\u53EF\u4EE5\u628A\u5783\u573E\u6876\u653E\u5728\u66F8\u67B6\u65C1\u908A\uFF0C\u628A\u66F8\u653E\u56DE\u66F8\u67B6\u4E0A\uFF0C\u8A18\u5F97\u8981\u6B63\u78BA\u5206\u985E\u54E6\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u7576\u7136\u53EF\u4EE5\uFF0C\u4F60\u53EF\u4EE5\u5C07\u5783\u573E\u6876\u64FA\u55BA\u66F8\u67B6\u9694\u96E2\uFF0C\u5C07\u66F8\u64FA\u756A\u4E0A\u53BB\u66F8\u67B6\uFF0C\u8A18\u5F97\u8981\u6B63\u78BA\u5206\u985E\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12766,7 +13107,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: b79f88f2-2604-4d77-a11b-9ac6b4a5a2e9
         type: 0
         typeString: 
       conversationID: 47
@@ -12790,8 +13131,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 706.2711
-        y: 209.02438
+        x: 505.09473
+        y: 214.90677
         width: 160
         height: 30
     - id: 11
@@ -12817,7 +13158,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: OK, I will.
+        value: No problem.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -12825,15 +13166,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No problem.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6C92\u554F\u984C\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6C92\u554F\u984C\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -12863,13 +13204,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 707.0976
-        y: 259.02438
+        x: 505.92126
+        y: 266.08322
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.73000026
+    canvasZoom: 0.85000014
   - id: 48
     fields:
     - title: Title
@@ -13034,19 +13375,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_6)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Excellent! Thanks for your helping.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u5FD9\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13114,19 +13455,21 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "\rYou're welcome, I\u2019m glad I could help!\r"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13159,8 +13502,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 39.296707
-        y: 251.76923
+        x: 46.989014
+        y: 252.86813
         width: 160
         height: 30
     - id: 3
@@ -13190,19 +13533,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_7)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Great! Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u505A\u5F97\u5E7E\u597D\u5440\uFF01\u5514\u8A72\u66EC\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13238,8 +13581,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 387.65933
-        y: 138.5934
+        x: 388.7582
+        y: 139.6923
         width: 160
         height: 30
     - id: 4
@@ -13269,19 +13612,21 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13314,8 +13659,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 305.65936
-        y: 263.56046
+        x: 314.45056
+        y: 244.87912
         width: 160
         height: 30
     - id: 5
@@ -13345,19 +13690,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Miss_8)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13425,19 +13770,21 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You are welcome.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13470,8 +13817,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 600
-        y: 221
+        x: 610.98895
+        y: 263.85712
         width: 160
         height: 30
     entryGroups: []
@@ -13631,24 +13978,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sorry, I accidentally spilled my bottle of water. Could you help clean
-          the table and floor?
+        value: Sorry, I accidentally spilled my water bottle and make such a mess.
+          Can you give me a hand?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_1)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sorry, I accidentally spilled my water bottle and make such a mess.
+          Can you give me a hand?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u54CE\u5440\uFF0C\u6211\u4E0D\u5C0F\u5FC3\u6253\u7FFB\u4E86\u6C34\u74F6\uFF0C\u5F04\u5F97\u5230\u8655\u90FD\u662F\u6C34\uFF0C\u600E\u9EBC\u8FA6\u5440\uFF1F\u4F60\u53EF\u4EE5\u5E6B\u5E6B\u6211\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u54CE\u5440\uFF0C\u6211\u5514\u5C0F\u5FC3\u5012\u7009\u5497\u6211\u652F\u6C34\u554A\uFF0C\u641E\u5230\u5468\u570D\u90FD\u4FC2\uFF0C\u9EDE\u7B97\u5440\uFF1F\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u5E6B\u6211\u5440\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13725,15 +14073,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No problem! Let me help you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6C92\u554F\u984C\uFF0C\u6211\u4F86\u5E6B\u4F60\u5427\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6C92\u554F\u984C\uFF0C\u6211\u4F86\u5E6B\u4F60\u5427\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13763,7 +14111,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Lily_Help"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13796,24 +14144,27 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You are so helpful. You may find the towel and the mop on the corner
-          of the classroom.
+        value: You are so kind! I remembered that there is a towel and a mop in the
+          corner of the classroom. You can use the towel to wipe the table and the
+          mop to clean the floor.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You are so kind! I remembered that there is a towel and a mop in the
+          corner of the classroom. You can use the towel to wipe the table and the
+          mop to clean the floor.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u592A\u597D\u4E86\uFF01\u6211\u8A18\u5F97\u6559\u5BA4\u89D2\u843D\u88E1\u6709\u584A\u62B9\u5E03\u548C\u62D6\u628A\uFF0C\u53EF\u4EE5\u7528\u90A3\u584A\u62B9\u5E03\u64E6\u684C\u5B50\u7684\u6C34\uFF0C\u7136\u5F8C\u7528\u62D6\u628A\u62D6\u5730\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u592A\u597D\u5566\uFF0C\u6211\u8A18\u5F97\u8AB2\u5BA4\u500B\u89D2\u843D\u982D\u6709\u584A\u5E03\u540C\u57CB\u5730\u62D6\uFF0C\u53EF\u4EE5\u7528\u679C\u584A\u5E03\u62B9\u67B1\u4E0A\u908A\u5572\u6C34\uFF0C\u540C\u57CB\u7528\u5730\u62D6\u62D6\u5730\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13825,7 +14176,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: EventGuid
-        value: 
+        value: 94e9f359-9a46-4bc1-be10-3638ac571cfc
         type: 0
         typeString: 
       conversationID: 49
@@ -13843,7 +14194,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("2.2_WaterPour", "active")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13884,15 +14235,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Got it. Let me get them first.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u660E\u767D\u4E86\uFF01\u6211\u53BB\u62FF\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u660E\u767D\u4E86\uFF01\u6211\u53BB\u62FF\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -13922,8 +14273,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 16.40776
-        y: 261.74756
+        x: 13.96875
+        y: 271.50366
         width: 160
         height: 30
     - id: 5
@@ -13949,7 +14300,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sorry, I am in a hurry. I can't help you.
+        value: Sorry, Lily, but I might not be able to help. I have some other things
+          to do.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -13957,15 +14309,16 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sorry, Lily, but I might not be able to help. I have some other things
+          to do.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0CLily\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0CLily\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14022,24 +14375,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Have you cleaned all the water? You can find the towel and the mop
-          is on the corner of the classroom. '
+        value: 'Have you cleaned up all the water? You can use the towel and mop
+          in the corner of the classroom. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Have you cleaned up all the water? You can use the towel and mop
+          in the corner of the classroom. '
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4F60\u5DF2\u7D93\u628A\u6240\u6709\u6C34\u8DE1\u90FD\u64E6\u4E7E\u4E86\u55CE\uFF1F\u4F60\u53EF\u4EE5\u7528\u6559\u5BA4\u89D2\u843D\u90A3\u88E1\u7684\u62B9\u5E03\u548C\u62D6\u628A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4F60\u4FC2\u54AA\u62B9\u4E7E\u66EC\u6240\u6709\u5605\u6C34\u8DE1\u5566\uFF1F\u4F60\u53EF\u4EE5\u7528\u8AB2\u5BA4\u89D2\u843D\u982D\u55F0\u584A\u5E03\u540C\u57CB\u500B\u5730\u62D6\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14081,8 +14435,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 518.34955
-        y: 81.65048
+        x: 617.13007
+        y: 68.23584
         width: 160
         height: 30
     - id: 7
@@ -14108,7 +14462,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Yes. The water on the table and ground has been wiped dry.
+        value: Yes. I wiped the table and floor dry.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -14116,15 +14470,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes. I wiped the table and floor dry.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u5DF2\u7D93\u628A\u684C\u5B50\u548C\u5730\u677F\u90FD\u64E6\u4E7E\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u5DF2\u7D93\u628A\u684C\u5B50\u548C\u5730\u677F\u90FD\u64E6\u4E7E\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14154,7 +14508,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 433.8835
+        x: 552.17615
         y: 165.73236
         width: 160
         height: 30
@@ -14189,15 +14543,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Not yet. Let me do it right now.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u6211\u73FE\u5728\u5E6B\u4F60\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u6211\u73FE\u5728\u5E6B\u4F60\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14227,8 +14581,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 687.18036
-        y: 166.60193
+        x: 812.7901
+        y: 165.38242
         width: 160
         height: 30
     entryGroups: []
@@ -14394,23 +14748,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Excellent! Thanks for your helping.
+        value: Excellent! Thank you for you help.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Excellent! Thank you for you help.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u771F\u7684\u592A\u597D\u5566\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u6211\u5FD9\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u771F\u4FC2\u592A\u597D\u5566\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u6211\u624B\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14477,19 +14831,21 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14553,19 +14909,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_5)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Great! Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u592A\u597D\u5566\uFF01\u8B1D\u8B1D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u592A\u597D\u5566\uFF01\u8B1D\u8B1D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14601,7 +14957,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 220
+        x: 223.0928
         y: 94.93617
         width: 160
         height: 30
@@ -14632,19 +14988,21 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14677,7 +15035,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 226.03091
+        x: 227.06186
         y: 174
         width: 160
         height: 30
@@ -14704,23 +15062,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Nice.
+        value: Thank you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Lily_6)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14783,23 +15141,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You're welcome.
+        value: You are welcome.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You are welcome.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14832,12 +15192,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 476.03094
+        x: 477.06183
         y: 180.06384
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 2.0618591}
     canvasZoom: 0.9699999
   - id: 6
     fields:
@@ -14993,25 +15353,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "Oh, I just found that there is little ink in my highlighter, but
-          I forgot to bring one more!\r"
+        value: Oh, I just realized my highlighter is running out of ink, but I forgot
+          to bring another one!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Amy_1)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: "Oh, I just found that there is little ink in my highlighter, but
-          I forgot to bring one more!\r"
+        value: Oh, I just realized my highlighter is running out of ink, but I forgot
+          to bring another one!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u54CE\u5440\uFF0C\u6211\u525B\u525B\u624D\u767C\u73FE\u6211\u7684\u7192\u5149\u7B46\u6C92\u58A8\u6C34\u4E86\uFF0C\u4F46\u6211\u4E0D\u8A18\u5F97\u591A\u5E36\u4E00\u652F\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u54CE\u5440\uFF0C\u6211\u5571\u5571\u5148\u767C\u73FE\u6211\u652F\u7192\u5149\u7B46\u5187\u58A8\uFF0C\u4F46\u4FC2\u6211\u5514\u8A18\u5F97\u5497\u5E36\u591A\u4E00\u652F\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15080,8 +15440,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: It's ok, don't worry! I can lend you my highlighter,it is in my drawer.
-          Just give my back tomorrow.
+        value: It's ok, don't worry! I can lend you mine from my drawer.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -15089,16 +15448,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: It's ok, don't worry! I can lend you my pen,it is in my drawer. Just
-          give my back tomorrow.
+        value: It's ok, don't worry! I can lend you mine from my drawer.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6C92\u95DC\u4FC2\uFF0C\u4E0D\u7528\u64D4\u5FC3\uFF01\u6211\u6709\u591A\u4E00\u652F\u5728\u6211\u7684\u62BD\u5C5C\u88CF\uFF0C\u53EF\u4EE5\u501F\u7D66\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6C92\u95DC\u4FC2\uFF0C\u4E0D\u7528\u64D4\u5FC3\uFF01\u6211\u6709\u591A\u4E00\u652F\u5728\u6211\u7684\u62BD\u5C5C\u88CF\uFF0C\u53EF\u4EE5\u501F\u7D66\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15128,7 +15486,10 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: SetQuestState("2.3_FindPen", "active")
+      userScript: 'SetQuestState("2.3_FindPen", "active");
+
+        Variable["Amy_Help"]
+        = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15161,23 +15522,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I didn't want to. But thank you.
+        value: Thank you so much for letting me borrow it!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Amy_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: I didn't want to. But thank you.
+        value: Thank you so much for letting me borrow it!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u9858\u610F\u501F\u6211\u5440\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u591A\u8B1D\u4F60\u80AF\u501F\u4FFE\u6211\u5440\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15214,7 +15575,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210.58823
-        y: 194.70593
+        y: 195.97177
         width: 160
         height: 30
     - id: 4
@@ -15240,7 +15601,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You're welcome.
+        value: You're welcome, glad to help!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -15248,15 +15609,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: You're welcome.
+        value: You're welcome, glad to help!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15286,7 +15647,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210.58823
+        x: 211.80774
         y: 259.99997
         width: 160
         height: 30
@@ -15309,11 +15670,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: It's your bad!
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Sorry, I don't have an extra one either.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -15321,15 +15682,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sorry, I don't have an extra one either.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0C\u6211\u4E5F\u6C92\u6709\u591A\u4E00\u652F\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0C\u6211\u4E5F\u6C92\u6709\u591A\u4E00\u652F\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15359,8 +15720,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 410.71475
-        y: 138.27249
+        x: 415.59277
+        y: 132.17493
         width: 160
         height: 30
     - id: 6
@@ -15386,23 +15747,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Have you got the highlighter for me?
+        value: Did you have the highlighter for me?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Amy_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Did you have the highlighter for me?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4F60\u5E6B\u6211\u62FF\u7192\u5149\u7B46\u4E86\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4F60\u5E6B\u6211\u62CE\u5497\u7192\u5149\u7B46\u672A\u5440\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15467,11 +15828,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: Yes! Here you are!
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Yes, here you go!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -15479,15 +15840,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes, here you go!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u62FF\u4F86\u5566\uFF0C\u5728\u9019\u88E1\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u62FF\u4F86\u5566\uFF0C\u5728\u9019\u88E1\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15517,7 +15878,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 631.69775
+        x: 632.91724
         y: 130.23077
         width: 160
         height: 30
@@ -15540,11 +15901,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: Not yet...Let me get it for you now!
+        value: 
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 
+        value: Not yet, let me get it from my drawer now.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -15552,94 +15913,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Not yet, let me get it from my drawer now.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u6211\u73FE\u5728\u5C31\u53BB\u6211\u62BD\u5C5C\u88CF\u62FF\u7D66\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 8
-        destinationConversationID: 6
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 883.78845
-        y: 132.31569
-        width: 160
-        height: 30
-    - id: 9
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 24
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: Thank you!
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-TC
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-Oral
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u6211\u73FE\u5728\u5C31\u53BB\u6211\u62BD\u5C5C\u88CF\u62FF\u7D66\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15669,13 +15951,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 886.5972
-        y: 196.43333
+        x: 883.78845
+        y: 132.31569
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 176.35384, y: 7.919105}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 84.67037, y: 21.115192}
+    canvasZoom: 0.7900002
   - id: 51
     fields:
     - title: Title
@@ -15798,7 +16080,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 132
-        y: 15
+        y: 58.52941
         width: 160
         height: 30
     - id: 1
@@ -15824,23 +16106,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: What a nice highlighter! I will use it carefully! Thank you!
+        value: Thank you, you are so nice!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(HighlighterText,false)
+        value: 'SetActive(HighlighterText,false);
+
+          AudioWait(Level2/Amy_4)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you, you are so nice!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\uFF0C\u4F60\u771F\u7684\u592A\u597D\u4EBA\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u66EC\u4F60\uFF0C\u4F60\u771F\u4FC2\u592A\u597D\u4EBA\u5566\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15877,7 +16161,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 129.82352
-        y: 89
+        y: 132.5294
         width: 160
         height: 30
     - id: 2
@@ -15903,23 +16187,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Glad to help!
+        value: "I\u2019m glad I could help!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -15952,8 +16238,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 127.82352
-        y: 164.17645
+        x: 132.52939
+        y: 207.70586
         width: 160
         height: 30
     entryGroups: []
@@ -16113,25 +16399,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "I had a quarrel with my parents yesterday. They never care about
-          what I am thinking, and never support my dreams.\r"
+        value: I had a quarrel with my parents yesterday. They never care about my
+          thoughts, and never support my dreams.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Jack_1)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: "I had a quarrel with my parents yesterday. They never care about
-          what I am thinking, and never support my dreams.\r"
+        value: I had a quarrel with my parents yesterday. They never care about my
+          thoughts, and never support my dreams.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6211\u6628\u665A\u548C\u6211\u7238\u5ABD\u5435\u67B6\u4E86\u3002\u4ED6\u5011\u5F9E\u4F86\u90FD\u4E0D\u95DC\u5FC3\u6211\u5728\u60F3\u4EC0\u9EBC\uFF0C\u4E5F\u5F9E\u4F86\u4E0D\u6703\u652F\u6301\u6211\u7684\u5922\u60F3\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6211\u5C0B\u665A\u540C\u6211\u7238\u5ABD\u55CC\u5497\u4EA4\u3002\u4F62\u5730\u5F9E\u4F86\u90FD\u5514\u95DC\u5FC3\u6211\u8AD7\u7DCA\u4E5C\uFF0C\u4EA6\u90FD\u5F9E\u4F86\u5514\u6703\u652F\u6301\u6211\u5605\u5922\u60F3\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16206,8 +16492,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '"That''s really sad. Most parents are same as yours. Let me help
-          you think about how to communicate with them. "'
+        value: 'That''s really sad. Most parents are like that. Let me help you figure
+          out how to communicate with them. '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16215,16 +16501,16 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '"That''s really sad. Most parents are same as yours. Let me help
-          you think about how to communicate with them. "'
+        value: 'That''s really sad. Most parents are like that. Let me help you figure
+          out how to communicate with them. '
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u592A\u6158\u4E86\uFF0C\u5927\u90E8\u5206\u7236\u6BCD\u90FD\u662F\u9019\u6A23\u7684\u5440\u3002\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u8DDF\u4ED6\u5011\u66F4\u597D\u5730\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u592A\u6158\u4E86\uFF0C\u5927\u90E8\u5206\u7236\u6BCD\u90FD\u662F\u9019\u6A23\u7684\u5440\u3002\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u8DDF\u4ED6\u5011\u66F4\u597D\u5730\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16287,25 +16573,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '"Yes, I don''t know what I should do. It will be great if you can
-          help me."'
+        value: Yes, I'm not sure what to do. I'd appreciate your help.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Jack_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '"Yes, I don''t know what I should do. It will be great if you can
-          help me."'
+        value: Yes, I'm not sure what to do. I'd appreciate your help.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u5C0D\u5440\uFF0C\u6211\u90FD\u4E0D\u77E5\u9053\u61C9\u8A72\u600E\u9EBC\u8FA6\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u5C31\u771F\u7684\u592A\u597D\u5566\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4FC2\u5440\uFF0C\u6211\u90FD\u5514\u77E5\u61C9\u8A72\u9EDE\u7B97\u3002\u5982\u679C\u4F60\u80AF\u5E6B\u6211\u5C31\u771F\u4FC2\u592A\u597D\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16341,7 +16625,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.063835
+        x: 33.41678
         y: 220
         width: 160
         height: 30
@@ -16380,11 +16664,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16451,7 +16735,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(Level2/Jack_6);
+
+          AudioWait(SFX/Score)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -16459,11 +16745,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u4E00\u9EDE\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u66EC\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u5C11\u5C11\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16523,7 +16809,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '"Don''t be sad. Most parents are like this. Let''s play games now."'
+        value: Don't be sad. Most parents are like this. Let's play games now.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16531,15 +16817,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '"Don''t be sad. Most parents are like this. Let''s play games now."'
+        value: Don't be sad. Most parents are like this. Let's play games now.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u5225\u4E0D\u958B\u5FC3\u5566\u3002\u5927\u90E8\u5206\u7236\u6BCD\u90FD\u662F\u9019\u6A23\u7684\uFF0C\u6211\u5011\u5148\u53BB\u73A9\u904A\u6232\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5225\u4E0D\u958B\u5FC3\u5566\u3002\u5927\u90E8\u5206\u7236\u6BCD\u90FD\u662F\u9019\u6A23\u7684\uFF0C\u6211\u5011\u5148\u53BB\u73A9\u904A\u6232\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16575,7 +16861,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
+        x: 212.35294
         y: 168.82355
         width: 160
         height: 30
@@ -16602,25 +16888,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '"I really don''t know what to do now. I am even not in the mood to
-          play games."'
+        value: I really don't know what to do now. I am even not in the mood to play
+          games.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Jack_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '"I really don''t know what to do now. I am even not in the mood to
-          play games."'
+        value: I really don't know what to do now. I am even not in the mood to play
+          games.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6211\u73FE\u5728\u771F\u7684\u4E0D\u77E5\u9053\u600E\u9EBC\u8FA6\u5440\uFF0C\u4E5F\u6C92\u6709\u5FC3\u60C5\u73A9\u904A\u6232\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6211\u800C\u5BB6\u771F\u4FC2\u5514\u77E5\u9EDE\u7B97\u5440\u3002\u90FD\u5187\u4E5C\u5FC3\u60C5\u73A9\u904A\u6232\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16695,11 +16981,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u548C\u4ED6\u5011\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u548C\u4ED6\u5011\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16766,7 +17052,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(Level2/Jack_7);
+
+          AudioWait(SFX/Score)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -16774,11 +17062,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16838,8 +17126,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\"It seems that you feel really sad and disappointed about your parents\u2018
-          behaviors. Let me help you think about how to communicate with them better. "
+        value: "It sounds like you're feeling sad and disappointed about your parents\u2018
+          behaviors. Don't worry, let me help you figure out how to communicate better
+          with them. "
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -16847,16 +17136,17 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: "\"It seems that you feel really sad and disappointed about your parents\u2018
-          behaviors. Let me help you think about how to communicate with them better. "
+        value: "It sounds like you're feeling sad and disappointed about your parents\u2018
+          behaviors. Don't worry, let me help you figure out how to communicate better
+          with them. "
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u807D\u8D77\u4F86\u4F60\u4F3C\u4E4E\u56E0\u70BA\u4F60\u7238\u7238\u5ABD\u5ABD\u7684\u884C\u70BA\u800C\u89BA\u5F97\u5F88\u50B7\u5FC3\u3001\u5F88\u5931\u671B\u5462\u3002\u5225\u64D4\u5FC3\uFF0C\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u8DDF\u4ED6\u5011\u66F4\u597D\u5730\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u807D\u8D77\u4F86\u4F60\u4F3C\u4E4E\u56E0\u70BA\u4F60\u7238\u7238\u5ABD\u5ABD\u7684\u884C\u70BA\u800C\u89BA\u5F97\u5F88\u50B7\u5FC3\u3001\u5F88\u5931\u671B\u5462\u3002\u5225\u64D4\u5FC3\uFF0C\u6211\u5E6B\u4F60\u4E00\u8D77\u60F3\u60F3\u600E\u9EBC\u8DDF\u4ED6\u5011\u66F4\u597D\u5730\u6E9D\u901A\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -16919,25 +17209,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: '"Thank you for saying that. Yes, I am really disappointed now. It
-          will be great if you can help me!"'
+        value: Thank you, I am really upset right now. It would be great if you could
+          help me!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Jack_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: '"Thank you for saying that. Yes, I am really disappointed now. It
-          will be great if you can help me!"'
+        value: Thank you, I am really upset right now. It would be great if you could
+          help me!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u771F\u7684\u5F88\u5931\u671B\u3002\u5982\u679C\u4F60\u80FD\u5E6B\u6211\uFF0C\u90A3\u5C31\u592A\u597D\u5566\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u66EC\u4F60\u5440\uFF0C\u6211\u771F\u4FC2\u5C0D\u4F62\u54CB\u597D\u5931\u671B\u3002\u5982\u679C\u4F60\u53EF\u4EE5\u5E6B\u6211\u5C31\u592A\u597D\u5566\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17012,11 +17302,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17083,7 +17373,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(Level2/Jack_Random);
+
+          AudioWait(SFX/Score);'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -17091,11 +17383,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u591A\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u6652\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u597D\u591A\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17155,102 +17447,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thank you. I feel better now!
+        value: Thank you! I feel much better now!
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Jack_Random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you! I feel much better now!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\uFF0C\u6211\u73FE\u5728\u5FC3\u60C5\u597D\u591A\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 7
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 7
-        originDialogueID: 14
-        destinationConversationID: 7
-        destinationDialogueID: 15
-        isConnector: 0
-        priority: 2
-      conditionsString: CurrentQuestState("2.4_ComfortClassmate") == "success"
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 748.2979
-        y: 124.255295
-        width: 160
-        height: 30
-    - id: 15
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 7
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: You are welcome.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-TC
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u66EC\u4F60\uFF0C\u6211\u800C\u5BB6\u5FC3\u60C5\u597D\u5497\u597D\u591A\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17273,15 +17486,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: CurrentQuestState("2.4_ComfortClassmate") == "success"
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 746.1702
-        y: 193.40424
+        x: 748.2979
+        y: 124.255295
         width: 160
         height: 30
     entryGroups: []
@@ -17441,24 +17654,27 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: We will start our next class soon. Would you like to help organize
-          stationery and sporting goods? So that other classmates won't trip up.
+        value: We're starting our next class soon. Would you mind helping organize
+          the stationery and sports equipment so so that our classmates don't trip
+          over anything?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_1)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: We're starting our next class soon. Would you mind helping organize
+          the stationery and sports equipment so so that our classmates don't trip
+          over anything?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6211\u5011\u5DEE\u4E0D\u591A\u8981\u4E0A\u4E0B\u4E00\u7BC0\u8AB2\u5566\uFF0C\u4F60\u53EF\u4EE5\u5E6B\u5FD9\u628A\u6587\u5177\u548C\u5668\u6750\u6574\u7406\u597D\u55CE\uFF1F\u9019\u6A23\u5176\u4ED6\u540C\u5B78\u5C31\u4E0D\u6703\u7D46\u5012\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6211\u54CB\u5DEE\u5514\u591A\u6E96\u5099\u4E0A\u5802\u5566\uFF0C\u4F60\u53EF\u5514\u53EF\u4EE5\u5E6B\u624B\u57F7\u597D\u5572\u6587\u5177\u540C\u57CB\u5668\u6750\u5440\uFF1F\u5481\u6A23\u5176\u4ED6\u540C\u5B78\u5C31\u5514\u6703\u63E2\u89AA\u5566\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17500,7 +17716,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 113.5443
+        x: 118.0219
         y: 95.31645
         width: 160
         height: 30
@@ -17527,7 +17743,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Of course! Just let me know what should I do.
+        value: Sure, I'd be happy to help. What should I do?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17535,15 +17751,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sure, I'd be happy to help. What should I do?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u7576\u7136\uFF0C\u6211\u5F88\u6A02\u610F\u5E6B\u5FD9\u3002\u6211\u61C9\u8A72\u505A\u4EC0\u9EBD\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u7576\u7136\uFF0C\u6211\u5F88\u6A02\u610F\u5E6B\u5FD9\u3002\u6211\u61C9\u8A72\u505A\u4EC0\u9EBD\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17573,7 +17789,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: Variable["Leo_Help"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17606,24 +17822,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: You are helpful! Please help hang the jump rope and ruler back on
-          the hooks on the wall, put the balls back to the box.
+        value: Please help hang the jump rope and ruler back on the hooks on the
+          wall, and put the balls back in the box.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_2)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Please help hang the jump rope and ruler back on the hooks on the
+          wall, and put the balls back in the box.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8ACB\u4F60\u5E6B\u5FD9\u628A\u8DF3\u7E69\u548C\u5C3A\u5B50\u639B\u5230\u58BB\u58C1\u7684\u639B\u9264\u4E0A\uFF0C\u7136\u5F8C\u5C07\u7403\u653E\u9032\u7BB1\u5B50\u88E1\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u8ACB\u4F60\u5E6B\u624B\u5C07\u5572\u8DF3\u7E69\u540C\u57CB\u5C3A\u639B\u55BA\u57F2\u58BB\u5605\u639B\u9264\u4E0A\uFF0C\u7136\u5F8C\u5C07\u7403\u653E\u5165\u7BB1\u88E1\u9762\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17659,8 +17876,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.860764
-        y: 240.88605
+        x: 43.33838
+        y: 242.3786
         width: 160
         height: 30
     - id: 4
@@ -17686,7 +17903,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: No problem! I will handle it.
+        value: No problem! I'll take care of it.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17694,15 +17911,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: No problem! I'll take care of it.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u6C92\u554F\u984C\uFF01\u6211\u6765\u6574\u7406\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u6C92\u554F\u984C\uFF01\u6211\u6765\u6574\u7406\u5427\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17732,7 +17949,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.860764
+        x: 41.84584
         y: 292.1519
         width: 160
         height: 30
@@ -17759,7 +17976,8 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: I got so many things to do. I can't help you this time, sorry.
+        value: Sorry, Leo, but I might not be able to help. I have some other things
+          to do.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -17767,94 +17985,16 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sorry, Leo, but I might not be able to help. I have some other things
+          to do.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0CLeo\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 52
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 52
-        originDialogueID: 5
-        destinationConversationID: 52
-        destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 290.75946
-        y: 188.35442
-        width: 160
-        height: 30
-    - id: 6
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 25
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: It's OK.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-TC
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-Oral
-        value: 
+        value: "\u4E0D\u597D\u610F\u601D\uFF0CLeo\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -17884,8 +18024,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 293.29108
-        y: 238.35442
+        x: 292.252
+        y: 188.35442
         width: 160
         height: 30
     - id: 7
@@ -17911,23 +18051,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Have you put all the things back?
+        value: Have you put everything back in its place?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_3)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Have you put everything back in its place?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4F60\u5DF2\u7D93\u628A\u6240\u6709\u6771\u897F\u90FD\u653E\u56DE\u6B63\u78BA\u7684\u4F4D\u7F6E\u4E86\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4F60\u4FC2\u54AA\u5DF2\u7D93\u5C07\u6240\u6709\u91CE\u64FA\u756A\u55BA\u5571\u5605\u4F4D\u5440\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18004,15 +18144,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Yes, I think so.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u653E\u597D\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u662F\u7684\uFF0C\u6211\u653E\u597D\u4E86\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18069,7 +18209,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Not yet. Would you mind let me know the task again?
+        value: Not yet, could you please remind me what I need to do?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -18077,15 +18217,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Not yet, could you please remind me what I need to do?
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u4F60\u80FD\u518D\u544A\u8A34\u6211\u4E00\u904D\u61C9\u8A72\u600E\u9EBD\u505A\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u9084\u6C92\u6709\uFF0C\u4F60\u80FD\u518D\u544A\u8A34\u6211\u4E00\u904D\u61C9\u8A72\u600E\u9EBD\u505A\u55CE\uFF1F"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18148,24 +18288,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Sure. Please help hang the jump rope and ruler back on the hooks on
-          the wall, put the balls back to the box.
+        value: Sure. Please hang the jump rope and ruler back on the hooks on the
+          wall, and put the balls back in the box.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_4)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Sure. Please hang the jump rope and ruler back on the hooks on the
+          wall, and put the balls back in the box.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u7576\u7136\u53EF\u4EE5\u3002\u8ACB\u4F60\u5C07\u8DF3\u7E69\u548C\u5C3A\u5B50\u639B\u56DE\u58BB\u4E0A\u7684\u639B\u9264\u4E0A\u3001\u4E26\u628A\u7403\u653E\u56DE\u7BB1\u5B50\u88E1\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u7576\u7136\u53EF\u4EE5\u3002\u8ACB\u4F60\u5C07\u8DF3\u7E69\u540C\u57CB\u5C3A\u639B\u55BA\u57F2\u58BB\u5605\u639B\u9264\u4E0A\u3001\u7136\u5F8C\u5C07\u7403\u653E\u756A\u500B\u7BB1\u88E1\u9762\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18228,7 +18369,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: OK, I will.
+        value: 'Got it! '
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -18236,15 +18377,15 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: 'Got it! '
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u660E\u767D\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u660E\u767D\u4E86\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18414,8 +18555,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 144
-        y: 29
+        x: 156.37112
+        y: 1
         width: 160
         height: 30
     - id: 1
@@ -18441,23 +18582,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Excellent! Thanks for your helping.
+        value: Excellent! Thank you for your help.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_5)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Excellent! Thank you for your help.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u592A\u597D\u5566\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u592A\u597D\u5566\uFF01\u5514\u8A72\u66EC\u4F60\u5E6B\u624B\u5440\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18520,23 +18661,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\rYou're welcome, I\u2019m glad I could help!\r"
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18569,8 +18712,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 43
-        y: 199.96906
+        x: 44.03093
+        y: 200.99997
         width: 160
         height: 30
     - id: 3
@@ -18600,19 +18743,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_6)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Great! Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u505A\u5F97\u5E7E\u597D\u5440\uFF01\u5514\u8A72\u66EC\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18675,23 +18818,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\rYou're welcome, I\u2019m glad I could help!\r"
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: "You're welcome, I\u2019m glad I could help!"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF0C\u6211\u4E5F\u5F88\u958B\u5FC3\u53EF\u4EE5\u5E6B\u5230\u4F60\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18751,23 +18896,23 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Nice.
+        value: Thank you.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level2/Leo_7)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: Thank you.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u8B1D\u8B1D\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u5514\u8A72\u4F60\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18830,23 +18975,25 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\rYou're welcome."
+        value: You're welcome.
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: You're welcome.
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4E0D\u5BA2\u6C23\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -18947,7 +19094,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 8
+        value: 6
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -18991,9 +19138,21 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 59
+        originDialogueID: 0
+        destinationConversationID: 59
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 59
+        originDialogueID: 0
+        destinationConversationID: 59
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -19005,9 +19164,157 @@ MonoBehaviour:
         y: 20
         width: 160
         height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: My desk is clean now, thank you!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Lily_Random_1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: My desk is clean now, thank you!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u6211\u7684\u684C\u5B50\u5DF2\u7D93\u4E7E\u6DE8\u5566\uFF0C\u8B1D\u8B1D\u4F60\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u6211\u5F35\u6AAF\u5DF2\u7D93\u4E7E\u6DE8\u5497\u5566\uFF0C\u5514\u8A72\u4F60\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 59
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["Lily_Help"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 32
+        y: 115
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 6
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Lily_Random_2)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u554F\u5176\u4ED6\u4EBA\u662F\u5426\u9700\u8981\u5E6B\u5FD9\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u6211\u66AB\u6642\u7121\u54A9\u60F3\u4F60\u5E6B\u6211\u624B\u5440\uFF0C\u5514\u8A72\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u4E0B\u5176\u4ED6\u4EBA\u4FC2\u54AA\u9700\u8981\u5E6B\u624B\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 59
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 344
+        y: 115
+        width: 160
+        height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.93999994
   - id: 61
     fields:
     - title: Title
@@ -19113,9 +19420,21 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 61
+        originDialogueID: 0
+        destinationConversationID: 61
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 61
+        originDialogueID: 0
+        destinationConversationID: 61
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -19125,6 +19444,154 @@ MonoBehaviour:
         serializedVersion: 2
         x: 30
         y: 20
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 25
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you for your help. Let's get ready for class.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Leo_Random_1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you for your help. Let's get ready for class.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\uFF0C\u6211\u5011\u6E96\u5099\u4E0A\u8AB2\u5427\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u5514\u8A72\u66EC\u4F60\u5E6B\u624B\uFF0C\u6211\u54CB\u6E96\u5099\u4E0A\u5802\u5566\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 61
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["Leo_Help"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 25
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Leo_Random_2)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u554F\u5176\u4ED6\u4EBA\u662F\u5426\u9700\u8981\u5E6B\u5FD9\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u6211\u66AB\u6642\u7121\u54A9\u60F3\u4F60\u5E6B\u6211\u624B\u5440\uFF0C\u5514\u8A72\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u4E0B\u5176\u4ED6\u4EBA\u4FC2\u54AA\u9700\u8981\u5E6B\u624B\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 61
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 290
+        y: 112
         width: 160
         height: 30
     entryGroups: []
@@ -19235,9 +19702,21 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 60
+        originDialogueID: 0
+        destinationConversationID: 60
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 60
+        originDialogueID: 0
+        destinationConversationID: 60
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -19247,6 +19726,154 @@ MonoBehaviour:
         serializedVersion: 2
         x: 30
         y: 20
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 24
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I'll return your highlighter to you as soon as possible!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Amy_Random_1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I'll return your highlighter to you as soon as possible!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u4F60\u7684\u7B46\u6211\u6703\u76E1\u5FEB\u9084\u7D66\u4F60\u7684\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u4F60\u652F\u7B46\u6211\u6703\u76E1\u5FEB\u4FFE\u756A\u4F60\u67B6\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 60
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["Amy_Help"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 35
+        y: 107
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 24
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Amy_Random_2)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: I don't have any more tasks for you. Thank you. You may ask others
+          to see if they need help.
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u6211\u66AB\u6642\u6C92\u6709\u4EC0\u9EBC\u9700\u8981\u5E6B\u5FD9\uFF0C\u8B1D\u8B1D\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u554F\u5176\u4ED6\u4EBA\u662F\u5426\u9700\u8981\u5E6B\u5FD9\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u6211\u66AB\u6642\u7121\u54A9\u60F3\u4F60\u5E6B\u6211\u624B\u5440\uFF0C\u5514\u8A72\u4F60\u3002\u4F60\u53EF\u4EE5\u53BB\u554F\u4E0B\u5176\u4ED6\u4EBA\u4FC2\u54AA\u9700\u8981\u5E6B\u624B\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 60
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 277
+        y: 102
         width: 160
         height: 30
     entryGroups: []
@@ -19534,8 +20161,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 177.25609
-        y: 208.58966
+        x: 136.3133
+        y: 187.85635
         width: 160
         height: 30
     - id: 3
@@ -19607,13 +20234,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 426.42377
-        y: 221.41057
+        x: 346.67694
+        y: 189.76497
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.58000034
+    canvasZoom: 0.88000005
   - id: 11
     fields:
     - title: Title
@@ -19860,7 +20487,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -20015,7 +20644,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -20167,7 +20798,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -20202,7 +20835,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["Test.1.1"] == ""
+      conditionsString: 
       userScript: 'Variable["Point_Level3"] = Variable["Point_Level3"] + 20;
 
         SetQuestState("3_1_CharityDonate",
@@ -20333,12 +20966,6 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      - originConversationID: 12
-        originDialogueID: 0
-        destinationConversationID: 12
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20373,7 +21000,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: It's very kind of you! Appreciate it!
+        value: Yes_Random
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -20403,7 +21030,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 12
       isRoot: 0
       isGroup: 0
@@ -20419,81 +21046,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 23.04544
-        y: 134.77272
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 8
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Thank you all the same.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: Delay(4)
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-TC
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-Oral
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 12
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["TASK_3_1_CASH"] == 0
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 257.2727
-        y: 133.7727
+        x: 26.454544
+        y: 110.90909
         width: 160
         height: 30
     entryGroups: []
@@ -20973,6 +21527,12 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
+      - originConversationID: 16
+        originDialogueID: 1
+        destinationConversationID: 16
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -20981,7 +21541,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 121
-        y: 85
+        y: 83.93617
         width: 160
         height: 30
     - id: 2
@@ -21144,8 +21704,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 121
-        y: 199
+        x: 123.127655
+        y: 207.51062
         width: 160
         height: 30
     - id: 4
@@ -21248,7 +21808,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetEnabled(DogOwner,false,DogOwner)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -21290,8 +21850,81 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 353.14285
-        y: 295.42862
+        x: 332.93008
+        y: 293.30096
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 11
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: No, I haven't
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: SetEnabled(DogOwner,false,DogOwner)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 16
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 406.10638
+        y: 145.6383
         width: 160
         height: 30
     entryGroups: []
@@ -21699,7 +22332,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 29
-        y: 70
+        y: 90
         width: 160
         height: 30
     - id: 2
@@ -21729,7 +22362,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(SFX/Score);
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -21771,8 +22404,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
-        y: 119
+        x: 30
+        y: 156
         width: 160
         height: 30
     entryGroups: []
@@ -22370,7 +23003,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(BlindPersonArea,false)
+        value: 'SetActive(BlindPersonArea,false);
+
+          AudioWait(SFX/Score)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -22425,7 +23060,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30.432251
-        y: 109.59944
+        y: 104.68141
         width: 160
         height: 30
     - id: 2
@@ -22489,7 +23124,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 18
+        originDialogueID: 2
+        destinationConversationID: 18
+        destinationDialogueID: 4
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 'Variable["TASK_3_2_HELP"] = true;
 
@@ -22500,7 +23141,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 27.93135
+        x: 32.84938
         y: 194.81714
         width: 160
         height: 30
@@ -22528,6 +23169,79 @@ MonoBehaviour:
         typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: I am afraid I can't. Sorry!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: SetActive(BlindGrannyBlock,false)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 18
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 298.18304
+        y: 190.54651
+        width: 160
+        height: 30
+    - id: 4
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 12
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Can you come to touch me?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -22573,8 +23287,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 298.18304
-        y: 195.46454
+        x: 21.373978
+        y: 282.52203
         width: 160
         height: 30
     entryGroups: []
@@ -22780,8 +23494,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 29.93814
-        y: 109.27533
+        x: 31.001968
+        y: 101.82852
         width: 160
         height: 30
     - id: 2
@@ -22811,7 +23525,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(SFX/Score)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -22853,8 +23567,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 35.092785
-        y: 201.73193
+        x: 24.45448
+        y: 179.39151
         width: 160
         height: 30
     entryGroups: []
@@ -22981,7 +23695,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 210
+        x: 120
         y: 20
         width: 160
         height: 30
@@ -23039,7 +23753,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -23067,8 +23781,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 212.6087
-        y: 83.0435
+        x: 120
+        y: 70
         width: 160
         height: 30
     - id: 2
@@ -23124,7 +23838,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -23134,14 +23848,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("3_4_Beggar", "abandoned")
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 360.4348
-        y: 148.69566
+        x: 26
+        y: 120
         width: 160
         height: 30
     - id: 3
@@ -23197,7 +23911,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -23213,8 +23927,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 76.95651
-        y: 147.69565
+        x: 209
+        y: 120
         width: 160
         height: 30
     entryGroups: []
@@ -23410,7 +24124,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -23466,7 +24180,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -23565,7 +24281,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -23621,7 +24337,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -23720,7 +24438,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -23776,7 +24494,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -23824,7 +24544,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1499999
+    canvasZoom: 0.94000006
   - id: 15
     fields:
     - title: Title
@@ -23939,12 +24659,6 @@ MonoBehaviour:
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      - originConversationID: 15
-        originDialogueID: 0
-        destinationConversationID: 15
-        destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -23979,7 +24693,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Thank you...I don't need to worry about being hungry today.
+        value: Yes_Random
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -24009,7 +24723,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -24025,81 +24739,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33
-        y: 132
-        width: 160
-        height: 30
-    - id: 2
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Description
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Actor
-        value: 6
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Dialogue Text
-        value: Thank you all the same.
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Sequence
-        value: Delay(4)
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: en
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-TC
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: zh-Oral
-        value: 
-        type: 4
-        typeString: CustomFieldType_Localization
-      - title: Guid
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: Response Menu Sequence
-        value: 
-        type: 0
-        typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 15
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: Variable["TASK_3_3_COIN"] == 0
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 352
-        y: 134
+        x: 27
+        y: 101
         width: 160
         height: 30
     entryGroups: []
@@ -24945,7 +25586,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -25097,7 +25740,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -25249,7 +25894,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(SFX/Score);
+
+          Delay(3)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -33737,6 +34384,365 @@ MonoBehaviour:
         serializedVersion: 2
         x: 30
         y: 20
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  - id: 63
+    fields:
+    - title: Title
+      value: TeacherGreeting Copy
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 5
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 63
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 63
+        originDialogueID: 0
+        destinationConversationID: 63
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 30
+        y: 20
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Alright everyone, let us stop here. You can take a break now!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: AudioWait(Level2/Miss_1)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Alright everyone, let us stop here. You can take a break now!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u597D\u5566\uFF0C\u5404\u4F4D\u540C\u5B78\uFF0C\u9019\u5802\u8AB2\u5C31\u4E0A\u5230\u9019\u88E1\u3002\u5927\u5BB6\u53EF\u4EE5\u53BB\u4F11\u606F\u5566\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u597D\u5566\uFF0C\u5404\u4F4D\u540C\u5B78\uFF0C\u5462\u5802\u5C31\u4E0A\u5230\u5462\u5EA6\u3002\u5927\u5BB6\u53EF\u4EE5\u53BB\u5C0F\u4F11\u5566\u3002"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 63
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 63
+        originDialogueID: 1
+        destinationConversationID: 63
+        destinationDialogueID: 3
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 54.454834
+        y: 122.53487
+        width: 160
+        height: 30
+    - id: 2
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: Thank you Miss Lee!
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: Delay(10)
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: Thank you Miss Lee!
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: "\u8B1D\u8B1DMiss Lee\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: "\u8B1D\u8B1DMiss Lee\uFF01"
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 63
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: Variable["ClassEnd"] = true
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 90.479614
+        y: 431.0606
+        width: 160
+        height: 30
+    - id: 3
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 5
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: en
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-TC
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: zh-Oral
+        value: 
+        type: 4
+        typeString: CustomFieldType_Localization
+      - title: Guid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 4d996df0-e8be-45ed-ae71-ce411b0fd031
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 63
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 63
+        originDialogueID: 3
+        destinationConversationID: 63
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 81.80774
+        y: 261.5937
         width: 160
         height: 30
     entryGroups: []

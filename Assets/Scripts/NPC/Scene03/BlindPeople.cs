@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using PixelCrushers.DialogueSystem;
 using UnityEngine.Events;
+using BNG;
 
 public class BlindPeople : MonoBehaviour
 {
@@ -22,9 +23,15 @@ public class BlindPeople : MonoBehaviour
 
     Transform target;
 
+    public TeleportPlayerFade teleport;
+    public ScreenFader ScreenFader;
+    public Transform playerPosition;
+
     private bool TASK_3_2_DONE;
     private bool Task_3_2_help;
     private bool hasStartedWalking = false;
+
+    private bool hasTouch = false;
 
 
     // Start is called before the first frame update
@@ -39,7 +46,8 @@ public class BlindPeople : MonoBehaviour
     void Update()
     {
 
-        Task_3_2_help = DialogueLua.GetVariable("TASK_3_2_HELP").asBool;
+        // 5.15 comment
+        /*Task_3_2_help = DialogueLua.GetVariable("TASK_3_2_HELP").asBool;
 
         if (Task_3_2_help && !hasStartedWalking)
         {
@@ -50,7 +58,7 @@ public class BlindPeople : MonoBehaviour
             // Add the following line to set the callback function:
             onTargetReached += TriggerNewConversation;
             //Switch the state
-        }
+        }*/
 
         //Debug.Log(Task_3_2_help + "Update");
         if (Vector3.Distance(transform.position, target.position) < 0.5f)
@@ -59,8 +67,9 @@ public class BlindPeople : MonoBehaviour
             _anim.SetBool("Idle", true);
             _anim.SetBool("Walk", false);
 
-            onTargetReached?.Invoke();
-            onTargetReached = null; // Reset the callback to avoid triggering again.
+            // 5.15 comment
+            /*onTargetReached?.Invoke();
+            onTargetReached = null; // Reset the callback to avoid triggering again.*/
         }
 
 
@@ -108,6 +117,31 @@ public class BlindPeople : MonoBehaviour
 
     public void ShowBlindPersonConversation()
     {
-        blindPerson.GetComponent<DialogueSystemTrigger>().OnUse();
+        foreach (var trigger in GetComponents<DialogueSystemTrigger>())
+        {
+            trigger.OnUse();
+        }
     }
+
+    public void TeleportAndFadeAfterTouch()
+    {
+        if (!hasTouch)
+        {
+            StartCoroutine(TouchAndHelp());
+        }
+        hasTouch = true;
+    }
+
+    private IEnumerator TouchAndHelp()
+    {
+        this.transform.position = Target2.position;
+
+        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+        TriggerNewConversation();
+        yield return new WaitForSeconds(1f);
+        
+        ShowBlindPersonConversation();
+    }
+
+
 }

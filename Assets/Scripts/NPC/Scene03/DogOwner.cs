@@ -18,6 +18,8 @@ public class DogOwner : MonoBehaviour
 
     public FacePlayerNormal facePlayer;
 
+    [SerializeField] private bool firstTalk = true;
+
     public float WalkValue;
     public float StopValue;
 
@@ -51,6 +53,16 @@ public class DogOwner : MonoBehaviour
             _anim.SetBool("Fall", false);
 
             facePlayer.enabled = true;
+
+            if(firstTalk)
+            {
+                foreach (var trigger in this.GetComponents<DialogueSystemTrigger>())
+                {
+                    trigger.OnUse();
+                }
+
+                firstTalk = false;
+            }
         }
 
     }
@@ -83,5 +95,11 @@ public class DogOwner : MonoBehaviour
 
         //DogOwner's transform, not walking around
         target = transform;
+    }
+
+
+    public void WalkToPlayer()
+    {
+
     }
 }

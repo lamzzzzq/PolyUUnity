@@ -29,6 +29,7 @@ public class FruitLady : MonoBehaviour
 
     public void DropFruit()
     {
+        _childAnim.SetBool("Pick", true);
         //fade.FadeCutscene();
         foreach (var item in gameObjects)
         {

@@ -8,11 +8,23 @@ public class ButtonManager : MonoBehaviour
     public GameObject Button;
     private CharacterController playerController;
 
+    private float initialRadius;
+    private bool isCanvasActive;
+
     private void Start()
     {
-        // Find the PlayerController GameObject and get its CharacterController component
-        // 查找 PlayerController GameObject 并获取其 CharacterController 组件
         playerController = GameObject.Find("PlayerController").GetComponent<CharacterController>();
+
+        // 获取初始的球形碰撞器半径
+        initialRadius = GetComponent<SphereCollider>().radius;
+    }
+
+    private void Update()
+    {
+        if (Button.activeSelf)
+        {
+            playerController.enabled = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -35,12 +47,29 @@ public class ButtonManager : MonoBehaviour
 
     private void UpdatePlayerControllerState()
     {
-        playerController.enabled = !DialogueCanvas.activeSelf;
+        bool newCanvasActiveState = DialogueCanvas.activeSelf;
+
+        // 检查Canvas的状态是否发生变化
+        if (isCanvasActive != newCanvasActiveState)
+        {
+            isCanvasActive = newCanvasActiveState;
+
+            // 根据Canvas的状态设置球形碰撞器半径
+            if (isCanvasActive)
+            {
+                GetComponent<SphereCollider>().radius = initialRadius * 2f;
+            }
+            else
+            {
+                GetComponent<SphereCollider>().radius = initialRadius;
+            }
+        }
+
+        playerController.enabled = !isCanvasActive;
     }
 
     private void UpdateButtonState()
     {
         Button.SetActive(!DialogueCanvas.activeSelf);
     }
-
 }

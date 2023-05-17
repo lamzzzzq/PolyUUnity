@@ -36,7 +36,7 @@ public class ScreenFadeNPCDisappear : MonoBehaviour
 
     public void DisableNPC()
     {
-        NPC.SetActive(false);
+        //NPC.SetActive(false);
         CallFadeOut();
     }
 

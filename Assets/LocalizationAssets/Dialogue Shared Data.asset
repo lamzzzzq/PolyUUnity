@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: Level_1_SandwichMenu
     m_Metadata:
       m_Items: []
+  - m_Id: 91714069485985792
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

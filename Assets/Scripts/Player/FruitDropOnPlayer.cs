@@ -12,6 +12,8 @@ public class FruitDropOnPlayer : MonoBehaviour
 
     public TeleportPlayerFade teleport;
 
+    public GameObject FruitCanvas;
+
     public UnityEvent npcEvents;
 
     private CharacterController playerController;
@@ -21,16 +23,18 @@ public class FruitDropOnPlayer : MonoBehaviour
         playerController = GameObject.Find("PlayerController").GetComponent<CharacterController>();
     }
 
-    public void FruitDropCutScene()
+    public void FruitDropCutSceneFirst()
     {
         teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
-        teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
+        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
         StartCoroutine(invokeFruitEvent());
+        playerController.enabled = false;
     }
 
     private IEnumerator invokeFruitEvent()
     {
         yield return new WaitForSeconds(1f);
         npcEvents.Invoke();
+        FruitCanvas.SetActive(true);
     }
 }

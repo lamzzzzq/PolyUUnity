@@ -9,22 +9,26 @@ public class Teacher : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
 
+    public HelpTeacher helpTeacher;
+
     public List<GameObject> TriggerPoints = new List<GameObject>();
     public GameObject canvas;
 
     public Transform Target1;
     public Transform Target2;
+    public Transform Target3;
     Transform Target;
 
     public GameObject npc;
 
     bool Fall;
+    private bool disableMovement = false;
 
     public FacePlayerNormal faceplayer;
 
     void Start()
     {
-        Target = Target1;
+        Target = Target3;
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
 
@@ -41,14 +45,30 @@ public class Teacher : MonoBehaviour
         }
         if (Vector3.Distance(transform.position, Target.position) < 0.1f && Fall == false)
         {
-            StopMoving();
-            StartCoroutine(Delay(8f));
+            bool arrive = false;
+            if(!arrive)
+            {
+                StopMoving();
+                arrive = true;
+            }
+
+            //StartCoroutine(Delay(8f));
+
             for (int i = 0; i < TriggerPoints.Count; i++)
             {
                 TriggerPoints[i].SetActive(false);
             }
+
             faceplayer.enabled = true;
             canvas.SetActive(true);
+
+            //disable player movement
+            if(!disableMovement)
+            {
+                helpTeacher.DisablePlayerController();
+                disableMovement = true;
+            }
+            
         }
     }
 
@@ -61,7 +81,7 @@ public class Teacher : MonoBehaviour
 
 
 
-    //First Step - Trigger By Timeline
+    //First Step - Trigger By TeacherGreeting GameObject
     public void WalkTowardTheDoor()
     {
         _agent.isStopped = false;
@@ -86,7 +106,7 @@ public class Teacher : MonoBehaviour
     private IEnumerator Delay(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        _anim.SetBool("Walk", false); // Ensure Walk is set to false after the delay
+        //_anim.SetBool("Walk", false); // Ensure Walk is set to false after the delay
     }
 
     public void TeacherGreeting()
