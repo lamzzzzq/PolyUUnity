@@ -24,6 +24,4 @@ public class Mask : MonoBehaviour
             isKnocked = true;
         }
     }
-
-
 }

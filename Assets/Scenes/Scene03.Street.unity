@@ -43072,7 +43072,7 @@ GameObject:
   - component: {fileID: 1866553423}
   - component: {fileID: 1866553422}
   m_Layer: 0
-  m_Name: TeacherTaskEntryCanvas
+  m_Name: FruitTaskEntryCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

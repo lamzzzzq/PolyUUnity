@@ -32109,8 +32109,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 574.96124
-        y: 123.61
+        x: 578.258
+        y: 102.73088
         width: 160
         height: 30
     - id: 5
@@ -32207,7 +32207,7 @@ MonoBehaviour:
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 13
+      value: 21
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -32253,7 +32253,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -32577,7 +32577,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32666,7 +32666,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -32753,7 +32753,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32829,7 +32829,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32905,7 +32905,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -32982,7 +32982,7 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -33036,8 +33036,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 632.68646
-        y: 364.77603
+        x: 659.26874
+        y: 373.63678
         width: 160
         height: 30
     - id: 10
@@ -33051,7 +33051,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -33124,7 +33124,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 13
+        value: 21
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -33187,8 +33187,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 47.540955, y: 0}
+    canvasZoom: 0.6100004
   - id: 34
     fields:
     - title: Title

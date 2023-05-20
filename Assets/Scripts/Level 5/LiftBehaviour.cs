@@ -9,20 +9,29 @@ public class LiftBehaviour : MonoBehaviour
     public bool isDoorOpened = false;
     public bool isDoorClosed = false;
     public bool isAudioPlayed = false;
+    public Vector3 rotationDegree_1;
     public Animator doorAnimator;
     public AudioSource LiftPersonAudio;
     public GameObject liftPerson;
 
+    private TeleportPlayerFade teleport;
+    public ScreenFader ScreenFader;
+    public PlayerController playerController;
 
     public GameObject player;
     public GameObject targetPosition;
+    
 
 
-    public FadeManager fadeManager;
+    //public FadeManager fadeManager;
     public Animator fadeAnim;
-    public PlayerTeleport Teleport;
+    //public PlayerTeleport Teleport;
 
     private bool _hasCompletedLiftFlow = false;
+    private void Start()
+    {
+        teleport = player.GetComponent<TeleportPlayerFade>();
+    }
 
     public void OpenLiftDoor()
     {
@@ -76,7 +85,7 @@ public class LiftBehaviour : MonoBehaviour
         //player.GetComponent<CharacterController>().enabled = true;
     }
 
-    IEnumerator TeleportPlayerWithFadeCoroutine()
+/*    IEnumerator TeleportPlayerWithFadeCoroutine()
     {
         // Fade in
         yield return StartCoroutine(FadeIn());
@@ -84,7 +93,7 @@ public class LiftBehaviour : MonoBehaviour
         // Fade out
         yield return StartCoroutine(FadeOut());
     }
-
+*/
     IEnumerator teleportaion()
     {
         Debug.Log("KK");
@@ -113,6 +122,7 @@ public class LiftBehaviour : MonoBehaviour
         if (!isDoorClosed)
         {
             Debug.Log("yes closeliftdoor event executed.");
+            playerController.enabled = false;
             StartCoroutine(CloseLift());
         }
     }
@@ -120,14 +130,27 @@ public class LiftBehaviour : MonoBehaviour
     IEnumerator CloseLift()
     {
         yield return new WaitForSeconds(5f);
+
+        //Play countdown UI
+
+
         doorAnimator.Play("Close");
         Debug.Log("Animation Close Played");
         isDoorClosed = true;
+        //Fix Later: Face direction after teleportation
+        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
     }
 
     public void StopDoorCloseCoroutine()
     {
         StopAllCoroutines();
+    }
+
+    public void Test()
+    {
+        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        teleport.ResetPlayerPosRotWithParameters(player.transform, ScreenFader);
     }
 
 }

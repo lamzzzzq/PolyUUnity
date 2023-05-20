@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class ButtonManager : MonoBehaviour
     private float initialRadius;
     private bool isCanvasActive;
 
+    private NavMeshAgent agent;
+
     private void Start()
     {
         playerController = GameObject.Find("PlayerController").GetComponent<CharacterController>();
 
+        agent = GetComponent<NavMeshAgent>();
         // 获取初始的球形碰撞器半径
         initialRadius = GetComponent<SphereCollider>().radius;
     }
@@ -24,6 +28,12 @@ public class ButtonManager : MonoBehaviour
         if (Button.activeSelf)
         {
             playerController.enabled = true;
+
+            // 检查导航AI的速度是否大于0
+            if (agent.velocity.magnitude > 0f)
+            {
+                Button.SetActive(false);
+            }
         }
     }
 
@@ -71,5 +81,15 @@ public class ButtonManager : MonoBehaviour
     private void UpdateButtonState()
     {
         Button.SetActive(!DialogueCanvas.activeSelf);
+    }
+
+    public void DisablePlayerMovement()
+    {
+        playerController.enabled = false;
+    }
+
+    public void EnablePlayerMovement()
+    {
+        playerController.enabled = true;
     }
 }

@@ -7,7 +7,15 @@ public class ScreenFadeNPCDisappear : MonoBehaviour
 {
     public GameObject NPC;
     public ScreenFader fader; //  the screen fader on the center eye camera, drag the camera here
+
+    private ButtonManager btnManager;
+    
     //[SerializeField] float fadeInWait = 0.5f;
+
+    private void Start()
+    {
+        btnManager = GetComponent<ButtonManager>();
+    }
 
     public void CallFadeIn()
     {
@@ -31,13 +39,16 @@ public class ScreenFadeNPCDisappear : MonoBehaviour
     {
         /*        CallFadeIn();
                 Invoke(nameof(DisableFather), 1f);*/
+        btnManager.EnablePlayerMovement();
+        btnManager.enabled = false;
         StartCoroutine(WaitFadeAndNPCDisappear());
     }
 
     public void DisableNPC()
     {
-        //NPC.SetActive(false);
+        NPC.SetActive(false);
         CallFadeOut();
+
     }
 
     /*    public void FadeCutscene()

@@ -18,6 +18,12 @@ public class Customer : MonoBehaviour
 
     public Transform targetPosition;
 
+    public WheelChairTaskOnPlayer wheelChairOnPlayer;
+
+
+    public GameObject wheechairCanvas1;
+    public GameObject wheechairCanvas2;
+
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -31,16 +37,23 @@ public class Customer : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition.position) > WalkValue)
             {
                 _agent.isStopped = false;
-                _anim.SetBool("Walk", true);
+                _anim.SetBool("Move", true);
             }
 
             if (Vector3.Distance(transform.position, targetPosition.position) < StopValue)
             {
-                knockDownEvent.Invoke();
                 _agent.isStopped = true;
-                _anim.SetBool("Walk", false);
-                _anim.SetBool("Fall", false);
+                _anim.SetBool("Move", false);
                 facePlayer.enabled = true;
+
+                if(wheelChairOnPlayer.triggerLeft)
+                {
+                    wheechairCanvas1.SetActive(true);
+                }
+                else
+                {
+                    wheechairCanvas2.SetActive(true);
+                }
             }
         }
 
@@ -48,20 +61,16 @@ public class Customer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //knockDownEvent.Invoke();
-        //还是没做好，timeslot的问题，不知道为什么other.tag检测不了
-
+        if(other.tag == "Target")
+        {
+            Debug.Log("Drop!");
+            knockDownEvent.Invoke();
+        }
     }
 
     public void WalkTowardTarget()
     {
         walk = true;
         _agent.SetDestination(targetPosition.position);
-        ItemDrop();
-    }
-
-    public void ItemDrop()
-    {
-        Debug.Log("Drop!");
     }
 }
