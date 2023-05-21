@@ -88,5 +88,9 @@ MonoBehaviour:
     m_Localized: WhatEverYouWant
     m_Metadata:
       m_Items: []
+  - m_Id: 114055414397411328
+    m_Localized: Mall
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

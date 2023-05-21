@@ -14984,7 +14984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &609634675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18727,7 +18727,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &922501792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18747,7 +18747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1290, y: 0}
+  m_AnchoredPosition: {x: 2196, y: -72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &925086591
@@ -22662,7 +22662,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:9cc644c5f22b9d0409fc2f1538003795
     m_TableEntryReference:
-      m_KeyId: 53322171369267200
+      m_KeyId: 114055414397411328
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -27587,7 +27587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1616177682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29283,7 +29283,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Scene04.Park
+          m_StringArgument: Scene05.Mall
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1784514140

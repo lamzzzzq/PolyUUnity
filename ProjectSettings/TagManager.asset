@@ -30,6 +30,7 @@ TagManager:
   - WristMenu
   - Box
   - Fruit
+  - clothes
   layers:
   - Default
   - TransparentFX

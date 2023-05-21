@@ -35,24 +35,34 @@ namespace BNG
 
         public void DetectItem()
         {
-            if (snapZone.HeldItem.CompareTag(gift.randomWord))
+            Debug.Log("snapZone.HeldItem.tag:" + snapZone.HeldItem.tag);
+            Debug.Log("gift.randomWordForCheck:" + gift.randomWord);
+
+            if (snapZone.HeldItem != null && !string.IsNullOrEmpty(snapZone.HeldItem.tag))
             {
-                //fade.FadeCutscene();
-                int oldValue = DialogueLua.GetVariable("Point_Level5").asInt;
-                int newValue = oldValue + 20;
-                DialogueLua.SetVariable("Point_Level5", newValue);
-                guideCanvas.SetActive(false);
-                snapZoneGameObj.SetActive(false);
+                if (snapZone.HeldItem.tag == gift.randomWord)
+                {
+                    //fade.FadeCutscene();
+                    Debug.Log("Yes");
+                    int oldValue = DialogueLua.GetVariable("Point/Level_5").asInt;
+                    int newValue = oldValue + 20;
+                    DialogueLua.SetVariable("Point/Level_5", newValue);
+                    guideCanvas.SetActive(false);
+                    snapZoneGameObj.SetActive(false);
 
 
+                }
+                else
+                {
+                    //fade.FadeCutscene();
+                    Debug.Log("No");
+                    guideCanvas.SetActive(false);
+                    snapZoneGameObj.SetActive(false);
+                }
             }
             else
             {
-                //fade.FadeCutscene();
-                guideCanvas.SetActive(false);
-                snapZoneGameObj.SetActive(false);
-
-
+                Debug.LogWarning("SnapZoneObj的HeldItem的标签为空");
             }
         }
     }

@@ -27,8 +27,14 @@ public class WheelChairTaskOnPlayer : MonoBehaviour
 
     public void WheelChairAction_1()
     {
-        playerController.enabled = false;
+        Debug.Log("Player Controller Enabled: first " + playerController.enabled);
+        if (!disableMovement)
+        {
+            playerController.enabled = false;
+            disableMovement = true;
+        }
         teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+        Debug.Log("Player Controller Enabled: second" + playerController.enabled);
         StartCoroutine(invokeWheeChairEvent());
     }
 

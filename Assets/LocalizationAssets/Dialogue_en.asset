@@ -53,5 +53,10 @@ MonoBehaviour:
       get the menu for families on next page.'
     m_Metadata:
       m_Items: []
+  - m_Id: 91714069485985792
+    m_Localized: "You are here to provide a THEWORD for your grandma. \n\nYou may
+      find the Navigation Board on your right hand side. "
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

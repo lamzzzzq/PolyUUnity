@@ -16,7 +16,7 @@ public class LiftBehaviour : MonoBehaviour
 
     private TeleportPlayerFade teleport;
     public ScreenFader ScreenFader;
-    public PlayerController playerController;
+    public CharacterController playerController;
 
     public GameObject player;
     public GameObject targetPosition;
@@ -122,7 +122,7 @@ public class LiftBehaviour : MonoBehaviour
         if (!isDoorClosed)
         {
             Debug.Log("yes closeliftdoor event executed.");
-            playerController.enabled = false;
+
             StartCoroutine(CloseLift());
         }
     }
@@ -135,11 +135,14 @@ public class LiftBehaviour : MonoBehaviour
 
 
         doorAnimator.Play("Close");
+        playerController.enabled = false;
         Debug.Log("Animation Close Played");
         isDoorClosed = true;
         //Fix Later: Face direction after teleportation
         teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
+
+        playerController.enabled = true;
     }
 
     public void StopDoorCloseCoroutine()

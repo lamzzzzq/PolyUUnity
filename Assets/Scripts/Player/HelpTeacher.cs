@@ -89,4 +89,15 @@ public class HelpTeacher : MonoBehaviour
 
         QuestLog.SetQuestState("2.1_TeacherDropItem", QuestState.Abandoned);
     }
+    public void EnablePlayerControllerDelay()
+    {
+        StartCoroutine(enableController());
+    }
+
+
+    private IEnumerator enableController()
+    {
+        yield return new WaitForSeconds(2f);
+        playerController.enabled = true;
+    }
 }

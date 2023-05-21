@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Localization.Settings;   //First
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization;//First
 
 
 public class LocaleSelector : MonoBehaviour
@@ -13,6 +14,10 @@ public class LocaleSelector : MonoBehaviour
         int ID = PlayerPrefs.GetInt("LocaleKey", 1 );
         ChangeLocale(ID);
 
+
+        Locale currentLocale = LocalizationSettings.SelectedLocale;
+        string localeCode = currentLocale.Identifier.Code;
+        Debug.Log("Current Locale: " + localeCode);
     }
 
     public void ChangeLocale(int localeID)
