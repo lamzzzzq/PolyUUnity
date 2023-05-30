@@ -3,7 +3,57 @@ guid: 92ccb5e47ae304f4fb3f15101d265de3
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 546e94625cbaf3f4f9775a2092e2ee58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic - Matte (Green)
+    second: {fileID: 2100000, guid: 4cc1cc8d5c14b4844ba16330ed1982a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic - Matte (Green).001
+    second: {fileID: 2100000, guid: c9f947c8edabbcb4a901a25119c01278, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 7952fd42aa364ab44a07141239df0ee6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: cdb4d4419f14980428f27e944904ed0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glasses Blue
+    second: {fileID: 2100000, guid: e528f84d3d3eecf43b3f9d67225fe96a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: groceryProps
+    second: {fileID: 2100000, guid: 36ffe5ac496892045aade9355dbdcf92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pig pink
+    second: {fileID: 2100000, guid: 0a46a0c966d016040976dd1d8dde56d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purple dark
+    second: {fileID: 2100000, guid: 42c701666bafb5b46a554b879123ac5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shopinterior
+    second: {fileID: 2100000, guid: 4c37b53a86435844a9242bce34c00c3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

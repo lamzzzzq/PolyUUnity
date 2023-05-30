@@ -13,7 +13,7 @@ public class BubbleGunLogic : MonoBehaviour
 
     public void CallResetPlayerPosRotWithSpecificParameters()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(JetPosition, ScreenFader);
     }
 }

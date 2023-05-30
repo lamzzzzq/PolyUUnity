@@ -49,8 +49,6 @@ namespace BNG
                     DialogueLua.SetVariable("Point/Level_5", newValue);
                     guideCanvas.SetActive(false);
                     snapZoneGameObj.SetActive(false);
-
-
                 }
                 else
                 {

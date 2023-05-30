@@ -29,8 +29,9 @@ TagManager:
   - LoadingProgressText
   - WristMenu
   - Box
-  - Fruit
   - clothes
+  - Apple
+  - Pear
   layers:
   - Default
   - TransparentFX

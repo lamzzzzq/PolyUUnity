@@ -11,6 +11,7 @@ public class BlindPeopleArrive : MonoBehaviour
     public Vector3 rotationDegree_1;
 
     public TeleportPlayerFade teleport;
+    public Transform PlayerPosition;
 
     public GameObject blindPeople;
 
@@ -23,11 +24,13 @@ public class BlindPeopleArrive : MonoBehaviour
 
     public void BlindPeopleArriveDes()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
-        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
-        playerController.enabled = true;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        teleport.ResetPlayerPosRotWithParameters(PlayerPosition, ScreenFader);
+        
         blindPeople.SetActive(false);
+        playerController.enabled = true;
     }
+
 
 
 }

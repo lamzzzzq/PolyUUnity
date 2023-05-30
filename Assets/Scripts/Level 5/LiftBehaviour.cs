@@ -20,6 +20,7 @@ public class LiftBehaviour : MonoBehaviour
 
     public GameObject player;
     public GameObject targetPosition;
+    private bool isCoroutineRunning = false;
     
 
 
@@ -43,13 +44,21 @@ public class LiftBehaviour : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+/*    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "SubPlayer" && !_hasCompletedLiftFlow)
         {
             StartCoroutine(LiftFlow());
         }
+    }*/
+    public void StartLift()
+    {
+        if(!_hasCompletedLiftFlow)
+        {
+            StartCoroutine(LiftFlow());
+        }
     }
+
 
     IEnumerator LiftFlow()
     {
@@ -119,7 +128,7 @@ public class LiftBehaviour : MonoBehaviour
 
     public void CloseLiftDoor()
     {
-        if (!isDoorClosed)
+        if (!isDoorClosed && !isCoroutineRunning)
         {
             Debug.Log("yes closeliftdoor event executed.");
 
@@ -129,6 +138,8 @@ public class LiftBehaviour : MonoBehaviour
 
     IEnumerator CloseLift()
     {
+        isCoroutineRunning = true;
+
         yield return new WaitForSeconds(5f);
 
         //Play countdown UI
@@ -138,11 +149,11 @@ public class LiftBehaviour : MonoBehaviour
         playerController.enabled = false;
         Debug.Log("Animation Close Played");
         isDoorClosed = true;
-        //Fix Later: Face direction after teleportation
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
 
         playerController.enabled = true;
+
+        isCoroutineRunning = false;
     }
 
     public void StopDoorCloseCoroutine()
@@ -152,8 +163,34 @@ public class LiftBehaviour : MonoBehaviour
 
     public void Test()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(player.transform, ScreenFader);
+    }
+
+    public void CloseLiftDoorWhenSuccess()
+    {
+        if (!isDoorClosed)
+        {
+            Debug.Log("yes closeliftdoor event executed.");
+
+            StartCoroutine(CloseLiftWhenSuccess());
+        }
+    }
+
+    IEnumerator CloseLiftWhenSuccess()
+    {
+        yield return new WaitForSeconds(2f);
+
+        //Play countdown UI
+
+
+        doorAnimator.Play("Close");
+        playerController.enabled = false;
+        Debug.Log("Animation Close Played");
+        isDoorClosed = true;
+        teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
+
+        playerController.enabled = true;
     }
 
 }

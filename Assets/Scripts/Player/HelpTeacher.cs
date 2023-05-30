@@ -46,7 +46,7 @@ public class HelpTeacher : MonoBehaviour
     
     private IEnumerator SetActiveAndTalk()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
         yield return new WaitForSeconds(1f);
         teacher.GetComponent<DialogueSystemTrigger>().OnUse();

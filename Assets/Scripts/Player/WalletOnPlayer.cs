@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BNG;
 using UnityEngine.Events;
+using PixelCrushers.DialogueSystem;
 
 public class WalletOnPlayer : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class WalletOnPlayer : MonoBehaviour
     public TeleportPlayerFade teleport;
     public Vector3 rotationDegree_1;
     public Transform playerPosition;
+    public Transform teleportPlayerPosition;
+    public GameObject phonePerson;
+    public Transform teleportation_firstFloor;
 
 
     public UnityEvent npcEvents;
@@ -30,7 +34,7 @@ public class WalletOnPlayer : MonoBehaviour
             disableMovement = true;
         }
 
-        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+        teleport.ResetPlayerPosRotWithParameters(teleportPlayerPosition, ScreenFader);
         StartCoroutine(invokeWalletEvent());
 
     }
@@ -48,7 +52,7 @@ public class WalletOnPlayer : MonoBehaviour
 
     private IEnumerator HelpAndPickUp()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
         playerController.enabled = true;
 
@@ -58,6 +62,20 @@ public class WalletOnPlayer : MonoBehaviour
     public void RefuseToHelp()
     {
         playerController.enabled = true;
+    }
+
+    public void TransportAndTalk()
+    {
+        StartCoroutine(TransportAndTalkToNPC());
+    }
+
+    private IEnumerator TransportAndTalkToNPC()
+    {
+        yield return new WaitForSeconds(1f);
+        teleport.ResetPlayerPosRotWithParameters(teleportation_firstFloor, ScreenFader);
+        playerController.enabled = true;
+
+        phonePerson.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
 }

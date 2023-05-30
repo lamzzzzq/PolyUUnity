@@ -25,7 +25,7 @@ public class FruitDropOnPlayer : MonoBehaviour
 
     public void FruitDropCutSceneFirst()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1);
         teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
         StartCoroutine(invokeFruitEvent());
         playerController.enabled = false;
@@ -35,6 +35,7 @@ public class FruitDropOnPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         npcEvents.Invoke();
+        yield return new WaitForSeconds(1f);
         FruitCanvas.SetActive(true);
     }
 }

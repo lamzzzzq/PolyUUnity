@@ -10,6 +10,8 @@ public class Teacher : MonoBehaviour
     private Animator _anim;
 
     public HelpTeacher helpTeacher;
+    public AudioClip audioClip;
+    private AudioSource audioSource;
 
     public List<GameObject> TriggerPoints = new List<GameObject>();
     public GameObject canvas;
@@ -33,6 +35,7 @@ public class Teacher : MonoBehaviour
         _anim = GetComponent<Animator>();
 
         _anim.SetBool("Fall", false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -40,6 +43,8 @@ public class Teacher : MonoBehaviour
         if (Vector3.Distance(transform.position, Target.position) < 0.1f && Fall == true)
         {
             StopMoving();
+            audioSource.clip = audioClip;
+            audioSource.Play();
             _anim.SetBool("Fall", true);
             StartCoroutine(GoToTheSecondPoint(3f));
         }

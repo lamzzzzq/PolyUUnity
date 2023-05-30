@@ -23,7 +23,7 @@ namespace BNG
             {
                 // 更新偏移量为相应的值
                 slotOffset.LocalPositionOffset = new Vector3(0.2f, 0f, 0f);
-                slotOffset.LocalRotationOffset = new Vector3(0f, 90f, -90f);
+                slotOffset.LocalRotationOffset = new Vector3(0f, 90f, -180f);
             }
         }
 
@@ -33,7 +33,7 @@ namespace BNG
             {
                 // 重置偏移量为默认值
                 slotOffset.LocalPositionOffset = Vector3.zero;
-                slotOffset.LocalRotationOffset = new Vector3(-90f, 0, -0);
+                slotOffset.LocalRotationOffset = new Vector3(-90f, 0, 90);
             }
         }
     }

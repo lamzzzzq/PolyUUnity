@@ -58,5 +58,24 @@ MonoBehaviour:
       find the Navigation Board on your right hand side. "
     m_Metadata:
       m_Items: []
+  - m_Id: 98307855620120576
+    m_Localized: "Welcome to \"Cradle\"! \n\nThank you for joining us today. You're
+      about to embark on a journey of kindness right from the street. Get ready to
+      make a positive impact on people you met and earn reward points along the way.
+      Are you excited? Let's begin!\""
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98314868878090240
+    m_Localized: 'You can choose an amount and drop it into the donation box. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98317768186535936
+    m_Localized: Please move the boxes to the marked area to clear the way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98325362737291264
+    m_Localized: You can choose an amount and put it into the beggar's bowl.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

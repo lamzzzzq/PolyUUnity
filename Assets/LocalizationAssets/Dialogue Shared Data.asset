@@ -39,6 +39,22 @@ MonoBehaviour:
     m_Key: WelcomeScene05
     m_Metadata:
       m_Items: []
+  - m_Id: 98307855620120576
+    m_Key: WelcomeScene03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98314868878090240
+    m_Key: Scene03_SocialWoker_Instruction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98317768186535936
+    m_Key: Scene03_Blind_Instruction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98325362737291264
+    m_Key: Scene03_Beggar_Instruction
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

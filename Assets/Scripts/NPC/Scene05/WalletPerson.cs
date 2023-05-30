@@ -11,11 +11,13 @@ public class WalletPerson : MonoBehaviour
     public Transform targetPosition;
     public GameObject phone;
     public GameObject phoneCanvas;
+    public List<GameObject> customer;
 
     private NavMeshAgent _agent;
     private Animator _anim;
     //public FacePlayerNormal facePlayer;
     private Transform target;
+    private bool activatePhone;
 
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class WalletPerson : MonoBehaviour
     {
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponentInChildren<Animator>();
+        activatePhone = false;
     }
 
     // Update is called once per frame
@@ -44,8 +47,21 @@ public class WalletPerson : MonoBehaviour
                 _anim.SetBool("Fall", false);
                 //facePlayer.enabled = true;
 
-                phone.SetActive(true);
+                if(!activatePhone)
+                {
+                    phone.SetActive(true);
+                    activatePhone = true;
+                }
+
                 phoneCanvas.SetActive(true);
+                foreach (var item in customer)
+                {
+                    item.SetActive(false);
+                }
+
+                target = transform;
+                _agent.isStopped = true;
+                transform.position = new Vector3(-7.9f, 0.103f, -134.85f);
                 //切换canvas
                 //this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
                 //和玩家对话

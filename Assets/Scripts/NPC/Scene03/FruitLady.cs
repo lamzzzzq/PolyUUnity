@@ -29,7 +29,7 @@ public class FruitLady : MonoBehaviour
 
     public void DropFruit()
     {
-        _childAnim.SetBool("Pick", true);
+        
         //fade.FadeCutscene();
         foreach (var item in gameObjects)
         {
@@ -40,11 +40,12 @@ public class FruitLady : MonoBehaviour
     public void TurnToTalk()
     {
         facePlayer.enabled = true;
-        _childAnim.SetBool("Idle", true);
+        _childAnim.SetBool("Pick", true);
         Basket.SetActive(false);
         BagFloor.SetActive(false);
         BagHand.SetActive(true);
-        StartConversation();
+
+        //StartConversation();
     }
 
     public void PlaceItem()

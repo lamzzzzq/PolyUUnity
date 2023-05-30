@@ -13,7 +13,10 @@ public class BlindPeople : MonoBehaviour
     //public AudioSource _audio;
     public Transform Target1;
     public Transform Target2;
+    public Transform Target3;
+    public Transform PlayerPosition;
     public GameObject Block;
+    public Vector3 rotation;
     //public GameObject BlockNewRoad;
     public GameObject blindPerson;
 
@@ -67,6 +70,7 @@ public class BlindPeople : MonoBehaviour
             _anim.SetBool("Idle", true);
             _anim.SetBool("Walk", false);
 
+            facePlayer.enabled = true;
             // 5.15 comment
             /*onTargetReached?.Invoke();
             onTargetReached = null; // Reset the callback to avoid triggering again.*/
@@ -134,9 +138,10 @@ public class BlindPeople : MonoBehaviour
 
     private IEnumerator TouchAndHelp()
     {
-        this.transform.position = Target2.position;
+        this.transform.position = Target3.position;
 
-        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+        //teleport.targetRotation = Quaternion.Euler(rotation) * transform.rotation;
+        teleport.ResetPlayerPosRotWithParameters(PlayerPosition, ScreenFader);
         TriggerNewConversation();
         yield return new WaitForSeconds(1f);
         

@@ -8,7 +8,6 @@ public class TeleportPlayerFade : MonoBehaviour
 {
     public Transform target;
     public ScreenFader fader;
-    public Quaternion targetRotation;
 
     public void CallFadeIn()
     {
@@ -23,7 +22,7 @@ public class TeleportPlayerFade : MonoBehaviour
     public void ResetPos()
     {
         transform.position = target.position;
-        transform.rotation = targetRotation;
+        transform.rotation = target.rotation;
     }
 
     public void ResetPlayerPosRot()
@@ -46,7 +45,7 @@ public class TeleportPlayerFade : MonoBehaviour
     private void ResetPlayer()
     {
         transform.position = target.position;
-        transform.rotation = targetRotation;
+        transform.rotation = target.rotation;
         CallFadeOut();
     }
 }

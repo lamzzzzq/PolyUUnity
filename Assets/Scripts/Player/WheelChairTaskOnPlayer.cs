@@ -73,10 +73,23 @@ public class WheelChairTaskOnPlayer : MonoBehaviour
 
     private IEnumerator HelpCustomer()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
         teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
 
         yield return new WaitForSeconds(1f);
         CustomerObj.GetComponent<DialogueSystemTrigger>().OnUse();
+    }
+
+    public void FadeAndTransportNoHelp()
+    {
+        StartCoroutine(NoHelpCustomer());
+    }
+
+    private IEnumerator NoHelpCustomer()
+    {
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+
+        yield return null;
     }
 }

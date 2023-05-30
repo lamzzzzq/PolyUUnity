@@ -39,7 +39,7 @@ public class DogOwner : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target.position) > WalkValue)
         {
-            Debug.Log("I am walking");
+            //Debug.Log("I am walking");
             _agent.isStopped = false;
             _anim.SetBool("Walk", true);
             facePlayer.enabled = false;
@@ -47,7 +47,7 @@ public class DogOwner : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target.position) < StopValue)
         {
-            Debug.Log("I am stop");
+            //Debug.Log("I am stop");
             _agent.isStopped = true;
             _anim.SetBool("Walk", false);
             _anim.SetBool("Fall", false);
@@ -80,7 +80,6 @@ public class DogOwner : MonoBehaviour
         facePlayer.enabled = true;
         
         StartCoroutine(ExecuteInSequence());
-        
     }
 
     private IEnumerator ExecuteInSequence()

@@ -11,6 +11,7 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
     public ScreenFader ScreenFader;
     public Vector3 rotationDegree_1;
     public Vector3 rotationDegree_2;
+    public GameObject player;
 
     public TeleportPlayerFade teleport;
 
@@ -25,15 +26,17 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
 
     public void DogOwnerCutsceneFirst()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_1) * transform.rotation;
+        
         teleport.ResetPlayerPosRotWithParameters(PlayerPosition_1, ScreenFader);
+        player.transform.rotation = Quaternion.Euler(rotationDegree_1);
         npcEvents.Invoke();
     }
 
     public void DogOwnerCutsceneSecond()
     {
-        teleport.targetRotation = Quaternion.Euler(rotationDegree_2) * transform.rotation;
+        
         teleport.ResetPlayerPosRotWithParameters(PlayerPosition_2, ScreenFader);
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_2);
         StartCoroutine(enableController());
     }
 
@@ -41,5 +44,10 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         playerController.enabled = true;
+    }
+
+    public void EnableController()
+    {
+        StartCoroutine(enableController());
     }
 }

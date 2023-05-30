@@ -101,7 +101,7 @@ public class TPCharacterController3D : MonoBehaviour
                             {
                                 Checkidles();
                                 Checkwalls();
-                                Checkinput();
+                                //Checkinput();
                                 rigid.velocity = dirforw * myspeed + dirside * mystrafes;
                                 trans.Rotate(0f, myturns, 0f);
                                 anim.SetInteger("forward", forward);
