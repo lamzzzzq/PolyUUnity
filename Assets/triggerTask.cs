@@ -12,9 +12,6 @@ public class triggerTask : MonoBehaviour
     public Transform spawnPoint;
     public GameObject cube;
 
-    public GameObject obj1;
-    public GameObject obj2;
-
     public List<Animator> anim = new List<Animator>();
     
 
@@ -31,8 +28,8 @@ public class triggerTask : MonoBehaviour
 
         if(other.gameObject.name == "DropPoint")
         {
-            obj1.SetActive(false);
-            obj2.SetActive(false) ;
+            //obj1.SetActive(false);
+            //obj2.SetActive(false) ;
 
             for (int i = 0; i < gameObject.Count; i++)
             {

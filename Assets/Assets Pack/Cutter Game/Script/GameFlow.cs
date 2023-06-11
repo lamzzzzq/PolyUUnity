@@ -71,12 +71,12 @@ public class GameFlow : MonoBehaviour
             score = 0;
             DialogueLua.SetVariable("1_2_SandWich", 0);
         }
-        else if (cookedCount >= 1 && cookedCount <= 3)
+        else if (cookedCount >= 1 && cookedCount <= 2)
         {
             score = 1;
             DialogueLua.SetVariable("1_2_SandWich", 1);
         }
-        else if (cookedCount == 4)
+        else if (cookedCount == 3)
         {
             score = 2;
             DialogueLua.SetVariable("1_2_SandWich", 2);

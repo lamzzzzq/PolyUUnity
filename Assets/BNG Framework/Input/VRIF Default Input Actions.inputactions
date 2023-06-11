@@ -422,7 +422,7 @@
                 {
                     "name": "",
                     "id": "e870334b-3dcf-4446-80da-692913c748ee",
-                    "path": "<XRController>{LeftHand}/thumbstickClicked",
+                    "path": "<Keyboard>/o",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",

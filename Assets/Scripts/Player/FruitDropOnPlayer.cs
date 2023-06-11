@@ -35,7 +35,7 @@ public class FruitDropOnPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         npcEvents.Invoke();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         FruitCanvas.SetActive(true);
     }
 }

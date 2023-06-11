@@ -54,8 +54,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 91714069485985792
-    m_Localized: "You are here to provide a THEWORD for your grandma. \n\nYou may
-      find the Navigation Board on your right hand side. "
+    m_Localized: "\"Welcome to \"\"Cradle\"\"! \n\nThank you for joining us today.
+      You're about to embark on a journey of kindness right from the shopping mall.
+      Get ready to make a positive impact on people you met and earn reward points
+      along the way. Are you excited? Let's begin!\""
     m_Metadata:
       m_Items: []
   - m_Id: 98307855620120576

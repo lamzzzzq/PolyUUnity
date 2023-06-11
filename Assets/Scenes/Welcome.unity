@@ -29475,7 +29475,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:9cc644c5f22b9d0409fc2f1538003795
     m_TableEntryReference:
-      m_KeyId: 24462967279853568
+      m_KeyId: 24462964985569280
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -49354,7 +49354,7 @@ MonoBehaviour:
   RotateAction: {fileID: -6493913391331992944, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}
   RotationType: 0
-  SnapRotationAmount: 45
+  SnapRotationAmount: 20
   SnapInputAmount: 0.75
   SmoothTurnSpeed: 40
   SmoothTurnMinInput: 0.1
@@ -73351,7 +73351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   fader: {fileID: 2294551287016359706}
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &4144118093912075215
 Transform:
   m_ObjectHideFlags: 0
@@ -110997,7 +110996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultLocomotion: 1
   LoadLocomotionFromPrefs: 0
-  locomotionToggleInput: 0e000000
+  locomotionToggleInput: 
   LocomotionToggleAction: {fileID: 3512515067727415170, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}
 --- !u!1 &8116959640625242104

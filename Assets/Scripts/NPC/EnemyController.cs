@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     //bool配合動畫
     bool isWalk;
     bool isTalk;
+    bool isPick;
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class EnemyController : MonoBehaviour
     {
         anim.SetBool("Walk", isWalk);
         anim.SetBool("Talk", isTalk);
+        anim.SetBool("Pick", isPick);
     }
 
     void SwitchStates()

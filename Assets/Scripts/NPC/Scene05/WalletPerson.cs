@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using PixelCrushers.DialogueSystem;
+using BNG;
 
 public class WalletPerson : MonoBehaviour
 {
@@ -12,12 +13,21 @@ public class WalletPerson : MonoBehaviour
     public GameObject phone;
     public GameObject phoneCanvas;
     public List<GameObject> customer;
+    public GameObject phonePersonToActive;
+
+    public GameObject player;
 
     private NavMeshAgent _agent;
     private Animator _anim;
     //public FacePlayerNormal facePlayer;
     private Transform target;
     private bool activatePhone;
+    private bool secondNav = false;
+
+    public GameObject ObjectToCreate;
+
+
+
 
 
     // Start is called before the first frame update
@@ -46,14 +56,14 @@ public class WalletPerson : MonoBehaviour
                 _anim.SetBool("Walk", false);
                 _anim.SetBool("Fall", false);
                 //facePlayer.enabled = true;
-
-                if(!activatePhone)
+                if (!activatePhone)
                 {
                     phone.SetActive(true);
                     activatePhone = true;
                 }
 
-                phoneCanvas.SetActive(true);
+                StartCoroutine(SetActiveCanvas());
+
                 foreach (var item in customer)
                 {
                     item.SetActive(false);
@@ -61,10 +71,14 @@ public class WalletPerson : MonoBehaviour
 
                 target = transform;
                 _agent.isStopped = true;
-                transform.position = new Vector3(-7.9f, 0.103f, -134.85f);
+                transform.position = new Vector3(-7.9f, -50f, -134.85f);
+                phonePersonToActive.SetActive(true);
                 //切换canvas
                 //this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
                 //和玩家对话
+                //this.GetComponent<DialogueSystemTrigger>().OnUse();
+                //secondNav = true;
+                
                 //this.GetComponent<DialogueSystemTrigger>().OnUse();
             }
         }
@@ -77,4 +91,23 @@ public class WalletPerson : MonoBehaviour
         target = targetPosition;
         _agent.SetDestination(target.position);
     }
+
+    private IEnumerator SetActiveCanvas()
+    {
+        yield return new WaitForSeconds(2);
+        phoneCanvas.SetActive(true);
+    }
+
+    public void ReleasePhone()
+    {
+        phone.GetComponent<Grabbable>().CanBeDropped = true;
+
+        phone.SetActive(false);
+    }
+
+    public void WalkToPlayer()
+    {
+        target = player.transform;
+    }
+
 }

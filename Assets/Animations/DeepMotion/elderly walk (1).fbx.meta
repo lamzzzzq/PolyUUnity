@@ -1,0 +1,1106 @@
+fileFormatVersion: 2
+guid: e525b089bb77a624f9698dc511a2fb9f
+ModelImporter:
+  serializedVersion: 20300
+  internalIDToNameTable:
+  - first:
+      74: 2264077025236624520
+    second: Armature.001|Armature.001Action
+  - first:
+      74: -5784005261616917065
+    second: Armature.001|Armature.001Action.001
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.001|Armature.001Action
+      takeName: Armature.001|Armature.001Action
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.001|Armature.001Action.001
+      takeName: Armature.001|Armature.001Action.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: TP_Pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_UpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_UpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger0
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger02
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger11
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger12
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger21
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger22
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger3
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger31
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger32
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger4
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger41
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_L_Finger42
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger02
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger11
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger12
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger21
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger22
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger3
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger31
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger32
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger4
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger41
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_R_Finger42
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: TP_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: elderly walk (1)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: stick
+      parentName: elderly walk (1)(Clone)
+      position: {x: 0.24894457, y: 0.8968194, z: 0.42404598}
+      rotation: {x: -0.7225331, y: -0.0047460394, z: 0.0020549688, w: 0.691317}
+      scale: {x: 99.99999, y: 100.00006, z: 99.99997}
+    - name: Armature.001
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000081460335, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ROOT
+      parentName: Armature.001
+      position: {x: 0.008765911, y: -0.01714341, z: -0.2701284}
+      rotation: {x: -0.000000059602897, y: -0.0076551796, z: 4.5628484e-10, w: 0.99997073}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: TP
+      parentName: ROOT
+      position: {x: 0.03851191, y: 0.76466495, z: 0.24911141}
+      rotation: {x: 1.4210855e-14, y: 0.5905412, z: -2.842171e-14, w: 0.8070076}
+      scale: {x: 1.0000042, y: 1, z: 1.0000042}
+    - name: TP_Pelvis
+      parentName: TP
+      position: {x: -0.013780025, y: 0.0817796, z: -0.041216727}
+      rotation: {x: 2.1990729e-10, y: -0.9870156, z: 0.0000000011621393, w: 0.16062443}
+      scale: {x: 1.0000018, y: 1.0000001, z: 1.0000018}
+    - name: TP_Spine
+      parentName: TP_Pelvis
+      position: {x: -0.000113863796, y: 0.094902955, z: 0.0000002225302}
+      rotation: {x: -0.0000000026374696, y: 0.0000015348194, z: 0.00000010477378,
+        w: 1}
+      scale: {x: 0.99999875, y: 0.9999999, z: 0.9999983}
+    - name: TP_Spine1
+      parentName: TP_Spine
+      position: {x: -0.00000003159046, y: 0.14304194, z: 5.9604643e-10}
+      rotation: {x: 0.0000000029103697, y: -0, z: -0.00000004656612, w: 1}
+      scale: {x: 1.0000039, y: 0.9999999, z: 1.0000035}
+    - name: TP_Spine2
+      parentName: TP_Spine1
+      position: {x: -0.00000013381242, y: 0.14304222, z: 0.0000000011920929}
+      rotation: {x: 0.0000000014551873, y: 9.2644216e-23, z: -0.000000023283068, w: 1}
+      scale: {x: 1.0000068, y: 0.9999997, z: 1.0000057}
+    - name: TP_Neck
+      parentName: TP_Spine2
+      position: {x: -0.016629599, y: 0.1033278, z: -0.00000002503395}
+      rotation: {x: -0.0000000029103533, y: 5.0823003e-17, z: 0.00000005820765, w: 1}
+      scale: {x: 1.0000063, y: 0.999998, z: 1.0000062}
+    - name: TP_Head
+      parentName: TP_Neck
+      position: {x: 0.000072513816, y: 0.09106793, z: -8.9406965e-10}
+      rotation: {x: 0.0000000014552988, y: 0.00000043213362, z: -0.0000000698492,
+        w: 1}
+      scale: {x: 1.0000042, y: 1.0000002, z: 1.000007}
+    - name: Glasses
+      parentName: TP_Head
+      position: {x: -0.00000003695488, y: -0.000000057071446, z: -0.0000000023841857}
+      rotation: {x: 5.440092e-15, y: -0, z: -0.000000023283075, w: 1}
+      scale: {x: 1.0000056, y: 1, z: 1.0000057}
+    - name: Glasses_end
+      parentName: Glasses
+      position: {x: -0, y: 0.025012512, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Clavicle
+      parentName: TP_Spine2
+      position: {x: -0.020187061, y: 0.05488415, z: 0.03623033}
+      rotation: {x: -8.3596385e-10, y: 0.70710605, z: -8.359581e-10, w: 0.70710754}
+      scale: {x: 1.000007, y: 0.99999815, z: 1.0000081}
+    - name: TP_L_UpperArm
+      parentName: TP_L_Clavicle
+      position: {x: -0.07787386, y: -0.00000008314848, z: -0.000000057816504}
+      rotation: {x: -0.05937987, y: -0.2519159, z: -0.22160786, w: 0.94016075}
+      scale: {x: 1.0000011, y: 1.0000004, z: 1.0000011}
+    - name: TP_L_Forearm
+      parentName: TP_L_UpperArm
+      position: {x: -0.16761978, y: -0.11174652, z: 0.09677528}
+      rotation: {x: 0.16164322, y: 0.093026884, z: -0.03614741, w: 0.9817897}
+      scale: {x: 1.0000384, y: 1.0000002, z: 0.99996513}
+    - name: TP_L_Hand
+      parentName: TP_L_Forearm
+      position: {x: -0.18119441, y: -0.07786637, z: 0.10514031}
+      rotation: {x: -0.000000009178102, y: 0.8443333, z: 0.000000059309958, w: 0.5358184}
+      scale: {x: 1.0000286, y: 1.0000002, z: 0.99998194}
+    - name: TP_L_Finger0
+      parentName: TP_L_Hand
+      position: {x: -0.036547367, y: 0.0055666277, z: -0.021665467}
+      rotation: {x: -0.22693972, y: -0.9430089, z: -0.1864156, w: -0.15646654}
+      scale: {x: 1.0000302, y: 1.0000008, z: 0.99997765}
+    - name: TP_L_Finger01
+      parentName: TP_L_Finger0
+      position: {x: 0.03857014, y: -0.031171894, z: 0.011479511}
+      rotation: {x: -0.000000012481232, y: -0.0000860784, z: 0.000000005829188, w: 1}
+      scale: {x: 1.0000006, y: 1.0000019, z: 1.0000004}
+    - name: TP_L_Finger02
+      parentName: TP_L_Finger01
+      position: {x: 0.020504292, y: -0.016587062, z: 0.006101142}
+      rotation: {x: 0.2559956, y: -0.0000446654, z: -0.86071664, w: 0.44003764}
+      scale: {x: 1.000003, y: 1.000001, z: 1.0000035}
+    - name: TP_L_Finger02_end
+      parentName: TP_L_Finger02
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Finger1
+      parentName: TP_L_Hand
+      position: {x: -0.036397737, y: -0.01713021, z: -0.08158249}
+      rotation: {x: -0.0013928864, y: -0.14337735, z: 0.0042838063, w: 0.9896579}
+      scale: {x: 1.000211, y: 1, z: 0.9998101}
+    - name: TP_L_Finger11
+      parentName: TP_L_Finger1
+      position: {x: -0.014782895, y: -0.0069235214, z: -0.022342369}
+      rotation: {x: 0.000000033355672, y: 0.0007557122, z: 0.000000037864883, w: 0.99999976}
+      scale: {x: 1.0000113, y: 1, z: 1.0000125}
+    - name: TP_L_Finger12
+      parentName: TP_L_Finger11
+      position: {x: -0.014752388, y: -0.00693473, z: -0.02235918}
+      rotation: {x: -0.66030633, y: 0.0004562941, z: 0.4351026, w: 0.612112}
+      scale: {x: 1.0000138, y: 1, z: 1.0000169}
+    - name: TP_L_Finger12_end
+      parentName: TP_L_Finger12
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Finger2
+      parentName: TP_L_Hand
+      position: {x: -0.010857213, y: -0.025783848, z: -0.08473525}
+      rotation: {x: 0.000000032565936, y: -0.044049997, z: -0.0000000046932747, w: 0.9990294}
+      scale: {x: 1.0000923, y: 1.0000007, z: 0.99995035}
+    - name: TP_L_Finger21
+      parentName: TP_L_Finger2
+      position: {x: -0.0063646734, y: -0.008906675, z: -0.025426425}
+      rotation: {x: -0.000000022449667, y: 0.00066728494, z: 0.000000014263026, w: 0.99999976}
+      scale: {x: 0.9999978, y: 1.0000019, z: 0.999997}
+    - name: TP_L_Finger22
+      parentName: TP_L_Finger21
+      position: {x: -0.0063347765, y: -0.008917652, z: -0.025430305}
+      rotation: {x: -0.7890857, y: 0.00037919945, z: 0.19601269, w: 0.58217084}
+      scale: {x: 1, y: 1.0000014, z: 1.0000029}
+    - name: TP_L_Finger22_end
+      parentName: TP_L_Finger22
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Finger3
+      parentName: TP_L_Hand
+      position: {x: 0.0113947075, y: -0.03754379, z: -0.07886319}
+      rotation: {x: 0.000000028997876, y: 0.043185547, z: 0.0000000036940047, w: 0.99906707}
+      scale: {x: 0.9999446, y: 1.0000004, z: 1.0000772}
+    - name: TP_L_Finger31
+      parentName: TP_L_Finger3
+      position: {x: 0.0026278496, y: -0.010716133, z: -0.025673313}
+      rotation: {x: 0.000000028345383, y: 0.00056039524, z: 4.907062e-11, w: 0.9999999}
+      scale: {x: 1.0000021, y: 1.0000012, z: 1.0000055}
+    - name: TP_L_Finger32
+      parentName: TP_L_Finger31
+      position: {x: 0.002651329, y: -0.010727431, z: -0.025665663}
+      rotation: {x: -0.8273742, y: 0.00030306276, z: -0.08594742, w: 0.5550359}
+      scale: {x: 1.0000176, y: 1.0000027, z: 1.0000182}
+    - name: TP_L_Finger32_end
+      parentName: TP_L_Finger32
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Finger4
+      parentName: TP_L_Hand
+      position: {x: 0.02265284, y: -0.053753164, z: -0.06670642}
+      rotation: {x: 0.06709964, y: 0.28404328, z: -0.031357933, w: 0.9559465}
+      scale: {x: 0.99975723, y: 1.0000002, z: 1.0002648}
+    - name: TP_L_Finger41
+      parentName: TP_L_Finger4
+      position: {x: 0.013301964, y: -0.0113501735, z: -0.01788509}
+      rotation: {x: -0.00000006753071, y: 0.00036862487, z: 0.00000002335875, w: 1}
+      scale: {x: 1.0000156, y: 1.0000006, z: 1.0000194}
+    - name: TP_L_Finger42
+      parentName: TP_L_Finger41
+      position: {x: 0.013309676, y: -0.011360104, z: -0.017872704}
+      rotation: {x: -0.68381137, y: 0.00018472421, z: -0.50938666, w: 0.52242446}
+      scale: {x: 1.0000104, y: 1.0000023, z: 1.0000107}
+    - name: TP_L_Finger42_end
+      parentName: TP_L_Finger42
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Clavicle
+      parentName: TP_Spine2
+      position: {x: -0.020186879, y: 0.05488408, z: -0.036230464}
+      rotation: {x: 0.00000003498504, y: 0.70710766, z: 0.000000030869383, w: -0.707106}
+      scale: {x: 1.0000232, y: 0.9999974, z: 1.0000226}
+    - name: TP_R_UpperArm
+      parentName: TP_R_Clavicle
+      position: {x: -0.07787378, y: 0.00000018239021, z: -0.000000013113022}
+      rotation: {x: 0.05937852, y: 0.25191614, z: -0.22160178, w: 0.9401623}
+      scale: {x: 1.0000132, y: 1.0000001, z: 1.0000108}
+    - name: TP_R_Forearm
+      parentName: TP_R_UpperArm
+      position: {x: -0.16761963, y: -0.11174651, z: -0.09677561}
+      rotation: {x: -0.16164225, y: -0.09301618, z: -0.03615435, w: 0.98179054}
+      scale: {x: 1.0000205, y: 1.0000002, z: 0.99999577}
+    - name: TP_R_Hand
+      parentName: TP_R_Forearm
+      position: {x: -0.18119447, y: -0.07786654, z: -0.10514049}
+      rotation: {x: -0.0000000046068167, y: -0.8443333, z: -0.000000020468523, w: 0.53581834}
+      scale: {x: 0.99998766, y: 1.0000014, z: 1.0000196}
+    - name: TP_R_Finger0
+      parentName: TP_R_Hand
+      position: {x: -0.036547378, y: 0.005566778, z: 0.021665262}
+      rotation: {x: 0.22694108, y: 0.9430124, z: -0.18641195, w: -0.15644833}
+      scale: {x: 1.0000178, y: 1.000001, z: 1.0000026}
+    - name: TP_R_Finger01
+      parentName: TP_R_Finger0
+      position: {x: 0.03857002, y: -0.031171927, z: -0.011479421}
+      rotation: {x: -0.000000009009094, y: 0.000086111926, z: -0.000000017451928,
+        w: 1}
+      scale: {x: 1.0000095, y: 1.0000017, z: 1.0000107}
+    - name: TP_R_Finger02
+      parentName: TP_R_Finger01
+      position: {x: 0.020504264, y: -0.016586551, z: -0.006100025}
+      rotation: {x: -0.25598958, y: 0.00006956333, z: -0.86072046, w: 0.44003373}
+      scale: {x: 1.0000117, y: 1.0000005, z: 1.0000117}
+    - name: TP_R_Finger02_end
+      parentName: TP_R_Finger02
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Finger1
+      parentName: TP_R_Hand
+      position: {x: -0.036397777, y: -0.017129883, z: 0.081582315}
+      rotation: {x: 0.001388159, y: 0.1433133, z: 0.0042622904, w: 0.9896673}
+      scale: {x: 1.0000607, y: 1.0000013, z: 0.99994165}
+    - name: TP_R_Finger11
+      parentName: TP_R_Finger1
+      position: {x: -0.01478291, y: -0.006923752, z: 0.022342276}
+      rotation: {x: 0.000000037533955, y: -0.0007550117, z: -0.00000002035691, w: 0.99999976}
+      scale: {x: 1.0000027, y: 1.0000032, z: 1.0000024}
+    - name: TP_R_Finger12
+      parentName: TP_R_Finger11
+      position: {x: -0.014752216, y: -0.006934805, z: 0.02235858}
+      rotation: {x: 0.6603549, y: -0.0004493399, z: 0.4350207, w: 0.6121178}
+      scale: {x: 1.0000049, y: 1.0000001, z: 1.0000048}
+    - name: TP_R_Finger12_end
+      parentName: TP_R_Finger12
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Finger2
+      parentName: TP_R_Hand
+      position: {x: -0.010857243, y: -0.025783896, z: 0.08473505}
+      rotation: {x: 0.000000044933827, y: 0.044050083, z: -0.000000002503083, w: 0.9990294}
+      scale: {x: 1.0000215, y: 1.0000021, z: 0.9999824}
+    - name: TP_R_Finger21
+      parentName: TP_R_Finger2
+      position: {x: -0.006364698, y: -0.008906784, z: 0.025426487}
+      rotation: {x: -0.000000007468224, y: -0.000667311, z: -0.000000017402362, w: 0.99999976}
+      scale: {x: 1.0000011, y: 1.0000024, z: 1.0000002}
+    - name: TP_R_Finger22
+      parentName: TP_R_Finger21
+      position: {x: -0.006334729, y: -0.008917622, z: 0.02543033}
+      rotation: {x: 0.78907984, y: -0.0003754671, z: 0.19599992, w: 0.582183}
+      scale: {x: 0.99999875, y: 1.0000002, z: 0.99999946}
+    - name: TP_R_Finger22_end
+      parentName: TP_R_Finger22
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Finger3
+      parentName: TP_R_Hand
+      position: {x: 0.011394539, y: -0.03754386, z: 0.07886304}
+      rotation: {x: 0.00000006974575, y: -0.043186173, z: -0.000000013557063, w: 0.99906707}
+      scale: {x: 0.99997693, y: 1.0000008, z: 1.000019}
+    - name: TP_R_Finger31
+      parentName: TP_R_Finger3
+      position: {x: 0.0026278018, y: -0.0107161375, z: 0.025673369}
+      rotation: {x: -0.000000038385338, y: -0.00056004134, z: 0.000000023353227, w: 0.9999999}
+      scale: {x: 1.0000008, y: 1.0000021, z: 1.0000007}
+    - name: TP_R_Finger32
+      parentName: TP_R_Finger31
+      position: {x: 0.0026515103, y: -0.010727591, z: 0.025666216}
+      rotation: {x: 0.8273795, y: -0.00029552367, z: -0.08594351, w: 0.5550286}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.000003}
+    - name: TP_R_Finger32_end
+      parentName: TP_R_Finger32
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Finger4
+      parentName: TP_R_Hand
+      position: {x: 0.022652812, y: -0.05375335, z: 0.06670635}
+      rotation: {x: -0.067129135, y: -0.284106, z: -0.03137564, w: 0.9559253}
+      scale: {x: 0.9999209, y: 1.0000011, z: 1.0000756}
+    - name: TP_R_Finger41
+      parentName: TP_R_Finger4
+      position: {x: 0.013301973, y: -0.011350104, z: 0.017885074}
+      rotation: {x: 0.000000029529978, y: -0.00036855027, z: 5.025667e-11, w: 1}
+      scale: {x: 0.99999905, y: 1.0000027, z: 1.0000005}
+    - name: TP_R_Finger42
+      parentName: TP_R_Finger41
+      position: {x: 0.013309879, y: -0.011359829, z: 0.017872715}
+      rotation: {x: 0.6837364, y: -0.00018088608, z: -0.5094949, w: 0.522417}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000007}
+    - name: TP_R_Finger42_end
+      parentName: TP_R_Finger42
+      position: {x: -0, y: 0.025012588, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_L_Thigh
+      parentName: TP_Pelvis
+      position: {x: 0.000000026673078, y: -0.00000016704202, z: 0.08252426}
+      rotation: {x: -0.00000010477377, y: 1, z: -0.0000000011822032, w: -0.00000037252897}
+      scale: {x: 0.9999986, y: 1.0000004, z: 0.9999985}
+    - name: TP_L_Calf
+      parentName: TP_L_Thigh
+      position: {x: -0.0359131, y: -0.35793385, z: 0.000000019073486}
+      rotation: {x: -0.0000000029103904, y: -0, z: 0.00000002328306, w: 1}
+      scale: {x: 1.0000038, y: 1.0000004, z: 1.0000033}
+    - name: TP_L_Foot
+      parentName: TP_L_Calf
+      position: {x: 0.035913, y: -0.3579338, z: 0.000000009536743}
+      rotation: {x: 0.0000000014551997, y: -5.0822162e-17, z: 0.000000005820751, w: 1}
+      scale: {x: 1.0000049, y: 1.0000005, z: 1.0000056}
+    - name: TP_L_Toe0
+      parentName: TP_L_Foot
+      position: {x: -0.09671545, y: -0.089278616, z: -0.000000011622905}
+      rotation: {x: 0.0000000014552002, y: -4.2351892e-17, z: 1.4210853e-14, w: 1}
+      scale: {x: 1.0000064, y: 1, z: 1.0000064}
+    - name: TP_L_Toe0_end
+      parentName: TP_L_Toe0
+      position: {x: -0, y: 0.025012556, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TP_R_Thigh
+      parentName: TP_Pelvis
+      position: {x: 0.00000007033348, y: 0.0000003093481, z: -0.08252428}
+      rotation: {x: -0.00000006984918, y: 1, z: 0.00000000463854, w: -0.00000037252897}
+      scale: {x: 0.9999986, y: 1.0000002, z: 0.999999}
+    - name: TP_R_Calf
+      parentName: TP_R_Thigh
+      position: {x: -0.035913028, y: -0.35793388, z: -0.0000000047683715}
+      rotation: {x: 0.0000000072759554, y: -0, z: -0.0000000116415375, w: 1}
+      scale: {x: 1.0000037, y: 1.0000002, z: 1.0000037}
+    - name: TP_R_Foot
+      parentName: TP_R_Calf
+      position: {x: 0.03591303, y: -0.35793376, z: -0.000000004172325}
+      rotation: {x: 0.000000016007098, y: 0.00000010430808, z: -6.9761883e-15, w: 1}
+      scale: {x: 1.0000129, y: 1.0000002, z: 1.000014}
+    - name: TP_R_Toe0
+      parentName: TP_R_Foot
+      position: {x: -0.096715465, y: -0.08927861, z: 0.0000000038743018}
+      rotation: {x: -0.0000000029103842, y: -0, z: -0.0000000029103757, w: 1}
+      scale: {x: 1.000008, y: 1, z: 1.000007}
+    - name: TP_R_Toe0_end
+      parentName: TP_R_Toe0
+      position: {x: -0, y: 0.025012556, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFLegsL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFSweater
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFFeetB
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFFeetA
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFFeetC
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFTieS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFSuit
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFTieL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFDressL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFDressS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFLegsS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFSkirt
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFShirtAL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFShirtAS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFShirtBS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFTshirtL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFTshirtS
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFTshirtB
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFLeggings
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFShirtBL
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPBowtie
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0.0000014999999, z: 1.2219053e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HEADsimple
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0.00001208, y: -0.02426697, z: -0.00000003395359}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairG
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: -0.00624512, z: -0.0000000010174595}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairC
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0.00000014999998, y: 1.3169285, z: -0.016670715}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairB
+      parentName: elderly walk (1)(Clone)
+      position: {x: 0.00000012, y: 1.3183997, z: -0.016670685}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairE
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0.00000014999998, y: 1.3150047, z: -0.016670715}
+      rotation: {x: 0.00000058146037, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairF
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0.00000014999998, y: 1.3194983, z: -0.018260065}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairA
+      parentName: elderly walk (1)(Clone)
+      position: {x: 0.00000035, y: 1.3183998, z: -0.016670795}
+      rotation: {x: 0.00000058146037, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHairD
+      parentName: elderly walk (1)(Clone)
+      position: {x: 0.00000003, y: 1.3183999, z: -0.016670546}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHatA
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHatB
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: TPFHatC
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HEAD
+      parentName: elderly walk (1)(Clone)
+      position: {x: -0, y: -0.02426697, z: -0.0000000039535917}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

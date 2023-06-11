@@ -16,6 +16,7 @@ public class FruitLady : MonoBehaviour
 
     public FacePlayerNormal facePlayer;
     private Animator _childAnim;
+    //public Animator test;
     private bool objectCounted = false;
 
     private void Start()
@@ -41,6 +42,7 @@ public class FruitLady : MonoBehaviour
     {
         facePlayer.enabled = true;
         _childAnim.SetBool("Pick", true);
+        //test.SetBool("Pick", true);
         Basket.SetActive(false);
         BagFloor.SetActive(false);
         BagHand.SetActive(true);
@@ -70,5 +72,10 @@ public class FruitLady : MonoBehaviour
     public void StartConversation()
     {
         FruitLadyObj.GetComponent<DialogueSystemTrigger>().OnUse();
+    }
+
+    public void ResueToHelp()
+    {
+        DialogueLua.SetVariable("3_5_Detect", true);
     }
 }

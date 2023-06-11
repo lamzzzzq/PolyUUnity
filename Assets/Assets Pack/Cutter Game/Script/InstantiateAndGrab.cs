@@ -23,6 +23,7 @@ public class InstantiateAndGrab : MonoBehaviour
             grabbable = go.GetComponent<Grabbable>();
 
             grabber.GrabGrabbable(grabbable);
+            
         }
     }
 

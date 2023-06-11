@@ -20,6 +20,7 @@ public class Lucy : MonoBehaviour
                 _facePlayer.enabled = true;
                 PlayAnimation();
                 WaterFadeIn();
+                StartConversation();
             }
             _audio.enabled = false;
         }
@@ -38,5 +39,14 @@ public class Lucy : MonoBehaviour
             gameObject[i].GetComponent<WaterFadeIn>().StartFading();
         }
         waterPoured = true;
+    }
+
+    public void StartConversation()
+    {
+        foreach (var trigger in this.GetComponents<DialogueSystemTrigger>())
+        {
+            trigger.OnUse();
+        }
+
     }
 }

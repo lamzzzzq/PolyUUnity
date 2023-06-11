@@ -28,6 +28,8 @@ public class Teacher : MonoBehaviour
 
     public FacePlayerNormal faceplayer;
 
+    public GameObject block1,block2;
+
     void Start()
     {
         Target = Target3;
@@ -66,6 +68,8 @@ public class Teacher : MonoBehaviour
 
             faceplayer.enabled = true;
             canvas.SetActive(true);
+            block1.SetActive(true);
+            block2.SetActive(true);
 
             //disable player movement
             if(!disableMovement)

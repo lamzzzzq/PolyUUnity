@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
 using BNG;
+using UnityEngine.Events;
 
 public class LiftBehaviour : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LiftBehaviour : MonoBehaviour
     public Animator doorAnimator;
     public AudioSource LiftPersonAudio;
     public GameObject liftPerson;
+    public GameObject canvas;
 
     private TeleportPlayerFade teleport;
     public ScreenFader ScreenFader;
@@ -21,7 +23,9 @@ public class LiftBehaviour : MonoBehaviour
     public GameObject player;
     public GameObject targetPosition;
     private bool isCoroutineRunning = false;
-    
+
+    public UnityEvent npcEvents;
+
 
 
     //public FadeManager fadeManager;
@@ -82,7 +86,9 @@ public class LiftBehaviour : MonoBehaviour
 
     public void ShowConversation()
     {
-        liftPerson.GetComponent<DialogueSystemTrigger>().OnUse();
+        //liftPerson.GetComponent<DialogueSystemTrigger>().OnUse();
+
+        canvas.SetActive(true);
     }
 
 
@@ -191,6 +197,22 @@ public class LiftBehaviour : MonoBehaviour
         teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
 
         playerController.enabled = true;
+    }
+
+    public void YesCoroutine()
+    {
+        //quest status change to Active
+        QuestLog.SetQuestState("HoldLift", QuestState.Active);
+        //envoke event : LiftBehaviour.CloseLiftDoor
+        npcEvents.Invoke();
+    }
+
+    public void NoCoroutine()
+    {
+        //quest status change to failure
+        QuestLog.SetQuestState("HoldLift", QuestState.Failure);
+        //envoke event : LiftBehaviour.CloseLiftDoor
+        npcEvents.Invoke();
     }
 
 }

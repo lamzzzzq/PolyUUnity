@@ -13,7 +13,7 @@ public class ConversationControl : MonoBehaviour
     private IEnumerator DelayAndStopConversation()
     {
         Debug.Log("Zhixing!");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         DialogueManager.StopConversation();
         
     }

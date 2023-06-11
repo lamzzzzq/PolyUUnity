@@ -23,17 +23,23 @@ public class QuestInitialization : MonoBehaviour
 
     void ResetQuests()
     {
+
+        //Level 1
         QuestLog.SetQuestState("1_1_CleanTheDirt", QuestState.Unassigned);
         QuestLog.SetQuestState("1_2_Sandwich", QuestState.Unassigned);
         QuestLog.SetQuestState("1_3_WashPlate", QuestState.Unassigned);
         QuestLog.SetQuestState("1.4_GrandmaGlasses", QuestState.Unassigned);
         QuestLog.SetQuestState("1.5_Sister", QuestState.Unassigned);
 
+        //Level 2
         QuestLog.SetQuestState("2.1_TeacherDropItem", QuestState.Unassigned);
         QuestLog.SetQuestState("2.2_WaterPour", QuestState.Unassigned);
         QuestLog.SetQuestState("2.3_FindPen", QuestState.Unassigned);
         QuestLog.SetQuestState("2.4_ComfortClassmate", QuestState.Unassigned);
         QuestLog.SetQuestState("2.5_Organize", QuestState.Unassigned);
+
+        //Level 3
+
 
         /*        foreach (QuestStatus qs in initialQuestStatuses)
                 {
@@ -63,7 +69,6 @@ public class QuestInitialization : MonoBehaviour
         {
             ReadQuestState();
         }
-
     }
 
     void ReadQuestState()
