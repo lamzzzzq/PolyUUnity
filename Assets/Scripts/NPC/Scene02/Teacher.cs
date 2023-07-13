@@ -10,7 +10,7 @@ public class Teacher : MonoBehaviour
     private Animator _anim;
 
     public HelpTeacher helpTeacher;
-    public AudioClip audioClip;
+    public AudioClip audioClip,teacherUIAudio;
     private AudioSource audioSource;
 
     public List<GameObject> TriggerPoints = new List<GameObject>();
@@ -29,6 +29,8 @@ public class Teacher : MonoBehaviour
     public FacePlayerNormal faceplayer;
 
     public GameObject block1,block2;
+    private bool playAudio = false;
+    private bool playAiya = false;
 
     void Start()
     {
@@ -45,8 +47,12 @@ public class Teacher : MonoBehaviour
         if (Vector3.Distance(transform.position, Target.position) < 0.1f && Fall == true)
         {
             StopMoving();
-            audioSource.clip = audioClip;
-            audioSource.Play();
+            if(!playAiya)
+            {
+                audioSource.clip = audioClip;
+                audioSource.Play();
+                playAiya = true;
+            }
             _anim.SetBool("Fall", true);
             StartCoroutine(GoToTheSecondPoint(3f));
         }
@@ -68,8 +74,14 @@ public class Teacher : MonoBehaviour
 
             faceplayer.enabled = true;
             canvas.SetActive(true);
-            block1.SetActive(true);
-            block2.SetActive(true);
+            if(!playAudio)
+            {
+                audioSource.PlayOneShot(teacherUIAudio);
+                playAudio = true;
+            }
+
+            block1.SetActive(false);
+            block2.SetActive(false);
 
             //disable player movement
             if(!disableMovement)

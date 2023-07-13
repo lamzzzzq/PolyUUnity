@@ -5,6 +5,8 @@ using PixelCrushers.DialogueSystem;
 
 public class DetectToyItem : MonoBehaviour
 {
+    public int itemNumber;
+
     public void PlaceItem()
     {
         int itemNumber = DialogueLua.GetVariable("2_5_Item").asInt;
@@ -19,5 +21,14 @@ public class DetectToyItem : MonoBehaviour
         itemNumber--;
         DialogueLua.SetVariable("2_5_Item", itemNumber);
         Debug.Log(DialogueLua.GetVariable("2_5_Item").asInt);
+    }
+
+    private void Update()
+    {
+        int itemNumber = DialogueLua.GetVariable("2_5_Item").asInt;
+        if (itemNumber == 7)
+        {
+            //do sth.
+        }
     }
 }

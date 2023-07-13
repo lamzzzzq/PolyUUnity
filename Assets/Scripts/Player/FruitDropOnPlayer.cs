@@ -18,6 +18,9 @@ public class FruitDropOnPlayer : MonoBehaviour
 
     private CharacterController playerController;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     private void Start()
     {
         playerController = GameObject.Find("PlayerController").GetComponent<CharacterController>();
@@ -36,6 +39,25 @@ public class FruitDropOnPlayer : MonoBehaviour
         yield return new WaitForSeconds(1f);
         npcEvents.Invoke();
         yield return new WaitForSeconds(2f);
+        //Play audio clip
+        audioSource.PlayOneShot(audioClip);
         FruitCanvas.SetActive(true);
+        StartCoroutine(PlayAudioAndEnableButton());
+    }
+
+    private IEnumerator PlayAudioAndEnableButton()
+    {
+        yield return new WaitForSeconds(audioClip.length);
+        SetButtonsInteractable(true);
+    }
+
+    private void SetButtonsInteractable(bool interactable)
+    {
+        UnityEngine.UI.Button[] buttons = FruitCanvas.GetComponentsInChildren<UnityEngine.UI.Button>(true);
+
+        foreach (UnityEngine.UI.Button button in buttons)
+        {
+            button.interactable = interactable;
+        }
     }
 }

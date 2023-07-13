@@ -7,15 +7,14 @@ public class ButtonSwitch : MonoBehaviour
 {
     public GameObject guide;
     public GameObject menu;
-    public bool isEnabled = true;
+    public bool menuActive = true;
     public TextMeshProUGUI buttonText;
     // Start is called before the first frame update
     public void ButtonClicked()
     {
-        isEnabled = !isEnabled;
-
-        guide.SetActive(isEnabled);
-        menu.SetActive(!isEnabled);
-        buttonText.text = isEnabled ? "MENU" : "GUIDE";
+        menu.SetActive(menuActive);
+        guide.SetActive(!menuActive);
+        //buttonText.text = menuActive ? "MENU" : "GUIDE";
+        menuActive = !menuActive;
     }
 }

@@ -36,6 +36,8 @@ public class BlindPeople : MonoBehaviour
 
     private bool hasTouch = false;
 
+    private bool firstTime = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +76,11 @@ public class BlindPeople : MonoBehaviour
             // 5.15 comment
             /*onTargetReached?.Invoke();
             onTargetReached = null; // Reset the callback to avoid triggering again.*/
+            if(!firstTime)
+            {
+                ShowBlindPersonConversation();
+                firstTime = true;
+            }
         }
 
 
@@ -88,7 +95,6 @@ public class BlindPeople : MonoBehaviour
         _agent.SetDestination(target.transform.position);
         _anim.SetBool("Walk", true);
         _anim.SetBool("Idle", false);
-        ShowBlindPersonConversation();
 
     }
 

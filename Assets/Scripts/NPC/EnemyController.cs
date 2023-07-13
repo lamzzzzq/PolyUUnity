@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
     [Header("Patrol State")]
     public float patrolRange;
 
-    private Vector3 wayPoint;
+    public Vector3 wayPoint;
     private Vector3 guardPos;
 
     //bool配合動畫
@@ -151,7 +151,7 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    void GetNewWayPoint()
+    public void GetNewWayPoint()
     {
         remainLookAtTime = lookAtTime;
 

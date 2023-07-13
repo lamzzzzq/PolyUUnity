@@ -7,6 +7,10 @@ public class CapsuleBehaviour : MonoBehaviour
     public GameObject Capsule;
     public AudioClip audioClip;
     public AudioSource audioSource;
+    public GameObject capsule_obj;
+    public AudioClip audioClip_Disappear;
+
+    public GameObject particlePrefab;
 
     public void HoldAndDisappear()
     {
@@ -18,6 +22,20 @@ public class CapsuleBehaviour : MonoBehaviour
         audioSource.clip = audioClip;
         audioSource.Play();
         yield return new WaitForSeconds(4);
+        
+
+
+        // Instantiate the particle system prefab at the position of the Capsule
+        GameObject particleEffect = Instantiate(particlePrefab, capsule_obj.transform.position, Quaternion.identity);
+
+        // Wait for the particle effect to finish playing
+        ParticleSystem particleSystem = particleEffect.GetComponent<ParticleSystem>();
+        yield return new WaitForSeconds(particleSystem.main.duration);
+
+        // Destroy the particle effect object
+        Destroy(particleEffect);
         Capsule.SetActive(false);
+        audioSource.clip = audioClip_Disappear;
+        audioSource.Play();
     }
 }

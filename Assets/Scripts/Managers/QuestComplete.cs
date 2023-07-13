@@ -10,6 +10,7 @@ public class QuestComplete : MonoBehaviour
 
     public AudioClip audioClip;
     public AudioSource audioSource;
+    public StarManager starManager;
 
     private bool played = false;
 
@@ -54,7 +55,7 @@ public class QuestComplete : MonoBehaviour
             case 4:
                 {
                     //Debug.Log("Now is Level 4");
-                    //Level_4_Check();
+                    Level_4_Check();
                 }
                 break;
             case 5:
@@ -131,9 +132,9 @@ public class QuestComplete : MonoBehaviour
         }
     }
 
-    private void Level_5_Check()
+    private void Level_4_Check()
     {
-        if ((QuestLog.CurrentQuestState("Collect Mask") == "success") && (QuestLog.CurrentQuestState("HoldLift") == "abandoned") && (QuestLog.CurrentQuestState("WatsonCheckOut") == "success") && (QuestLog.CurrentQuestState("5_5_Phone") == "abandoned"))
+        if ((Lua.Run("return Variable['4_1_Detect']").AsBool) && (Lua.Run("return Variable['4_2_Detect']").AsBool) && (Lua.Run("return Variable['4_3_Detect']").AsBool) && (Lua.Run("return Variable['4_4_Detect']").AsBool) && (Lua.Run("return Variable['4_5_Detect']").AsBool))
         {
             Debug.Log("Level Complete!");
             menu.SetActive(true);
@@ -150,6 +151,38 @@ public class QuestComplete : MonoBehaviour
         {
             Debug.Log("If statement not met");
         }
+    }
+
+
+    private void Level_5_Check()
+    {
+        if ((Lua.Run("return Variable['5_1_Detect']").AsBool) && (Lua.Run("return Variable['5_2_Detect']").AsBool) && (Lua.Run("return Variable['5_3_Detect']").AsBool) && (Lua.Run("return Variable['5_4_Detect']").AsBool) && (Lua.Run("return Variable['5_5_Detect']").AsBool))
+        {
+            Debug.Log("Level Complete!");
+            menu.SetActive(true);
+
+            audioSource.clip = audioClip;
+            if (!played)
+            {
+                audioSource.Play();
+                played = true;
+            }
+
+        }
+        else
+        {
+            Debug.Log("If statement not met");
+        }
+    }
+
+    public void TaskSuccess()
+    {
+        starManager.CompleteTask(true);
+    }
+
+    public void TaskFail()
+    {
+        starManager.CompleteTask(false);
     }
 
 

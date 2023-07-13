@@ -18,6 +18,8 @@ public class HelpTeacher : MonoBehaviour
     public List<GameObject> npcToShow;
     public List<GameObject> npcToHide;
 
+    private bool teleportForItem = false;
+
     private CharacterController playerController;
 
     private void Start()
@@ -27,6 +29,16 @@ public class HelpTeacher : MonoBehaviour
         //disable controller
         //DisablePlayerController();
     }
+
+    private void Update()
+    {
+        if((DialogueLua.GetVariable("2_1_TeacherItem").asInt == 4)&&(DialogueLua.GetVariable("2_1_Dustbin").asBool) && !teleportForItem)
+        {
+            TalkAfterCollect();
+            teleportForItem = true;
+        }
+    }
+
 
     public void TransformAndHelp()
     {
@@ -41,6 +53,12 @@ public class HelpTeacher : MonoBehaviour
     public void DisablePlayerController()
     {
         playerController.enabled = false;
+    }
+
+    public void TalkAfterCollect()
+    {
+        teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
+        teacher.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
     

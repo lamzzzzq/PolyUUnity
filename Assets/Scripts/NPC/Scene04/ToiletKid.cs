@@ -14,9 +14,15 @@ public class ToiletKid : MonoBehaviour
 
     public FacePlayerNormal facePlayer;
 
+    public Transform npcPosition;
+
     private NavMeshAgent _agent;
     private Animator _anim;
     private Transform target;
+
+    public BoxCollider trigger;
+
+    [SerializeField] private bool firstTalk = true;
 
     // Start is called before the first frame update
     void Start()
@@ -47,15 +53,45 @@ public class ToiletKid : MonoBehaviour
             _anim.SetBool("Fall", false);
 
             facePlayer.enabled = true;
+
+            if (firstTalk)
+            {
+                foreach (var trigger in this.GetComponents<DialogueSystemTrigger>())
+                {
+                    trigger.OnUse();
+                }
+
+                firstTalk = false;
+            }
         }
     }
     
-    private void OnTriggerEnter(Collider other)
+/*    private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Target")
         {
             DialogueLua.SetVariable("TASK_4_1_ARRIVE", true);
             target = targetPoint;
         }
+    }*/
+
+    public void StayAndTalk()
+    {
+        transform.position = npcPosition.transform.position;
+
+        _agent.isStopped = true;
+        _anim.SetBool("Walk", false);
+        _anim.SetBool("Fall", false);
+
+        target = transform;
+        DialogueLua.SetVariable("TASK_4_1_ARRIVE", true);
+
+        foreach (var item in this.GetComponents<DialogueSystemTrigger>())
+        {
+            item.OnUse();
+        }
+
+        trigger.enabled = false;
+
     }
 }

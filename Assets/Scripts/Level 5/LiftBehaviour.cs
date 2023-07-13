@@ -10,9 +10,10 @@ public class LiftBehaviour : MonoBehaviour
     public bool isDoorOpened = false;
     public bool isDoorClosed = false;
     public bool isAudioPlayed = false;
+    public bool isAudioPersonPlayed = false;
     public Vector3 rotationDegree_1;
     public Animator doorAnimator;
-    public AudioSource LiftPersonAudio;
+    public AudioSource liftMenuAudio;
     public GameObject liftPerson;
     public GameObject canvas;
 
@@ -25,6 +26,10 @@ public class LiftBehaviour : MonoBehaviour
     private bool isCoroutineRunning = false;
 
     public UnityEvent npcEvents;
+
+
+    public AudioSource liftAudioSource;
+    public AudioClip liftAudioClip;
 
 
 
@@ -67,11 +72,12 @@ public class LiftBehaviour : MonoBehaviour
     IEnumerator LiftFlow()
     {
         yield return new WaitForSeconds(1);
+        FindObjectOfType<LiftPerson>().WalkTowardTheLift();
+        PlayLiftPersonAudio();
+        yield return new WaitForSeconds(liftAudioClip.length);
         PlayAudio();
         yield return new WaitForSeconds(0.5f);
         ShowConversation();
-        yield return new WaitForSeconds(0.5f);
-        FindObjectOfType<LiftPerson>().WalkTowardTheLift();
         _hasCompletedLiftFlow = true;
     }
 
@@ -79,8 +85,17 @@ public class LiftBehaviour : MonoBehaviour
     {
         if (!isAudioPlayed)
         {
-            LiftPersonAudio.Play();
+            liftMenuAudio.Play();
             isAudioPlayed = true;
+        }
+    }
+
+    public void PlayLiftPersonAudio()
+    {
+        if (!isAudioPersonPlayed)
+        {
+            liftAudioSource.PlayOneShot(liftAudioClip);
+            isAudioPersonPlayed = true;
         }
     }
 
@@ -156,7 +171,7 @@ public class LiftBehaviour : MonoBehaviour
         Debug.Log("Animation Close Played");
         isDoorClosed = true;
         teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
-
+        yield return new WaitForSeconds(2f);
         playerController.enabled = true;
 
         isCoroutineRunning = false;
@@ -195,7 +210,7 @@ public class LiftBehaviour : MonoBehaviour
         Debug.Log("Animation Close Played");
         isDoorClosed = true;
         teleport.ResetPlayerPosRotWithParameters(targetPosition.transform, ScreenFader);
-
+        yield return new WaitForSeconds(2f);
         playerController.enabled = true;
     }
 

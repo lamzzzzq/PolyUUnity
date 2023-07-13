@@ -8,6 +8,7 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
 {
     public Transform PlayerPosition_1;
     public Transform PlayerPosition_2;
+    public Transform PlayerPosition_3;
     public ScreenFader ScreenFader;
     public Vector3 rotationDegree_1;
     public Vector3 rotationDegree_2;
@@ -16,6 +17,7 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
     public TeleportPlayerFade teleport;
 
     public UnityEvent npcEvents;
+    public UnityEvent changeTarget;
 
     private CharacterController playerController;
 
@@ -49,5 +51,12 @@ public class DogOwnerFadeAndTransportOnPlayer : MonoBehaviour
     public void EnableController()
     {
         StartCoroutine(enableController());
+    }
+
+    public void DogOwnerAgreeToHelp()
+    {
+        teleport.ResetPlayerPosRotWithParameters(PlayerPosition_3, ScreenFader);
+        StartCoroutine(enableController());
+        changeTarget.Invoke();
     }
 }

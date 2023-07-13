@@ -11,8 +11,9 @@ public class LocaleSelector : MonoBehaviour
 
     private void Start()
     {
-        int ID = PlayerPrefs.GetInt("LocaleKey", 1 );
-        ChangeLocale(ID);
+        //int ID = PlayerPrefs.GetInt("LocaleKey", 1 );
+
+        StartCoroutine(SetLocale(1));
 
 
         Locale currentLocale = LocalizationSettings.SelectedLocale;

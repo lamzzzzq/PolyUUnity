@@ -54,10 +54,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 91714069485985792
-    m_Localized: "\"Welcome to \"\"Cradle\"\"! \n\nThank you for joining us today.
-      You're about to embark on a journey of kindness right from the shopping mall.
-      Get ready to make a positive impact on people you met and earn reward points
-      along the way. Are you excited? Let's begin!\""
+    m_Localized: "Welcome to \"Cradle\"! \n\nThank you for joining us today. You're
+      about to embark on a journey of kindness right from the shopping mall. Get
+      ready to make a positive impact on people you met and earn reward points along
+      the way. Are you excited? Let's begin!\""
     m_Metadata:
       m_Items: []
   - m_Id: 98307855620120576
@@ -77,6 +77,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 98325362737291264
     m_Localized: You can choose an amount and put it into the beggar's bowl.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108494468014809088
+    m_Localized: Please turn around, the kitchen is behind you. You can view the
+      menu and make sandwiches there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112789935376703488
+    m_Localized: "Welcome to \"Cradle\"! \n\nThank you for joining us today. You're
+      about to embark on a journey of kindness right from the park. Get ready to
+      make a positive impact on people you met and earn reward points along the way.
+      Are you excited? Let's begin!"
     m_Metadata:
       m_Items: []
   references:

@@ -10,11 +10,20 @@ public class DecrementScript : MonoBehaviour
     public TMP_Text numberText;
     public UnityEvent onNumberSeven;
     public UnityEvent onNumberFour;
+    public UnityEvent onNumberZero;
     //public GameObject particleSystem;
     public GameObject canvas;
     //public GameObject exitBtn;
     public GameObject gunBoy;
     private GunBoy gunBoyScript;
+    public ParticleSystem particleSystem;
+
+
+    public float cooldownDuration = 0.5f;
+    private float lastPressTime;
+
+
+    public bool isNPCMoving = false;
 
     private void Start()
     {
@@ -25,28 +34,52 @@ public class DecrementScript : MonoBehaviour
 
     public void DecrementNumber()
     {
+        // Check if enough time has passed since the last button press
+        if (Time.time - lastPressTime < cooldownDuration)
+        {
+            return; // Ignore the button press
+        }
+
+        lastPressTime = Time.time; // Record the current press time
+
+
+
         string numberString = numberText.text;
         if (int.TryParse(numberString, out int currentNumber))
         {
-            if (currentNumber == 7)
+            if(!isNPCMoving && currentNumber > 0)
             {
-                Debug.Log("Current Number is:" + currentNumber);
+                if (currentNumber == 7 || currentNumber == 4 || currentNumber == 1)
+                {
+                    // Do not play the particle system
+                }
+                else
+                {
+                    // Play the particle system
+                    particleSystem.Play();
+                }
 
-                Debug.Log("gunboyScript Enabled");
-                onNumberSeven.Invoke();
-                //particleSystem.SetActive(false);
-                //exitBtn.SetActive(true);
+                if (currentNumber == 7)
+                {
+                    Debug.Log("Current Number is:" + currentNumber);
+                    Debug.Log("gunboyScript Enabled");
+                    onNumberSeven.Invoke();
+                    //particleSystem.SetActive(false);
+                    //exitBtn.SetActive(true);
+                    Debug.Log("Show2");
+                }
+                if (currentNumber == 4)
+                {
+                    onNumberFour.Invoke();
+                }
+                if(currentNumber == 1)
+                {
+                    Debug.Log("Exe");
+                    onNumberZero.Invoke();
+                }
                 currentNumber--;
-                Debug.Log("Show2");
+                numberText.text = currentNumber.ToString();
             }
-            if(currentNumber ==4)
-            {
-                onNumberFour.Invoke();
-
-                //particleSystem.SetActive(false);
-            }
-            currentNumber--;
-            numberText.text = currentNumber.ToString();
         }
         else
         {

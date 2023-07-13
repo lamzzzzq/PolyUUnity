@@ -30,4 +30,10 @@ public class LiftOnPlayer : MonoBehaviour
 
         liftBehaviour.StartLift();
     }
+
+    public void DoneTask_5_2()
+    {
+        DialogueLua.SetVariable("5_2_Detect", true);
+    }
+
 }

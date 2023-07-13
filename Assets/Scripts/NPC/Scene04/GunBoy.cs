@@ -19,6 +19,10 @@ public class GunBoy : MonoBehaviour
     private Animator _anim;
     private EnemyController _enemyController;
 
+
+    public GameObject npcFaceTarget;
+    public DecrementScript bubbleScript;
+
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -65,13 +69,16 @@ public class GunBoy : MonoBehaviour
             if (Vector3.Distance(transform.position, target.position) < StopValue)
             {
                 _agent.isStopped = true;
+
                 _anim.SetBool("Walk", false);
                 _anim.SetBool("Fall", false);
                 facePlayer.enabled = true;
 
 
-                //和玩家对话
-                //this.GetComponent<DialogueSystemTrigger>().OnUse();
+                foreach (var item in this.GetComponents<DialogueSystemTrigger>())
+                {
+                    item.OnUse();
+                }
             }
         }
 
@@ -80,13 +87,17 @@ public class GunBoy : MonoBehaviour
 
     public void OnJet()
     {
+        target = OnJetTarget;
+        _agent.isStopped = true;
+        this.GetComponent<NavMeshAgent>().enabled = false;
+        this.GetComponent<FacePlayerNormal>().player = npcFaceTarget.transform;
         transform.position = OnJetTarget.position;
         transform.rotation = Quaternion.Euler(0, 2.5f, 0);
 
         _anim.SetTrigger("Drive");
 
     }
-
+    
     public void WalkAway()
     {
         target = walkAwayTarget;
@@ -94,8 +105,18 @@ public class GunBoy : MonoBehaviour
         _agent.SetDestination(target.transform.position);
     }
 
+    public void TeleportNPC()
+    {
+        canCount();
+        target = null;
+        _agent.isStopped = true;
+        transform.position = walkAwayTarget.position;
+
+    }
+
     public void WalkToPlayer()
     {
+        cantCount();
         _enemyController.enabled = false;
         target = targetPosition;
         _agent.isStopped = false;
@@ -105,9 +126,20 @@ public class GunBoy : MonoBehaviour
 
     public void WalkToPlayerSecond()
     {
+        cantCount();
         target = targetPosition;
         _agent.isStopped = false;
         _agent.SetDestination(target.transform.position);
+    }
+
+    public void canCount()
+    {
+        bubbleScript.isNPCMoving = false;
+    }
+
+    public void cantCount()
+    {
+        bubbleScript.isNPCMoving = true;
     }
 
 }

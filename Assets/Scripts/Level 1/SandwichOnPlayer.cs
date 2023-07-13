@@ -12,6 +12,9 @@ public class SandwichOnPlayer : MonoBehaviour
     public GameObject mother;
 
     private bool done = false;
+    private bool cleanDirt = false;
+    private bool washPlate = false;
+
     public Transform playerPosition;
     // Update is called once per frame
     void Update()
@@ -25,6 +28,18 @@ public class SandwichOnPlayer : MonoBehaviour
                 FadeAndStartConversation();
             }
             done = true;
+        }
+
+        if((DialogueLua.GetVariable("1_1_Dirt").asInt == 10) && !cleanDirt)
+        {
+            FadeAndStartConversation();
+            cleanDirt = true;
+        }
+
+        if ((DialogueLua.GetVariable("1_3_Dirt").asInt == 15) && !washPlate)
+        {
+            FadeAndStartConversation();
+            washPlate = true;
         }
     }
 

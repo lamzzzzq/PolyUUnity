@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using PixelCrushers.DialogueSystem;
 using BNG;
-
+using SimpleJSON;
 public class MainManager : MonoBehaviour
 {
     // Singleton Instance
@@ -129,6 +129,17 @@ public class MainManager : MonoBehaviour
     public void SaveOnKeyPress()
     {
         SaveOption();
+    }
+    void a() {
+        JSONNode json = new JSONArray();
+        json["S1"]["Q1"]= 1;
+
+        string filePath = Application.persistentDataPath + "/Scene:" + scene.buildIndex + ".json";
+        string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + "_" + timeID + ".json");
+        sw.WriteLine(timeID);
+        sw.WriteLine(json.ToString());
+        sw.Close();
     }
 
     void SaveOption()

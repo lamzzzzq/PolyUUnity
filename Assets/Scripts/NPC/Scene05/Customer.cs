@@ -11,6 +11,8 @@ public class Customer : MonoBehaviour
     public float WalkValue;
     public float StopValue;
     public bool walk = false;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
 
     private FacePlayerNormal facePlayer;
 
@@ -23,6 +25,8 @@ public class Customer : MonoBehaviour
 
     public GameObject wheechairCanvas1;
     public GameObject wheechairCanvas2;
+
+    private bool audioPlayed = false;
 
     private void Start()
     {
@@ -48,11 +52,27 @@ public class Customer : MonoBehaviour
 
                 if(wheelChairOnPlayer.triggerLeft)
                 {
-                    wheechairCanvas1.SetActive(true);
+                    if(!audioPlayed)
+                    {
+                        //Play audio clip
+                        audioSource.PlayOneShot(audioClip);
+                        wheechairCanvas1.SetActive(true);
+                        StartCoroutine(PlayAudioAndEnableButton_1());
+
+                        audioPlayed = true;
+                    }    
                 }
                 else
                 {
-                    wheechairCanvas2.SetActive(true);
+                    if(!audioPlayed)
+                    {
+                        //Play audio clip
+                        audioSource.PlayOneShot(audioClip);
+                        wheechairCanvas2.SetActive(true);
+                        StartCoroutine(PlayAudioAndEnableButton_2());
+                        audioPlayed = true;
+                    }
+
                 }
             }
         }
@@ -72,5 +92,37 @@ public class Customer : MonoBehaviour
     {
         walk = true;
         _agent.SetDestination(targetPosition.position);
+    }
+
+    private IEnumerator PlayAudioAndEnableButton_1()
+    {
+        yield return new WaitForSeconds(audioClip.length);
+        SetButtonsInteractable_1(true);
+    }
+
+    private void SetButtonsInteractable_1(bool interactable)
+    {
+        UnityEngine.UI.Button[] buttons = wheechairCanvas1.GetComponentsInChildren<UnityEngine.UI.Button>(true);
+
+        foreach (UnityEngine.UI.Button button in buttons)
+        {
+            button.interactable = interactable;
+        }
+    }
+
+    private IEnumerator PlayAudioAndEnableButton_2()
+    {
+        yield return new WaitForSeconds(audioClip.length);
+        SetButtonsInteractable_2(true);
+    }
+
+    private void SetButtonsInteractable_2(bool interactable)
+    {
+        UnityEngine.UI.Button[] buttons = wheechairCanvas2.GetComponentsInChildren<UnityEngine.UI.Button>(true);
+
+        foreach (UnityEngine.UI.Button button in buttons)
+        {
+            button.interactable = interactable;
+        }
     }
 }

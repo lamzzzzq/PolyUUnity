@@ -15,6 +15,9 @@ public class WalletPerson : MonoBehaviour
     public List<GameObject> customer;
     public GameObject phonePersonToActive;
 
+    public AudioClip audioClip;
+    public AudioSource audioSource;
+
     public GameObject player;
 
     private NavMeshAgent _agent;
@@ -26,7 +29,7 @@ public class WalletPerson : MonoBehaviour
 
     public GameObject ObjectToCreate;
 
-
+    private bool audioPlayed = false;
 
 
 
@@ -72,11 +75,15 @@ public class WalletPerson : MonoBehaviour
                 target = transform;
                 _agent.isStopped = true;
                 transform.position = new Vector3(-7.9f, -50f, -134.85f);
-                phonePersonToActive.SetActive(true);
+
+
+
+
                 //切换canvas
                 //this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
                 //和玩家对话
                 //this.GetComponent<DialogueSystemTrigger>().OnUse();
+                //secondNav = true;
                 //secondNav = true;
                 
                 //this.GetComponent<DialogueSystemTrigger>().OnUse();
@@ -96,6 +103,14 @@ public class WalletPerson : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         phoneCanvas.SetActive(true);
+        if (!audioPlayed)
+        {
+            //Play audio clip
+            audioSource.PlayOneShot(audioClip);
+            phonePersonToActive.SetActive(true);
+            StartCoroutine(PlayAudioAndEnableButton());
+            audioPlayed = true;
+        }
     }
 
     public void ReleasePhone()
@@ -110,4 +125,19 @@ public class WalletPerson : MonoBehaviour
         target = player.transform;
     }
 
+    private IEnumerator PlayAudioAndEnableButton()
+    {
+        yield return new WaitForSeconds(audioClip.length);
+        SetButtonsInteractable(true);
+    }
+
+    private void SetButtonsInteractable(bool interactable)
+    {
+        UnityEngine.UI.Button[] buttons = phonePersonToActive.GetComponentsInChildren<UnityEngine.UI.Button>(true);
+
+        foreach (UnityEngine.UI.Button button in buttons)
+        {
+            button.interactable = interactable;
+        }
+    }
 }

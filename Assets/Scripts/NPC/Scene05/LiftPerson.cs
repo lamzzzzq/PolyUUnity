@@ -44,7 +44,7 @@ public class LiftPerson : MonoBehaviour
                 facePlayer.enabled = true;
 
                 //切换canvas
-                this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
+                //this.GetComponent<OverrideDialogueUI>().ui = GameObject.Find(childUIName);
                 //和玩家对话
                 this.GetComponent<DialogueSystemTrigger>().OnUse();
             }

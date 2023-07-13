@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadManager : MonoBehaviour
 {
+    //public GameObject objectToHide;
     public void LoadNextLevel(string scene)
     {
         StartCoroutine(LoadLevel(scene));
@@ -26,4 +27,6 @@ public class LoadManager : MonoBehaviour
             yield return null;
         }
     }
+
+
 }

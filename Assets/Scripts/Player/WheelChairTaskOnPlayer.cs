@@ -66,6 +66,8 @@ public class WheelChairTaskOnPlayer : MonoBehaviour
         triggerLeft = false;
     }
 
+
+
     public void FadeAndTransportToTalk()
     {
         StartCoroutine(HelpCustomer());
@@ -91,5 +93,21 @@ public class WheelChairTaskOnPlayer : MonoBehaviour
         teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
 
         yield return null;
+    }
+
+    public void DoneTask_5_1()
+    {
+        DialogueLua.SetVariable("5_1_Detect", true);
+    }
+
+
+    public void DoneTask_5_4()
+    {
+        DialogueLua.SetVariable("5_4_Detect", true);
+    }
+
+    public void DoneTask_5_5()
+    {
+        DialogueLua.SetVariable("5_5_Detect", true);
     }
 }

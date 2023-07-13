@@ -27,11 +27,12 @@ public class Volunteer : MonoBehaviour
         target = player;
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animator>();
+        _agent.SetDestination(target.transform.position);
     }
 
     void Update()
     {
-        _agent.SetDestination(target.transform.position);
+        //_agent.SetDestination(target.transform.position);
 
         if (Vector3.Distance(transform.position, target.position) > WalkValue)
         {
@@ -47,16 +48,31 @@ public class Volunteer : MonoBehaviour
             _agent.isStopped = true;
             _anim.SetBool("Walk", false);
             facePlayer.enabled = true;
+
             if (firstTalk)
             {
-                reachedPlayerEvent?.Invoke();
+                foreach (var trigger in this.GetComponents<DialogueSystemTrigger>())
+                {
+                    trigger.OnUse();
+                }
+
                 firstTalk = false;
             }
+
+/*            //stay
+            target = transform;*/
         }
 
     }
 
-    private void OnDisable()
+    public void Stay()
+    {
+        target = transform;
+
+    }
+
+
+/*    private void OnDisable()
     {
         // 取消订阅事件，确保在禁用脚本时取消订阅，避免潜在的内存泄漏
         reachedPlayerEvent = null;
@@ -69,6 +85,6 @@ public class Volunteer : MonoBehaviour
         {
             trigger.OnUse();
         }
-    }
+    }*/
 
 }

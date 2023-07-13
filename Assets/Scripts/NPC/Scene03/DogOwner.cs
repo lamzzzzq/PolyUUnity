@@ -9,6 +9,7 @@ public class DogOwner : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
     public Transform targetNPC;
+    public Transform targetNPCafterTeleport;
     public Transform targetDog;
     private Transform target;
 
@@ -97,8 +98,8 @@ public class DogOwner : MonoBehaviour
     }
 
 
-    public void WalkToPlayer()
+    public void ChangeTarget()
     {
-
+        target = targetNPCafterTeleport;
     }
 }
