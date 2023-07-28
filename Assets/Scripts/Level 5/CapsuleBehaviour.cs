@@ -34,8 +34,9 @@ public class CapsuleBehaviour : MonoBehaviour
 
         // Destroy the particle effect object
         Destroy(particleEffect);
-        Capsule.SetActive(false);
         audioSource.clip = audioClip_Disappear;
         audioSource.Play();
+        Capsule.SetActive(false);
+
     }
 }

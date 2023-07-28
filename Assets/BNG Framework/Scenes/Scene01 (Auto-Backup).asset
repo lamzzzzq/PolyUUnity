@@ -3745,7 +3745,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3759,7 +3759,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3773,7 +3773,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3787,7 +3787,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3801,7 +3801,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -3815,7 +3815,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
-      value: False
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Description
@@ -5334,7 +5334,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 17.748032
-        y: 89.109726
+        y: 93.505325
         width: 160
         height: 30
     - id: 2
@@ -7249,8 +7249,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 47.4567, y: 17.134615}
+    canvasZoom: 0.7600002
   - id: 42
     fields:
     - title: Title
@@ -8943,8 +8943,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 33
-        y: 101
+        x: 32
+        y: 102
         width: 160
         height: 30
     entryGroups: []
@@ -10088,7 +10088,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 408.51337
+        x: 407.24756
         y: 192.6756
         width: 160
         height: 30
@@ -10240,8 +10240,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26.316444
-        y: 318.49365
+        x: 28.848091
+        y: 314.69617
         width: 160
         height: 30
     entryGroups: []
@@ -13512,8 +13512,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.5055
-        y: 132.87912
+        x: 39.725014
+        y: 147.51326
         width: 160
         height: 30
     - id: 2
@@ -13590,8 +13590,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 48.208527
-        y: 251.64862
+        x: 43.330475
+        y: 261.40472
         width: 160
         height: 30
     - id: 3
@@ -13671,7 +13671,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 333.8132
-        y: 155.30475
+        y: 154.08524
         width: 160
         height: 30
     - id: 4
@@ -14407,11 +14407,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: "\u4E0D\u597D\u610F\u601D\uFF0CLily\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
+        value: "\u4E0D\u597D\u610F\u601D\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: "\u4E0D\u597D\u610F\u601D\uFF0CLily\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
+        value: "\u4E0D\u597D\u610F\u601D\uFF0C\u6211\u53EF\u80FD\u5E6B\u4E0D\u4E86\u4F60\uFF0C\u6211\u9084\u6709\u4E9B\u4E8B\u60C5\u8981\u505A\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -14680,7 +14680,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9999999
+    canvasZoom: 0.82000005
   - id: 50
     fields:
     - title: Title
@@ -15050,8 +15050,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 223.0928
-        y: 94.93617
+        x: 234.43301
+        y: 98.02898
         width: 160
         height: 30
     - id: 4
@@ -15207,8 +15207,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 481
-        y: 99
+        x: 441.82477
+        y: 97.82356
         width: 160
         height: 30
     - id: 6
@@ -15285,13 +15285,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 484.27832
-        y: 179.03293
+        x: 443.04132
+        y: 178.00201
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 2.0618591}
-    canvasZoom: 0.9699999
+    canvasScrollPosition: {x: 0, y: 0.5145305}
+    canvasZoom: 0.84999996
   - id: 6
     fields:
     - title: Title
@@ -15813,7 +15813,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 415.59277
+        x: 414.56177
         y: 132.17493
         width: 160
         height: 30
@@ -16049,8 +16049,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 97.260056, y: 0}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 103.76749, y: 0}
+    canvasZoom: 0.90999997
   - id: 51
     fields:
     - title: Title
@@ -16254,7 +16254,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 129.82352
-        y: 132.5294
+        y: 130.17645
         width: 160
         height: 30
     - id: 2
@@ -16284,9 +16284,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'AudioWait(SFX/Score);
-
-          Delay(3)'
+        value: AudioWait(SFX/Score)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -16332,7 +16330,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 132.52939
-        y: 210.05882
+        y: 208.88234
         width: 160
         height: 30
     entryGroups: []
@@ -18734,7 +18732,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 42.03093
-        y: 133.96907
+        y: 132.93814
         width: 160
         height: 30
     - id: 2
@@ -18891,7 +18889,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 257
-        y: 132.96907
+        y: 131.93814
         width: 160
         height: 30
     - id: 4
@@ -19047,8 +19045,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 473
-        y: 140
+        x: 475.06183
+        y: 129.69073
         width: 160
         height: 30
     - id: 6
@@ -19126,7 +19124,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 477.86957
-        y: 206.6087
+        y: 201.45407
         width: 160
         height: 30
     entryGroups: []
@@ -20188,8 +20186,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 209.65297
-        y: 93.439255
+        x: 211.9257
+        y: 121.84834
         width: 160
         height: 30
     - id: 2
@@ -20263,8 +20261,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 98.81329
-        y: 207.17456
+        x: 80.63147
+        y: 219.67456
         width: 160
         height: 30
     - id: 3
@@ -20336,8 +20334,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 356.9042
-        y: 204.53767
+        x: 360.3133
+        y: 221.58315
         width: 160
         height: 30
     entryGroups: []
@@ -21535,7 +21533,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 123.127655
+        x: 124.19148
         y: 207.51062
         width: 160
         height: 30
@@ -22532,7 +22530,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 36.26886
+        x: 37.488373
         y: 229.02528
         width: 160
         height: 30
@@ -22842,7 +22840,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.85000014
+    canvasZoom: 0.8200002
   - id: 18
     fields:
     - title: Title
@@ -25318,13 +25316,13 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["3_5_Fruit"] == 5
-      userScript: Variable["Point_Level_3"] = Variable["Point_Level_3"] + 20
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 26
+        x: 28
         y: 83
         width: 160
         height: 30
@@ -25396,7 +25394,10 @@ MonoBehaviour:
       userScript: 'SetQuestState("3_5_FruitPickUp", "abandoned");
 
         Variable["3_5_Detect"]
-        = true'
+        = true;
+
+        Variable["Point_Level_3"] = Variable["Point_Level_3"] +
+        20'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25475,7 +25476,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["3_5_Fruit"] > 0 and (Variable["3_5_Fruit"] < 5)
-      userScript: Variable["Point_Level_3"] = Variable["Point_Level_3"] + 15
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25553,7 +25554,10 @@ MonoBehaviour:
       userScript: 'SetQuestState("3_5_FruitPickUp", "abandoned");
 
         Variable["3_5_Detect"]
-        = true'
+        = true;
+
+        Variable["Point_Level_3"] = Variable["Point_Level_3"] +
+        15'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -25632,14 +25636,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["3_5_Fruit"] == 0
-      userScript: Variable["Point_Level_3"] = Variable["Point_Level_3"] + 0
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 535
-        y: 88
+        x: 537
+        y: 81
         width: 160
         height: 30
     - id: 6
@@ -26448,7 +26452,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 31.204391
-        y: 340.26343
+        y: 339.0439
         width: 160
         height: 30
     - id: 4
@@ -27065,7 +27069,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 231.99619
-        y: 208.81998
+        y: 207.6435
         width: 160
         height: 30
     - id: 8
@@ -27381,7 +27385,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 507.7079
-        y: 360.31146
+        y: 357.9585
         width: 160
         height: 30
     - id: 12
@@ -27484,7 +27488,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/trash_5 (mp3cut.net))
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -27492,11 +27496,11 @@ MonoBehaviour:
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\u5440\uFF0C\u771F\u662F\u4E56\u5B69\u5B50\uFF01"
+        value: "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: "\u505A\u5F97\u975E\u5E38\u597D\uFF01\u8B1D\u8B1D\u4F60\u5E6B\u5FD9\u5440\uFF0C\u771F\u662F\u4E56\u5B69\u5B50\uFF01"
+        value: "\u505A\u5F97\u5F88\u597D\u5440\uFF01\u8B1D\u8B1D\u3002"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -27526,8 +27530,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1128.319
-        y: 115.71423
+        x: 1094.2012
+        y: 111.00833
         width: 160
         height: 30
     - id: 14
@@ -27852,7 +27856,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/AED_2_update)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28084,7 +28088,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/AED_3_update)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28236,7 +28240,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: Delay(2)
+        value: AudioWait(Level4/AED_4_update)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28285,7 +28289,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 875.1204
-        y: 194.046
+        y: 193.01506
         width: 160
         height: 30
     - id: 12
@@ -28315,7 +28319,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: AudioWait(SFX/Score);
+        value: AudioWait(SFX/Score)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28351,14 +28355,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Point_Level_4"] = Variable["Point_Level_4"] + 20
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 877.79913
-        y: 296.78882
+        y: 294.72696
         width: 160
         height: 30
     entryGroups: []
@@ -28535,7 +28539,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(TriggerForToilet,true)
+        value: 'SetActive(TriggerForToilet,true);
+
+          AudioWait(Level4/balloon_1
+          (mp3cut.net))'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28597,7 +28604,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 112.85303
-        y: 120.857574
+        y: 120.85759
         width: 160
         height: 30
     - id: 2
@@ -28861,7 +28868,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: 'AudioWait(Level4/balloon_3 (mp3cut.net));
+
+          SetActive(LegoArea,false)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -28910,7 +28919,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 812.6314
-        y: 240.9985
+        y: 239.62863
         width: 160
         height: 30
     - id: 9
@@ -29166,7 +29175,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(BallonTriggerToHide,false)
+        value: 'SetActive(BallonTriggerToHide,false);
+
+          AudioWait(Level4/balloon_2
+          (mp3cut.net))'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -29246,7 +29258,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(LegoArea,true)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -29288,13 +29300,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1103.1796
+        x: 1104.5494
         y: 138.27184
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.73000026
+    canvasZoom: 0.5200004
   - id: 29
     fields:
     - title: Title
@@ -29491,7 +29503,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 92
+        y: 94
         width: 160
         height: 30
     entryGroups: []
@@ -29701,8 +29713,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 0, y: 6.135206}
+    canvasZoom: 0.91
   - id: 31
     fields:
     - title: Title
@@ -30056,7 +30068,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: SetActive(TriggerForToilet,true)
+        value: 'SetActive(TriggerForToilet,true);
+
+          AudioWait(Level4/wc_1_update)'
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -30220,7 +30234,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetEnabled(ToiletKid,false,ToiletKid)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -30266,7 +30280,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 270.2195
-        y: 192.56097
+        y: 191.29514
         width: 160
         height: 30
     - id: 6
@@ -30296,7 +30310,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetEnabled(ToiletKid,false,ToiletKid)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -30341,8 +30355,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 522.37885
-        y: 178.52731
+        x: 523.64465
+        y: 179.79315
         width: 160
         height: 30
     entryGroups: []
@@ -30500,7 +30514,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/wc_2_update)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -30701,7 +30715,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/wc_3_update)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -30743,17 +30757,17 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 'Variable["Point_Level4"] = Variable["Point_Level4"] + 20;
+      userScript: 'Variable["4_1_OPTION_1"] = "1_True";
 
-        Variable["4_1_OPTION_1"]
-        = "1_True"'
+        Variable["Point_Level_4"]
+        = Variable["Point_Level_4"] + 20'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 36
-        y: 68
+        x: 29
+        y: 125
         width: 160
         height: 30
     - id: 2
@@ -30825,8 +30839,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 32
-        y: 125
+        x: 19
+        y: 278
         width: 160
         height: 30
     entryGroups: []
@@ -31673,7 +31687,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(Arrow_Lift,true)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -31716,7 +31730,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 210.25908
-        y: 333.98853
+        y: 336.62012
         width: 160
         height: 30
     - id: 4
@@ -31800,8 +31814,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 458.614
-        y: 174.6416
+        x: 461.2456
+        y: 170.69424
         width: 160
         height: 30
     - id: 5
@@ -31831,7 +31845,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetActive(Arrow_Lift,true)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -31891,7 +31905,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 421.2206
+        x: 419.90482
         y: 363.28348
         width: 160
         height: 30
@@ -33303,11 +33317,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 'SetActive(Change_1,true);
-
-          SetActive(Change_2,true);
-
-          AudioWait(Level5/cashier_2)'
+        value: AudioWait(Level5/cashier_2);
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -33356,7 +33366,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 31.253296
+        x: 32.47281
         y: 86.91168
         width: 160
         height: 30
@@ -33387,7 +33397,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SetEnabled(
         type: 0
         typeString: CustomFieldType_Text
       - title: en
@@ -33430,7 +33440,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 38.35517
-        y: 310.88232
+        y: 308.4433
         width: 160
         height: 30
     - id: 3
@@ -35072,7 +35082,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 207
+        y: 206
         width: 160
         height: 30
     entryGroups: []
@@ -36037,19 +36047,19 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: AudioWait(Level4/wc_random)
         type: 0
         typeString: CustomFieldType_Text
       - title: en
-        value: 
+        value: What a nice day!
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-TC
-        value: 
+        value: "\u4ECA\u5929\u5929\u6C23\u771F\u597D\u5440\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: zh-Oral
-        value: 
+        value: "\u4ECA\u5929\u5929\u6C23\u771F\u597D\u5440\uFF01"
         type: 4
         typeString: CustomFieldType_Localization
       - title: Guid
@@ -36079,13 +36089,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 28
+        x: 30
         y: 92
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0

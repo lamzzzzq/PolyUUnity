@@ -6,27 +6,32 @@ using PixelCrushers.DialogueSystem;
 
 public class ToggleWristMenu : MonoBehaviour
 {
-
     public GameObject WristMenu;
     public bool Show;
-    // Update is called once per frame
+    private bool isButtonPressed = false;
+    private float buttonPressStartTime = 0f;
+    private float holdDuration = 2f;
+
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.XButtonDown))
+        if ((Input.GetKeyDown(KeyCode.M) || InputBridge.Instance.XButtonDown) && !isButtonPressed)
         {
-            Show = !Show;
-            int score = DialogueLua.GetVariable("TASK_3_1_CASH").AsInt;
-            Debug.Log(score);
+            isButtonPressed = true;
+            buttonPressStartTime = Time.time;
         }
 
-        if(Show)
+        if ((Input.GetKeyUp(KeyCode.M) || InputBridge.Instance.XButtonUp) && isButtonPressed)
         {
-            WristMenu.SetActive(true);
+            isButtonPressed = false;
+
+            float buttonHoldTime = Time.time - buttonPressStartTime;
+            if (buttonHoldTime >= holdDuration)
+            {
+                Show = !Show;
+            }
         }
 
-        if(!Show)
-        {
-            WristMenu.SetActive(false);
-        }
+        WristMenu.SetActive(Show);
     }
+
 }

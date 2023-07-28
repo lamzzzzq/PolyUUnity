@@ -16,6 +16,9 @@ public class BallonGirl : MonoBehaviour
     public bool secondTimeArrive = false;
     public GameObject canvas;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     public LegoOnPlayer legoOnPlayer;
 
 
@@ -59,6 +62,7 @@ public class BallonGirl : MonoBehaviour
                     Debug.Log("firstTime is true - Once");
                     canvas.SetActive(true);
                     showCanvas = true;
+                    audioSource.PlayOneShot(audioClip);
                     firstTimeArrive = true;
                 }
             }

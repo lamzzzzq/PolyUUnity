@@ -50,7 +50,7 @@ public class HelperOnPlayer : MonoBehaviour
         //disable movement
         playerController.enabled = false;
         //fade in/out
-        teleport.ResetPlayerPosRotWithParameters(playerPosition, ScreenFader);
+        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
 
         //set active NPC
         HelperObj_1.SetActive(true);

@@ -12,6 +12,8 @@ public class BagBehaviourForLevel4 : MonoBehaviour
     public Transform playerPosition;
     public Transform NPCPosition;
     public ScreenFader screenFader;
+    public AudioSource audio;
+    public AudioClip clip;
 
     private void Update()
     {
@@ -24,6 +26,8 @@ public class BagBehaviourForLevel4 : MonoBehaviour
         if (other.CompareTag("Box"))
         {
             boxCount++; // 增加计数器
+
+            audio.PlayOneShot(clip);
 
             // 当两个物体都进入触发器时
             if (boxCount == 6)

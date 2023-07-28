@@ -13,7 +13,12 @@ public class BubbleCarOnPlayer : MonoBehaviour
     public Transform playerPosition;
     public Transform exitPosition;
     public Transform startingPosition;
+    public Transform bubbleCanvasPosition;
     public GameObject confirmUI;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
+    private bool trigger = false;
 
     public GameObject gunBoy;
 
@@ -65,5 +70,24 @@ public class BubbleCarOnPlayer : MonoBehaviour
         teleport.ResetPlayerPosRotWithParameters(playerPosition, screenFader);
         //change the position of GunBoy
         gunBoy.GetComponent<GunBoy>().TeleportNPC();
+    }
+
+    public void teleportToCanvasAndPlayAudio()
+    {
+        if (!trigger)
+        { 
+            //Disable Movement
+            playerController.enabled = false;
+            //Transport to a position and specific rotation degrees
+            teleport.ResetPlayerPosRotWithParameters(bubbleCanvasPosition, screenFader);
+
+            //show Canvas
+            confirmUI.SetActive(true);
+            //Play audio
+            audioSource.PlayOneShot(audioClip);
+            trigger = true;
+        }
+
+
     }
 }
