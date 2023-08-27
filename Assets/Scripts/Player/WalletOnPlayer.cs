@@ -9,7 +9,7 @@ public class WalletOnPlayer : MonoBehaviour
 {
     public ScreenFader ScreenFader;
     public TeleportPlayerFade teleport;
-    public Vector3 rotationDegree_1;
+    //public Vector3 rotationDegree_1;
     public Transform playerPosition;
     public Transform teleportPlayerPosition;
     public GameObject phonePerson;

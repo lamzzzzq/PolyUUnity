@@ -10,6 +10,7 @@ public class ButtonSoundEffect : MonoBehaviour
 
     private Button button;
     private AudioSource audioSource;
+    public GameObject obj;
 
     private void Awake()
     {
@@ -44,5 +45,6 @@ public class ButtonSoundEffect : MonoBehaviour
         // Disable the button
         button.interactable = false;
         gameObject.SetActive(false);
+        obj.SetActive(false);
     }
 }

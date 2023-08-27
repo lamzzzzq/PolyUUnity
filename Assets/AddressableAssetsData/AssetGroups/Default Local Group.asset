@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6590d9e8b6d9965428b4a975d289573b
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: e13e7d7d5bffcea4a8482dda031e268b
+    m_Address: Assets/Models/ProSocial/Cafeteria0820Material/MI_Utensils.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fbfc8f4724b756f4ab4cba718143da1d, type: 2}
   m_SchemaSet:
