@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: WelcomeScene04
     m_Metadata:
       m_Items: []
+  - m_Id: 133382577466515456
+    m_Key: WelecomeSceneCanteen
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

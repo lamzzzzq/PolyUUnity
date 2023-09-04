@@ -29,7 +29,7 @@ public class FruitDropOnPlayer : MonoBehaviour
     public void FruitDropCutSceneFirst()
     {
         //teleport.targetRotation = Quaternion.Euler(rotationDegree_1);
-        teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
+        //teleport.ResetPlayerPosRotWithParameters(transform, ScreenFader);
         StartCoroutine(invokeFruitEvent());
         playerController.enabled = false;
     }

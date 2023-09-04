@@ -33,6 +33,7 @@ TagManager:
   - Apple
   - Pear
   - Mouth
+  - Octopus
   layers:
   - Default
   - TransparentFX

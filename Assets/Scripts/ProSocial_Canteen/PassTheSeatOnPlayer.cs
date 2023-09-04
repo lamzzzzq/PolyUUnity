@@ -12,12 +12,20 @@ public class PassTheSeatOnPlayer : MonoBehaviour
 
     public TeleportPlayerFade teleport;
     public GameObject NPC;
+    public GameObject eatCanvas;
 
     public GameObject QueueNPC_Standing;
     public GameObject QueueNPC_Sitting;
     public GameObject NPCStanding;
     public GameObject NPCSitting;
     public GameObject food;
+    public GameObject NPCStandingTalking;
+    public GameObject firstPanToHide;
+    public GameObject firstPanToShow;
+
+    //public FoodInteraction foodInteraction;
+
+    public int eatFood=0;
 
     private CharacterController playerController;
 
@@ -37,17 +45,32 @@ public class PassTheSeatOnPlayer : MonoBehaviour
 
     public void FadeAndTalk()
     {
-        teleport.ResetPlayerPosRotWithParameters(SeatPosition, ScreenFader);
-        NPCStanding.SetActive(true);
-        foreach (var trigger in NPC.GetComponents<DialogueSystemTrigger>())
+        bool playOnce = false;
+        if(eatFood == 2 && !playOnce)
         {
-            trigger.OnUse();
+            teleport.ResetPlayerPosRotWithParameters(SeatPosition, ScreenFader);
+            eatCanvas.SetActive(false);
+            NPCStanding.SetActive(true);
+            NPCStandingTalking.SetActive(false);
+            foreach (var trigger in NPC.GetComponents<DialogueSystemTrigger>())
+            {
+                trigger.OnUse();
+            }
+            playOnce = true;
+            //foodInteraction.OnGrab();
+
+            firstPanToHide.SetActive(false);
+            firstPanToShow.SetActive(true);
+        
         }
+
+        
+
     }
 
     public void AgreeToleave()
     {
-        teleport.ResetPlayerPosRotWithParameters(SeatPosition, ScreenFader);
+        //teleport.ResetPlayerPosRotWithParameters(SeatPosition, ScreenFader);
 
         //NPC sits
         NPCStanding.SetActive(false);
@@ -55,9 +78,25 @@ public class PassTheSeatOnPlayer : MonoBehaviour
         NPCSitting.SetActive(true);
 
         //Food Enable
-        food.SetActive(true);
+        //food.SetActive(true);
 
         //Player and food move to other place
         teleport.ResetPlayerPosRotWithParameters(SeatPosition_Second, ScreenFader);
+
+        playerController.enabled = false;
     }
+
+    public void StopAllConversations()
+    {
+        for (int i = DialogueManager.instance.activeConversations.Count - 1; i >= 0; i--)
+        {
+            DialogueManager.instance.activeConversations[i].conversationController.Close();
+        }
+    }
+
+    public void Eat()
+    {
+        eatFood++;
+    }
+
 }

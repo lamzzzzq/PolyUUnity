@@ -13,6 +13,7 @@ public class OrderTaskOnPlayer : MonoBehaviour
     public Transform playerPosition;
     public Transform playerPosition_faceNPC;
     public Transform NPCPosition_facePlayer;
+    public Transform NPCPosition_stepBack;
     public Transform playerPosition_faceBack;
     public GameObject Arrow;
 
@@ -64,6 +65,37 @@ public class OrderTaskOnPlayer : MonoBehaviour
 
         yield return new WaitForSeconds(2);
 
+        //NPC talk
+        foreach (var trigger in NPC.GetComponents<DialogueSystemTrigger>())
+        {
+            trigger.OnUse();
+        }
+    }
+
+    public void NPCStepBack()
+    {
+        StartCoroutine(NPCStepBackWatchScreen());
+    }
+
+
+    private IEnumerator NPCStepBackWatchScreen()
+    {
+        //fade in / out & playerPosition_faceNPC
+        teleport.ResetPlayerPosRotWithParameters(playerPosition_faceNPC, screenFader);
+
+        //NPC nav
+        facePlayer.enabled = false;
+
+        NPC.transform.position = NPCPosition_stepBack.position;
+
+        yield return null;
+
+
+    }
+
+    public void startConversation()
+    {
+        QuestLog.SetQuestState("Canteen_TASK_1", QuestState.Abandoned);
         //NPC talk
         foreach (var trigger in NPC.GetComponents<DialogueSystemTrigger>())
         {

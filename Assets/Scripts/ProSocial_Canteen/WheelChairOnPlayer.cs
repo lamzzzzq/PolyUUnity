@@ -22,6 +22,10 @@ public class WheelChairOnPlayer : MonoBehaviour
     private bool trigger = false;
     public GameObject NPC;
 
+    public GameObject wheelChairCanvas;
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
 
     private void Start()
     {
@@ -100,4 +104,36 @@ public class WheelChairOnPlayer : MonoBehaviour
         NPC.GetComponent<DialogueSystemTrigger>().OnUse();
     }
 
+    public void WheelChairEvent()
+    {
+        //teleport.targetRotation = Quaternion.Euler(rotationDegree_1);
+        teleport.ResetPlayerPosRotWithParameters(transform, screenFader);
+        StartCoroutine(invokeFruitEvent());
+        playerController.enabled = false;
+    }
+
+    private IEnumerator invokeFruitEvent()
+    {
+        yield return new WaitForSeconds(1f);
+        //Play audio clip
+        audioSource.PlayOneShot(audioClip);
+        wheelChairCanvas.SetActive(true);
+        StartCoroutine(PlayAudioAndEnableButton());
+    }
+
+    private IEnumerator PlayAudioAndEnableButton()
+    {
+        yield return new WaitForSeconds(audioClip.length);
+        SetButtonsInteractable(true);
+    }
+
+    private void SetButtonsInteractable(bool interactable)
+    {
+        UnityEngine.UI.Button[] buttons = wheelChairCanvas.GetComponentsInChildren<UnityEngine.UI.Button>(true);
+
+        foreach (UnityEngine.UI.Button button in buttons)
+        {
+            button.interactable = interactable;
+        }
+    }
 }
