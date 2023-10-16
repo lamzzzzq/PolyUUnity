@@ -36,6 +36,9 @@ public class FruitDropOnPlayer : MonoBehaviour
 
     private IEnumerator invokeFruitEvent()
     {
+        Debug.Log("Execute");
+
+
         yield return new WaitForSeconds(1f);
         npcEvents.Invoke();
         yield return new WaitForSeconds(2f);

@@ -35,19 +35,19 @@ public class QuestComplete : MonoBehaviour
         {
             case 1:
                 {
-                    Debug.Log("Now is Level 1");
+                    //Debug.Log("Now is Level 1");
                     Level_1_Check();
                 }
                 break;
             case 2:
                 {
-                    Debug.Log("Now is Level 2");
+                    //Debug.Log("Now is Level 2");
                     Level_2_Check();
                 }
                 break;
             case 3:
                 {
-                    Debug.Log("Now is Level 3");
+                    //Debug.Log("Now is Level 3");
                     Level_3_Check();
 
                 }
@@ -86,7 +86,7 @@ public class QuestComplete : MonoBehaviour
         }
         else
         {
-            Debug.Log("If statement not met");
+            //Debug.Log("If statement not met");
         }
     }
 
@@ -107,7 +107,7 @@ public class QuestComplete : MonoBehaviour
         }
         else
         {
-            Debug.Log("If statement not met");
+            //Debug.Log("If statement not met");
         }
     }
 
@@ -128,7 +128,7 @@ public class QuestComplete : MonoBehaviour
         }
         else
         {
-            Debug.Log("If statement not met");
+           // Debug.Log("If statement not met");
         }
     }
 
@@ -149,7 +149,7 @@ public class QuestComplete : MonoBehaviour
         }
         else
         {
-            Debug.Log("If statement not met");
+            //Debug.Log("If statement not met");
         }
     }
 
@@ -171,7 +171,7 @@ public class QuestComplete : MonoBehaviour
         }
         else
         {
-            Debug.Log("If statement not met");
+            //Debug.Log("If statement not met");
         }
     }
 

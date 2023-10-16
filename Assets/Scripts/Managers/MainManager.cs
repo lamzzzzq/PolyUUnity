@@ -11,8 +11,19 @@ public class MainManager : MonoBehaviour
 {
     // Singleton Instance
     public static MainManager Instance;
+
+    // UI and External Components
     public GameObject InputField;
     private VRTextInput vrTextInput;
+    public GameObject menuContainer;
+    public UnityEngine.UI.Slider slider;
+    public Text progressText;
+
+    // Scene and User Data
+    private Scene scene;
+    private string userID;
+    private Dictionary<string, string> dialogueOptions = new Dictionary<string, string>();
+
 
     public string task_1_1;
     public string task_1_2;
@@ -24,30 +35,25 @@ public class MainManager : MonoBehaviour
 
     public string task_4_1;
     public string task_4_4;
-    
-    private Scene scene;
-    private string userID;
+   
 
-    // InGameMenu variables
-    public GameObject menuContainer;
     //public GameObject optionsSubMenu;
     public UnityEngine.UI.Button[] levelButtons;
 
     // Level Loading variables
-    public UnityEngine.UI.Slider slider;
-    public Text progressText;
 
 
+    #region Singleton
     private void Awake()
     {
         if (Instance != null)
         {
             Destroy(gameObject);
         }
-
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+    #endregion
 
     void OnEnable()
     {
@@ -92,13 +98,16 @@ public class MainManager : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
         vrTextInput = InputField.GetComponent<VRTextInput>();
-        userID = vrTextInput.userID;
+        //userID = vrTextInput.userID;
+
         // Start the SaveCSVFileCoroutine
         StartCoroutine(SaveCSVFileCoroutine());
     }
 
     private void Update()
     {
+        userID = vrTextInput.userID;
+
         // Toggle menu when the player presses the key
         if ((Input.GetKeyDown(KeyCode.M)) || (InputBridge.Instance.XButtonDown))
         {
@@ -126,10 +135,6 @@ public class MainManager : MonoBehaviour
         sw.Close();
     }
 
-    public void SaveOnKeyPress()
-    {
-        SaveOption();
-    }
     void a() {
         JSONNode json = new JSONArray();
         json["S1"]["Q1"]= 1;
@@ -144,10 +149,22 @@ public class MainManager : MonoBehaviour
 
     void SaveOption()
     {
-        //Update the current scene
+        // 更新当前场景
         scene = SceneManager.GetActiveScene();
 
-        switch (scene.buildIndex)
+        // 清除以前的内容
+        dialogueOptions.Clear();
+
+        // 存储当前场景的任务内容到字典中
+        StoreSceneTasksInDictionary();
+
+        // 使用改进的SaveString方法进行保存
+        SaveStringToFile();
+
+
+
+        //暂时comment
+/*        switch (scene.buildIndex)
         {
             case 1:
                 task_1_1 = string.Concat(userID, ",", "1_1_OPTION IS:", ",", DialogueLua.GetVariable("1_1_OPTION_1").asString, ",", DialogueLua.GetVariable("1_1_OPTION_2").asString);
@@ -177,8 +194,58 @@ public class MainManager : MonoBehaviour
             // Add more cases for other scenes if needed
             default:
                 break;
-        } 
+        } */
     }
+
+    void StoreSceneTasksInDictionary()
+    {
+        switch (scene.buildIndex)
+        {
+            case 1:
+                AddToDictionary("1_1_OPTION", $"{userID},1_1_OPTION IS:,{DialogueLua.GetVariable("1_1_OPTION_1").asString},{DialogueLua.GetVariable("1_1_OPTION_2").asString}");
+                AddToDictionary("1_2_OPTION", $"{userID},1_2_OPTION IS:,{DialogueLua.GetVariable("1_2_OPTION_1").asString},{DialogueLua.GetVariable("1_2_OPTION_2").asString}");
+                AddToDictionary("1_3_OPTION", $"{userID},1_3_OPTION IS:,{DialogueLua.GetVariable("1_3_OPTION_1").asString},{DialogueLua.GetVariable("1_3_OPTION_2").asString}");
+                AddToDictionary("1_4_OPTION", $"{userID},1_4_OPTION IS:,{DialogueLua.GetVariable("1_4_OPTION_1").asString},{DialogueLua.GetVariable("1_4_OPTION_2").asString}");
+                AddToDictionary("1_5_OPTION", $"{userID},1_5_OPTION IS:,{DialogueLua.GetVariable("1_5_OPTION_1").asString},{DialogueLua.GetVariable("1_5_OPTION_2").asString},{DialogueLua.GetVariable("1_5_OPTION_3").asString}");
+
+
+
+                // ... 同样的方式添加其他任务内容
+                break;
+            case 2:
+                AddToDictionary("Scene", "scene2");
+                break;
+            // ... 其他场景的处理
+            default:
+                break;
+        }
+    }
+
+    void AddToDictionary(string key, string value)
+    {
+        dialogueOptions[key] = value;
+    }
+
+
+    void SaveStringToFile()
+    {
+        string filePath = Application.persistentDataPath + "/Scene:" + scene.buildIndex + ".csv";
+        print("saving to" + filePath);
+
+        string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
+        Debug.Log(timeID);
+
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + userID + "_" + timeID + ".csv");
+        sw.WriteLine(timeID);
+
+        foreach (var entry in dialogueOptions)
+        {
+            sw.WriteLine(entry.Value);
+        }
+
+        sw.Close();
+    }
+
 
     IEnumerator SaveCSVFileCoroutine()
     {
@@ -189,7 +256,19 @@ public class MainManager : MonoBehaviour
 
             // Save the CSV file
             SaveOption();
+
+            a();
+
+            if (!string.IsNullOrEmpty(userID))
+            {
+                Debug.Log(userID);
+            }
+            else
+            {
+                Debug.Log("userID 是空的");
+            }
         }
+
     }
     public void ToggleMenu()
     {
@@ -254,6 +333,20 @@ public class MainManager : MonoBehaviour
         Debug.Log("Button clicked!");
         LoadLevel(scene);
         // Add your button click logic here
+    }
+
+
+    public void InitializeDialogueOptions()
+    {
+        //scene 1
+        AddToDictionary("1_1_OPTION", $"{userID},1_1_OPTION IS:,1_False,2_False");
+        AddToDictionary("1_2_OPTION", $"{userID},1_2_OPTION IS:,1_False,2_False");
+        AddToDictionary("1_3_OPTION", $"{userID},1_3_OPTION IS:,1_False,2_False");
+        AddToDictionary("1_4_OPTION", $"{userID},1_4_OPTION IS:,1_False,2_False");
+        AddToDictionary("1_5_OPTION", $"{userID},1_5_OPTION IS:,1_False,2_False,3_False");
+
+
+        //scene 2
     }
 }
             

@@ -20,6 +20,10 @@ public class NPCFallsDown : MonoBehaviour
 
     public ScreenFader ScreenFader;
 
+    public GameObject phone;
+    public GameObject utensil;
+    public GameObject holder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,18 +59,28 @@ public class NPCFallsDown : MonoBehaviour
 
     public void NPCFalls()
     {
+
         _anim.SetBool("Fall", true);
         Debug.Log("Yes.");
 
         StartCoroutine(DoSomething());
     }
 
+    public void NPCPick()
+    {
+        phone.SetActive(false);
+        utensil.SetActive(true);
+        holder.SetActive(true);
+        _anim.SetBool("Pick", true);
+    }
+
+
     private IEnumerator DoSomething()
     {
         AnimatorStateInfo stateInfo = _anim.GetCurrentAnimatorStateInfo(0);
         float time = stateInfo.length;
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time-1);
 
         dropScript.FruitDropCutSceneFirst();
     }
