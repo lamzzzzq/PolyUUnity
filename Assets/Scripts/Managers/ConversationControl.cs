@@ -4,7 +4,8 @@ using UnityEngine;
 using PixelCrushers.DialogueSystem;
 
 public class ConversationControl : MonoBehaviour
-{   
+{
+    public int waitSeconds;
     public void EndConversation()
     {
         StartCoroutine(DelayAndStopConversation());
@@ -13,9 +14,8 @@ public class ConversationControl : MonoBehaviour
     private IEnumerator DelayAndStopConversation()
     {
         Debug.Log("Zhixing!");
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(waitSeconds);
         DialogueManager.StopConversation();
-        
     }
     
 }

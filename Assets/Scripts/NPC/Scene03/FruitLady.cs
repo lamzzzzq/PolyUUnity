@@ -40,6 +40,7 @@ public class FruitLady : MonoBehaviour
 
     public void TurnToTalk()
     {
+        DialogueLua.SetVariable("3_5_OPTION", true);
         facePlayer.enabled = true;
         _childAnim.SetBool("Pick", true);
         //test.SetBool("Pick", true);
@@ -77,5 +78,6 @@ public class FruitLady : MonoBehaviour
     public void ResueToHelp()
     {
         DialogueLua.SetVariable("3_5_Detect", true);
+        DialogueLua.SetVariable("3_5_OPTION", false);
     }
 }

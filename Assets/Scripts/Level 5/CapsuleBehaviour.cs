@@ -9,6 +9,7 @@ public class CapsuleBehaviour : MonoBehaviour
     public AudioSource audioSource;
     public GameObject capsule_obj;
     public AudioClip audioClip_Disappear;
+    public GameObject guide;
 
     public GameObject particlePrefab;
 
@@ -37,6 +38,8 @@ public class CapsuleBehaviour : MonoBehaviour
         audioSource.clip = audioClip_Disappear;
         audioSource.Play();
         Capsule.SetActive(false);
+
+        guide.SetActive(true);
 
     }
 }

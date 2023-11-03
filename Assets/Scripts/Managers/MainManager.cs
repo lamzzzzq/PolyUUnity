@@ -35,7 +35,7 @@ public class MainManager : MonoBehaviour
 
     public string task_4_1;
     public string task_4_4;
-   
+
 
     //public GameObject optionsSubMenu;
     public UnityEngine.UI.Button[] levelButtons;
@@ -118,7 +118,7 @@ public class MainManager : MonoBehaviour
 
     void SaveString(string str)
     {
-        string filePath = Application.persistentDataPath + "/Scene:" +scene.buildIndex + ".csv";
+        string filePath = Application.persistentDataPath + "/Scene:" + scene.buildIndex + ".csv";
         print("saving to" + filePath);
 
         Debug.Log("Scene build index: " + scene.buildIndex);
@@ -129,15 +129,16 @@ public class MainManager : MonoBehaviour
         string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
         Debug.Log(timeID);
 
-        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex +"_" + timeID + ".csv");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + "_" + timeID + ".csv");
         sw.WriteLine(timeID);
         sw.WriteLine(str);
         sw.Close();
     }
 
-    void a() {
+/*    void a()
+    {
         JSONNode json = new JSONArray();
-        json["S1"]["Q1"]= 1;
+        json["S1"]["Q1"] = 1;
 
         string filePath = Application.persistentDataPath + "/Scene:" + scene.buildIndex + ".json";
         string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
@@ -145,7 +146,7 @@ public class MainManager : MonoBehaviour
         sw.WriteLine(timeID);
         sw.WriteLine(json.ToString());
         sw.Close();
-    }
+    }*/
 
     void SaveOption()
     {
@@ -164,37 +165,37 @@ public class MainManager : MonoBehaviour
 
 
         //暂时comment
-/*        switch (scene.buildIndex)
-        {
-            case 1:
-                task_1_1 = string.Concat(userID, ",", "1_1_OPTION IS:", ",", DialogueLua.GetVariable("1_1_OPTION_1").asString, ",", DialogueLua.GetVariable("1_1_OPTION_2").asString);
-                task_1_2 = string.Concat(userID, ",", "1_2_OPTION IS:", ",", DialogueLua.GetVariable("1_2_OPTION_1").asString, ",", DialogueLua.GetVariable("1_2_OPTION_2").asString);
-                task_1_3 = string.Concat(userID, ",", "1_3_OPTION IS:", ",", DialogueLua.GetVariable("1_3_OPTION_1").asString, ",", DialogueLua.GetVariable("1_3_OPTION_2").asString);
-                task_1_4 = string.Concat(userID, ",", "1_4_OPTION IS:", ",", DialogueLua.GetVariable("1_4_OPTION_1").asString, ",", DialogueLua.GetVariable("1_4_OPTION_2").asString);
-                task_1_5 = string.Concat(userID, ",", "1_5_OPTION IS:", ",", DialogueLua.GetVariable("1_5_OPTION_1").asString, ",", DialogueLua.GetVariable("1_5_OPTION_2").asString, ",", DialogueLua.GetVariable("1_5_OPTION_3").asString);
-                SaveString(task_1_1 + "," + task_1_2 + "," + task_1_3 + "," + task_1_4 + "," + task_1_5);
-                break;
-            case 2:
-                task_4_4 = "scene2";
-                SaveString(task_4_4);
-                break;
-            case 3:
-                task_4_4 = "scene3";
-                SaveString(task_4_4);
-                break;
-            case 4:
-                task_4_1 = string.Concat(userID, ",", "4_1_OPTION IS:", ",", DialogueLua.GetVariable("4_1_OPTION_1").asString, ",", DialogueLua.GetVariable("4_1_OPTION_2").asString, ",", DialogueLua.GetVariable("4_1_OPTION_3").asString);
-                task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
-                SaveString(task_4_1 + "," + task_4_4);
-                break;
-            case 5:
-                task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
-                SaveString(task_4_4);
-                break;
-            // Add more cases for other scenes if needed
-            default:
-                break;
-        } */
+        /*        switch (scene.buildIndex)
+                {
+                    case 1:
+                        task_1_1 = string.Concat(userID, ",", "1_1_OPTION IS:", ",", DialogueLua.GetVariable("1_1_OPTION_1").asString, ",", DialogueLua.GetVariable("1_1_OPTION_2").asString);
+                        task_1_2 = string.Concat(userID, ",", "1_2_OPTION IS:", ",", DialogueLua.GetVariable("1_2_OPTION_1").asString, ",", DialogueLua.GetVariable("1_2_OPTION_2").asString);
+                        task_1_3 = string.Concat(userID, ",", "1_3_OPTION IS:", ",", DialogueLua.GetVariable("1_3_OPTION_1").asString, ",", DialogueLua.GetVariable("1_3_OPTION_2").asString);
+                        task_1_4 = string.Concat(userID, ",", "1_4_OPTION IS:", ",", DialogueLua.GetVariable("1_4_OPTION_1").asString, ",", DialogueLua.GetVariable("1_4_OPTION_2").asString);
+                        task_1_5 = string.Concat(userID, ",", "1_5_OPTION IS:", ",", DialogueLua.GetVariable("1_5_OPTION_1").asString, ",", DialogueLua.GetVariable("1_5_OPTION_2").asString, ",", DialogueLua.GetVariable("1_5_OPTION_3").asString);
+                        SaveString(task_1_1 + "," + task_1_2 + "," + task_1_3 + "," + task_1_4 + "," + task_1_5);
+                        break;
+                    case 2:
+                        task_4_4 = "scene2";
+                        SaveString(task_4_4);
+                        break;
+                    case 3:
+                        task_4_4 = "scene3";
+                        SaveString(task_4_4);
+                        break;
+                    case 4:
+                        task_4_1 = string.Concat(userID, ",", "4_1_OPTION IS:", ",", DialogueLua.GetVariable("4_1_OPTION_1").asString, ",", DialogueLua.GetVariable("4_1_OPTION_2").asString, ",", DialogueLua.GetVariable("4_1_OPTION_3").asString);
+                        task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
+                        SaveString(task_4_1 + "," + task_4_4);
+                        break;
+                    case 5:
+                        task_4_4 = string.Concat(userID, ",", "4_4_OPTION IS:", ",", DialogueLua.GetVariable("4_4_OPTION_1").asString, ",", DialogueLua.GetVariable("4_4_OPTION_2").asString, ",", DialogueLua.GetVariable("4_4_OPTION_3").asString);
+                        SaveString(task_4_4);
+                        break;
+                    // Add more cases for other scenes if needed
+                    default:
+                        break;
+                } */
     }
 
     void StoreSceneTasksInDictionary()
@@ -213,8 +214,39 @@ public class MainManager : MonoBehaviour
                 // ... 同样的方式添加其他任务内容
                 break;
             case 2:
-                AddToDictionary("Scene", "scene2");
+                AddToDictionary("2_1_OPTION", $"{userID},2_1_OPTION IS:,{DialogueLua.GetVariable("2_1_OPTION").asString}");
+                AddToDictionary("2_2_OPTION", $"{userID},2_2_OPTION IS:,{DialogueLua.GetVariable("Lily_Help").asString}");
+                AddToDictionary("2_3_OPTION", $"{userID},2_3_OPTION IS:,{DialogueLua.GetVariable("Amy_Help").asString}");
+                AddToDictionary("2_4_OPTION", $"{userID},2_4_OPTION IS:,{DialogueLua.GetVariable("2_4_OPTION").asString}");
+                AddToDictionary("2_5_OPTION", $"{userID},2_5_OPTION IS:,{DialogueLua.GetVariable("Leo_Help").asString}");
                 break;
+
+            case 3:
+                AddToDictionary("3_1_OPTION", $"{userID},3_1_OPTION IS:,{DialogueLua.GetVariable("3_1_OPTION").asString}");
+                AddToDictionary("3_2_OPTION", $"{userID},3_2_OPTION IS:,{DialogueLua.GetVariable("3_2_OPTION").asString}");
+                AddToDictionary("3_3_1_OPTION", $"{userID},3_3_1_OPTION IS:,{DialogueLua.GetVariable("3_3_1_OPTION").asString}");
+                AddToDictionary("3_3_2_OPTION", $"{userID},3_3_2_OPTION IS:,{DialogueLua.GetVariable("3_3_2_OPTION").asString}");
+                AddToDictionary("3_4_OPTION", $"{userID},3_4_OPTION IS:,{DialogueLua.GetVariable("3_4_OPTION").asString}");
+                AddToDictionary("3_5_OPTION", $"{userID},3_5_OPTION IS:,{DialogueLua.GetVariable("3_5_OPTION").asString}");
+                AddToDictionary("3_5_SCORE", $"{userID},3_5_SCORE IS:, {DialogueLua.GetVariable("3_5_Fruit").asString}");
+                break;
+/* 
+            case 4:
+                AddToDictionary("4_1_OPTION", $"{userID},4_1_OPTION IS:,{DialogueLua.GetVariable("2_1_OPTION").asString}");
+                AddToDictionary("4_2_OPTION", $"{userID},4_2_OPTION IS:,{DialogueLua.GetVariable("Lily_Help").asString}");
+                AddToDictionary("4_3_OPTION", $"{userID},4_3_OPTION IS:,{DialogueLua.GetVariable("Amy_Help").asString}");
+                AddToDictionary("4_4_OPTION", $"{userID},4_4_OPTION IS:,{DialogueLua.GetVariable("2_4_OPTION").asString}");
+                AddToDictionary("4_5_OPTION", $"{userID},4_5_OPTION IS:,{DialogueLua.GetVariable("Leo_Help").asString}");
+                break;
+
+            case 5:
+                AddToDictionary("5_1_OPTION", $"{userID},5_1_OPTION IS:,{DialogueLua.GetVariable("2_1_OPTION").asString}");
+                AddToDictionary("5_2_OPTION", $"{userID},5_2_OPTION IS:,{DialogueLua.GetVariable("Lily_Help").asString}");
+                AddToDictionary("5_3_OPTION", $"{userID},5_3_OPTION IS:,{DialogueLua.GetVariable("Amy_Help").asString}");
+                AddToDictionary("5_4_OPTION", $"{userID},5_4_OPTION IS:,{DialogueLua.GetVariable("2_4_OPTION").asString}");
+                AddToDictionary("5_5_OPTION", $"{userID},5_5_OPTION IS:,{DialogueLua.GetVariable("Leo_Help").asString}");
+                break;*/
+
             // ... 其他场景的处理
             default:
                 break;
@@ -235,7 +267,7 @@ public class MainManager : MonoBehaviour
         string timeID = System.DateTime.Now.ToString("yyyy_MM_dd-HH_mm_ss") + ",";
         Debug.Log(timeID);
 
-        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + userID + "_" + timeID + ".csv");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Scene_" + SceneManager.GetActiveScene().buildIndex + "_" + userID + "_" + timeID + ".csv");
         sw.WriteLine(timeID);
 
         foreach (var entry in dialogueOptions)
@@ -257,7 +289,7 @@ public class MainManager : MonoBehaviour
             // Save the CSV file
             SaveOption();
 
-            a();
+            //a();
 
             if (!string.IsNullOrEmpty(userID))
             {
@@ -336,6 +368,7 @@ public class MainManager : MonoBehaviour
     }
 
 
+    //是否不需要用到？
     public void InitializeDialogueOptions()
     {
         //scene 1
@@ -349,4 +382,4 @@ public class MainManager : MonoBehaviour
         //scene 2
     }
 }
-            
+

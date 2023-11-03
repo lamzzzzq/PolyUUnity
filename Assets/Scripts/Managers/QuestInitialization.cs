@@ -90,7 +90,8 @@ public class QuestInitialization : MonoBehaviour
         DialogueLua.SetVariable("Lily_Help", false);
         DialogueLua.SetVariable("Amy_Help", false);
         DialogueLua.SetVariable("Leo_Help", false);
-
+        DialogueLua.SetVariable("2_1_OPTION", false);
+        DialogueLua.SetVariable("2_4_OPTION", 0);
 
         //Level 3
         DialogueLua.SetVariable("3_1_FirstTime", true);

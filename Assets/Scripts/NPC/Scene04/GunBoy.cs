@@ -18,10 +18,12 @@ public class GunBoy : MonoBehaviour
     private NavMeshAgent _agent;
     private Animator _anim;
     private EnemyController _enemyController;
+    private bool faceNPC = false;
 
 
     public GameObject npcFaceTarget;
     public DecrementScript bubbleScript;
+    public BubbleCarOnPlayer bubbleCarLogic;
 
     private void Start()
     {
@@ -74,6 +76,11 @@ public class GunBoy : MonoBehaviour
                 _anim.SetBool("Fall", false);
                 facePlayer.enabled = true;
 
+                if(!faceNPC)
+                {
+                    bubbleCarLogic.faceNPC();
+                    faceNPC = true;
+                }
 
                 foreach (var item in this.GetComponents<DialogueSystemTrigger>())
                 {

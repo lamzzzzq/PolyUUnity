@@ -78,6 +78,9 @@ public class HelpTeacher : MonoBehaviour
             item.SetActive(false);
         }
 
+        //帮助老师
+        DialogueLua.SetVariable("2_1_OPTION",true);
+
     }
 
 
@@ -104,6 +107,9 @@ public class HelpTeacher : MonoBehaviour
 
         teacher.SetActive(false);
         EnablePlayerController();
+
+        //不帮助老师
+        DialogueLua.SetVariable("2_1_OPTION", false);
 
         QuestLog.SetQuestState("2.1_TeacherDropItem", QuestState.Abandoned);
     }

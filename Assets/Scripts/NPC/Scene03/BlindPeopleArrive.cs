@@ -46,7 +46,7 @@ public class BlindPeopleArrive : MonoBehaviour
         teleport.ResetPlayerPosRotWithParameters(PlayerPosition_LookAtBlind, ScreenFader);
         blindPeople.GetComponent<BlindPeople>().WalkTowardTheDestination();
         EnableController();
-        blindPeopleTrigger.SetActive(false);
+        //blindPeopleTrigger.SetActive(false);
     }
 
     private IEnumerator enableController()

@@ -27,6 +27,7 @@ public class WheelChairBoy : MonoBehaviour
     {
         _agent = this.GetComponent<NavMeshAgent>();
         _anim = this.GetComponentInChildren<Animator>();
+
     }
 
     // Update is called once per frame
@@ -60,6 +61,7 @@ public class WheelChairBoy : MonoBehaviour
     public void moveToDestination()
     {
         walk = true;
+        targetPosition = transform;
         _agent.SetDestination(targetPosition.position);
     }
 

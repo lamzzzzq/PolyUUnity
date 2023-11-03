@@ -181,6 +181,7 @@ public class OrderManager : MonoBehaviour
         FoodD_BeforeAsk.SetActive(false);
     }
 
+    //call when move to the new seat
     public void DeactivateTableMeal_AfterAsk()
     {
         FoodA_AfterAsk.SetActive(false);
@@ -189,6 +190,7 @@ public class OrderManager : MonoBehaviour
         FoodD_AfterAsk.SetActive(false);
     }
 
+    //call when place the tray
     public void DeactivateTableMeal_AfterEat()
     {
         FoodA_Final.SetActive(false);

@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelection.unity
     guid: 451ff3b681caa6645bc749026303f72a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Canteen.unity
     guid: fba9a4505ea1aa64295505e8afe80fa0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Classroom.unity
     guid: c19cf0bd214c85f409b78495f50d7b1e
   - enabled: 0

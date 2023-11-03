@@ -65,11 +65,15 @@ public class WheelChairOnPlayer_Classroom : MonoBehaviour
         teleport.ResetPlayerPosRotWithParameters(playerSeatedPosition, screenFader);
     }
 
+
+    //暂时没用了
     public void enableController()
     {
         playerController.enabled = true;
     }
 
+
+    //暂时没用了
     public void enableSeatTrigger()
     {
         seat.enabled = true;

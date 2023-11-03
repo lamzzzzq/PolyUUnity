@@ -11,6 +11,7 @@ public class BubbleCarOnPlayer : MonoBehaviour
     public TeleportPlayerFade teleport;
     public ScreenFader screenFader;
     public Transform playerPosition;
+    public Transform facePosition;
     public Transform exitPosition;
     public Transform startingPosition;
     public Transform bubbleCanvasPosition;
@@ -87,7 +88,12 @@ public class BubbleCarOnPlayer : MonoBehaviour
             audioSource.PlayOneShot(audioClip);
             trigger = true;
         }
-
-
     }
+
+    public void faceNPC()
+    {
+        teleport.ResetPlayerPosRotWithParameters(facePosition, screenFader);
+    }
+
+
 }

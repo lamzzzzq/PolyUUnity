@@ -17,6 +17,7 @@ public class ScanQRCode : MonoBehaviour
     public Material newMaterial;
 
     public ProSocial_NPC_Teacher teacherScript;
+    public ProSocial_NPC_Sponsor sponsorScript;
 
     private void Start()
     {
@@ -81,7 +82,7 @@ public class ScanQRCode : MonoBehaviour
 
     public void teacherTalk()
     {
-        QuestLog.SetQuestState("Classroom_TASK_2", QuestState.Abandoned);
+        QuestLog.SetQuestState("Classroom_TASK_2", QuestState.Success);
         teacherScript.hasFinish = false;
     }
 }

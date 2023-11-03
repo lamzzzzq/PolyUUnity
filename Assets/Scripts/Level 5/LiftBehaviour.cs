@@ -161,7 +161,7 @@ public class LiftBehaviour : MonoBehaviour
     {
         isCoroutineRunning = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
 
         //Play countdown UI
 
@@ -200,7 +200,7 @@ public class LiftBehaviour : MonoBehaviour
 
     IEnumerator CloseLiftWhenSuccess()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(8f);
 
         //Play countdown UI
 

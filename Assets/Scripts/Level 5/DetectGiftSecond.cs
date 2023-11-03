@@ -66,5 +66,13 @@ namespace BNG
                 Debug.LogWarning("SnapZoneObj的HeldItem的标签为空");
             }
         }
+
+        public void StopAllConversations()
+        {
+            for (int i = DialogueManager.instance.activeConversations.Count - 1; i >= 0; i--)
+            {
+                DialogueManager.instance.activeConversations[i].conversationController.Close();
+            }
+        }
     }
 }
