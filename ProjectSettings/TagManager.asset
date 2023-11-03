@@ -23,6 +23,7 @@ TagManager:
   - Painting 2
   - Painting 3
   - PuzzlePiece
+  - PuzzleController
   layers:
   - Default
   - TransparentFX
