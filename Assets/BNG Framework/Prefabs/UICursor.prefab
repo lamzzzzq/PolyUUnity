@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2255670627275077588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,5 +247,6 @@ MonoBehaviour:
   snapSound: {fileID: 8300000, guid: 30ef761f6d7153845addf7410feca63e, type: 3}
   solveJigsaw: {fileID: 8300000, guid: ffb3045797aed9c44852e404c676746e, type: 3}
   logoPieces: []
+  prePlacedPuzzles: []
   progressBar: {fileID: 0}
   slider: {fileID: 0}
